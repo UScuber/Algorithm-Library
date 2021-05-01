@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//seg min
 template<class T> struct segmentTree{
   public:
   segmentTree(int x){
@@ -64,5 +65,36 @@ template<class T> struct segmentTree{
         return min_left_sub(a, b, x, 2 * k + 2, (l + r) / 2, r);
       }
     }
+  }
+};
+
+
+//seg sum
+template<class T> struct bit{
+  public:
+  bit(int x){
+    while(x > n) n *= 2;
+    d.resize(n);
+  }
+  T sum(int l, int r){
+    return sum(r) - sum(l);
+  }
+  void add(int i, T x){
+    i++;
+    while(i <= n){
+      d[i - 1] += x;
+      i += i & -i;
+    }
+  }
+  private:
+  int n = 1;
+  vector<T> d;
+  T sum(int i){
+    T tot = 0;
+    while(i > 0){
+      tot += d[i - 1];
+      i -= i & -i;
+    }
+    return tot;
   }
 };
