@@ -2,6 +2,26 @@
 using ll = long long;
 using namespace std;
 
+
+template<class T>
+T gcd(T a, T b){
+  if(a % b == 0) return b;
+  return gcd(b, a % b);
+}
+
+template<class T>
+T lcm(T a, T b){
+  return a / gcd(a, b) * b;
+}
+
+ll modPow(ll a, ll n, ll p){
+  if(!n) return 1;
+  if(n == 1) return a % p;
+  if(n & 1) return (a * modPow(a, n - 1, p)) % p;
+  ll t = modPow(a, n / 2, p);
+  return (t * t) % p;
+}
+
 ll ext_gcd(ll a, ll b, ll &x, ll &y){
   ll d = a;
   if(b){
