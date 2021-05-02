@@ -22,13 +22,13 @@ template<class T> struct rangeUpdateQuery{
     d[k] = lazy[k];
     lazy[k] = inf;
   }
-  void update(int a, int b, int x){ update(a, b, x, 0, 0, n); }
+  void update(int a, int b, T x){ update(a, b, x, 0, 0, n); }
   T query(int a, int b){ return query_sub(a, b, 0, 0, n); }
   private:
   const T inf = numeric_limits<T>::max();
   int n = 1;
   vector<T> d, lazy;
-  void update(int a, int b, int x, int k, int l, int r){
+  void update(int a, int b, T x, int k, int l, int r){
     eval(k);
     if(a <= l && r <= b){
       lazy[k] = x;
