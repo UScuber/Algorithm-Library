@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Union Find
 struct UnionFind {
   vector<int> d;
   UnionFind(int n): d(n,-1) {}
@@ -27,6 +28,8 @@ struct UnionFind {
 
 
 
+
+//重み付きUnion Find
 struct UnionFindW{
   vector<int> par, rank;
   vector<int> diff_weight;
