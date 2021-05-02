@@ -43,3 +43,30 @@ pair<ll,ll> crt(ll b1, ll m1, ll b2, ll m2)
 - 戻り値は x と lcm(m1, m2)
 - x が存在しない場合は -1 を返す
 - 計算量は O(log max(m1,m2))
+
+
+## 5. complex(複素数)
+```cpp
+complex(double re = 0, double img = 0)
+```
+- 実数部を re 虚数部を img として複素数を定義
+
+### 演算
+```cpp
+complex a,b;
+a + b;
+a - b;
+a * b;
+a / b;
+
+a += b;
+a -= b;
+a *= b;
+a /= b;
+```
+
+### inv
+```cpp
+complex(x).inv()
+```
+- x * y = 1 となる y を求める
