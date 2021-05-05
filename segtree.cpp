@@ -8,9 +8,9 @@ template<class T> struct segmentTree{
     while(x > n) n *= 2;
     d.resize(2*n - 1, inf);
   }
-  void update(int k, T a){
+  void update(int k, T x){
     k += n - 1;
-    d[k] = a;
+    d[k] = x;
     while(k > 0){
       k = (k - 1) / 2;
       d[k] = min(d[k * 2 + 1], d[k * 2 + 2]);
@@ -21,11 +21,12 @@ template<class T> struct segmentTree{
     for(int k = n - 2; k >= 0; k--)
       d[k] = min(d[2 * k + 1], d[2 * k + 2]);
   }
-  T query(int a, int b){ return query_sub(a, b, 0, 0, n); }
-  int min_right(int a, int b, T x){ return find_rightest_sub(a, b, x, 0, 0, n); }
-  int min_left(int a, int b, T x){ return min_left_sub(a, b, x, 0, 0, n); }
+  T query(int l, int r){ return query_sub(l, r, 0, 0, n); }
+  int min_right(int l, int r, T x){ return find_rightest_sub(l, r, x, 0, 0, n); }
+  int min_left(int l, int r, T x){ return min_left_sub(l, r, x, 0, 0, n); }
   
-  void debug(int l = 0, int r = n){
+  void debug(int l = 0, int r = -1){
+    if(r == -1) r = n;
     cerr << "[" << l << "," << r << "): ";
     for(int i = l; i < r; i++) cerr << d[i] << " ";
     cerr << "\n";
@@ -92,7 +93,8 @@ template<class T> struct bit{
     }
   }
 
-  void debug(int l = 0, int r = n){
+  void debug(int l = 0, int r = -1){
+    if(r == -1) r = n;
     cerr << "[" << l << "," << r << "): ";
     for(int i = l; i < r; i++) cerr << d[i] << " ";
     cerr << "\n";

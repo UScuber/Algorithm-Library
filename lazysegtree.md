@@ -10,9 +10,9 @@ rangeUpdateQuery(int x)
 
 ## update
 ```cpp
-void update(int a, int b, T x)
+void update(int l, int r, T x)
 ```
-- [a, b) の区間の値を x に更新する
+- [l, r) の区間の値を x に更新する
 - 計算量は O(log n)
 
 ## set
@@ -30,9 +30,9 @@ void build()
 
 ## query
 ```cpp
-T query(int a, int b)
+T query(int l, int r)
 ```
-- [a, b) の中での最小値を求める
+- [l, r) の中での最小値を求める
 - 計算量は O(log n)
 
 
@@ -47,9 +47,9 @@ lazySegmentTree(int x)
 
 ## add
 ```cpp
-void add(int a, int b, T x)
+void add(int l, int r, T x)
 ```
-- [a, b) の区間の値に x を加える
+- [l, r) の区間の値に x を加える
 - 計算量は O(log n)
 
 ## set
@@ -67,7 +67,7 @@ void build()
 
 ## sum
 ```cpp
-T sum(int a, int b)
+T sum(int l, int r)
 ```
-- [a, b) の区間の総和を求める
+- [l, r) の区間の総和を求める
 - 計算量は O(log n)

@@ -29,25 +29,25 @@ void build()
 
 ## query
 ```cpp
-T query(int a, int b)
+T query(int l, int r)
 ```
-- [a, b) の中での最小値を求める
+- [l, r) の中での最小値を求める
 - 計算量は O(log n)
 
 ## min_right
 ```cpp
-int min_right(int a, int b, T x)
+int min_right(int l, int r, T x)
 ```
-- [a, b) の中で x 以下の値がある一番右の位置を求める
-- 存在しない場合は a-1 を返す
+- [l, r) の中で x 以下の値がある一番右の位置を求める
+- 存在しない場合は l-1 を返す
 - 計算量は O(log n)
 
 ## min_left
 ```cpp
-int min_left(int a, int b, T x)
+int min_left(int l, int r, T x)
 ```
-- [a, b) の中で x 以下の値がある一番左の位置を求める
-- 存在しない場合は b を返す
+- [l, r) の中で x 以下の値がある一番左の位置を求める
+- 存在しない場合は r を返す
 - 計算量は O(log n)
 
 ## debug
