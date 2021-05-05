@@ -68,7 +68,7 @@ struct complex {
     return complex(re / t, -img / t);
   }
   friend ostream &operator<<(ostream &os, const complex &c){
-    printf("%.10lf+%.10lfi\n", c.re, c.img);
+    printf("%.10lf %.10lf", c.re, c.img);
     return os;
   }
 };
