@@ -39,6 +39,12 @@ template<class T> struct matrix{
     }
     return b;
   }
+  void debug(){
+    rep(i, n){
+      rep(j, n) cerr << a[i][j] << " ";
+      cerr << "\n";
+    }
+  }
   int n;
   private:
   T Mod;

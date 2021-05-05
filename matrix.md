@@ -26,6 +26,13 @@ mint(x).mod(ll t)
 - x^t を求める
 - 計算量は O(n^3 log t)
 
+## debug
+```cpp
+void debug()
+```
+- 行列の値を出力する
+- `cerr`を使っているので書き残したまま提出しても問題ない
+
 ## 要素の取得
 ```cpp
 matrix a[i][j]
