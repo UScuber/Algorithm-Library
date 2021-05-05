@@ -41,7 +41,7 @@ template<class T> struct rangeUpdateQuery{
   }
   T query_sub(int a, int b, int k, int l, int r){
     eval(k);
-    if(r <= a || b <= l) return inf
+    if(r <= a || b <= l) return inf;
     if(a <= l && r <= b) return d[k];
     T vlef = query_sub(a, b, k*2 + 1, l, (r+l)/2);
     T vrig = query_sub(a, b, k*2 + 2, (r+l)/2, r);

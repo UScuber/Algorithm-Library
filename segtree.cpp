@@ -38,7 +38,7 @@ template<class T> struct segmentTree{
   }
   //範囲外であればreturn a-1
   int min_right_sub(int a, int b, T x, int k, int l, int r){
-    if(dat[k] > x || r <= a || b <= l){
+    if(d[k] > x || r <= a || b <= l){
       return a - 1;
     }else if(k >= n - 1){
       return k - (n - 1);
@@ -53,7 +53,7 @@ template<class T> struct segmentTree{
   }
   //範囲外であればreturn b
   int min_left_sub(int a, int b, T x, int k, int l, int r){
-    if (dat[k] > x || r <= a || b <= l){
+    if (d[k] > x || r <= a || b <= l){
       return b;
     }else if(k >= n - 1) {
       return k - (n - 1);
