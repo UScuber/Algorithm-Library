@@ -25,6 +25,11 @@ template<class T> struct segmentTree{
   int min_right(int a, int b, T x){ return find_rightest_sub(a, b, x, 0, 0, n); }
   int min_left(int a, int b, T x){ return min_left_sub(a, b, x, 0, 0, n); }
   
+  void debug(int l = 0, int r = n){
+    cerr << "[" << l << "," << r << "): ";
+    for(int i = l; i < r; i++) cerr << d[i] << " ";
+    cerr << "\n";
+  }
   private:
   const T inf = numeric_limits<T>::max();
   int n = 1;
@@ -85,6 +90,12 @@ template<class T> struct bit{
       d[i - 1] += x;
       i += i & -i;
     }
+  }
+
+  void debug(int l = 0, int r = n){
+    cerr << "[" << l << "," << r << "): ";
+    for(int i = l; i < r; i++) cerr << d[i] << " ";
+    cerr << "\n";
   }
   private:
   int n = 1;

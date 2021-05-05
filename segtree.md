@@ -50,6 +50,13 @@ int min_left(int a, int b, T x)
 - 存在しない場合は b を返す
 - 計算量は O(log n)
 
+## debug
+```cpp
+void debug(int l = 0, int r = n)
+```
+- cerr で [l, r) の区間の値を出力する
+
+
 
 
 # 2. Binary Indexed Tree(BIT)
@@ -73,3 +80,9 @@ T sum(int l, int r, T x)
 ```
 - [l, r) の区間の値の総和を求める
 - 計算量は O(log n)
+
+## debug
+```cpp
+void debug(int l = 0, int r = n)
+```
+- cerr で [l, r) の区間の値を出力する
