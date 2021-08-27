@@ -50,6 +50,9 @@ struct mint{
   mint inv() const{ return pow(mod - 2); }
   mint &operator/=(const mint &a){ return (*this) *= a.inv(); }
   mint operator/(const mint &a) const{ return mint(*this) /= a; }
+  bool operator==(const mint &a) const{ return x == a.x; }
+  bool operator<(const mint &a) const{ return x < a.x; }
+  bool operator>(const mint &a) const{ return x > a.x; }
   friend istream &operator>>(istream &is, mint &a){ return is >> a.x; }
   friend ostream &operator<<(ostream &os, const mint &a){ return os << a.x; }
 };
