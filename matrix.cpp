@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#define rep(i,n) for(int i = 0; i < n; i++)
 using namespace std;
 
 template<class T> struct matrix {
@@ -7,19 +6,20 @@ template<class T> struct matrix {
   vector<T> &operator[](const int &m){ return a[m]; }
   matrix &operator*=(const matrix &b){
     vector<vector<T>> c(n, vector<T>(n));
-    rep(i, n) rep(j, b.n) rep(k, n){
+    for(int i = 0; i < n; i++) for(int j = 0; j < b.n; j++)
+    for(int k = 0; k < n; k++){
       c[i][j] += a[i][k] * b.a[k][j];
     }
     a = c;
     return *this;
   }
   matrix &operator+=(const matrix &b){
-    rep(i, n) rep(j, n)
+    for(int i = 0; i < n; i++) for(int j = 0; j < n; j++)
       a[i][j] += b.a[i][j];
     return *this;
   }
   matrix &operator-=(const matrix &b){
-    rep(i, n) rep(j, n)
+    for(int i = 0; i < n; i++) for(int j = 0; j < n; j++)
       a[i][j] -= b.a[i][j];
     return *this;
   }
@@ -28,7 +28,7 @@ template<class T> struct matrix {
   matrix operator-(const matrix &b) const{ return matrix(*this) -= b; }
   matrix pow(ll t) const{
     matrix<T> b(n), c = *this;
-    rep(i, n) b[i][i] = 1;
+    for(int i = 0; i < n; i++) b[i][i] = 1;
     while(t > 0){
       if(t & 1) b *= c;
       c *= c;
@@ -37,33 +37,43 @@ template<class T> struct matrix {
     return b;
   }
   T det() const{
+    if(n == 2) return a[0][0]*a[1][1] - a[0][1]*a[1][0];
     T res = 0;
-    rep(i, n){
+    for(int i = 0; i < n; i++){
       T p = 1, m = 1;
-      rep(j, n){
+      for(int j = 0; j < n; j++){
         p *= a[(i+j) % n][j];
-        m *= a[(j+j) % n][n-j-1];
+        m *= a[(i+j) % n][n-j-1];
       }
       res += p - m;
     }
     return res;
   }
   matrix inv(){
-    if(!det()) return matrix();
     matrix b(n), c = *this;
-    rep(i, n) b[i][i] = 1;
-    rep(i, n){
-      T v = c[i][i];
-      rep(j, n) b[j][i] /= v, c[j][i] /= v;
-      rep(j, n){
-        if(i == j) continue;
-        T v = c[j][i];
-        rep(k, n){
-          c[j][k] -= c[i][k] * v;
-          b[j][k] -= b[i][k] * v;
+    for(int i = 0; i < n; i++) b[i][i] = 1;
+    int r = 0;
+    for(int i = 0; i < n && r < n; i++){
+      if(c[r][i] == 0){
+        T max_val = 0; int mx_pos;
+        for(int j = r+1; j < n; j++){
+          if(max_val < c[j][i]) max_val = c[j][i], mx_pos = j;
         }
-      }
-    }
+        if(max_val == 0) return false;
+        swap(c[r], c[mx_pos]); swap(b[r], b[mx_pos]);
+      }     
+		T d = T(1) / c[r][i];
+		for(int j = 0; j < n; j++) c[r][j] *= d, b[r][j] *= d;
+		for(int j = 0; j < n; j++){
+			T v = c[j][i];
+			if(j == r || c[j][i] == 0) continue;
+			for(int k = 0; k < n; k++){
+        c[j][k] -= c[r][k] * v;
+        b[j][k] -= b[r][k] * v;
+			}
+		}
+		r++;
+	}
     return b;
   }
   void debug(){
