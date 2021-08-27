@@ -40,6 +40,9 @@ struct frac {
   frac operator+(const frac &d) const{ return frac(*this) += d; }
   frac operator-(const frac &d) const{ return frac(*this) -= d; }
   bool operator!(){ return !a; }
+  bool operator==(const frac &d) const{ return a == d.a && b == d.b;}
+  bool operator<(const frac &d) const{ return (double)a/b < (double)d.a/d.b; }
+  bool operator>(const frac &d) const{ return (double)a/b > (double)d.a/d.b; }
   void reduce(){
     ll g = gcd(abs(a), abs(b));
     if(a < 0 && b < 0) g = -g;
@@ -49,7 +52,8 @@ struct frac {
     if(a % b == 0) return b;
     return gcd(b, a % b);
   }
-  void debug(){ cout << a << "/" << b << "\n"; }
+  void debug(){ cerr << a << "/" << b << " "; }
+  friend istream &operator>>(istream &is, frac &d){ return is >> d.a; }
   friend ostream &operator<<(ostream &os, const frac &d){
     printf("%.10lf", (double)d.a / d.b);
     //if(!d.a) os << 0;
