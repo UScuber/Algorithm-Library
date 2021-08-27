@@ -62,18 +62,18 @@ template<class T> struct matrix {
         if(max_val == 0) return false;
         swap(c[r], c[mx_pos]); swap(b[r], b[mx_pos]);
       }     
-		T d = T(1) / c[r][i];
-		for(int j = 0; j < n; j++) c[r][j] *= d, b[r][j] *= d;
-		for(int j = 0; j < n; j++){
-			T v = c[j][i];
-			if(j == r || c[j][i] == 0) continue;
-			for(int k = 0; k < n; k++){
+    T d = T(1) / c[r][i];
+    for(int j = 0; j < n; j++) c[r][j] *= d, b[r][j] *= d;
+    for(int j = 0; j < n; j++){
+      T v = c[j][i];
+      if(j == r || c[j][i] == 0) continue;
+      for(int k = 0; k < n; k++){
         c[j][k] -= c[r][k] * v;
         b[j][k] -= b[r][k] * v;
-			}
-		}
-		r++;
-	}
+      }
+    }
+    r++;
+  }
     return b;
   }
   void debug(){
