@@ -2,24 +2,28 @@
 using namespace std;
 
 template<class T> struct matrix {
-  matrix(int n = 0) : n(n), a(n, vector<T>(n)){}
-  vector<T> &operator[](const int &m){ return a[m]; }
+  matrix(int n) : n(n), m(n), a(n, vector<T>(n)){}
+  matrix(int n, int m) : n(n), m(m), a(n, vector<T>(m)){}
+  vector<T> &operator[](const int &i){ return a[i]; }
   matrix &operator*=(const matrix &b){
-    vector<vector<T>> c(n, vector<T>(n));
-    for(int i = 0; i < n; i++) for(int j = 0; j < b.n; j++)
-    for(int k = 0; k < n; k++){
+    if(m != b.n) return *this;
+    vector<vector<T>> c(n, vector<T>(b.m));
+    for(int i = 0; i < n; i++) for(int j = 0; j < b.m; j++)
+    for(int k = 0; k < m; k++){
       c[i][j] += a[i][k] * b.a[k][j];
     }
     a = c;
     return *this;
   }
   matrix &operator+=(const matrix &b){
-    for(int i = 0; i < n; i++) for(int j = 0; j < n; j++)
+    if(n != b.n || m != b.m) return *this;
+    for(int i = 0; i < n; i++) for(int j = 0; j < m; j++)
       a[i][j] += b.a[i][j];
     return *this;
   }
   matrix &operator-=(const matrix &b){
-    for(int i = 0; i < n; i++) for(int j = 0; j < n; j++)
+    if(n != b.n || m != b.m) return *this;
+    for(int i = 0; i < n; i++) for(int j = 0; j < m; j++)
       a[i][j] -= b.a[i][j];
     return *this;
   }
@@ -27,6 +31,7 @@ template<class T> struct matrix {
   matrix operator+(const matrix &b) const{ return matrix(*this) += b; }
   matrix operator-(const matrix &b) const{ return matrix(*this) -= b; }
   matrix pow(ll t) const{
+    if(n != m) return false;
     matrix<T> b(n), c = *this;
     for(int i = 0; i < n; i++) b[i][i] = 1;
     while(t > 0){
@@ -37,19 +42,31 @@ template<class T> struct matrix {
     return b;
   }
   T det() const{
-    if(n == 2) return a[0][0]*a[1][1] - a[0][1]*a[1][0];
-    T res = 0;
+    if(n != m) return false;
+    matrix b = *this;
+    T res(1);
     for(int i = 0; i < n; i++){
-      T p = 1, m = 1;
-      for(int j = 0; j < n; j++){
-        p *= a[(i+j) % n][j];
-        m *= a[(i+j) % n][n-j-1];
+      if(b[i][i] == 0){
+        for(int j = i + 1; j < n; j++){
+          if(b[j][i] > 0){
+            swap(b[i], b[j]);
+            res = -res;
+            break;
+          }
+        }
       }
-      res += p - m;
+      res *= b[i][i];
+      for(int j = i + 1; j < n; j++){
+        T d = T(1) / b[i][i];
+        for(int k = i + 1; k < n; k++){
+          b[j][k] -= b[j][i] * d * b[i][k];
+        }
+      }
     }
     return res;
   }
   matrix inv(){
+    if(n != m) return false;
     matrix b(n), c = *this;
     for(int i = 0; i < n; i++) b[i][i] = 1;
     int r = 0;
@@ -62,27 +79,28 @@ template<class T> struct matrix {
         if(max_val == 0) return false;
         swap(c[r], c[mx_pos]); swap(b[r], b[mx_pos]);
       }     
-    T d = T(1) / c[r][i];
-    for(int j = 0; j < n; j++) c[r][j] *= d, b[r][j] *= d;
-    for(int j = 0; j < n; j++){
-      T v = c[j][i];
-      if(j == r || c[j][i] == 0) continue;
-      for(int k = 0; k < n; k++){
-        c[j][k] -= c[r][k] * v;
-        b[j][k] -= b[r][k] * v;
+      T d = T(1) / c[r][i];
+      for(int j = 0; j < n; j++) c[r][j] *= d, b[r][j] *= d;
+      for(int j = 0; j < n; j++){
+        T v = c[j][i];
+        if(j == r || c[j][i] == 0) continue;
+        for(int k = 0; k < n; k++){
+          c[j][k] -= c[r][k] * v;
+          b[j][k] -= b[r][k] * v;
+        }
       }
+      r++;
     }
-    r++;
-  }
     return b;
   }
+  int size() const{ return n; }
   void debug(){
-    rep(i, n){
-      rep(j, n) cerr << a[i][j] << " ";
+    for(int i = 0; i < n; i++){
+      for(int j = 0; j < n; j++) cerr << a[i][j] << " ";
       cerr << "\n";
     }
   }
-  int n;
+  int n,m;
   private:
   vector<vector<T>> a;
 };
