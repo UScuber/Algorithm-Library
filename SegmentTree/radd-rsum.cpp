@@ -39,7 +39,7 @@ template<class T> struct segmentTree {
       d[k] = d[2*k+1] + d[2*k+2];
     }
   }
-  T sum(int a, int b, T k, int l, int r) {
+  T sum(int a, int b, T k, int l, int r){
     eval(k, l, r);
     if(b <= l || r <= a) return 0;
     if(a <= l && r <= b) return d[k];

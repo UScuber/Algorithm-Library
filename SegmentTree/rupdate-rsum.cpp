@@ -3,8 +3,8 @@ using namespace std;
 
 //区間の更新、区間和
 
-template <class T> struct LazySegTree {
-  LazySegTree(int x){
+template <class T> struct segmentTree {
+  segmentTree(int x){
     while(n < x) n *= 2;
     d.resize(n*2 - 1);
     lazy.resize(n*2 - 1, inf);

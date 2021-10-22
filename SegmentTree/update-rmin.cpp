@@ -46,7 +46,7 @@ struct segmentTree {
   }
   //範囲外であればreturn a-1
   int min_right_sub(int a, int b, T x, int k, int l, int r){
-    if(op(d[k]-1,x)==x || r <= a || b <= l) return a - 1;
+    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return a - 1;
     if(k >= n - 1) return k - (n - 1);
 
     int vrig = min_right_sub(a, b, x, 2*k+2, (l+r)/2, r);
@@ -55,7 +55,7 @@ struct segmentTree {
   }
   //範囲外であればreturn b
   int min_left_sub(int a, int b, T x, int k, int l, int r){
-    if(op(d[k]-1,x)==x || r <= a || b <= l) return b;
+    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return b;
     else if(k >= n - 1) return k - (n - 1);
 
     int vlef = min_left_sub(a, b, x, 2*k+1, l, (l+r)/2);
