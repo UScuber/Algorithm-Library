@@ -17,20 +17,20 @@ struct scc {
   }
   void build(){
     for(int i = 0; i < n; i++){
-      for(int &x : root[i])
+      for(auto &x : root[i])
         rroot[x].push_back(i);
     }
     for(int i = 0; i < n; i++) dfs(i);
     reverse(ord.begin(), ord.end());
     int cnt = 0;
-    for(int &x : ord) if(comp[x] == -1){
+    for(auto &x : ord) if(comp[x] == -1){
       rdfs(x, cnt);
       cnt++;
     }
     dag.resize(cnt);
     group.resize(cnt);
     for(int i = 0; i < n; i++){
-      for(int &x : root[i]){
+      for(auto &x : root[i]){
         int a = comp[i], b = comp[x];
         if(a == b) continue;
         dag[a].push_back(b);
@@ -59,6 +59,6 @@ struct scc {
   void rdfs(int pos, const int &cnt){
     if(comp[pos] != -1) return;
     comp[pos] = cnt;
-    for(int &x : rroot[pos]) rdfs(x, cnt);
+    for(auto &x : rroot[pos]) rdfs(x, cnt);
   }
 };
