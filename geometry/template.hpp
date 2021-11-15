@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 #include <complex>
+#include <cassert>
 using namespace std;
 
 using Point = complex<double>;
 constexpr double EPS = 1e-8;
 constexpr double PI = acos(-1);
+constexpr double INF = 1e10;
 
 bool eq(const double &a, const double &b){
   return fabs(b - a) < EPS;
@@ -34,15 +36,24 @@ double dot(const Point &a, const Point &b){
   return a.real() * b.real() + a.imag() * b.imag();
 }
 
+//直線
 struct Line {
   Point a,b;
   Line(){}
   Line(Point a, Point b) : a(a), b(b){}
 };
 
+//線分
+struct Segment : Line {
+  Segment(){}
+  Segment(Point a, Point b) : Line(a,b){}
+  Segment(Line a) : Line(a){}
+};
+
+//円
 struct Circle {
   Point p;
   double r;
   Circle(){};
-  Circle(Point p, Real r) : p(p), r(r){}
+  Circle(Point p, double r) : p(p), r(r){}
 };
