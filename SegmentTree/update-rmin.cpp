@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //一つの値を更新、区間の最小値/最大値
@@ -11,6 +12,7 @@ struct segmentTree {
     d.resize(2*n - 1, inf);
   }
   void update(int k, T x){
+    assert(0 <= k && k < n);
     k += n - 1;
     d[k] = x;
     while(k > 0){
@@ -18,15 +20,30 @@ struct segmentTree {
       d[k] = op(d[k*2+1], d[k*2+2]);
     }
   }
-  void set(int i, T x){ d[i + n - 1] = x; }
-  T &operator[](int i){ return d[i + n - 1]; }
+  void set(int i, T x){
+    assert(0 <= i && i < n);
+    d[i + n - 1] = x;
+  }
+  T &operator[](int i){
+    assert(0 <= i && i < n);
+    return d[i + n - 1];
+  }
   void build(){
     for(int k = n - 2; k >= 0; k--)
       d[k] = op(d[2*k+1], d[2*k+2]);
   }
-  T query(int l, int r){ return query_sub(l, r, 0, 0, n); }
-  int min_right(int l, int r, T x){ return min_right_sub(l, r, x, 0, 0, n); }
-  int min_left(int l, int r, T x){ return min_left_sub(l, r, x, 0, 0, n); }
+  T query(int l, int r){
+    assert(0 <= l && l < r && r < n);
+    return query_sub(l, r, 0, 0, n);
+  }
+  int min_right(int l, int r, T x){
+    assert(0 <= l && l < r && r < n);
+    return min_right_sub(l, r, x, 0, 0, n);
+  }
+  int min_left(int l, int r, T x){
+    assert(0 <= l && l < r && r < n);
+    return min_left_sub(l, r, x, 0, 0, n);
+  }
   void debug(int l = 0, int r = -1){
     if(r == -1) r = n;
     cerr << "[" << l << "," << r << "): ";

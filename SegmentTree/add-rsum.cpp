@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //一つの値を加算、区間和
@@ -10,9 +11,11 @@ template<class T> struct bit{
     d.resize(n);
   }
   T sum(int l, int r){
+    assert(0 <= l && r < n);
     return sum(r) - sum(l);
   }
   void add(int i, T x){
+    assert(0 <= i && i < n);
     i++;
     while(i <= n){
       d[i - 1] += x;

@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //区間更新、区間の最小値/最大値
@@ -11,12 +12,34 @@ struct segmentTree {
     d.resize(2*n - 1, inf);
     lazy.resize(2*n - 1, inf);
   }
-  void set(int i, T x){ d[i + n - 1] = x; }
-  T &operator[](int i){ return d[i + n - 1]; }
+  void set(int i, T x){
+    assert(0 <= i && i < n);
+    d[i + n - 1] = x;
+  }
   void build(){
     for(int k = n - 2; k >= 0; k--)
       d[k] = min(d[k * 2 + 1], d[k * 2 + 2]);
   }
+  void update(int a, int b, T x){
+    assert(0 <= a && a < b && b < n);
+    update(a, b, x, 0, 0, n);
+  }
+  T query(int a, int b){
+    assert(0 <= a && a < b && b < n);
+    return query_sub(a, b, 0, 0, n);
+  }
+  int min_right(int l, int r, T x){
+    assert(0 <= a && a < b && b < n);
+    return min_right_sub(l, r, x, 0, 0, n);
+  }
+  int min_left(int l, int r, T x){
+    assert(0 <= a && a < b && b < n);
+    return min_left_sub(l, r, x, 0, 0, n);
+  }
+  private:
+  T inf = numeric_limits<T>::max();
+  int n = 1;
+  vector<T> d, lazy;
   void eval(int k){
     if(lazy[k] == inf) return;
     if(k < n - 1){
@@ -26,14 +49,6 @@ struct segmentTree {
     d[k] = lazy[k];
     lazy[k] = inf;
   }
-  void update(int a, int b, T x){ update(a, b, x, 0, 0, n); }
-  T query(int a, int b){ return query_sub(a, b, 0, 0, n); }
-  int min_right(int l, int r, T x){ return min_right_sub(l, r, x, 0, 0, n); }
-  int min_left(int l, int r, T x){ return min_left_sub(l, r, x, 0, 0, n); }
-  private:
-  T inf = numeric_limits<T>::max();
-  int n = 1;
-  vector<T> d, lazy;
   void update(int a, int b, T x, int k, int l, int r){
     eval(k);
     if(a <= l && r <= b){

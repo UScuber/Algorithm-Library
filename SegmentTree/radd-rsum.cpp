@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //区間加算、区間和
@@ -9,13 +10,22 @@ template<class T> struct segmentTree {
     d.resize(2 * n - 1);
     lazy.resize(2 * n - 1);
   }
-  void set(int i, T x){ d[i + n - 1] += x; }
+  void set(int i, T x){
+    assert(0 <= i && i < n);
+    d[i + n - 1] += x;
+  }
   void build(){
     for(int i = n - 2; i >= 0; i--)
       d[i] = d[i * 2 + 1] + d[i * 2 + 2];
   }
-  void add(int l, int r, T x){ add(l, r, x, 0, 0, n); }
-  T sum(int l, int r){ return sum(l, r, 0, 0, n); }
+  void add(int l, int r, T x){
+    assert(0 <= l && l < r && r < n);
+    add(l, r, x, 0, 0, n);
+  }
+  T sum(int l, int r){
+    assert(0 <= l && l < r && r < n);
+    return sum(l, r, 0, 0, n);
+  }
   private:
   int n = 1;
   vector<T> d, lazy;

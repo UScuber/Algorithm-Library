@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //区間の更新、区間和
@@ -12,13 +13,22 @@ template <class T> struct segmentTree {
     si[0] = n;
     for(int i = 1; i < n*2 - 1; i++) si[i] = si[(i-1) / 2] / 2;
   }
-  void set(int i, T x){ d[i + n - 1] = x; }
+  void set(int i, T x){
+    assert(0 <= i && i < n);
+    d[i + n - 1] = x;
+  }
   void build(){
     for(int i = n - 2; i >= 0; i--)
       d[i] = d[i*2+1] + d[i*2+2];
   }
-  void update(int a, int b, T x){ update_sub(a, b, 0, 0, n, x); }
-  T query(int a, int b){ return query_sub(a, b, 0, 0, n); }
+  void update(int a, int b, T x){
+    assert(0 <= a && a < b && b < n);
+    update_sub(a, b, 0, 0, n, x);
+  }
+  T query(int a, int b){
+    assert(0 <= a && a < b && b < n);
+    return query_sub(a, b, 0, 0, n);
+  }
   private:
   vector<T> d, lazy, si;
   int n = 1;

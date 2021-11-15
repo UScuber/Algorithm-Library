@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 //区間加算、区間の最小値/最大値
@@ -12,16 +13,30 @@ struct segmentTree {
     lazy.resize(2*n - 1, 0);
     d[0] = sum_unity;
   }
-  void set(int i, T x){ d[i + n - 1] += x; }
-  T &operator[](int i){ return d[i + n - 1]; }
+  void set(int i, T x){
+    assert(0 <= i && i < n);
+    d[i + n - 1] += x;
+  }
   void build(){
     for(int i = n - 2; i >= 0; i--)
       d[i] = op(d[i*2+1], d[i*2+2]);
   }
-  void add(int a, int b, T x){ add_sub(a, b, x, 0, 0, n); }
-  T query(int a,int b){ return query_sub(a, b, 0, 0, n); }
-  int min_right(int l, int r, T x){ return min_right_sub(l, r, x, 0, 0, n); }
-  int min_left(int l, int r, T x){ return min_left_sub(l, r, x, 0, 0, n); }
+  void add(int a, int b, T x){
+    assert(0 <= a && a < b && b < n);
+    add_sub(a, b, x, 0, 0, n);
+  }
+  T query(int a, int b){
+    assert(0 <= a && a < b && b < n);
+    return query_sub(a, b, 0, 0, n);
+  }
+  int min_right(int l, int r, T x){
+    assert(0 <= a && a < b && b < n);
+    return min_right_sub(l, r, x, 0, 0, n);
+  }
+  int min_left(int l, int r, T x){
+    assert(0 <= a && a < b && b < n);
+    return min_left_sub(l, r, x, 0, 0, n);
+  }
   private:
   vector<T> d, lazy;
   int n = 1;
