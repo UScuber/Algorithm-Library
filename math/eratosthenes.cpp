@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 using ll = long long;
 
@@ -14,13 +15,13 @@ struct range_factorization {
     large.resize(R-L);
     aux.assign(R-L, 1);
 
-    for (ll i = 2; i*i < R; ++i){
+    for(ll i = 2; i*i < R; i++){
       if(small[i] < i) continue;
       small[i] = i;
       for(ll j = i*i; j < M; j += i){
         if(small[j] == j) small[j] = i;
       }
-      for(ll j = max(i, L+i-1)/i*i; j < R; j += i){
+      for(ll j = max(2*i, L+i-1)/i*i; j < R; j += i){
         ll k = j;
         //素因数の積がsqrt(R)を超えるまで素因数を探す
         while(k % i == 0){
@@ -33,6 +34,7 @@ struct range_factorization {
     }
   }
   vector<ll> factor(ll n){
+    assert(L <= n && n < R);
     vector<ll> res = large[n - L];
     n /= aux[n-L];
     if(n >= M){
