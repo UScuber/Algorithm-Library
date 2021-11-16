@@ -4,8 +4,9 @@ using namespace std;
 //Union Find
 struct UnionFind {
   vector<int> d;
-  UnionFind(int n): d(n,-1) {}
-  int root(int x) {
+  UnionFind(int n): n(n), d(n, -1){}
+  int root(int x){
+    assert(0 <= x && x < n);
     if(d[x] < 0) return x;
     return d[x] = root(d[x]);
   }
@@ -13,7 +14,7 @@ struct UnionFind {
     x = root(x);
     y = root(y);
     if(x == y) return false;
-    if(d[x] > d[y]) swap(x,y);
+    if(d[x] > d[y]) swap(x, y);
     d[x] += d[y];
     d[y] = x;
     return true;
@@ -24,20 +25,23 @@ struct UnionFind {
   int size(int x){
     return -d[root(x)];
   }
+  private:
+  int n;
 };
 
 
 
 
 //重み付きUnion Find
-struct UnionFindW{
+struct UnionFindW {
   vector<int> par, rank;
   vector<int> diff_weight;
 
-  UnionFindW(int n = 1, int sum_unity = 0) : par(n), rank(n), diff_weight(n){
+  UnionFindW(int n = 1, int sum_unity = 0) : n(n), par(n), rank(n), diff_weight(n){
     for(int i = 0; i < n; i++) par[i] = i, rank[i] = 0, diff_weight[i] = sum_unity;
   }
   int root(int x){
+    assert(0 <= x && x < n);
     if(par[x] == x){
       return x;
     }else{
@@ -66,4 +70,6 @@ struct UnionFindW{
   int diff(int x, int y){
     return weight(y) - weight(x);
   }
+  private:
+  int n;
 };
