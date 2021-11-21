@@ -11,7 +11,7 @@ template<class T> struct bit{
     d.resize(n);
   }
   T sum(int l, int r){
-    assert(0 <= l && r < n);
+    assert(0 <= l && l <= r && r <= n);
     return sum(r) - sum(l);
   }
   void add(int i, T x){

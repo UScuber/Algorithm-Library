@@ -20,20 +20,20 @@ struct segmentTree {
     for(int k = n - 2; k >= 0; k--)
       d[k] = min(d[k * 2 + 1], d[k * 2 + 2]);
   }
-  void update(int a, int b, T x){
-    assert(0 <= a && a < b && b < n);
-    update(a, b, x, 0, 0, n);
+  void update(int l, int r, T x){
+    assert(0 <= l && l <= r && r <= n);
+    update(l, r, x, 0, 0, n);
   }
-  T query(int a, int b){
-    assert(0 <= a && a < b && b < n);
-    return query_sub(a, b, 0, 0, n);
+  T query(int l, int r){
+    assert(0 <= l && l <= r && r <= n);
+    return query_sub(l, r, 0, 0, n);
   }
   int min_right(int l, int r, T x){
-    assert(0 <= a && a < b && b < n);
+    assert(0 <= l && l <= r && r <= n);
     return min_right_sub(l, r, x, 0, 0, n);
   }
   int min_left(int l, int r, T x){
-    assert(0 <= a && a < b && b < n);
+    assert(0 <= l && l <= r && r <= n);
     return min_left_sub(l, r, x, 0, 0, n);
   }
   private:

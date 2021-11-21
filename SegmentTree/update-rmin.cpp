@@ -33,15 +33,15 @@ struct segmentTree {
       d[k] = op(d[2*k+1], d[2*k+2]);
   }
   T query(int l, int r){
-    assert(0 <= l && l < r && r < n);
+    assert(0 <= l && l <= r && r <= n);
     return query_sub(l, r, 0, 0, n);
   }
   int min_right(int l, int r, T x){
-    assert(0 <= l && l < r && r < n);
+    assert(0 <= l && l <= r && r <= n);
     return min_right_sub(l, r, x, 0, 0, n);
   }
   int min_left(int l, int r, T x){
-    assert(0 <= l && l < r && r < n);
+    assert(0 <= l && l <= r && r <= n);
     return min_left_sub(l, r, x, 0, 0, n);
   }
   void debug(int l = 0, int r = -1){

@@ -21,13 +21,13 @@ template <class T> struct segmentTree {
     for(int i = n - 2; i >= 0; i--)
       d[i] = d[i*2+1] + d[i*2+2];
   }
-  void update(int a, int b, T x){
-    assert(0 <= a && a < b && b < n);
-    update_sub(a, b, 0, 0, n, x);
+  void update(int l, int r, T x){
+    assert(0 <= l && l <= r && r <= n);
+    update_sub(l, r, 0, 0, n, x);
   }
-  T query(int a, int b){
-    assert(0 <= a && a < b && b < n);
-    return query_sub(a, b, 0, 0, n);
+  T query(int l, int r){
+    assert(0 <= l && l <= r && r <= n);
+    return query_sub(l, r, 0, 0, n);
   }
   private:
   vector<T> d, lazy, si;

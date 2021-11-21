@@ -19,11 +19,11 @@ template<class T> struct segmentTree {
       d[i] = d[i * 2 + 1] + d[i * 2 + 2];
   }
   void add(int l, int r, T x){
-    assert(0 <= l && l < r && r < n);
+    assert(0 <= l && l <= r && r <= n);
     add(l, r, x, 0, 0, n);
   }
   T sum(int l, int r){
-    assert(0 <= l && l < r && r < n);
+    assert(0 <= l && l <= r && r <= n);
     return sum(l, r, 0, 0, n);
   }
   private:
