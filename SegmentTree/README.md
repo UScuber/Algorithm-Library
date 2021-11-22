@@ -42,3 +42,18 @@ segmentTree<T>(int x)
 ```cpp
 segmentTree<T, const T&(*op)(const T&,const T&)>(int x, T sum_unity = T())
 ```
+
+## 2d-segtree
+- 2D Segment Tree
+- 一点更新、長方形の区間でsum/min/max
+- idは初期値
+```cpp
+SegmentTree2D<T, T(*op)(const T&,const T&), T id>(int _h, int _w)
+```
+- 例
+```cpp
+int op(const int &a, const int &b){
+  return a + b;
+}
+SegmentTree2D<int, op, 0> seg2d(h, w);
+```
