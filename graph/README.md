@@ -16,6 +16,7 @@ bool same(int x, int y)
 ```cpp
 int size(int x)
 ```
+- verified: https://judge.yosupo.jp/submission/57767
 
 ## Weighted UnionFind
 - 重み付きUnionFind
@@ -34,6 +35,7 @@ bool same(int x, int y)
 ```cpp
 int diff(int x, int y)
 ```
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_1_B/review/5295028/US_cube/C++17
 
 ## lca
 - Longest Common Ancestor(最小共通祖先)
@@ -44,6 +46,7 @@ lca(const graph &G, int root = 0)
 ```cpp
 int lca::query(int u, int v)
 ```
+- verified: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
 
 ## cycle detect
 - 閉路を検出し、そのうち１つの閉路の頂点集合を返す
@@ -51,6 +54,7 @@ int lca::query(int u, int v)
 ```cpp
 vector<edge<int>> detect(const graph &root)
 ```
+- verified: https://judge.yosupo.jp/submission/65892
 
 ## bellman ford
 - ベルマンフォード法
@@ -73,6 +77,7 @@ const T &operator[](const int &i)
 ```cpp
 bool is_cycle(const int &i)
 ```
+- verified: https://atcoder.jp/contests/abc061/submissions/27291957
 
 ## kruskal
 - 最小全域木を求める
@@ -93,9 +98,11 @@ scc(const graph &g);
 ```cpp
 void build()
 ```
+- verified: https://atcoder.jp/contests/typical90/submissions/24733706
 
 ## center
 - 木の中心を求める
 ```cpp
 vector<int> find_centor(const graph &g)
 ```
+- verified: https://atcoder.jp/contests/abc221/submissions/27165381

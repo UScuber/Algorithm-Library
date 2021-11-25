@@ -6,6 +6,7 @@
 ```cpp
 vector<T> slide_min(const vector<T> &a, int k);
 ```
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_3_D/review/6071329/US_cube/C++11
 
 ## SWAG
 - Sliding Window Aggregation
@@ -32,3 +33,4 @@ void SWAG::push_back(T x);
 ```cpp
 void SWAG::pop();
 ```
+- verified: https://judge.yosupo.jp/submission/67274

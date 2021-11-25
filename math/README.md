@@ -18,6 +18,7 @@ ll modPow(ll a, ll n, ll p)
 ```cpp
 ll ext_gcd(ll a, ll b, ll &x, ll &y)
 ```
+- verified: https://atcoder.jp/contests/abc186/submissions/25334469
 
 ## 4. crt
 - Chinese Remainder Theorem(中国剰余定理)
@@ -28,6 +29,7 @@ ll ext_gcd(ll a, ll b, ll &x, ll &y)
 ```cpp
 pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2)
 ```
+- verified: https://atcoder.jp/contests/abc193/submissions/25333960
 
 ## 5. euler
 - オイラー関数
@@ -36,6 +38,7 @@ pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2)
 ```cpp
 ll euler(ll n)
 ```
+- verified: https://atcoder.jp/contests/abc212/submissions/24730963
 
 ## 6. matrix
 - 行列の計算を行う
@@ -82,6 +85,7 @@ range_factorization(ll L, ll R)
 ```cpp
 vector<ll> range_factorization::factor(ll n)
 ```
+- verified: https://atcoder.jp/contests/abc227/submissions/27264629
 
 ## 9. range_eratosthenes
 - 区間$[L,R)$の素数判定を行う
