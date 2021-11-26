@@ -60,6 +60,8 @@ matrix matrix::det()
 ```cpp
 matrix matrix::inv()
 ```
+- verified(product): https://judge.yosupo.jp/submission/67877
+- verified(determinant): https://judge.yosupo.jp/submission/67882
 
 ## 7. mint
 - 計算途中でmodをとってくれる型

@@ -1,28 +1,33 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 template<class T> struct matrix {
+  int n,m;
+  private:
+  vector<vector<T>> a;
+  public:
   matrix(int n) : n(n), m(n), a(n, vector<T>(n)){}
   matrix(int n, int m) : n(n), m(m), a(n, vector<T>(m)){}
   vector<T> &operator[](const int &i){ return a[i]; }
   matrix &operator*=(const matrix &b){
-    if(m != b.n) return *this;
+    assert(m == b.n);
     vector<vector<T>> c(n, vector<T>(b.m));
-    for(int i = 0; i < n; i++) for(int j = 0; j < b.m; j++)
-    for(int k = 0; k < m; k++){
-      c[i][j] += a[i][k] * b.a[k][j];
+    for(int i = 0; i < n; i++) for(int j = 0; j < m; j++)
+    for(int k = 0; k < b.m; k++){
+      c[i][k] += a[i][j] * b.a[j][k];
     }
     a = c;
     return *this;
   }
   matrix &operator+=(const matrix &b){
-    if(n != b.n || m != b.m) return *this;
+    assert(n == b.n && m == b.m);
     for(int i = 0; i < n; i++) for(int j = 0; j < m; j++)
       a[i][j] += b.a[i][j];
     return *this;
   }
   matrix &operator-=(const matrix &b){
-    if(n != b.n || m != b.m) return *this;
+    assert(n == b.n && m == b.m);
     for(int i = 0; i < n; i++) for(int j = 0; j < m; j++)
       a[i][j] -= b.a[i][j];
     return *this;
@@ -31,7 +36,7 @@ template<class T> struct matrix {
   matrix operator+(const matrix &b) const{ return matrix(*this) += b; }
   matrix operator-(const matrix &b) const{ return matrix(*this) -= b; }
   matrix pow(ll t) const{
-    if(n != m) return false;
+    assert(n == m);
     matrix<T> b(n), c = *this;
     for(int i = 0; i < n; i++) b[i][i] = 1;
     while(t > 0){
@@ -42,7 +47,7 @@ template<class T> struct matrix {
     return b;
   }
   T det() const{
-    if(n != m) return false;
+    assert(n == m);
     matrix b = *this;
     T res(1);
     for(int i = 0; i < n; i++){
@@ -66,7 +71,7 @@ template<class T> struct matrix {
     return res;
   }
   matrix inv(){
-    if(n != m) return false;
+    assert(n == m);
     matrix b(n), c = *this;
     for(int i = 0; i < n; i++) b[i][i] = 1;
     int r = 0;
@@ -100,7 +105,4 @@ template<class T> struct matrix {
       cerr << "\n";
     }
   }
-  int n,m;
-  private:
-  vector<vector<T>> a;
 };
