@@ -2,7 +2,7 @@
 #include <cassert>
 using namespace std;
 
-template <class T, T(*op)(const T&,const T&), T id>
+template <class T, T(*op)(const T&, const T&), const T(*e)()>
 struct SegmentTree2D {
   int h,w, logh,logw;
   vector<vector<T>> d;
@@ -12,47 +12,46 @@ struct SegmentTree2D {
     logh = logw = 1;
     while((h <<= 1) < _h) logh++;
     while((w <<= 1) < _w) logw++;
-    d.resize(h * 2, vector<T>(2 * w, id));
+    d.resize(h * 2, vector<T>(2 * w, e()));
   }
   void set(int i, int j, T x){
-    d[i + h][j + w] = x;
+    d[i + h][j + w] += x;
   }
   void build(){
     for(int i = 2*h-1; i >= h ; i--){
-      for(int j = w - 1; j >= 1; j--){
+      for(int j = w - 1; j >= 1; j--)
         updateX(i,j);
-      }
     }
     for(int i = h-1; i >= 1; i--){
-      for(int j = 2*w-1 ; j >= 1; j--){
+      for(int j = 2*w-1 ; j >= 1; j--)
         updateY(i,j);
-      }
     }
   }
   void update(int py, int px, T x){
     assert(0 <= py && py < h);
     assert(0 <= px && px < w);
     py += h, px += w;
-    d[py][px] = x;
+    d[py][px] += x;
     for(int j = 1; j <= logw; j++){
-      updateX(py, px>>j);
+      updateX(py,px>>j);
     }
     for(int i = 1; i <= logh; i++){
       for(int j = 0 ; j <= logw; j++){
-        updateY(py>>i, px>>j);
+        updateY(py >> i, px >> j);
       }
     }
   }
-  T get(int i, int j){
-    assert(0 <= i && i < h);
-    assert(0 <= j && j < w);
-    return d[i + h][j + w];
+  T get(int py, int px){
+    assert(0 <= py && py < h);
+    assert(0 <= px && px < w);
+    return d[py + h][px + w];
   }
   T query(int ly, int lx, int ry , int rx){
     assert(0 <= ly && ly <= ry && ry <= h);
     assert(0 <= lx && lx <= rx && rx <= w);
-    T sml = id, smr = id;
-    ly += h, ry += h;
+    T sml = e(), smr = e();
+    ly += h;
+    ry += h;
     while(ly < ry){
       if(ly & 1) sml = op(sml, query_sub(lx, rx, ly++));
       if(ry & 1) smr = op(query_sub(lx, rx, --ry), smr);
@@ -63,8 +62,9 @@ struct SegmentTree2D {
   }
   private:
   T query_sub(int lx, int rx, int y){
-    T sml = id, smr = id;
-    lx += w, rx += w;
+    T sml = e(), smr = e();
+    lx += w;
+    rx += w;
     while(lx < rx){
       if(lx & 1) sml = op(sml, d[y][lx++]);
       if(rx & 1) smr = op(d[y][--rx], smr);
@@ -81,6 +81,11 @@ struct SegmentTree2D {
   }
 };
 
-int op(const int &a, const int &b){
+template <class T>
+T op(const T &a, const T &b){
   return a + b;
+}
+template <class T>
+const T e(){
+  return 0;
 }

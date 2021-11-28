@@ -64,3 +64,4 @@ int op(const int &a, const int &b){
 }
 SegmentTree2D<int, op, 0> seg2d(h, w);
 ```
+- verified: https://atcoder.jp/contests/abc228/submissions/27566771
