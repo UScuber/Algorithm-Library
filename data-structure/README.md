@@ -34,3 +34,19 @@ void SWAG::push_back(T x);
 void SWAG::pop();
 ```
 - verified: https://judge.yosupo.jp/submission/67274
+
+## SparseTable
+- 区間min/max(更新なし)
+```cpp
+SparseTable<class T, const T&(*op)(const T&,const T&)>(int n);
+SparseTable<class T, const T&(*op)(const T&,const T&)>(const vector<T> &a);
+```
+- 構築(値の入力が終わったら実行する) O(NlogN)
+```cpp
+void build();
+```
+- 区間min/maxを求める O(1)
+```cpp
+int query(int l, int r);
+```
+- verified: https://judge.yosupo.jp/submission/68186
