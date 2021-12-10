@@ -8,10 +8,11 @@ T lcm(T a, T b)
 ```
 
 ## 2. modPow
-- $a^n$ mod p を求める
+- $a^n \mod p $ を求める
 ```cpp
 ll modPow(ll a, ll n, ll p)
 ```
+- verified: https://atcoder.jp/contests/abc228/submissions/27797359
 
 ## 3. ext_gcd
 - $gcd(a,b)$と、$ax+by=gcd(a,b)$を満たす整数$x,y$を求める

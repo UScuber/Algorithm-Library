@@ -16,11 +16,14 @@ T lcm(T a, T b){
 
 
 ll modPow(ll a, ll n, ll p){
-  if(!n) return 1;
-  if(n == 1) return a % p;
-  if(n & 1) return (a * modPow(a, n - 1, p)) % p;
-  ll t = modPow(a, n / 2, p);
-  return (t * t) % p;
+  a %= p;
+  ll res = 1;
+  while(n){
+    if(n & 1) (res *= a) %= p;
+    (a *= a) %= p;
+    n >>= 1;
+  }
+  return res;
 }
 
 
