@@ -50,3 +50,19 @@ void build();
 int query(int l, int r);
 ```
 - verified: https://judge.yosupo.jp/submission/68186
+
+## Cumulative Sum 2D
+- 二次元累積和
+```cpp
+CumulativeSum2D<class T>(int h, int w);
+CumulativeSum2D<class T>(const vector<vector<T>> &v);
+```
+- 構築
+```cpp
+void build();
+```
+- 長方形の区間の和を求める
+```cpp
+T query(int ly, int lx, int ry, int rx);
+```
+- verified: https://atcoder.jp/contests/abc005/submissions/27791299
