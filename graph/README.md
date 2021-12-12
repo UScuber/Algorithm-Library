@@ -4,7 +4,7 @@
 ```cpp
 UnionFind(int n)
 ```
-- 頂点$x,y$を接続
+- 頂点x,yを接続
 ```cpp
 bool unite(int x, int y)
 ```
@@ -23,7 +23,7 @@ int size(int x)
 ```cpp
 UnionFindW(int n = 1, int sum_unity = 0)
 ```
-- 頂点$x,y$を$w$で接続
+- 頂点x,yを重みwで接続
 ```cpp
 bool merge(int x, int y, int w)
 ```
@@ -31,11 +31,42 @@ bool merge(int x, int y, int w)
 ```cpp
 bool same(int x, int y)
 ```
-- $x$と$y$の重みの差を求める
+- xとyの重みの差を求める
 ```cpp
 int diff(int x, int y)
 ```
 - verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_1_B/review/5295028/US_cube/C++17
+
+## Undo UnionFind
+- Undoが可能なUnionFind
+```cpp
+UndoUnionFind(int n)
+```
+- 頂点x,yを接続
+```cpp
+bool unite(int x, int y)
+```
+- 同じ集合か判定
+```cpp
+bool same(int x, int y)
+```
+- その頂点を含む集合の大きさを求める
+```cpp
+int size(int x)
+```
+- 一つ前の状態に戻す
+```cpp
+void undo()
+```
+- 最初の状態に戻す
+```cpp
+void rollback()
+```
+- 現在の状態を保存する
+- これ以降、rollbackした後はこの状態に戻る
+```cpp
+void snapshot()
+```
 
 ## lca
 - Longest Common Ancestor(最小共通祖先)
