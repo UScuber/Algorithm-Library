@@ -73,7 +73,7 @@ void snapshot()
 ```cpp
 lca(const graph &G, int root = 0)
 ```
-- $x$と$y$の最小共通祖先を求める
+- xとyの最小共通祖先を求める
 ```cpp
 int lca::query(int u, int v)
 ```
@@ -90,16 +90,16 @@ vector<edge<int>> detect(const graph &root)
 ## bellman ford
 - ベルマンフォード法
 - 負のコストを含めた最短経路を求める
-- $O(NM)$
+- O(NM)
 ```cpp
 bellman_ford<T, const T&(*op)(const T&, const T&)>(int n);
 bellman_ford<T, const T&(*op)(const T&, const T&)>(const Graph<T> &r);
 ```
-- 頂点$s$を始点として最短経路を求める
+- 頂点sを始点として最短経路を求める
 ```cpp
 void solve(int s)
 ```
-- $i$までの最短距離を`変数名[i]`で取得
+- i までの最短距離を`変数名[i]`で取得
 - 負閉路の場合はinfが出力される
 ```cpp
 const T &operator[](const int &i)

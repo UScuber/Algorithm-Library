@@ -2,7 +2,7 @@
 
 ## slide-min
 - スライド最小値
-- $min(a_i, a_{i+1}, \cdots, a_{\min(N-1,i+k)}) $を求める($0 \leq i \leq N - 1$)
+- min(a_i, a_{i+1}, ... , a_{min(N-1,i+k)}) を求める(0 <= i < N)
 ```cpp
 vector<T> slide_min(const vector<T> &a, int k);
 ```

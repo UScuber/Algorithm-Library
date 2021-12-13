@@ -8,14 +8,14 @@ T lcm(T a, T b)
 ```
 
 ## 2. modPow
-- $a^n \mod p $ を求める
+- a^n mod.pを求める
 ```cpp
 ll modPow(ll a, ll n, ll p)
 ```
 - verified: https://atcoder.jp/contests/abc228/submissions/27797359
 
 ## 3. ext_gcd
-- $gcd(a,b)$と、$ax+by=gcd(a,b)$を満たす整数$x,y$を求める
+- gcd(a,b)と、ax+by=gcd(a,b)を満たす整数x,yを求める
 ```cpp
 ll ext_gcd(ll a, ll b, ll &x, ll &y)
 ```
@@ -23,10 +23,10 @@ ll ext_gcd(ll a, ll b, ll &x, ll &y)
 
 ## 4. crt
 - Chinese Remainder Theorem(中国剰余定理)
-- $x \equiv b_1 \mod m_1$
-- $x \equiv b_2 \mod m_2$
-- が成り立つ最小の$x$を求める
-- 存在しない場合は{0, -1}を返す
+- x ≡ b1 mod.m1
+- x ≡ b2 mod.m2
+- が成り立つ最小のxを求める
+- 存在しない場合は{ 0, -1 }を返す
 ```cpp
 pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2)
 ```
@@ -34,8 +34,8 @@ pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2)
 
 ## 5. euler
 - オイラー関数
-- $\varphi(n)$を求める
-- $O(\sqrt n)$
+- φ(n)を求める
+- O(sqrt(n))
 ```cpp
 ll euler(ll n)
 ```
@@ -43,12 +43,12 @@ ll euler(ll n)
 
 ## 6. matrix
 - 行列の計算を行う
-- $n \times n$行列または、$n \times m$行列を生成
+- n×n行列または、n×m行列を生成
 ```cpp
 matrix(int n)
 matrix(int n, int m)
 ```
-- $A^t$を求める
+- A^tを求める
 ```cpp
 matrix matrix::pow(ll t)
 ```
@@ -73,14 +73,14 @@ mint(ll x = 0)
 ```cpp
 mint mint::inv()
 ```
-- $x^t \mod p$を求める
+- x^t mod.pを求める
 ```cpp
 mint mint::pow(ll t)
 ```
 
 ## 8. range_factorization
-- 区間$[L,R)$の素因数分解をする
-- $O((R-L)logR)$
+- 区間[L,R)の素因数分解をする
+- O((R-L)logR)
 ```cpp
 range_factorization(ll L, ll R)
 ```
@@ -91,8 +91,8 @@ vector<ll> range_factorization::factor(ll n)
 - verified: https://atcoder.jp/contests/abc227/submissions/27264629
 
 ## 9. range_eratosthenes
-- 区間$[L,R)$の素数判定を行う
-- $O((R-L)log log R)$
+- 区間[L,R)の素数判定を行う
+- O((R-L)log(logR))
 ```cpp
 range_eratosthenes(ll L, ll R)
 ```
