@@ -8,7 +8,7 @@ template<class T, const T&(*op)(const T&,const T&)>
 struct segmentTree {
   segmentTree(int x){
     while(x > n) n *= 2;
-    inf = -op(inf, -inf);
+    inf = -op(inf-1, -inf+1);
     d.resize(2*n - 1, inf);
     lazy.resize(2*n - 1, inf);
   }

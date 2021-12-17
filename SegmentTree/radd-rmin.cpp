@@ -8,7 +8,7 @@ template<class T, const T&(*op)(const T&,const T&)>
 struct segmentTree {
   segmentTree(int x, const T &sum_unity = T()){
     while(x > n) n *= 2;
-    inf = -op(inf, -inf);
+    inf = -op(inf-1, -inf+1);
     d.resize(2*n - 1);
     lazy.resize(2*n - 1, 0);
     d[0] = sum_unity;

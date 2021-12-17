@@ -22,13 +22,6 @@ template<class T> struct bit{
       i += i & -i;
     }
   }
-
-  void debug(int l = 0, int r = -1){
-    if(r == -1) r = n;
-    cerr << "[" << l << "," << r << "): ";
-    for(int i = l; i < r; i++) cerr << d[i] << " ";
-    cerr << "\n";
-  }
   private:
   int n = 1;
   vector<T> d;
