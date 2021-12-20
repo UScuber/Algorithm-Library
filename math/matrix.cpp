@@ -9,6 +9,7 @@ template<class T> struct matrix {
   public:
   matrix(int n) : n(n), m(n), a(n, vector<T>(n)){}
   matrix(int n, int m) : n(n), m(m), a(n, vector<T>(m)){}
+  matrix(const vector<vector<T>> &d) : a(d), n(d.size()), m(d[0].size()){}
   vector<T> &operator[](const int &i){ return a[i]; }
   matrix &operator*=(const matrix &b){
     assert(m == b.n);
@@ -42,7 +43,7 @@ template<class T> struct matrix {
     while(t > 0){
       if(t & 1) b *= c;
       c *= c;
-      t /= 2;
+      t >= 2;
     }
     return b;
   }
