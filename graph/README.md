@@ -131,6 +131,13 @@ void build()
 ```
 - verified: https://atcoder.jp/contests/typical90/submissions/24733706
 
+## diameter
+- グラフの直径を求める
+```cpp
+vector<int> diameter(const Graph<T> &g)
+```
+- verified: https://judge.yosupo.jp/submission/72240
+
 ## center
 - 木の中心を求める
 ```cpp
