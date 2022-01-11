@@ -78,7 +78,25 @@ mint mint::inv()
 mint mint::pow(ll t)
 ```
 
-## 8. range_factorization
+## 8. combination
+- nCr, nPr, nHr の計算をする
+- lenの値でnの上限を設定し、プログラム開始時に前計算を行う
+```cpp
+```
+- nCrを求める
+```cpp
+mint C(int n, int r)
+```
+- nPrを求める
+```cpp
+mint C(int n, int r)
+```
+- nHrを求める
+```cpp
+mint H(int n, int r)
+```
+
+## 9. range_factorization
 - 区間[L,R)の素因数分解をする
 - O((R-L)logR)
 ```cpp
@@ -90,7 +108,7 @@ vector<ll> range_factorization::factor(ll n)
 ```
 - verified: https://atcoder.jp/contests/abc227/submissions/27264629
 
-## 9. range_eratosthenes
+## 10. range_eratosthenes
 - 区間[L,R)の素数判定を行う
 - O((R-L)log(logR))
 ```cpp
@@ -101,7 +119,7 @@ range_eratosthenes(ll L, ll R)
 bool range_eratosthenes::is_prime(const ll &n)
 ```
 
-## 10. frac
+## 11. frac
 - 分数での計算を行う
 ```cpp
 frac(const ll a = 0, const ll b = 1)
