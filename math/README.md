@@ -81,6 +81,7 @@ mint mint::pow(ll t)
 ## 8. combination
 - nCr, nPr, nHr の計算をする
 - lenの値でnの上限を設定し、プログラム開始時に前計算を行う
+- 前計算: O(N), nCr: O(1)
 ```cpp
 ```
 - nCrを求める
@@ -96,7 +97,22 @@ mint C(int n, int r)
 mint H(int n, int r)
 ```
 
-## 9. range_factorization
+## 9. nCr mod P
+- nCr mod P を求める(Pは素数)
+- lenの値でnの上限を設定し、プログラム開始時に前計算を行う
+- 前計算: O(min(max(n,r),P)), nCr: O(log_P max(n,r))
+```cpp
+```
+- nCrを求める
+```cpp
+mint C(int n, int r)
+```
+- nHrを求める
+```cpp
+mint H(int n, int r)
+```
+
+## 10. range_factorization
 - 区間[L,R)の素因数分解をする
 - O((R-L)logR)
 ```cpp
@@ -108,7 +124,7 @@ vector<ll> range_factorization::factor(ll n)
 ```
 - verified: https://atcoder.jp/contests/abc227/submissions/27264629
 
-## 10. range_eratosthenes
+## 11. range_eratosthenes
 - 区間[L,R)の素数判定を行う
 - O((R-L)log(logR))
 ```cpp
@@ -119,7 +135,7 @@ range_eratosthenes(ll L, ll R)
 bool range_eratosthenes::is_prime(const ll &n)
 ```
 
-## 11. frac
+## 12. frac
 - 分数での計算を行う
 ```cpp
 frac(const ll a = 0, const ll b = 1)
