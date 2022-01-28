@@ -66,3 +66,58 @@ void build();
 T query(int ly, int lx, int ry, int rx);
 ```
 - verified: https://atcoder.jp/contests/abc005/submissions/27791299
+
+## Bit Vector
+- 完備辞書
+- 初期化
+```cpp
+BitVector(int len);
+```
+- 構築
+```cpp
+void build();
+```
+- k番目の値をbにする
+```cpp
+void set(const int &k, const int &b = 1);
+```
+- [0,k]にある val の数を求める O(1)
+```cpp
+int rank(const int &val, const int &k);
+```
+
+## Wavelet Matrix / Compressed Wavelet Matrix
+- ウェーブレット行列
+- 構築
+```cpp
+WaveletMatrix<class T, int maxlog>(vector<T> v);
+CompWaveletMatrix<class T, maxlog>(const vector<T> v);
+```
+- 計算量：O(maxlog)
+- v[k]の値を求める
+```cpp
+T access(int k);
+```
+- [0,r)の区間でxが現れる数を求める
+```cpp
+int rank(const T &x, int r);
+```
+- [l,r)の中でk番目に小さい/大きい値を求める
+```cpp
+T kth_smallest(int l, int r, int k);
+T kth_largest(int l, int r, int k);
+```
+- [l,r)のiについて lower <= v[i] < upper を満たすiの数を求める
+```cpp
+int range_freq(int l, int r, const T &lower, const T &upper);
+```
+- [l,r)のiについて v[i] < upper を満たす最大のv[i]を求める
+```cpp
+T prev_value(int l, int r, const T &upper);
+```
+- [l,r)のiについて lower <= v[i] を満たす最小のv[i]を求める
+```cpp
+T next_value(int l, int r, const T &lower);
+```
+- verified: https://judge.yosupo.jp/submission/76069
+- verified(Compressed): https://judge.yosupo.jp/submission/76070
