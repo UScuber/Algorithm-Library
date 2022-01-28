@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 using namespace std;
 
 //一つの値を加算、区間和

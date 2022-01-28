@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 using namespace std;
 
 template<class T> struct matrix {

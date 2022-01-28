@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <functional>
 #include "template.hpp"
 using namespace std;
 

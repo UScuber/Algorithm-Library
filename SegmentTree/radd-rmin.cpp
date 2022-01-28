@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 using namespace std;
 
 //区間加算、区間の最小値/最大値

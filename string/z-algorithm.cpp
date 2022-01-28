@@ -1,5 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 vector<int> z_algo(const string &s){
-  int n = s.size();
+  const int n = s.size();
   vector<int> z(n);
   z[0] = n;
   int i = 1, j = 0;

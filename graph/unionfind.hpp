@@ -77,7 +77,7 @@ struct UnionFindW {
 
 
 
-
+//Undo付きUnionFind
 struct UndoUnionFind {
   private:
   int n;

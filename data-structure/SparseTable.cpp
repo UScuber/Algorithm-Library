@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 using namespace std;
 
 template <class T, const T&(*op)(const T&,const T&)>

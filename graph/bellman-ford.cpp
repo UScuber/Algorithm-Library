@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 #include "template.hpp"
 using namespace std;
 

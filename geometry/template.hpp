@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
-#include <complex>
-#include <cassert>
 using namespace std;
 
 using Point = complex<double>;
 constexpr double EPS = 1e-8;
-constexpr double PI = acos(-1);
+const double PI = acos(-1);
 constexpr double INF = 1e10;
 
 bool eq(const double &a, const double &b){
