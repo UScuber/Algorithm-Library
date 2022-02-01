@@ -10,60 +10,55 @@ SegmentTree<class T,T(*op)(const T&,const T&),T(*e)()>(int _n)
 - 一点更新、区間min/max
 - opには`std::min,std::max`が入る
 ```cpp
-segmentTree<T, const T&(*op)(const T&,const T&)>(int x)
+SegmentTree<class T, const T&(*op)(const T&,const T&)>(int _n)
 ```
-- 例
-```cpp
-segmentTree<int, std::min> seg_min(n);
-segmentTree<int, std::max> seg_max(n);
-```
-- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_A/review/6077862/US_cube/C++11
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_A/review/6274049/US_cube/C++17
 
-## add - range sum
-- BIT(Binary Indexed Tree)
+## Binary Indexed Tree
 - 一点加算、区間和
 ```cpp
-bit<T>(int x)
+Bit<class T>(int _n)
 ```
-- verified: https://judge.yosupo.jp/submission/67889
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_B/review/6274064/US_cube/C++17
 
 
 # Lazy SegmentTree
 
 ## lazysegtree
+- 区間更新、区間取得
 ```cpp
 LazySegmentTree<class T, T(*op)(const T&,const T&), T(*e)(), class F,
           T(*mapping)(const F&,const T&), F(*composition)(const F&,const F&), F(*id)()>(int _n)
 ```
 
 ## range update - range min
-- 区間更新、区間min/max
+- 区間更新、区間min
 ```cpp
-segmentTree<T, const T&(*op)(const T&,const T&)>(int x)
+LazySegmentTree<class T>(int _n)
 ```
-- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_F/review/6077870/US_cube/C++11
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_F/review/6275233/US_cube/C++17
 
 ## range add - range sum
 - 区間加算、区間和
 ```cpp
-segmentTree<T>(int x)
+LazySegmentTree<class T>(int _n)
 ```
-- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_G/review/6077880/US_cube/C++11
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_G/review/6275225/US_cube/C++17
 
 ## range update - range sum
 - 区間更新、区間和
 ```cpp
-segmentTree<T>(int x)
+LazySegmentTree<class T>(int _n)
 ```
-- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_I/review/6077887/US_cube/C++11
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_I/review/6274079/US_cube/C++17
 
 ## range add - range min
 - Starry Sky Tree
-- 区間加算、区間min/max
+- 区間加算、区間min
 ```cpp
-segmentTree<T, const T&(*op)(const T&,const T&)>(int x, T sum_unity = T())
+LazySegmentTree<class T>(int _n)
 ```
-- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_H/review/6077890/US_cube/C++11
+- verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_H/review/6275215/US_cube/C++17
 
 ## liner segtree
 ```cpp

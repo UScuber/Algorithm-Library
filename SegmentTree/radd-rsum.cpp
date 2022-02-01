@@ -1,59 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//区間加算、区間和
-
-template<class T> struct segmentTree {
-  segmentTree(int x){
-    while(n < x) n *= 2;
-    d.resize(2 * n - 1);
-    lazy.resize(2 * n - 1);
+template <class T>
+struct LazySegmentTree {
+  LazySegmentTree(int _n) : n(_n){
+    while((1 << log) < n) log++;
+    len = 1 << log;
+    d.assign(len * 2, 0);
+    lazy.assign(len, 0);
+    si.assign(len * 2, 1);
+    for(int i = len - 1; i >= 1; i--) si[i] = si[i*2] << 1;
   }
-  void set(int i, T x){
+  void set(int i, const T &x){
     assert(0 <= i && i < n);
-    d[i + n - 1] += x;
+    d[i + len] = x;
+  }
+  T &operator[](int i){
+    assert(0 <= i && i < n);
+    return d[i + len];
   }
   void build(){
-    for(int i = n - 2; i >= 0; i--)
-      d[i] = d[i * 2 + 1] + d[i * 2 + 2];
+    for(int i = len - 1; i >= 1; i--) update(i);
   }
-  void add(int l, int r, T x){
+  void update(int l, int r, const T &x){
     assert(0 <= l && l <= r && r <= n);
-    add(l, r, x, 0, 0, n);
+    l += len; r += len;
+    for(int i = log; i >= 1; i--){
+      if((l >> i) << i != l) push(l >> i);
+      if((r >> i) << i != r) push((r - 1) >> i);
+    }
+    const int lt = l, rt = r;
+    while(l < r){
+      if(l & 1) apply(l++, x);
+      if(r & 1) apply(--r, x);
+      l >>= 1; r >>= 1;
+    }
+    l = lt; r = rt;
+    for(int i = 1; i <= log; i++){
+      if((l >> i) << i != l) update(l >> i);
+      if((r >> i) << i != r) update((r - 1) >> i);
+    }
   }
-  T sum(int l, int r){
+  T query(int l, int r){
     assert(0 <= l && l <= r && r <= n);
-    return sum(l, r, 0, 0, n);
+    l += len; r += len;
+    for(int i = log; i >= 1; i--){
+      if((l >> i) << i != l) push(l >> i);
+      if((r >> i) << i != r) push((r - 1) >> i);
+    }
+    T res = 0;
+    while(l < r){
+      if(l & 1) res += d[l++];
+      if(r & 1) res += d[--r];
+      l >>= 1; r >>= 1;
+    }
+    return res;
   }
   private:
-  int n = 1;
   vector<T> d, lazy;
-  void eval(int k, int l, int r){
-    d[k] += lazy[k];
-    if(r - l > 1){
-      lazy[2*k+1] += lazy[k] / 2;
-      lazy[2*k+2] += lazy[k] / 2;
-    }
+  vector<int> si;
+  int n = 1, log = 0, len = 0;
+  void update(const int &k){ d[k] = d[2*k] + d[2*k+1]; }
+  void apply(const int &k, const T &x){
+    d[k] += x * si[k];
+    if(k < len) lazy[k] += x;
+  }
+  void push(const int &k){
+    if(!lazy[k]) return;
+    apply(2*k, lazy[k]);
+    apply(2*k+1, lazy[k]);
     lazy[k] = 0;
-  }
-  void add(int a, int b, T x, int k, int l, int r){
-    eval(k, l, r);
-    if(b <= l || r <= a) return;
-    if(a <= l && r <= b) {
-      lazy[k] += (r - l) * x;
-      eval(k, l, r);
-    }else{
-      add(a, b, x, 2*k+1, l, (l+r)/2);
-      add(a, b, x, 2*k+2, (l+r)/2, r);
-      d[k] = d[2*k+1] + d[2*k+2];
-    }
-  }
-  T sum(int a, int b, T k, int l, int r){
-    eval(k, l, r);
-    if(b <= l || r <= a) return 0;
-    if(a <= l && r <= b) return d[k];
-    T vlef = sum(a, b, 2*k+1, l, (l+r)/2);
-    T vrig = sum(a, b, 2*k+2, (l+r)/2, r);
-    return vlef + vrig;
   }
 };

@@ -1,91 +1,72 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//区間加算、区間の最小値/最大値
-
-template<class T, const T&(*op)(const T&,const T&)>
-struct segmentTree {
-  segmentTree(int x, const T &sum_unity = T()){
-    while(x > n) n *= 2;
-    inf = -op(inf-1, -inf+1);
-    d.resize(2*n - 1);
-    lazy.resize(2*n - 1, 0);
-    d[0] = sum_unity;
+template <class T>
+struct LazySegmentTree {
+  LazySegmentTree(int _n) : n(_n){
+    while((1 << log) < n) log++;
+    len = 1 << log;
+    d.assign(len * 2, 0);
+    lazy.assign(len, 0);
   }
-  void set(int i, T x){
+  void set(int i, const T &x){
     assert(0 <= i && i < n);
-    d[i + n - 1] += x;
+    d[i + len] = x;
+  }
+  T &operator[](int i){
+    assert(0 <= i && i < n);
+    return d[i + len];
   }
   void build(){
-    for(int i = n - 2; i >= 0; i--)
-      d[i] = op(d[i*2+1], d[i*2+2]);
+    for(int i = len - 1; i >= 1; i--) update(i);
   }
-  void add(int l, int r, T x){
+  void update(int l, int r, const T &x){
     assert(0 <= l && l <= r && r <= n);
-    add_sub(l, r, x, 0, 0, n);
+    l += len; r += len;
+    for(int i = log; i >= 1; i--){
+      if((l >> i) << i != l) push(l >> i);
+      if((r >> i) << i != r) push((r - 1) >> i);
+    }
+    const int lt = l, rt = r;
+    while(l < r){
+      if(l & 1) apply(l++, x);
+      if(r & 1) apply(--r, x);
+      l >>= 1; r >>= 1;
+    }
+    l = lt; r = rt;
+    for(int i = 1; i <= log; i++){
+      if((l >> i) << i != l) update(l >> i);
+      if((r >> i) << i != r) update((r - 1) >> i);
+    }
   }
   T query(int l, int r){
     assert(0 <= l && l <= r && r <= n);
-    return query_sub(l, r, 0, 0, n);
-  }
-  int min_right(int l, int r, T x){
-    assert(0 <= l && l <= r && r <= n);
-    return min_right_sub(l, r, x, 0, 0, n);
-  }
-  int min_left(int l, int r, T x){
-    assert(0 <= l && l <= r && r <= n);
-    return min_left_sub(l, r, x, 0, 0, n);
+    l += len; r += len;
+    for(int i = log; i >= 1; i--){
+      if((l >> i) << i != l) push(l >> i);
+      if((r >> i) << i != r) push((r - 1) >> i);
+    }
+    T left = inf, right = inf;
+    while(l < r){
+      if(l & 1) left = min(left, d[l++]);
+      if(r & 1) right = min(d[--r], right);
+      l >>= 1; r >>= 1;
+    }
+    return min(left, right);
   }
   private:
   vector<T> d, lazy;
-  int n = 1;
-  T inf = numeric_limits<T>::max();
-  void eval(int k){
-    d[k] += lazy[k];
-    if(k < n - 1){
-      lazy[k*2+1] += lazy[k];
-      lazy[k*2+2] += lazy[k];
-    }
+  int n = 1, log = 0, len = 0;
+  const T inf = numeric_limits<T>::max();
+  void update(const int &k){ d[k] = min(d[2*k], d[2*k+1]); }
+  void apply(const int &k, const T &x){
+    d[k] += x;
+    if(k < len) lazy[k] += x;
+  }
+  void push(const int &k){
+    if(!lazy[k]) return;
+    apply(2*k, lazy[k]);
+    apply(2*k+1, lazy[k]);
     lazy[k] = 0;
-  }
-  void add_sub(int a, int b, T x, int k, int l, int r){
-    eval(k);
-    if(r <= a || b <= l) return;
-    if(a <= l && r <= b){
-      lazy[k] += x;
-      eval(k);
-    }else{
-      add_sub(a, b, x, k*2+1, l, (l+r)/2);
-      add_sub(a, b, x, k*2+2, (l+r)/2, r);
-      d[k] = op(d[k*2+1], d[k*2+2]);
-    }
-  }
-  T query_sub(int a, int b, int k, int l, int r){
-    eval(k);
-    if(r <= a || b <= l) return inf;
-    if(a <= l && r <= b) return d[k];
-    T vlef = query_sub(a, b, k*2+1, l, (l+r)/2);
-    T vrig = query_sub(a, b, k*2+2, (l+r)/2, r);
-    return op(vlef, vrig);
-  }
-  //範囲外であればreturn a-1
-  int min_right_sub(int a, int b, T x, int k, int l, int r){
-    eval(k);
-    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return a - 1;
-    if(k >= n - 1) return k - (n - 1);
-
-    int vrig = min_right_sub(a, b, x, 2*k+2, (l+r)/2, r);
-    if(vrig != a - 1) return vrig;
-    return min_right_sub(a, b, x, 2*k+1, l, (l+r)/2);
-  }
-  //範囲外であればreturn b
-  int min_left_sub(int a, int b, T x, int k, int l, int r){
-    eval(k);
-    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return b;
-    if(k >= n - 1) return k - (n - 1);
-
-    int vlef = min_left_sub(a, b, x, 2*k+1, l, (l+r)/2);
-    if(vlef != b) return vlef;
-    return min_left_sub(a, b, x, 2*k+2, (l+r)/2, r);
   }
 };
