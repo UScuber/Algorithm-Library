@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cassert>
 using namespace std;
 
 template <class T, T(*op)(const T&, const T&), const T(*e)()>
@@ -14,7 +13,7 @@ struct SegmentTree2D {
     while((w <<= 1) < _w) logw++;
     d.resize(h * 2, vector<T>(2 * w, e()));
   }
-  void set(int i, int j, T x){
+  void set(int i, int j, const T &x){
     d[i + h][j + w] += x;
   }
   void build(){
@@ -27,7 +26,7 @@ struct SegmentTree2D {
         updateY(i,j);
     }
   }
-  void update(int py, int px, T x){
+  void update(int py, int px, const T &x){
     assert(0 <= py && py < h);
     assert(0 <= px && px < w);
     py += h, px += w;
@@ -41,7 +40,7 @@ struct SegmentTree2D {
       }
     }
   }
-  T get(int py, int px){
+  T get(const int &py, const int &px){
     assert(0 <= py && py < h);
     assert(0 <= px && px < w);
     return d[py + h][px + w];
@@ -73,10 +72,10 @@ struct SegmentTree2D {
     }
     return op(sml, smr);
   }
-  void updateX(int i, int j){
+  inline void updateX(const int &i, const int &j){
     d[i][j] = op(d[i][2*j], d[i][2*j+1]);
   }
-  void updateY(int i, int j){
+  inline void updateY(const int &i, const int &j){
     d[i][j] = op(d[2*i][j], d[2*i+1][j]);
   }
 };
