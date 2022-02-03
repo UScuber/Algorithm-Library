@@ -6,8 +6,8 @@ struct SegmentTree {
   SegmentTree(int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
-    inf = -op(inf-1, -inf+1);
-    //inf = -op(inf, -inf);
+    //inf = -op(inf-1, -inf+1);
+    inf = -op(inf, -inf);
     d.resize(len * 2, inf);
   }
   void update(int k, const T &x){
@@ -19,17 +19,16 @@ struct SegmentTree {
       d[k] = op(d[k*2], d[k*2+1]);
     }
   }
-  void set(int i, const T &x){
+  void set(const int &i, const T &x){
     assert(0 <= i && i < n);
-    d[i + n] = x;
+    d[i + len] = x;
   }
-  T &operator[](int i){
+  void get(const int &i) const{
     assert(0 <= i && i < n);
-    return d[i + n];
+    return d[i + len];
   }
   void build(){
-    for(int k = len - 1; k >= 1; k--)
-      d[k] = op(d[2*k], d[2*k+1]);
+    for(int k = len - 1; k >= 1; k--) d[k] = op(d[2*k], d[2*k+1]);
   }
   T query(int l, int r){
     assert(0 <= l && l <= r && r <= n);
