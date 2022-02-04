@@ -5,25 +5,25 @@ template <class T, T(*op)(const T&, const T&), const T(*e)()>
 struct SegmentTree2D {
   int h,w, logh,logw;
   vector<vector<T>> d;
-  SegmentTree2D() : SegmentTree2D(0,0){}
+  SegmentTree2D() : SegmentTree2D(0, 0){}
   SegmentTree2D(int _h, int _w){
     h = w = 1;
     logh = logw = 1;
     while((h <<= 1) < _h) logh++;
     while((w <<= 1) < _w) logw++;
-    d.resize(h * 2, vector<T>(2 * w, e()));
+    d.resize(h * 2, vector<T>(w * 2, e()));
   }
-  void set(int i, int j, const T &x){
+  void set(const int &i, const int &j, const T &x){
     d[i + h][j + w] += x;
   }
   void build(){
     for(int i = 2*h-1; i >= h ; i--){
       for(int j = w - 1; j >= 1; j--)
-        updateX(i,j);
+        updateX(i, j);
     }
     for(int i = h-1; i >= 1; i--){
-      for(int j = 2*w-1 ; j >= 1; j--)
-        updateY(i,j);
+      for(int j = 2*w-1; j >= 1; j--)
+        updateY(i, j);
     }
   }
   void update(int py, int px, const T &x){
@@ -32,10 +32,10 @@ struct SegmentTree2D {
     py += h, px += w;
     d[py][px] += x;
     for(int j = 1; j <= logw; j++){
-      updateX(py,px>>j);
+      updateX(py, px >> j);
     }
     for(int i = 1; i <= logh; i++){
-      for(int j = 0 ; j <= logw; j++){
+      for(int j = 0; j <= logw; j++){
         updateY(py >> i, px >> j);
       }
     }
@@ -45,7 +45,7 @@ struct SegmentTree2D {
     assert(0 <= px && px < w);
     return d[py + h][px + w];
   }
-  T query(int ly, int lx, int ry , int rx){
+  T query(int ly, int lx, int ry, int rx){
     assert(0 <= ly && ly <= ry && ry <= h);
     assert(0 <= lx && lx <= rx && rx <= w);
     T sml = e(), smr = e();
