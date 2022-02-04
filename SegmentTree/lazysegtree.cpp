@@ -11,13 +11,15 @@ struct LazySegmentTree {
     d.assign(len * 2, e());
     lazy.assign(len, id());
   }
-  void set(int i, const T &x){
+  void set(const int &i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
-  T &operator[](int i){
-    assert(0 <= i && i < n);
-    return d[i + len];
+  T get(int p){
+    assert(0 <= p && p < n);
+    p += len;
+    for(int i = log; i >= 1; i--) push(p >> i);
+    return d[p];
   }
   void build(){
     for(int i = len - 1; i >= 1; i--) update(i);
@@ -25,10 +27,10 @@ struct LazySegmentTree {
   void update(int l, int r, const F &x){
     assert(0 <= l && l <= r && r <= n);
     l += len; r += len;
-    for(int i = log; i >= 1; i--){
-      if((l >> i) << i != l) push(l >> i);
-      if((r >> i) << i != r) push((r - 1) >> i);
-    }
+    const int l_ctz = __builtin_ctz(l);
+    const int r_ctz = __builtin_ctz(r);
+    for(int i = log; i > l_ctz; i--) push(l >> i);
+    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);
     const int lt = l, rt = r;
     while(l < r){
       if(l & 1) apply(l++, x);
@@ -36,18 +38,16 @@ struct LazySegmentTree {
       l >>= 1; r >>= 1;
     }
     l = lt; r = rt;
-    for(int i = 1; i <= log; i++){
-      if((l >> i) << i != l) update(l >> i);
-      if((r >> i) << i != r) update((r - 1) >> i);
-    }
+    for(int i = l_ctz + 1; i <= log; i++) update(l >> i);
+    for(int i = r_ctz + 1; i <= log; i++) update((r - 1) >> i);
   }
   T query(int l, int r){
     assert(0 <= l && l <= r && r <= n);
     l += len; r += len;
-    for(int i = log; i >= 1; i--){
-      if((l >> i) << i != l) push(l >> i);
-      if((r >> i) << i != r) push((r - 1) >> i);
-    }
+    const int l_ctz = __builtin_ctz(l);
+    const int r_ctz = __builtin_ctz(r);
+    for(int i = log; i > l_ctz; i--) push(l >> i);
+    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);
     T left = e(), right = e();
     while(l < r){
       if(l & 1) left = op(left, d[l++]);
