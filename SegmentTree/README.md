@@ -70,7 +70,7 @@ Data query(int l, int r);
 ```
 - 更新 (l <= i < r) の区間で a[i] <- a[i] + s + p*(i - l)
 ```cpp
-void update(int l, int r, const Lazy &x);
+void update(int l, int r, { s, p, l });
 ```
 
 

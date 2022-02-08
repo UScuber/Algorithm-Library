@@ -26,10 +26,10 @@ struct LazySegmentTree {
   void update(int l, int r, const F &x){
     assert(0 <= l && l <= r && r <= n);
     l += len; r += len;
-    for(int i = log; i >= 1; i--){
-      if((l >> i) << i != l) push(l >> i);
-      if((r >> i) << i != r) push((r - 1) >> i);
-    }
+    const int l_ctz = __builtin_ctz(l);
+    const int r_ctz = __builtin_ctz(r);
+    for(int i = log; i > l_ctz; i--) push(l >> i);
+    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);
     const int lt = l, rt = r;
     while(l < r){
       if(l & 1) apply(l++, x);
@@ -37,18 +37,16 @@ struct LazySegmentTree {
       l >>= 1; r >>= 1;
     }
     l = lt; r = rt;
-    for(int i = 1; i <= log; i++){
-      if((l >> i) << i != l) update(l >> i);
-      if((r >> i) << i != r) update((r - 1) >> i);
-    }
+    for(int i = l_ctz + 1; i <= log; i++) update(l >> i);
+    for(int i = r_ctz + 1; i <= log; i++) update((r - 1) >> i);
   }
   T query(int l, int r){
     assert(0 <= l && l <= r && r <= n);
     l += len; r += len;
-    for(int i = log; i >= 1; i--){
-      if((l >> i) << i != l) push(l >> i);
-      if((r >> i) << i != r) push((r - 1) >> i);
-    }
+    const int l_ctz = __builtin_ctz(l);
+    const int r_ctz = __builtin_ctz(r);
+    for(int i = log; i > l_ctz; i--) push(l >> i);
+    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);
     T left = e(), right = e();
     while(l < r){
       if(l & 1) left = op(left, d[l++]);
@@ -72,14 +70,15 @@ struct LazySegmentTree {
     lazy[k] = id(d[k].l);
   }
 };
+using T = ll;
 //値、幅、左の位置
 struct Data {
-  ll val; 
+  T val; 
   int len, l;
 };
 //初項、等差、左の位置
 struct Lazy {
-  ll s, p;
+  T s, p;
   int l;
 };
 Data op(const Data &a, const Data &b){
@@ -89,12 +88,37 @@ Data e(){
   return { 0, 0, 0 };
 }
 Data mapping(const Lazy &a, const Data &b){
-  ll tot = (a.s*2+a.p*(b.l-a.l)*2 + a.p*(b.len-1)) * b.len / 2;
+  T tot = (a.s*2+a.p*(b.l-a.l)*2 + a.p*(b.len-1)) * b.len / 2;
   return { b.val + tot, b.len, b.l };
 }
 Lazy composition(const Lazy &a, const Lazy &b){
   return { a.s+b.s + b.p*(a.l-b.l), a.p+b.p, a.l };
 }
-Lazy id(const int &k){
+Lazy id(int k){
   return { 0, 0, k };
+}
+
+int main(){
+  int n,q;
+  cin >> n >> q;
+  LazySegmentTree<Data,op,e,Lazy,mapping,composition,id> seg(n);
+  //init
+  for(int i = 0; i < n; i++) seg.set(i, { 0, 1, i });
+  seg.build();
+  for(int i = 0; i < q; i++){
+    int t; cin >> t;
+    //update: (l <= i < r)  a[i] = a[i] + s + p*(i - l)
+    if(t == 0){
+      int l,r; T s,p;
+      cin >> l >> r >> s >> p;
+      l--;
+      seg.update(l, r, { s, p, l });
+    }
+    //query: a[l]+a[l+1]+...+a[r-2]+a[r-1]
+    else{
+      int l,r;
+      cin >> l >> r;
+      cout << seg.query(--l, r).val << "\n";
+    }
+  }
 }
