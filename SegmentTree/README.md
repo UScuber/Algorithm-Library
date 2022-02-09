@@ -60,17 +60,17 @@ LazySegmentTree<class T>(int _n)
 ```
 - verified: https://onlinejudge.u-aizu.ac.jp/solutions/problem/DSL_2_H/review/6275215/US_cube/C++17
 
-## liner segtree
+## linear segtree
 ```cpp
-LazySegmentTree<Data,op,e,Lazy,mapping,composition,id>(int _n);
+LazySegmentTree<T>(int _n);
 ```
 - クエリ sum[i=l, r-1] a[i] を求める
 ```cpp
-Data query(int l, int r);
+T query(int l, int r);
 ```
 - 更新 (l <= i < r) の区間で a[i] <- a[i] + s + p*(i - l)
 ```cpp
-void update(int l, int r, { s, p, l });
+void update(int l, int r, { s, p });
 ```
 
 
