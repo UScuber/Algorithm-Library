@@ -21,12 +21,12 @@ struct Timer {
 	Timer(){
 		memset(&e, 0, sizeof(e));
 		QueryPerformanceFrequency(&freq);
-    start();
+		start();
 	}
 	void start(){ QueryPerformanceCounter(&s); }
 	void end(){ QueryPerformanceCounter(&e); }
 	double result(){
 		double time = static_cast<double>(e.QuadPart - s.QuadPart) * 1000.0 / freq.QuadPart;
-    return time;
+		return time;
 	}
 };
