@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-template<class T> struct matrix {
+template <class T>
+struct matrix {
   int n,m;
   private:
   vector<vector<T>> a;
@@ -42,7 +43,7 @@ template<class T> struct matrix {
     while(t > 0){
       if(t & 1) b *= c;
       c *= c;
-      t >= 2;
+      t >>= 1;
     }
     return b;
   }
@@ -50,24 +51,22 @@ template<class T> struct matrix {
     assert(n == m);
     matrix b = *this;
     T res(1);
+    bool flip = false;
     for(int i = 0; i < n; i++){
-      if(b[i][i] == 0){
-        for(int j = i + 1; j < n; j++){
-          if(b[j][i] > 0){
-            swap(b[i], b[j]);
-            res = -res;
-            break;
+      for(int j = i + 1; j < n; j++){
+        while(b[j][i] > 0){
+          swap(b[i], b[j]);
+          flip ^= 1;
+          const T d = b[j][i] / b[i][i];
+          for(int k = i; k < n; k++){
+            b[j][k] -= b[i][k] * d;
           }
         }
       }
+      if(b[i][i] == 0) return 0;
       res *= b[i][i];
-      for(int j = i + 1; j < n; j++){
-        T d = T(1) / b[i][i];
-        for(int k = i + 1; k < n; k++){
-          b[j][k] -= b[j][i] * d * b[i][k];
-        }
-      }
     }
+    if(flip) res = -res;
     return res;
   }
   matrix inv(){
