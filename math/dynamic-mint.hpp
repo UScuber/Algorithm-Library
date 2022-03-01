@@ -1,10 +1,12 @@
-#define mod 1000000007
-using ll = long long;
+using ull = unsigned long long;
+unsigned int mod;
+ull bar;
 
-struct mint{
-  ll x;
-  mint(ll x = 0) : x((x + mod) % mod){}
-  mint operator-() const{ return mint(-x); }
+struct mint {
+  using uint = unsigned int;
+  uint x;
+  mint(const uint &x = 0) : x((x+mod)%mod){}
+  mint operator-() const{ return mint(mod - x); }
   mint operator+=(const mint &a){
     if((x += a.x) >= mod) x -= mod;
     return *this;
@@ -14,31 +16,36 @@ struct mint{
     return *this;
   }
   mint operator++(int){
-    mint temp = *this;
-    if(++x == mod) x = 0;
-    return temp;
+    mint res = *this;
+    ++*this;
+    return res;
   }
   mint &operator-=(const mint &a){
-    if((x -= a.x) < 0) x += mod;
+    if(x >= a.x) x -= a.x;
+    else x += mod - a.x;
     return *this;
   }
   mint &operator--(){
-    if(--x < 0) x += mod;
+    if(!x) x = mod - 1;
+    else x--;
     return *this;
   }
   mint operator--(int){
-    mint temp = *this;
-    if(--x < 0) x += mod;
-    return temp;
+    mint res = *this;
+    --*this;
+    return res;
   }
   mint &operator*=(const mint &a){
-    (x *= a.x) %= mod;
+    ull z = (ull)x * a.x;
+    ull t = (ull)(((unsigned __int128)z * bar) >> 64);
+    x = (uint)(z - t*mod);
+    if(mod <= x) x += mod;
     return *this;
   }
   mint operator+(const mint &a) const{ return mint(*this) += a; }
   mint operator-(const mint &a) const{ return mint(*this) -= a; }
   mint operator*(const mint &a) const{ return mint(*this) *= a; }
-  mint pow(ll t) const{
+  mint pow(ull t) const{
     if(!t) return 1;
     mint res = 1, v = *this;
     while(t){
@@ -48,14 +55,15 @@ struct mint{
     }
     return res;
   }
-  mint inv() const{ return pow(mod - 2); }
-  mint &operator/=(const mint &a){ return (*this) *= a.inv(); }
+  mint &operator/=(const mint &a){ x /= a.x; return *this; }
   mint operator/(const mint &a) const{ return mint(*this) /= a; }
   bool operator==(const mint &a) const{ return x == a.x; }
+  bool operator!=(const mint &a) const{ return x != a.x; }
   bool operator<(const mint &a) const{ return x < a.x; }
   bool operator>(const mint &a) const{ return x > a.x; }
-  bool operator<=(const mint &a) const{ return x <= a.x; }
-  bool operator>=(const mint &a) const{ return x >= a.x; }
   friend istream &operator>>(istream &is, mint &a){ return is >> a.x; }
   friend ostream &operator<<(ostream &os, const mint &a){ return os << a.x; }
 };
+void init(){
+  bar = (ull)-1 / mod + 1;
+}
