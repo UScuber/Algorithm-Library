@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using lll = __int128_t;
+using lll = __int128;
 ostream &operator<<(ostream &os, lll x){
-  #define pc(c) (os << c)
+  #define pc(c) os.put(c)
   char tmp_s[40];
   if(!x){ pc('0'); return os; }
   if(x < 0){ pc('-'); x = -x; }
@@ -18,7 +18,15 @@ ostream &operator<<(ostream &os, lll x){
   #undef pc
 }
 istream &operator>>(istream &is, lll &x){
-  string s; is >> s; x = 0;
-  for(const char &c : s) x = x*10 + c-'0';
+  #define gc(c) is.get(c)
+  bool neg = false;
+  char c;
+  gc(c);
+  while((c < '0' || c > '9') && c != '-') gc(c);
+  if(c == '-') neg = true, gc(c);
+  x = c^'0'; gc(c);
+  while(c >= '0' && c <= '9') x = x*10 + (c^'0'), gc(c);
+  if(neg) x = -x;
   return is;
+  #undef gc
 }
