@@ -42,11 +42,13 @@ struct Vector {
     if(s < n) n = s;
   }
   void assign(const int &s, const T &v){
+    assert(0 <= s);
     extention(s);
-    std::fill(d, d + sz, v);
+    std::fill(d, d + s, v);
     n = s;
   }
   void resize(const int &s, const T &v = T()){
+    assert(0 <= s);
     extention(s);
     if(n < s) std::fill(d + n, d + s, v);
     n = s;
@@ -66,37 +68,43 @@ struct Vector {
   bool empty() const noexcept{ return !n; }
   T *begin() const noexcept{ return d; }
   T *end() const noexcept{ return d + n; }
-  void erase(T *p) noexcept{
-    assert(d <= p && p < d+n);
+  void erase(const int &pos) noexcept{
+    assert(0 <= pos && pos < n);
+    std::move(d+pos+1, d+n, d+pos);
     n--;
-    for(; p < d+n; p++) *p = std::move(*(p+1));
   }
-  void erase(T *lp, const T *rp) noexcept{
-    assert(d <= lp && lp <= rp && rp <= d+n);
-    const int c = rp - lp;
-    n -= c;
-    for(; lp < d+n; lp++) *lp = std::move(*(lp+c));
+  void erase(const int &l, const int &r) noexcept{
+    assert(0 <= l && l <= r && r <= n);
+    std::move(d+r, d+n, d+l);
+    n -= r - l;
   }
-  void insert(T *pt, const T &v) noexcept{
-    assert(d <= pt && pt <= d+n);
+  void erase(const T *p) noexcept{ erase(p - d); }
+  void erase(const T *lp, const T *rp) noexcept{ erase(lp - d, rp - d); }
+  void insert(const int &pos, const T &v) noexcept{
+    assert(0 <= pos && pos <= n);
     if(n == sz) extention(sz);
-    for(T *p = d+n; p != pt; p--) *p = std::move(*(p-1));
-    *pt = v; n++;
+    std::rotate(d+pos, d+n, d+n+1);
+    d[pos] = v; n++;
   }
-  void insert(T *pt, const T *lp, const T *rp) noexcept{
-    assert(d <= pt && pt <= d+n);
+  void insert(const int &pos, const T *lp, const T *rp) noexcept{
+    assert(0 <= pos && pos <= n && lp <= rp);
     const int c = rp - lp;
     extention(n + c);
-    for(T *p = d+n; p-- != pt;) *(p+c) = std::move(*p);
-    memcpy(pt, lp, c * sizeof(T));
+    std::rotate(d+pos, d+n, d+n+c);
+    memcpy(d+pos, lp, c * sizeof(T));
     n += c;
   }
+  void insert(const T *pt, const T &v) noexcept{ insert(pt - d, v); }
+  void insert(T *pt, const T *lp, const T *rp) noexcept{ insert(pt - d, lp, rp); }
   template <int s>
-  void insert(T *pt, const T (&a)[s]) noexcept{ insert(pt, a, a + s); }
+  void insert(T *pt, const T (&a)[s]) noexcept{ insert(pt - d, a, a + s); }
+  void sort(const bool &rev = false) noexcept{
+    if(rev) std::sort(d, d + n, [&](const  T &a, const T &b){ return b < a; });
+    else std::sort(d, d + n, [&](const T &a, const T &b){ return a < b; });
+  }
   private:
   T *d = nullptr;
-  int sz; //配列dの長さ
-  int n; //代入されているところまでの長さ
+  int sz, n;
   void extention(const int &len) noexcept{
     sz = ceil_pow(len);
     d = (T*)realloc(d, sz * sizeof(T));

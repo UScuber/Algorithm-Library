@@ -121,3 +121,20 @@ T next_value(int l, int r, const T &lower);
 ```
 - verified: https://judge.yosupo.jp/submission/76069
 - verified(Compressed): https://judge.yosupo.jp/submission/76070
+
+## Vector
+- std::vectorを高速化した配列
+- begin(),end()の戻り値がポインタで、それ以外の操作はstd::vectorとほとんど同じ
+
+- 10^8個の値のpush_back(emplace_back)
+  - Vector: 540[ms], std::vector: 945[ms]
+- 10^8回 pop_back
+  - Vector: 256[ms], std::vector: 344[ms]
+- 10^5回 assign (サイズは0以上10^4以下の乱数)
+  - Vector: 467[ms], std::vector: 488[ms]
+- 10^7の配列のソート
+  - Vector: 1325[ms], std::vector: 2764[ms]
+- 10^5回 insert
+  - Vector: 335[ms], std::vector: 340[ms]
+- 10^5回 erase
+  - Vector: 338[ms], std::vector: 328[ms]
