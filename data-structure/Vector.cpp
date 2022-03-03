@@ -69,25 +69,25 @@ struct Vector {
   void erase(T *p) noexcept{
     assert(d <= p && p < d+n);
     n--;
-    for(; p < d+n; p++) *p = move(*(p+1));
+    for(; p < d+n; p++) *p = std::move(*(p+1));
   }
   void erase(T *lp, const T *rp) noexcept{
     assert(d <= lp && lp <= rp && rp <= d+n);
     const int c = rp - lp;
     n -= c;
-    for(; lp < d+n; lp++) *lp = move(*(lp+c));
+    for(; lp < d+n; lp++) *lp = std::move(*(lp+c));
   }
   void insert(T *pt, const T &v) noexcept{
     assert(d <= pt && pt <= d+n);
     if(n == sz) extention(sz);
-    for(T *p = d+n; p != pt; p--) *p = move(*(p-1));
+    for(T *p = d+n; p != pt; p--) *p = std::move(*(p-1));
     *pt = v; n++;
   }
   void insert(T *pt, const T *lp, const T *rp) noexcept{
     assert(d <= pt && pt <= d+n);
     const int c = rp - lp;
     extention(n + c);
-    for(T *p = d+n; p-- != pt;) *(p+c) = move(*p);
+    for(T *p = d+n; p-- != pt;) *(p+c) = std::move(*p);
     memcpy(pt, lp, c * sizeof(T));
     n += c;
   }
