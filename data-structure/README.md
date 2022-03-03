@@ -134,7 +134,7 @@ T next_value(int l, int r, const T &lower);
   - Vector: 467[ms], std::vector: 488[ms]
 - 10^7の配列のソート
   - Vector: 1325[ms], std::vector: 2764[ms]
-- 10^5回 insert
-  - Vector: 335[ms], std::vector: 340[ms]
-- 10^5回 erase
-  - Vector: 338[ms], std::vector: 328[ms]
+- 10^5回 insert (1点追加)
+  - Vector: 232[ms], std::vector: 237[ms]
+- 10^5回 erase (1点消去)
+  - Vector: 327[ms], std::vector: 337[ms]

@@ -1,5 +1,4 @@
-#include <cassert>
-#include <string>
+#include <bits/stdc++.h>
 
 template <class T>
 struct Vector {
@@ -83,14 +82,14 @@ struct Vector {
   void insert(const int &pos, const T &v) noexcept{
     assert(0 <= pos && pos <= n);
     if(n == sz) extention(sz);
-    std::rotate(d+pos, d+n, d+n+1);
+    std::move_backward(d+pos, d+n, d+n+1);
     d[pos] = v; n++;
   }
   void insert(const int &pos, const T *lp, const T *rp) noexcept{
     assert(0 <= pos && pos <= n && lp <= rp);
     const int c = rp - lp;
     extention(n + c);
-    std::rotate(d+pos, d+n, d+n+c);
+    std::move_backward(d+pos, d+n, d+n+c);
     memcpy(d+pos, lp, c * sizeof(T));
     n += c;
   }
