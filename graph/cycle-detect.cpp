@@ -5,7 +5,7 @@ using namespace std;
 namespace cycle {
   graph g;
   vector<int> used;
-  vector<edge<int>> prev, cyc;
+  vector<Edge<int>> prev, cyc;
   bool dfs(int pos){
     used[pos] = 1;
     for(auto &x : g[pos]){
@@ -25,11 +25,11 @@ namespace cycle {
     used[pos] = 2;
     return false;
   }
-  vector<edge<int>> detect(const graph &root){
+  vector<Edge<int>> detect(const graph &root){
     g = root;
-    int n = g.size();
-    used.resize(n);
-    prev.resize(n, -1);
+    const int n = g.size();
+    used.assign(n, 0);
+    prev.assign(n, -1);
     for(int i = 0; i < n; i++){
       if(!used[i] && dfs(i)){
         reverse(cyc.begin(), cyc.end());
