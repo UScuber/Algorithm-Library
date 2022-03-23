@@ -21,7 +21,7 @@ struct SegmentTree {
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
-  T &operator[](int i){
+  T get(const int &i) const{
     assert(0 <= i && i < n);
     return d[i + len];
   }
@@ -39,14 +39,6 @@ struct SegmentTree {
       l >>= 1; r >>= 1;
     }
     return op(left, right);
-  }
-  int min_right(int l, int r, T x){
-    assert(0 <= l && l <= r && r <= n);
-    return min_right_sub(l, r, x, 1, 0, n);
-  }
-  int min_left(int l, int r, T x){
-    assert(0 <= l && l <= r && r <= n);
-    return min_left_sub(l, r, x, 1, 0, n);
   }
   private:
   int n = 1, log = 0, len = 0;

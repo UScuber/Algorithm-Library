@@ -23,7 +23,7 @@ struct SegmentTree {
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
-  void get(const int &i) const{
+  T get(const int &i) const{
     assert(0 <= i && i < n);
     return d[i + len];
   }
@@ -43,11 +43,11 @@ struct SegmentTree {
   }
   int min_right(int l, int r, const T &x){
     assert(0 <= l && l <= r && r <= n);
-    return min_right_sub(l, r, x, 1, 0, n);
+    return min_right_sub(l, r, x, 1, 0, len);
   }
   int min_left(int l, int r, const T &x){
     assert(0 <= l && l <= r && r <= n);
-    return min_left_sub(l, r, x, 1, 0, n);
+    return min_left_sub(l, r, x, 1, 0, len);
   }
   private:
   T inf = numeric_limits<T>::max();
@@ -56,7 +56,7 @@ struct SegmentTree {
   //範囲外であればreturn a-1
   int min_right_sub(int a, int b, const T &x, int k, int l, int r){
     if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return a - 1;
-    if(k >= n) return k - n;
+    if(k >= len) return k - len;
 
     int vrig = min_right_sub(a, b, x, 2*k+1, (l+r)/2, r);
     if(vrig != a - 1) return vrig;
@@ -65,7 +65,7 @@ struct SegmentTree {
   //範囲外であればreturn b
   int min_left_sub(int a, int b, const T &x, int k, int l, int r){
     if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return b;
-    if(k >= n) return k - n;
+    if(k >= len) return k - len;
 
     int vlef = min_left_sub(a, b, x, 2*k, l, (l+r)/2);
     if(vlef != b) return vlef;
