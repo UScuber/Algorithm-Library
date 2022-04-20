@@ -44,6 +44,8 @@ struct SegmentTree {
   int n = 1, log = 0, len = 0;
   vector<T> d;
 };
+
+/*
 struct Data {
   int a;
 };
@@ -53,3 +55,4 @@ Data op(const Data &a, const Data &b){
 Data e(){
   return { 0 };
 }
+*/
