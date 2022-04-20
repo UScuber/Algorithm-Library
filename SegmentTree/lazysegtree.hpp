@@ -71,6 +71,8 @@ struct LazySegmentTree {
     lazy[k] = id();
   }
 };
+
+/*
 struct Data {
   ll a, len;
 };
@@ -92,3 +94,4 @@ Lazy composition(const Lazy &a, const Lazy &b){
 Lazy id(){
   return { 1, 0 };
 }
+*/
