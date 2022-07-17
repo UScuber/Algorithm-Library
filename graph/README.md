@@ -73,9 +73,17 @@ void snapshot()
 ```cpp
 lca(const graph &G, int root = 0)
 ```
-- xとyの最小共通祖先を求める
+- uとvの最小共通祖先を求める
 ```cpp
 int lca::query(int u, int v)
+```
+- u,v間の距離を求める
+```cpp
+int lca::dist(int u, int v)
+```
+- u-vのパスでuからの距離がdの頂点を求める
+```cpp
+int lca::jump(int u, int v, int d)
 ```
 - verified: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
 
