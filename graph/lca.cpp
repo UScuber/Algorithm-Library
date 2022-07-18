@@ -11,32 +11,42 @@ struct lca {
     init(root);
   }
   void init(int root = 0){
-    const int V = G.size();
-    while((1 << log) < V) log++;
-    parent.assign(log, vector<int>(V, -1));
-    dep.assign(V, -1);
-    dfs(root, -1, 0);
-    for(int k = 0; k + 1 < log; k++){
-      for(int v = 0; v < V; v++){
+    const int n = G.size();
+    dep.assign(n, -1);
+    parent.assign(1, vector<int>(n, -1));
+    queue<int> que({ root });
+    dep[root] = 0;
+    int max_dep = 0;
+    while(!que.empty()){
+      const int pos = que.front();
+      que.pop();
+      max_dep = max(max_dep, dep[pos]);
+      for(const auto &x : G[pos]){
+        if(dep[x] == -1){
+          dep[x] = dep[pos] + 1;
+          parent[0][x] = pos;
+          que.push(x);
+        }
+      }
+    }
+    while((1 << log) <= max_dep) log++;
+    parent.resize(log, vector<int>(n, -1));
+    for(int k = 0; k < log - 1; k++){
+      for(int v = 0; v < n; v++){
         if(parent[k][v] < 0) parent[k + 1][v] = -1;
         else parent[k + 1][v] = parent[k][parent[k][v]];
       }
     }
   }
-  void dfs(int v, int p, int d){
-    parent[0][v] = p;
-    dep[v] = d;
-    for(auto &e : G[v]){
-      if(e != p) dfs(e, v, d + 1);
-    }
-  }
   int query(int u, int v) const{
     if(dep[u] < dep[v]) swap(u, v);
+    const int sub = dep[u] - dep[v];
     for(int k = 0; k < log; k++){
-      if((dep[u] - dep[v]) >> k & 1) u = parent[k][u];
+      if(!(sub >> k)) break;
+      if(sub >> k & 1) u = parent[k][u];
     }
     if(u == v) return u;
-    for(int k = log - 1; k >= 0; k--){
+    for(int k = __lg(dep[u]); k >= 0; k--){
       if(parent[k][u] != parent[k][v]){
         u = parent[k][u];
         v = parent[k][v];
@@ -57,6 +67,7 @@ struct lca {
       swap(u, v);
     }
     for(int k = 0; k < log; k++){
+      if(!(d >> k)) break;
       if(d >> k & 1) u = parent[k][u];
     }
     return u;
