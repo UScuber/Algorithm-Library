@@ -100,7 +100,7 @@ T access(int k);
 ```
 - [0,r)の区間でxが現れる数を求める
 ```cpp
-int rank(const T &x, int r);
+int rank(const T x, int r);
 ```
 - [l,r)の中でk番目に小さい/大きい値を求める
 ```cpp
@@ -109,18 +109,18 @@ T kth_largest(int l, int r, int k);
 ```
 - [l,r)のiについて lower <= v[i] < upper を満たすiの数を求める
 ```cpp
-int range_freq(int l, int r, const T &lower, const T &upper);
+int range_freq(int l, int r, const T lower, const T upper);
 ```
 - [l,r)のiについて v[i] < upper を満たす最大のv[i]を求める
 ```cpp
-T prev_value(int l, int r, const T &upper);
+T prev_value(int l, int r, const T upper);
 ```
 - [l,r)のiについて lower <= v[i] を満たす最小のv[i]を求める
 ```cpp
-T next_value(int l, int r, const T &lower);
+T next_value(int l, int r, const T lower);
 ```
-- verified: https://judge.yosupo.jp/submission/76069
-- verified(Compressed): https://judge.yosupo.jp/submission/76070
+- verified: https://judge.yosupo.jp/submission/96279
+- verified: https://judge.yosupo.jp/submission/96283
 
 ## Vector
 - std::vectorを高速化した配列
