@@ -2,13 +2,27 @@
 #include "template.hpp"
 using namespace std;
 
-namespace cycle {
-  graph g;
+struct Cycle {
+  Cycle(const graph &_g) : g(_g){}
+  vector<Edge<int>> detect(){
+    const int n = g.size();
+    used.assign(n, 0);
+    prev.assign(n, -1);
+    for(int i = 0; i < n; i++){
+      if(!used[i] && dfs(i)){
+        reverse(cyc.begin(), cyc.end());
+        return cyc;
+      }
+    }
+    return {};
+  }
+  private:
+  const graph &g;
   vector<int> used;
   vector<Edge<int>> prev, cyc;
   bool dfs(int pos){
     used[pos] = 1;
-    for(auto &x : g[pos]){
+    for(const auto &x : g[pos]){
       if(!used[x]){
         prev[x] = x;
         if(dfs(x)) return true;
@@ -24,18 +38,5 @@ namespace cycle {
     }
     used[pos] = 2;
     return false;
-  }
-  vector<Edge<int>> detect(const graph &root){
-    g = root;
-    const int n = g.size();
-    used.assign(n, 0);
-    prev.assign(n, -1);
-    for(int i = 0; i < n; i++){
-      if(!used[i] && dfs(i)){
-        reverse(cyc.begin(), cyc.end());
-        return cyc;
-      }
-    }
-    return {};
   }
 };

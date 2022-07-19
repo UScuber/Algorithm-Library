@@ -91,9 +91,13 @@ int lca::jump(int u, int v, int d)
 - 閉路を検出し、そのうち１つの閉路の頂点集合を返す
 - 閉路が存在しなければ、空の配列を返す
 ```cpp
-vector<edge<int>> detect(const graph &root)
+Cycle (const graph &_g)
 ```
-- verified: https://judge.yosupo.jp/submission/65892
+- 閉路検出
+```cpp
+vector<Edge<int>> Cycle::detect()
+```
+- verified: https://judge.yosupo.jp/submission/96353
 
 ## bellman ford
 - ベルマンフォード法
