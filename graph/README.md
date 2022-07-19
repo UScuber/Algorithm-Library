@@ -122,7 +122,7 @@ bool is_cycle(const int &i)
 - 最小全域木を求める
 - 戻り値は全域木の最小コスト
 ```cpp
-ll kruskal(vector<edge<T>> &es, int V)
+ll kruskal(vector<Edge<T>> &es, int V)
 ```
 
 ## scc
@@ -151,4 +151,4 @@ vector<int> diameter(const Graph<T> &g)
 ```cpp
 vector<int> find_centor(const graph &g)
 ```
-- verified: https://atcoder.jp/contests/abc221/submissions/27165381
+- verified: https://atcoder.jp/contests/abc221/submissions/33353795
