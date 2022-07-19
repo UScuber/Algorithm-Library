@@ -100,8 +100,7 @@ vector<edge<int>> detect(const graph &root)
 - 負のコストを含めた最短経路を求める
 - O(NM)
 ```cpp
-bellman_ford<T, const T&(*op)(const T&, const T&)>(int n);
-bellman_ford<T, const T&(*op)(const T&, const T&)>(const Graph<T> &r);
+BellmanFord<T, const T&(*op)(const T&, const T&)>(const Graph<T> &r);
 ```
 - 頂点sを始点として最短経路を求める
 ```cpp
@@ -110,13 +109,13 @@ void solve(int s)
 - i までの最短距離を`変数名[i]`で取得
 - 負閉路の場合はinfが出力される
 ```cpp
-const T &operator[](const int &i)
+const T &operator[](const int i)
 ```
 - 負閉路判定
 ```cpp
-bool is_cycle(const int &i)
+bool is_cycle(const int i)
 ```
-- verified: https://atcoder.jp/contests/abc061/submissions/27291957
+- verified: https://atcoder.jp/contests/abc061/submissions/33358312
 
 ## kruskal
 - 最小全域木を求める
