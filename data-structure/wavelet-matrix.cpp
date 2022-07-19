@@ -46,7 +46,7 @@ struct WaveletMatrix {
   T operator[](const int k) const{ return access(k); }
   // count i  (0 <= i < r) && v[i] == x
   int rank(const T x, int r) const{
-    //assert(0 <= r && r <= len);
+    assert(0 <= r && r <= len);
     int l = 0;
     for(int level = maxlog - 1; level >= 0; level--){
       l = succ(x >> level & 1, l, level);
