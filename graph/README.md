@@ -130,14 +130,9 @@ ll kruskal(vector<Edge<T>> &es, int V)
 - group[i]: 分解後のグループiに入る頂点集合
 - comp[i]: iが入っている成分の番号
 ```cpp
-scc(const int &n);
 scc(const graph &g);
 ```
-- 構築
-```cpp
-void build()
-```
-- verified: https://atcoder.jp/contests/typical90/submissions/24733706
+- verified: https://atcoder.jp/contests/typical90/submissions/33353968
 
 ## diameter
 - グラフの直径を求める
