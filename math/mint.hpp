@@ -1,46 +1,47 @@
-#define mod 1000000007
 using ll = long long;
 
-struct mint{
+template <int mod>
+struct Mint {
   ll x;
-  mint(ll x = 0) : x((x + mod) % mod){}
-  mint operator-() const{ return mint(-x); }
-  mint operator+=(const mint &a){
+  constexpr Mint(ll x = 0) : x((x + mod) % mod){}
+  static constexpr int get_mod(){ return mod; }
+  constexpr Mint operator-() const{ return Mint(-x); }
+  constexpr Mint operator+=(const Mint &a){
     if((x += a.x) >= mod) x -= mod;
     return *this;
   }
-  mint &operator++(){
+  constexpr Mint &operator++(){
     if(++x == mod) x = 0;
     return *this;
   }
-  mint operator++(int){
-    mint temp = *this;
+  constexpr Mint operator++(int){
+    Mint temp = *this;
     if(++x == mod) x = 0;
     return temp;
   }
-  mint &operator-=(const mint &a){
+  constexpr Mint &operator-=(const Mint &a){
     if((x -= a.x) < 0) x += mod;
     return *this;
   }
-  mint &operator--(){
+  constexpr Mint &operator--(){
     if(--x < 0) x += mod;
     return *this;
   }
-  mint operator--(int){
-    mint temp = *this;
+  constexpr Mint operator--(int){
+    Mint temp = *this;
     if(--x < 0) x += mod;
     return temp;
   }
-  mint &operator*=(const mint &a){
+  constexpr Mint &operator*=(const Mint &a){
     (x *= a.x) %= mod;
     return *this;
   }
-  mint operator+(const mint &a) const{ return mint(*this) += a; }
-  mint operator-(const mint &a) const{ return mint(*this) -= a; }
-  mint operator*(const mint &a) const{ return mint(*this) *= a; }
-  mint pow(ll t) const{
+  constexpr Mint operator+(const Mint &a) const{ return Mint(*this) += a; }
+  constexpr Mint operator-(const Mint &a) const{ return Mint(*this) -= a; }
+  constexpr Mint operator*(const Mint &a) const{ return Mint(*this) *= a; }
+  constexpr Mint pow(ll t) const{
     if(!t) return 1;
-    mint res = 1, v = *this;
+    Mint res = 1, v = *this;
     while(t){
       if(t & 1) res *= v;
       v *= v;
@@ -48,14 +49,14 @@ struct mint{
     }
     return res;
   }
-  mint inv() const{ return pow(mod - 2); }
-  mint &operator/=(const mint &a){ return (*this) *= a.inv(); }
-  mint operator/(const mint &a) const{ return mint(*this) /= a; }
-  bool operator==(const mint &a) const{ return x == a.x; }
-  bool operator<(const mint &a) const{ return x < a.x; }
-  bool operator>(const mint &a) const{ return x > a.x; }
-  bool operator<=(const mint &a) const{ return x <= a.x; }
-  bool operator>=(const mint &a) const{ return x >= a.x; }
-  friend istream &operator>>(istream &is, mint &a){ return is >> a.x; }
-  friend ostream &operator<<(ostream &os, const mint &a){ return os << a.x; }
+  constexpr Mint inv() const{ return pow(mod - 2); }
+  constexpr Mint &operator/=(const Mint &a){ return (*this) *= a.inv(); }
+  constexpr Mint operator/(const Mint &a) const{ return Mint(*this) /= a; }
+  constexpr bool operator==(const Mint &a) const{ return x == a.x; }
+  constexpr bool operator!=(const Mint &a) const{ return x != a.x; }
+  constexpr bool operator<(const Mint &a) const{ return x < a.x; }
+  constexpr bool operator>(const Mint &a) const{ return x > a.x; }
+  friend istream &operator>>(istream &is, Mint &a){ return is >> a.x; }
+  friend ostream &operator<<(ostream &os, const Mint &a){ return os << a.x; }
 };
+using mint = Mint<1000000007>;
