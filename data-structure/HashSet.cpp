@@ -12,17 +12,15 @@ struct HashSet {
   bitset<N> flag;
   const ull r;
   static constexpr uint shift = 64 - logn;
-  ull rng() const{
-    ull m = chrono::duration_cast<chrono::nanoseconds>(
-            chrono::high_resolution_clock::now().time_since_epoch())
-            .count();
+  constexpr ull rng() const{
+    ull m = chrono::duration_cast<chrono::nanoseconds>(chrono::high_resolution_clock::now().time_since_epoch()).count();
     m ^= m >> 16;
     m ^= m << 32;
     return m;
   }
   public:
   HashSet() : keys(new Key[N]), r(rng()){}
-  void set(const Key i){
+  constexpr void set(const Key i) noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]){
@@ -34,7 +32,7 @@ struct HashSet {
       hash = (hash + 1) & (N - 1);
     }
   }
-  bool find(const Key i){
+  constexpr bool count(const Key i) const noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]) return false;
