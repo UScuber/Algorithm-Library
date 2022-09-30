@@ -8,11 +8,11 @@ struct SWAG : deque<T> {
   stack<T> back;
   int l = 0, r = 0;
   public:
-  SWAG(int n = 0) : deque<T>(n){}
+  SWAG(const int n = 0) : deque<T>(n, e()){}
   SWAG(const deque<T> &v) : deque<T>(v){}
-  T fold(int i, int j){
+  T fold(const int i, const int j){
     assert(l <= i && i <= j);
-    assert(r <= j && j <= (*this).size());
+    assert(r <= j && j <= (int)(*this).size());
     while(r < j) front = op(front, (*this)[r++]);
     while(l < i){
       if(back.empty()){
