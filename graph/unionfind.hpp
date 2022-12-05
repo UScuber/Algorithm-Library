@@ -34,13 +34,12 @@ struct UnionFind {
 
 
 //重み付きUnion Find
+template <class T>
 struct UnionFindW {
-  private:
-  int n;
   vector<int> par, rank;
-  vector<int> diff_weight;
-  public:
-  UnionFindW(int n = 1, int sum_unity = 0) : n(n), par(n), rank(n), diff_weight(n){
+  vector<T> diff_weight;
+
+  UnionFindW(int n = 1, T sum_unity = 0) : n(n), par(n), rank(n), diff_weight(n){
     for(int i = 0; i < n; i++) par[i] = i, rank[i] = 0, diff_weight[i] = sum_unity;
   }
   int root(int x){
@@ -48,19 +47,19 @@ struct UnionFindW {
     if(par[x] == x){
       return x;
     }else{
-      int r = root(par[x]);
+      const int r = root(par[x]);
       diff_weight[x] += diff_weight[par[x]];
       return par[x] = r;
     }
   }
-  int weight(int x){
+  T weight(int x){
     root(x);
     return diff_weight[x];
   }
   bool same(int x, int y){
     return root(x) == root(y);
   }
-  bool merge(int x, int y, int w){
+  bool merge(int x, int y, T w){
     w += weight(x); w -= weight(y);
     x = root(x); y = root(y);
     if(x == y) return false;
@@ -70,9 +69,11 @@ struct UnionFindW {
     diff_weight[y] = w;
     return true;
   }
-  int diff(int x, int y){
+  T diff(int x, int y){
     return weight(y) - weight(x);
   }
+  private:
+  int n;
 };
 
 
