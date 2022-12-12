@@ -23,12 +23,11 @@ ll ext_gcd(ll a, ll b, ll &x, ll &y)
 
 ## 4. crt
 - Chinese Remainder Theorem(中国剰余定理)
-- x ≡ b1 mod.m1
-- x ≡ b2 mod.m2
+- x ≡ b_i mod.m_i (0 <= i < n)
 - が成り立つ最小のxを求める
-- 存在しない場合は{ 0, -1 }を返す
+- 存在しない場合は{ 0, 0 }を返す
 ```cpp
-pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2)
+pair<ll, ll> crt(const vector<ll> &r, const vector<ll> &m)
 ```
 - verified: https://atcoder.jp/contests/abc193/submissions/25333960
 

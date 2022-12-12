@@ -37,14 +37,31 @@ ll ext_gcd(ll a, ll b, ll &x, ll &y){
 }
 
 
-pair<ll, ll> crt(ll b1, ll m1, ll b2, ll m2){
-  ll p, q;
-  ll d = ext_gcd(m1, m2, p, q); // p is inv of m1/d (mod. m2/d)
-  if((b2 - b1) % d != 0) return make_pair(0, -1);
-  ll m = m1 * (m2/d); // lcm of (m1, m2)
-  ll tmp = (b2 - b1) / d * p % (m2/d);
-  ll r = ((b1 + m1 * tmp) % m + m) % m;
-  return make_pair(r, m);
+pair<ll, ll> crt(const vector<ll> &r,const vector<ll> &m){
+  assert(r.size() == m.size());
+  const int n = (int)r.size();
+  ll r0 = 0, m0 = 1;
+  for(int i = 0; i < n; i++){
+    assert(1 <= m[i]);
+    ll r1 = (r[i] % m[i] + m[i]) % m[i], m1 = m[i];
+    if(m0 < m1){
+      swap(r0, r1);
+      swap(m0, m1);
+    }
+    if(m0 % m1 == 0){
+      if(r0 % m1 != r1) return { 0, 0 };
+      continue;
+    }
+    ll im, tmp;
+    const ll g = ext_gcd(m0, m1, im, tmp);
+    const ll u1 = (m1 / g);
+    if((r1 - r0) % g) return { 0, 0 };
+    const ll x = (r1 - r0) / g % u1 * im % u1;
+    r0 += x * m0;
+    m0 *= u1;
+    if(r0 < 0) r0 += m0;
+  }
+  return { r0, m0 };
 }
 
 
