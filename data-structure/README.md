@@ -90,8 +90,8 @@ int rank(const int &val, const int &k);
 - ウェーブレット行列
 - 構築
 ```cpp
-WaveletMatrix<class T, int maxlog>(vector<T> v);
-CompWaveletMatrix<class T, maxlog>(const vector<T> v);
+WaveletMatrix<class T, int maxlog, bool USE_SUM = false>(vector<T> v);
+CompWaveletMatrix<class T, maxlog, bool USE_SUM = false>(const vector<T> &data);
 ```
 - 計算量：O(maxlog)
 - v[k]の値を求める
@@ -106,6 +106,12 @@ int rank(const T x, int r);
 ```cpp
 T kth_smallest(int l, int r, int k);
 T kth_largest(int l, int r, int k);
+```
+- [l, r)の中で1~k番目に小さい/大きい値の総和を求める
+- USE_SUM = trueが必要
+```cpp
+T kth_smallest_sum(int l, int r, int k);
+T kth_largest_sum(int l, int r, int k);
 ```
 - [l,r)のiについて lower <= v[i] < upper を満たすiの数を求める
 ```cpp
