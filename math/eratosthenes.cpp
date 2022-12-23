@@ -9,7 +9,7 @@ struct range_factorization {
   vector<vector<ll>> large;  // 大きい篩
   vector<ll> aux;  // aux[i] := large[i] の素因数の積
   public:
-  range_factorization(ll L, ll R): L(L), R(R), M(sqrt(R)+1){
+  range_factorization(const ll L, const ll R): L(L), R(R), M(sqrt(R)+1){
     small.resize(M);
     for(int i = 0; i < M; i++) small[i] = i;
     large.resize(R-L);
@@ -57,7 +57,7 @@ struct range_eratosthenes {
   static constexpr int Max_range = 1000010; //10^6
   bitset<Max_range> small, large;
   public:
-  range_eratosthenes(ll L, ll R) : L(L), R(R), M(sqrt(R)+1){
+  range_eratosthenes(const ll L, const ll R) : L(L), R(R), M(sqrt(R)+1){
     assert(M <= Max_range && R - L <= Max_range);
     for(ll i = 2; i < M; i++){
       if(small[i]) continue;
@@ -66,7 +66,7 @@ struct range_eratosthenes {
         large[j - L] = 1;
     }
   }
-  bool is_prime(const ll &n) const{
+  bool is_prime(const ll n) const{
     assert(L <= n && n < R);
     return !large[n - L];
   }

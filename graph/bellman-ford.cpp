@@ -8,7 +8,7 @@ struct BellmanFord {
     inf = -op(inf, -inf);
     res.assign(n, inf);
   }
-  void solve(int s){
+  void solve(const int s){
     assert(0 <= s && s < n);
     res[s] = 0;
     for(int i = 1; i < n; i++) for(int j = 0; j < n; j++){

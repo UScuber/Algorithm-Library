@@ -3,7 +3,7 @@ using namespace std;
 
 template<class T, const T&(*op)(const T&,const T&)>
 struct SegmentTree {
-  SegmentTree(int _n) : n(_n){
+  SegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
     //inf = -op(inf-1, -inf+1);
@@ -19,11 +19,11 @@ struct SegmentTree {
       d[k] = op(d[k*2], d[k*2+1]);
     }
   }
-  void set(const int &i, const T &x){
+  void set(const int i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
-  T get(const int &i) const{
+  T get(const int i) const{
     assert(0 <= i && i < n);
     return d[i + len];
   }
@@ -41,11 +41,28 @@ struct SegmentTree {
     }
     return op(left, right);
   }
-  int min_right(int l, int r, const T &x){
+  //min i  (0 <= i < r), (op(a[i], v) == a[i])
+  int min_left(int r, const T v) const{
+    assert(0 <= r && r <= n);
+    if(d[1] > v || !r) return r;
+    r += len;
+    int k = 1;
+    for(int i = log - 1; i >= 0; i--){
+      k <<= 1;
+      if(op(d[k]+op(1,-1),v)==v){
+        k++;
+        if(k > (r >> i) || op(d[k]+op(1,-1),v)==v) return r - len;
+      }
+    }
+    return k - len;
+  }
+  //max i  (0 <= i < r), (op(a[i], v) == a[i])
+  int min_right(const int l, const int r, const T &x) const{
     assert(0 <= l && l <= r && r <= n);
     return min_right_sub(l, r, x, 1, 0, len);
   }
-  int min_left(int l, int r, const T &x){
+  //min i  (l <= i < r), (op(a[i], v) == a[i])
+  int min_left(const int l, const int r, const T &x) const{
     assert(0 <= l && l <= r && r <= n);
     return min_left_sub(l, r, x, 1, 0, len);
   }
@@ -54,7 +71,7 @@ struct SegmentTree {
   int n = 1, log = 0, len = 0;
   vector<T> d;
   //範囲外であればreturn a-1
-  int min_right_sub(int a, int b, const T &x, int k, int l, int r){
+  int min_right_sub(int a, int b, const T &x, int k, int l, int r) const{
     if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return a - 1;
     if(k >= len) return k - len;
 
@@ -63,7 +80,7 @@ struct SegmentTree {
     return min_right_sub(a, b, x, 2*k, l, (l+r)/2);
   }
   //範囲外であればreturn b
-  int min_left_sub(int a, int b, const T &x, int k, int l, int r){
+  int min_left_sub(int a, int b, const T &x, int k, int l, int r) const{
     if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return b;
     if(k >= len) return k - len;
 

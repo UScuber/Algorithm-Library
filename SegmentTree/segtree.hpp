@@ -3,7 +3,7 @@ using namespace std;
 
 template <class T, T(*op)(const T&,const T&), T(*e)()>
 struct SegmentTree {
-  SegmentTree(int _n) : n(_n){
+  SegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
     d.resize(len * 2, e());
@@ -17,11 +17,11 @@ struct SegmentTree {
       d[k] = op(d[k*2], d[k*2+1]);
     }
   }
-  void set(int i, const T &x){
+  void set(const int i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
-  T get(const int &i) const{
+  T get(const int i) const{
     assert(0 <= i && i < n);
     return d[i + len];
   }

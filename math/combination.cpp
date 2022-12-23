@@ -12,17 +12,17 @@ struct initializer {
     for(int i = len - 2; i >= 0; i--) invfact[i] = invfact[i + 1] * (i + 1);
   }
 } initializer;
-mint C(int n, int r){
+mint C(const int n, const int r){
   assert(0 <= n && n < len);
   if(n < r) return 0;
   return fact[n] * invfact[n - r] * invfact[r];
 }
-mint P(int n, int r){
+mint P(const int n, const int r){
   assert(0 <= n && n < len);
   if(n < r) return 0;
   return fact[n] * invfact[n - r];
 }
-mint H(int n, int r){
+mint H(const int n, const int r){
   assert(0 < n && 0 <= r);
   assert(0 < n+r && n+r <= len);
   return fact[n + r - 1] * invfact[n - 1] * invfact[r];

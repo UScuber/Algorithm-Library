@@ -10,9 +10,9 @@ struct SparseTable {
   vector<int> len;
   T inf = numeric_limits<T>::max();
   public:
-  SparseTable(int n) : n(n), a(n), len(n + 1){}
+  SparseTable(const int n) : n(n), a(n), len(n + 1){}
   SparseTable(const vector<T> &a) : a(a), n(a.size()), len(a.size() + 1){}
-  T &operator[](const int &i){ return a[i]; }
+  T &operator[](const int i){ return a[i]; }
   void build(){
     inf = -op(inf, -inf);
     int logn = 0;
@@ -26,7 +26,7 @@ struct SparseTable {
     }
     for(int i = 2; i <= n; i++) len[i] = len[i >> 1] + 1;
   }
-  T query(int l, int r) const{
+  T query(const int l, const int r) const{
     assert(0 <= l && l <= r && r <= n);
     if(l == r) return inf;
     const int range = len[r - l];

@@ -7,7 +7,7 @@ struct LazySegmentTree {
   struct Lazy {
     T s,p;
   };
-  LazySegmentTree(int _n) : n(_n){
+  LazySegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
     d.assign(len * 2, 0);
@@ -17,7 +17,7 @@ struct LazySegmentTree {
     for(int i = 2; i < len * 2; i++) si[i] = si[i>>1]>>1;
   }
   ~LazySegmentTree(){ delete si; }
-  void set(int i, const T &x){
+  void set(const int i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
@@ -74,8 +74,8 @@ struct LazySegmentTree {
   vector<Lazy> lazy;
   int *si;
   int n = 1, log = 0, len = 0;
-  void update(const int &k){ d[k] = d[2*k] + d[2*k+1]; }
-  void apply(const int &k, const Lazy &x, const int &r){
+  inline void update(const int k){ d[k] = d[2*k] + d[2*k+1]; }
+  inline void apply(const int k, const Lazy &x, const int r){
     const T tot = (x.s*2+x.p*(r*2+si[k]-1))*si[k] / 2;
     d[k] += tot;
     if(k < len){
@@ -83,7 +83,7 @@ struct LazySegmentTree {
       lazy[k].p += x.p;
     }
   }
-  void push(const int &k){
+  inline void push(const int k){
     if(lazy[k].s == 0 && lazy[k].p == 0) return;
     apply(2*k, lazy[k], 0);
     apply(2*k+1, lazy[k], si[2*k+1]);

@@ -7,10 +7,10 @@ struct matrix {
   private:
   vector<vector<T>> a;
   public:
-  matrix(int n) : n(n), m(n), a(n, vector<T>(n)){}
-  matrix(int n, int m) : n(n), m(m), a(n, vector<T>(m)){}
+  matrix(const int n) : n(n), m(n), a(n, vector<T>(n)){}
+  matrix(const int n, const int m) : n(n), m(m), a(n, vector<T>(m)){}
   matrix(const vector<vector<T>> &d) : a(d), n(d.size()), m(d[0].size()){}
-  vector<T> &operator[](const int &i){ return a[i]; }
+  vector<T> &operator[](const int i){ return a[i]; }
   matrix &operator*=(const matrix &b){
     assert(m == b.n);
     vector<vector<T>> c(n, vector<T>(b.m));

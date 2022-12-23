@@ -5,13 +5,13 @@ using namespace std;
 template <class T, T(*op)(const T&,const T&), T(*e)(), class F,
           T(*mapping)(const F&,const T&), F(*composition)(const F&,const F&), F(*id)()>
 struct LazySegmentTree {
-  LazySegmentTree(int _n) : n(_n){
+  LazySegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
     d.assign(len * 2, e());
     lazy.assign(len, id());
   }
-  void set(const int &i, const T &x){
+  void set(const int i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
@@ -60,12 +60,12 @@ struct LazySegmentTree {
   vector<T> d;
   vector<F> lazy;
   int n = 1, log = 0, len = 0;
-  void update(const int &k){ d[k] = op(d[2*k], d[2*k+1]); }
-  void apply(const int &k, const F &x){
+  inline void update(const int k){ d[k] = op(d[2*k], d[2*k+1]); }
+  inline void apply(const int k, const F &x){
     d[k] = mapping(x, d[k]);
     if(k < len) lazy[k] = composition(lazy[k], x);
   }
-  void push(const int &k){
+  inline void push(const int k){
     apply(2*k, lazy[k]);
     apply(2*k+1, lazy[k]);
     lazy[k] = id();

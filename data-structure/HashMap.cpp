@@ -21,7 +21,7 @@ struct HashMap {
   }
   public:
   HashMap() : keys(new Key[N]), vals(new Val[N]), r(rng()){}
-  constexpr Val &operator[](const Key i) noexcept{
+  inline constexpr Val &operator[](const Key i) noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]){
@@ -33,7 +33,7 @@ struct HashMap {
       hash = (hash + 1) & (N - 1);
     }
   }
-  constexpr bool count(const Key i) const noexcept{
+  inline constexpr bool count(const Key i) const noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]) return false;

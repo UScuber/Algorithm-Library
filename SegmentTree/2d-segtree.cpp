@@ -6,14 +6,14 @@ struct SegmentTree2D {
   int h,w, logh,logw;
   vector<vector<T>> d;
   SegmentTree2D() : SegmentTree2D(0, 0){}
-  SegmentTree2D(int _h, int _w){
+  SegmentTree2D(const int _h, const int _w){
     h = w = 1;
     logh = logw = 1;
     while((h <<= 1) < _h) logh++;
     while((w <<= 1) < _w) logw++;
     d.resize(h * 2, vector<T>(w * 2, e()));
   }
-  void set(const int &i, const int &j, const T &x){
+  void set(const int i, const int j, const T x){
     d[i + h][j + w] += x;
   }
   void build(){
@@ -26,7 +26,7 @@ struct SegmentTree2D {
         updateY(i, j);
     }
   }
-  void update(int py, int px, const T &x){
+  void update(int py, int px, const T x){
     assert(0 <= py && py < h);
     assert(0 <= px && px < w);
     py += h, px += w;
@@ -40,7 +40,7 @@ struct SegmentTree2D {
       }
     }
   }
-  T get(const int &py, const int &px){
+  T get(const int py, const int px){
     assert(0 <= py && py < h);
     assert(0 <= px && px < w);
     return d[py + h][px + w];
@@ -60,7 +60,7 @@ struct SegmentTree2D {
     return op(sml, smr);
   }
   private:
-  T query_sub(int lx, int rx, int y){
+  T query_sub(int lx, int rx, const int y){
     T sml = e(), smr = e();
     lx += w;
     rx += w;
@@ -72,10 +72,10 @@ struct SegmentTree2D {
     }
     return op(sml, smr);
   }
-  inline void updateX(const int &i, const int &j){
+  inline void updateX(const int i, const int j){
     d[i][j] = op(d[i][2*j], d[i][2*j+1]);
   }
-  inline void updateY(const int &i, const int &j){
+  inline void updateY(const int i, const int j){
     d[i][j] = op(d[2*i][j], d[2*i+1][j]);
   }
 };

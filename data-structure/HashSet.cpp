@@ -20,7 +20,7 @@ struct HashSet {
   }
   public:
   HashSet() : keys(new Key[N]), r(rng()){}
-  constexpr void set(const Key i) noexcept{
+  inline constexpr void set(const Key i) noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]){
@@ -32,7 +32,7 @@ struct HashSet {
       hash = (hash + 1) & (N - 1);
     }
   }
-  constexpr bool count(const Key i) const noexcept{
+  inline constexpr bool count(const Key i) const noexcept{
     uint hash = (ull(i) * r) >> shift;
     while(true){
       if(!flag[hash]) return false;

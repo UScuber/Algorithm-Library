@@ -3,7 +3,7 @@ using namespace std;
 
 template <class T>
 struct LazySegmentTree {
-  LazySegmentTree(int _n) : n(_n){
+  LazySegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
     d.assign(len * 2, 0);
@@ -11,7 +11,7 @@ struct LazySegmentTree {
     si.assign(len * 2, 1);
     for(int i = len - 1; i >= 1; i--) si[i] = si[i<<1] << 1;
   }
-  void set(const int &i, const T &x){
+  void set(const int i, const T &x){
     assert(0 <= i && i < n);
     d[i + len] = x;
   }
@@ -60,12 +60,12 @@ struct LazySegmentTree {
   vector<T> d, lazy;
   vector<int> si;
   int n = 1, log = 0, len = 0;
-  void update(const int &k){ d[k] = d[2*k] + d[2*k+1]; }
-  void apply(const int &k, const T &x){
+  inline void update(const int k){ d[k] = d[2*k] + d[2*k+1]; }
+  inline void apply(const int k, const T &x){
     d[k] += x * si[k];
     if(k < len) lazy[k] += x;
   }
-  void push(const int &k){
+  inline void push(const int k){
     if(!lazy[k]) return;
     apply(2*k, lazy[k]);
     apply(2*k+1, lazy[k]);
