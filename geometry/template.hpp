@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <complex>
+#include "../template/template.hpp"
 
 using Point = complex<double>;
 constexpr double EPS = 1e-8;

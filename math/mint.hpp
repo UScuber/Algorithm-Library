@@ -1,4 +1,4 @@
-using ll = long long;
+#pragma once
 
 template <int mod>
 struct Mint {

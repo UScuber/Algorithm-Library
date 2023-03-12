@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 struct BitVector {
   using uint = unsigned int;
   static constexpr int w = 32;

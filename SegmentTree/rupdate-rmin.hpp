@@ -1,11 +1,10 @@
-template <class T, T(*op)(const T&,const T&), T(*e)(), class F,
-          T(*mapping)(const F&,const T&), F(*composition)(const F&,const F&), F(*id)()>
+template <class T>
 struct LazySegmentTree {
   LazySegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
-    d.assign(len * 2, e());
-    lazy.assign(len, id());
+    d.assign(len * 2, inf);
+    lazy.assign(len, inf);
   }
   void set(const int i, const T &x){
     assert(0 <= i && i < n);
@@ -20,7 +19,7 @@ struct LazySegmentTree {
   void build(){
     for(int i = len - 1; i >= 1; i--) update(i);
   }
-  void update(int l, int r, const F &x){
+  void update(int l, int r, const T &x){
     assert(0 <= l && l <= r && r <= n);
     l += len; r += len;
     const int l_ctz = __builtin_ctz(l);
@@ -44,50 +43,27 @@ struct LazySegmentTree {
     const int r_ctz = __builtin_ctz(r);
     for(int i = log; i > l_ctz; i--) push(l >> i);
     for(int i = log; i > r_ctz; i--) push((r - 1) >> i);
-    T left = e(), right = e();
+    T left = inf, right = inf;
     while(l < r){
-      if(l & 1) left = op(left, d[l++]);
-      if(r & 1) right = op(d[--r], right);
+      if(l & 1) left = min(left, d[l++]);
+      if(r & 1) right = min(d[--r], right);
       l >>= 1; r >>= 1;
     }
-    return op(left, right);
+    return min(left, right);
   }
   private:
-  vector<T> d;
-  vector<F> lazy;
+  vector<T> d, lazy;
+  const T inf = numeric_limits<T>::max();
   int n = 1, log = 0, len = 0;
-  inline void update(const int k){ d[k] = op(d[2*k], d[2*k+1]); }
-  inline void apply(const int k, const F &x){
-    d[k] = mapping(x, d[k]);
-    if(k < len) lazy[k] = composition(lazy[k], x);
+  inline void update(const int k){ d[k] = min(d[2*k], d[2*k+1]); }
+  inline void apply(const int k, const T &x){
+    d[k] = x;
+    if(k < len) lazy[k] = x;
   }
   inline void push(const int k){
+    if(lazy[k] == inf) return;
     apply(2*k, lazy[k]);
     apply(2*k+1, lazy[k]);
-    lazy[k] = id();
+    lazy[k] = inf;
   }
 };
-
-/*
-struct Data {
-  ll a, len;
-};
-struct Lazy {
-  ll a, b;
-};
-Data op(const Data &a, const Data &b){
-  return { a.a+b.a, a.len+b.len };
-}
-Data e(){
-  return { 0, 0 };
-}
-Data mapping(const Lazy &a, const Data &b){
-  return { a.a*b.a + a.b*b.len, b.len };
-}
-Lazy composition(const Lazy &a, const Lazy &b){
-  return { a.a*b.a, a.b*b.a + b.b };
-}
-Lazy id(){
-  return { 1, 0 };
-}
-*/

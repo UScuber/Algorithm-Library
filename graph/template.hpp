@@ -1,6 +1,8 @@
-#include <bits/stdc++.h>
-using namespace std;
+#pragma once
 
+/**
+ * @brief Graph Template
+*/
 template <class T>
 struct Edge {
   int from,to;

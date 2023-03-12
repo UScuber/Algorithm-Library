@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template <class T, T(*op)(const T&,const T&), T(*e)()>
 struct SegmentTree {
   SegmentTree(const int _n) : n(_n){

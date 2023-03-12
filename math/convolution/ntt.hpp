@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template <class mint>
 struct NTT {
   static constexpr uint32_t get_pr(){

@@ -1,5 +1,3 @@
-using ll = long long;
-
 inline unsigned int randxor32() noexcept{
   static unsigned int y = 2463534242;
   y = y ^ (y << 13); y = y ^ (y >> 17);

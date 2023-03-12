@@ -1,4 +1,5 @@
-#include "fps-template.hpp"
+#include "ntt.hpp"
+#include "../mint.hpp"
 
 namespace ArbitraryNTT {
 using u128 = __uint128_t;
@@ -40,7 +41,6 @@ vector<int> multiply(const vector<T> &s, const vector<T> &t, const int mod){
   }
   return ret;
 }
-
 template <class mint>
 vector<mint> multiply(const vector<mint> &a, const vector<mint> &b){
   if(a.size() == 0 && b.size() == 0) return {};
@@ -58,61 +58,27 @@ vector<mint> multiply(const vector<mint> &a, const vector<mint> &b){
   for(int i = 0; i < (int)u.size(); i++) ret[i] = mint(u[i]);
   return ret;
 }
-
-template <class T>
-vector<u128> multiply_u128(const vector<T> &s, const vector<T> &t){
-  if(s.size() == 0 && t.size() == 0) return {};
-  if(min<int>(s.size(), t.size()) < 128){
-    vector<u128> ret(s.size() + t.size() - 1);
-    for(int i = 0; i < (int)s.size(); i++)
-      for(int j = 0; j < (int)t.size(); j++) ret[i + j] += ll(s[i]) * t[j];
-    return ret;
-  }
-  const auto d0 = mul<T, mint0>(s, t);
-  const auto d1 = mul<T, mint1>(s, t);
-  const auto d2 = mul<T, mint2>(s, t);
+vector<ll> multiply_ll(const vector<ll> &s, const vector<ll> &t){
+  const auto d0 = mul<ll, mint0>(s, t);
+  const auto d1 = mul<ll, mint1>(s, t);
+  const auto d2 = mul<ll, mint2>(s, t);
   const int n = d0.size();
-  vector<u128> ret(n);
+  vector<ll> ret(n);
+  const ll W1 = w1;
+  const ll W2 = w2;
   for(int i = 0; i < n; i++){
-    ll n1 = d1[i].x, n2 = d2[i].x;
-    ll a = d0[i].x;
-    u128 b = (n1 + m1 - a) * r01 % m1;
-    u128 c = ((n2 + m2 - a) * r02r12 + (m2 - b) * r12) % m2;
-    ret[i] = a + b * w1 + c * w2;
+    const ll n1 = d1[i].x, n2 = d2[i].x, a = d0[i].x;
+    const ll b = ll(n1 + m1 - a) * r01 % m1;
+    const ll c = (ll(n2 + m2 - a) * r02r12 + ll(m2 - b) * r12) % m2;
+    ret[i] = (ll(a) + ll(b) * W1 + ll(c) * W2);
   }
   return ret;
 }
 } // namespace ArbitraryNTT
-template <class mint> void FPS<mint>::set_fft(){ ntt_ptr = nullptr; }
-template <class mint> void FPS<mint>::ntt(){ exit(1); }
-template <class mint> void FPS<mint>::intt(){ exit(1); }
-template <class mint> void FPS<mint>::ntt_doubling(){ exit(1); }
-template <class mint> int FPS<mint>::ntt_pr(){ exit(1); }
 template <class mint>
-FPS<mint> &FPS<mint>::operator*=(const FPS<mint> &r){
-  if(this->empty() || r.empty()){
-    this->clear();
-    return *this;
-  }
-  const auto ret = ArbitraryNTT::multiply(*this, r);
-  return *this = FPS<mint>(ret.begin(), ret.end());
+vector<mint> convolution(const vector<mint> &a, const vector<mint> &b){
+  return ArbitraryNTT::multiply(a, b);
 }
-template <class mint>
-FPS<mint> FPS<mint>::inv(int deg) const{
-  assert((*this)[0] != mint(0));
-  if(deg == -1) deg = (*this).size();
-  FPS<mint> ret({mint(1) / (*this)[0]});
-  for(int i = 1; i < deg; i <<= 1)
-    ret = (ret + ret - ret * ret * (*this).pre(i << 1)).pre(i << 1);
-  return ret.pre(deg);
-}
-template <class mint>
-FPS<mint> FPS<mint>::exp(int deg) const{
-  assert((*this).size() == 0 || (*this)[0] == mint(0));
-  if(deg == -1) deg = (int)this->size();
-  FPS<mint> ret({mint(1)});
-  for(int i = 1; i < deg; i <<= 1){
-    ret = (ret * (pre(i << 1) + mint(1) - ret.log(i << 1))).pre(i << 1);
-  }
-  return ret.pre(deg);
+vector<ll> convolution_ll(const vector<ll> &a, const vector<ll> &b){
+  return ArbitraryNTT::multiply_ll(a, b);
 }

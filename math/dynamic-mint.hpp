@@ -1,4 +1,5 @@
 using ull = unsigned long long;
+
 unsigned int mod;
 ull bar;
 
