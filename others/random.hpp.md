@@ -8,27 +8,27 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"others/random.hpp\"\nusing ll = long long;\n\ninline unsigned\
-    \ int randxor32() noexcept{\n  static unsigned int y = 2463534242;\n  y = y ^\
-    \ (y << 13); y = y ^ (y >> 17);\n  return y = y ^ (y << 5);\n}\n// returns random\
-    \ [l, r)\ninline int rnd(const int l, const int r) noexcept{\n  return randxor32()\
-    \ % (r - l) + l;\n}\n\nunsigned long long randxor64(){\n  static unsigned long\
-    \ long x = 88172645463325252ULL;\n  x = x ^ (x << 7);\n  return x = x ^ (x >>\
-    \ 9);\n}\n// returns random [l, r)\ninline long long rnd(const ll l, const ll\
-    \ r) noexcept{\n  return randxor64() % (r - l) + l;\n}\n"
-  code: "using ll = long long;\n\ninline unsigned int randxor32() noexcept{\n  static\
-    \ unsigned int y = 2463534242;\n  y = y ^ (y << 13); y = y ^ (y >> 17);\n  return\
-    \ y = y ^ (y << 5);\n}\n// returns random [l, r)\ninline int rnd(const int l,\
-    \ const int r) noexcept{\n  return randxor32() % (r - l) + l;\n}\n\nunsigned long\
-    \ long randxor64(){\n  static unsigned long long x = 88172645463325252ULL;\n \
-    \ x = x ^ (x << 7);\n  return x = x ^ (x >> 9);\n}\n// returns random [l, r)\n\
-    inline long long rnd(const ll l, const ll r) noexcept{\n  return randxor64() %\
-    \ (r - l) + l;\n}"
+  bundledCode: "#line 1 \"others/random.hpp\"\ninline unsigned int randxor32() noexcept{\r\
+    \n  static unsigned int y = 2463534242;\r\n  y = y ^ (y << 13); y = y ^ (y >>\
+    \ 17);\r\n  return y = y ^ (y << 5);\r\n}\r\n// returns random [l, r)\r\ninline\
+    \ int rnd(const int l, const int r) noexcept{\r\n  return randxor32() % (r - l)\
+    \ + l;\r\n}\r\n\r\nunsigned long long randxor64(){\r\n  static unsigned long long\
+    \ x = 88172645463325252ULL;\r\n  x = x ^ (x << 7);\r\n  return x = x ^ (x >> 9);\r\
+    \n}\r\n// returns random [l, r)\r\ninline long long rnd(const ll l, const ll r)\
+    \ noexcept{\r\n  return randxor64() % (r - l) + l;\r\n}\n"
+  code: "inline unsigned int randxor32() noexcept{\r\n  static unsigned int y = 2463534242;\r\
+    \n  y = y ^ (y << 13); y = y ^ (y >> 17);\r\n  return y = y ^ (y << 5);\r\n}\r\
+    \n// returns random [l, r)\r\ninline int rnd(const int l, const int r) noexcept{\r\
+    \n  return randxor32() % (r - l) + l;\r\n}\r\n\r\nunsigned long long randxor64(){\r\
+    \n  static unsigned long long x = 88172645463325252ULL;\r\n  x = x ^ (x << 7);\r\
+    \n  return x = x ^ (x >> 9);\r\n}\r\n// returns random [l, r)\r\ninline long long\
+    \ rnd(const ll l, const ll r) noexcept{\r\n  return randxor64() % (r - l) + l;\r\
+    \n}"
   dependsOn: []
   isVerificationFile: false
   path: others/random.hpp
   requiredBy: []
-  timestamp: '2022-07-13 09:36:21+09:00'
+  timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: others/random.hpp

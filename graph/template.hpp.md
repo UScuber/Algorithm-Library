@@ -3,61 +3,63 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: data-structure/hld.cpp
-    title: data-structure/hld.cpp
+    path: data-structure/HLD.hpp
+    title: data-structure/HLD.hpp
   - icon: ':warning:'
-    path: graph/bellman-ford.cpp
-    title: graph/bellman-ford.cpp
+    path: graph/bellman-ford.hpp
+    title: graph/bellman-ford.hpp
   - icon: ':warning:'
-    path: graph/center.cpp
-    title: graph/center.cpp
+    path: graph/center.hpp
+    title: graph/center.hpp
   - icon: ':warning:'
-    path: graph/check-bipartite.cpp
-    title: graph/check-bipartite.cpp
+    path: graph/cycle-detect.hpp
+    title: graph/cycle-detect.hpp
   - icon: ':warning:'
-    path: graph/cycle-detect.cpp
-    title: graph/cycle-detect.cpp
+    path: graph/diameter.hpp
+    title: graph/diameter.hpp
   - icon: ':warning:'
-    path: graph/diameter.cpp
-    title: graph/diameter.cpp
+    path: graph/dinic.hpp
+    title: graph/dinic.hpp
   - icon: ':warning:'
-    path: graph/kruskal.cpp
-    title: graph/kruskal.cpp
+    path: graph/lca.hpp
+    title: graph/lca.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: Graph Template
     links: []
-  bundledCode: "#line 1 \"graph/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
-    \ std;\n\ntemplate <class T>\nstruct Edge {\n  int from,to;\n  T cost;\n  int\
-    \ idx;\n  Edge(){};\n  Edge(int f, int t, T c=1, int i=-1) : from(f), to(t), cost(c),\
-    \ idx(i){}\n  Edge(int t) : to(t), from(-1), cost(1), idx(-1){}\n  operator int()\
-    \ const{ return to; }\n  bool operator<(const Edge &e){ return cost < e.cost;\
-    \ }\n};\ntemplate <class T>\nstruct Graph : vector<vector<Edge<T>>> {\n  Graph(){}\n\
-    \  Graph(const int &n) : vector<vector<Edge<T>>>(n){}\n  void add_edge(int a,\
-    \ int b, T c=1, int i=-1){\n    (*this)[a].push_back({ a, b, c, i });\n  }\n};\n\
-    using graph = Graph<int>;\n"
-  code: "#include <bits/stdc++.h>\nusing namespace std;\n\ntemplate <class T>\nstruct\
-    \ Edge {\n  int from,to;\n  T cost;\n  int idx;\n  Edge(){};\n  Edge(int f, int\
-    \ t, T c=1, int i=-1) : from(f), to(t), cost(c), idx(i){}\n  Edge(int t) : to(t),\
-    \ from(-1), cost(1), idx(-1){}\n  operator int() const{ return to; }\n  bool operator<(const\
-    \ Edge &e){ return cost < e.cost; }\n};\ntemplate <class T>\nstruct Graph : vector<vector<Edge<T>>>\
-    \ {\n  Graph(){}\n  Graph(const int &n) : vector<vector<Edge<T>>>(n){}\n  void\
-    \ add_edge(int a, int b, T c=1, int i=-1){\n    (*this)[a].push_back({ a, b, c,\
-    \ i });\n  }\n};\nusing graph = Graph<int>;"
+  bundledCode: "#line 2 \"graph/template.hpp\"\n\r\n/**\r\n * @brief Graph Template\r\
+    \n*/\r\ntemplate <class T>\r\nstruct Edge {\r\n  int from,to;\r\n  T cost;\r\n\
+    \  int idx;\r\n  Edge(){};\r\n  Edge(int f, int t, T c=1, int i=-1) : from(f),\
+    \ to(t), cost(c), idx(i){}\r\n  Edge(int t) : to(t), from(-1), cost(1), idx(-1){}\r\
+    \n  operator int() const{ return to; }\r\n  bool operator<(const Edge &e){ return\
+    \ cost < e.cost; }\r\n};\r\ntemplate <class T>\r\nstruct Graph : vector<vector<Edge<T>>>\
+    \ {\r\n  Graph(){}\r\n  Graph(const int &n) : vector<vector<Edge<T>>>(n){}\r\n\
+    \  void add_edge(int a, int b, T c=1, int i=-1){\r\n    (*this)[a].push_back({\
+    \ a, b, c, i });\r\n  }\r\n};\r\nusing graph = Graph<int>;\n"
+  code: "#pragma once\r\n\r\n/**\r\n * @brief Graph Template\r\n*/\r\ntemplate <class\
+    \ T>\r\nstruct Edge {\r\n  int from,to;\r\n  T cost;\r\n  int idx;\r\n  Edge(){};\r\
+    \n  Edge(int f, int t, T c=1, int i=-1) : from(f), to(t), cost(c), idx(i){}\r\n\
+    \  Edge(int t) : to(t), from(-1), cost(1), idx(-1){}\r\n  operator int() const{\
+    \ return to; }\r\n  bool operator<(const Edge &e){ return cost < e.cost; }\r\n\
+    };\r\ntemplate <class T>\r\nstruct Graph : vector<vector<Edge<T>>> {\r\n  Graph(){}\r\
+    \n  Graph(const int &n) : vector<vector<Edge<T>>>(n){}\r\n  void add_edge(int\
+    \ a, int b, T c=1, int i=-1){\r\n    (*this)[a].push_back({ a, b, c, i });\r\n\
+    \  }\r\n};\r\nusing graph = Graph<int>;"
   dependsOn: []
   isVerificationFile: false
   path: graph/template.hpp
   requiredBy:
-  - data-structure/hld.cpp
-  - graph/kruskal.cpp
-  - graph/check-bipartite.cpp
-  - graph/diameter.cpp
-  - graph/bellman-ford.cpp
-  - graph/cycle-detect.cpp
-  - graph/center.cpp
-  timestamp: '2022-03-01 22:20:05+09:00'
+  - data-structure/HLD.hpp
+  - graph/center.hpp
+  - graph/diameter.hpp
+  - graph/cycle-detect.hpp
+  - graph/dinic.hpp
+  - graph/lca.hpp
+  - graph/bellman-ford.hpp
+  timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/template.hpp
@@ -65,5 +67,5 @@ layout: document
 redirect_from:
 - /library/graph/template.hpp
 - /library/graph/template.hpp.html
-title: graph/template.hpp
+title: Graph Template
 ---

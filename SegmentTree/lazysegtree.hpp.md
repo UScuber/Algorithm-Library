@@ -8,79 +8,81 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"SegmentTree/lazysegtree.hpp\"\n#include <bits/stdc++.h>\n\
-    using ll = long long;\nusing namespace std;\n\ntemplate <class T, T(*op)(const\
-    \ T&,const T&), T(*e)(), class F,\n          T(*mapping)(const F&,const T&), F(*composition)(const\
-    \ F&,const F&), F(*id)()>\nstruct LazySegmentTree {\n  LazySegmentTree(const int\
-    \ _n) : n(_n){\n    while((1 << log) < n) log++;\n    len = 1 << log;\n    d.assign(len\
-    \ * 2, e());\n    lazy.assign(len, id());\n  }\n  void set(const int i, const\
-    \ T &x){\n    assert(0 <= i && i < n);\n    d[i + len] = x;\n  }\n  T get(int\
-    \ p){\n    assert(0 <= p && p < n);\n    p += len;\n    for(int i = log; i >=\
-    \ 1; i--) push(p >> i);\n    return d[p];\n  }\n  void build(){\n    for(int i\
-    \ = len - 1; i >= 1; i--) update(i);\n  }\n  void update(int l, int r, const F\
-    \ &x){\n    assert(0 <= l && l <= r && r <= n);\n    l += len; r += len;\n   \
-    \ const int l_ctz = __builtin_ctz(l);\n    const int r_ctz = __builtin_ctz(r);\n\
-    \    for(int i = log; i > l_ctz; i--) push(l >> i);\n    for(int i = log; i >\
-    \ r_ctz; i--) push((r - 1) >> i);\n    const int lt = l, rt = r;\n    while(l\
-    \ < r){\n      if(l & 1) apply(l++, x);\n      if(r & 1) apply(--r, x);\n    \
-    \  l >>= 1; r >>= 1;\n    }\n    l = lt; r = rt;\n    for(int i = l_ctz + 1; i\
-    \ <= log; i++) update(l >> i);\n    for(int i = r_ctz + 1; i <= log; i++) update((r\
-    \ - 1) >> i);\n  }\n  T query(int l, int r){\n    assert(0 <= l && l <= r && r\
-    \ <= n);\n    l += len; r += len;\n    const int l_ctz = __builtin_ctz(l);\n \
-    \   const int r_ctz = __builtin_ctz(r);\n    for(int i = log; i > l_ctz; i--)\
-    \ push(l >> i);\n    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);\n  \
-    \  T left = e(), right = e();\n    while(l < r){\n      if(l & 1) left = op(left,\
-    \ d[l++]);\n      if(r & 1) right = op(d[--r], right);\n      l >>= 1; r >>= 1;\n\
-    \    }\n    return op(left, right);\n  }\n  private:\n  vector<T> d;\n  vector<F>\
-    \ lazy;\n  int n = 1, log = 0, len = 0;\n  inline void update(const int k){ d[k]\
-    \ = op(d[2*k], d[2*k+1]); }\n  inline void apply(const int k, const F &x){\n \
-    \   d[k] = mapping(x, d[k]);\n    if(k < len) lazy[k] = composition(lazy[k], x);\n\
-    \  }\n  inline void push(const int k){\n    apply(2*k, lazy[k]);\n    apply(2*k+1,\
-    \ lazy[k]);\n    lazy[k] = id();\n  }\n};\n\n/*\nstruct Data {\n  ll a, len;\n\
-    };\nstruct Lazy {\n  ll a, b;\n};\nData op(const Data &a, const Data &b){\n  return\
-    \ { a.a+b.a, a.len+b.len };\n}\nData e(){\n  return { 0, 0 };\n}\nData mapping(const\
-    \ Lazy &a, const Data &b){\n  return { a.a*b.a + a.b*b.len, b.len };\n}\nLazy\
-    \ composition(const Lazy &a, const Lazy &b){\n  return { a.a*b.a, a.b*b.a + b.b\
-    \ };\n}\nLazy id(){\n  return { 1, 0 };\n}\n*/\n"
-  code: "#include <bits/stdc++.h>\nusing ll = long long;\nusing namespace std;\n\n\
-    template <class T, T(*op)(const T&,const T&), T(*e)(), class F,\n          T(*mapping)(const\
-    \ F&,const T&), F(*composition)(const F&,const F&), F(*id)()>\nstruct LazySegmentTree\
-    \ {\n  LazySegmentTree(const int _n) : n(_n){\n    while((1 << log) < n) log++;\n\
-    \    len = 1 << log;\n    d.assign(len * 2, e());\n    lazy.assign(len, id());\n\
-    \  }\n  void set(const int i, const T &x){\n    assert(0 <= i && i < n);\n   \
-    \ d[i + len] = x;\n  }\n  T get(int p){\n    assert(0 <= p && p < n);\n    p +=\
-    \ len;\n    for(int i = log; i >= 1; i--) push(p >> i);\n    return d[p];\n  }\n\
-    \  void build(){\n    for(int i = len - 1; i >= 1; i--) update(i);\n  }\n  void\
-    \ update(int l, int r, const F &x){\n    assert(0 <= l && l <= r && r <= n);\n\
-    \    l += len; r += len;\n    const int l_ctz = __builtin_ctz(l);\n    const int\
-    \ r_ctz = __builtin_ctz(r);\n    for(int i = log; i > l_ctz; i--) push(l >> i);\n\
-    \    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);\n    const int lt =\
-    \ l, rt = r;\n    while(l < r){\n      if(l & 1) apply(l++, x);\n      if(r &\
-    \ 1) apply(--r, x);\n      l >>= 1; r >>= 1;\n    }\n    l = lt; r = rt;\n   \
-    \ for(int i = l_ctz + 1; i <= log; i++) update(l >> i);\n    for(int i = r_ctz\
-    \ + 1; i <= log; i++) update((r - 1) >> i);\n  }\n  T query(int l, int r){\n \
-    \   assert(0 <= l && l <= r && r <= n);\n    l += len; r += len;\n    const int\
-    \ l_ctz = __builtin_ctz(l);\n    const int r_ctz = __builtin_ctz(r);\n    for(int\
-    \ i = log; i > l_ctz; i--) push(l >> i);\n    for(int i = log; i > r_ctz; i--)\
-    \ push((r - 1) >> i);\n    T left = e(), right = e();\n    while(l < r){\n   \
-    \   if(l & 1) left = op(left, d[l++]);\n      if(r & 1) right = op(d[--r], right);\n\
-    \      l >>= 1; r >>= 1;\n    }\n    return op(left, right);\n  }\n  private:\n\
-    \  vector<T> d;\n  vector<F> lazy;\n  int n = 1, log = 0, len = 0;\n  inline void\
-    \ update(const int k){ d[k] = op(d[2*k], d[2*k+1]); }\n  inline void apply(const\
-    \ int k, const F &x){\n    d[k] = mapping(x, d[k]);\n    if(k < len) lazy[k] =\
-    \ composition(lazy[k], x);\n  }\n  inline void push(const int k){\n    apply(2*k,\
-    \ lazy[k]);\n    apply(2*k+1, lazy[k]);\n    lazy[k] = id();\n  }\n};\n\n/*\n\
-    struct Data {\n  ll a, len;\n};\nstruct Lazy {\n  ll a, b;\n};\nData op(const\
-    \ Data &a, const Data &b){\n  return { a.a+b.a, a.len+b.len };\n}\nData e(){\n\
-    \  return { 0, 0 };\n}\nData mapping(const Lazy &a, const Data &b){\n  return\
-    \ { a.a*b.a + a.b*b.len, b.len };\n}\nLazy composition(const Lazy &a, const Lazy\
-    \ &b){\n  return { a.a*b.a, a.b*b.a + b.b };\n}\nLazy id(){\n  return { 1, 0 };\n\
-    }\n*/"
+  bundledCode: "#line 1 \"SegmentTree/lazysegtree.hpp\"\ntemplate <class T, T(*op)(const\
+    \ T&,const T&), T(*e)(), class F,\r\n          T(*mapping)(const F&,const T&),\
+    \ F(*composition)(const F&,const F&), F(*id)()>\r\nstruct LazySegmentTree {\r\n\
+    \  LazySegmentTree(const int _n) : n(_n){\r\n    while((1 << log) < n) log++;\r\
+    \n    len = 1 << log;\r\n    d.assign(len * 2, e());\r\n    lazy.assign(len, id());\r\
+    \n  }\r\n  void set(const int i, const T &x){\r\n    assert(0 <= i && i < n);\r\
+    \n    d[i + len] = x;\r\n  }\r\n  T get(int p){\r\n    assert(0 <= p && p < n);\r\
+    \n    p += len;\r\n    for(int i = log; i >= 1; i--) push(p >> i);\r\n    return\
+    \ d[p];\r\n  }\r\n  void build(){\r\n    for(int i = len - 1; i >= 1; i--) update(i);\r\
+    \n  }\r\n  void update(int l, int r, const F &x){\r\n    assert(0 <= l && l <=\
+    \ r && r <= n);\r\n    l += len; r += len;\r\n    const int l_ctz = __builtin_ctz(l);\r\
+    \n    const int r_ctz = __builtin_ctz(r);\r\n    for(int i = log; i > l_ctz; i--)\
+    \ push(l >> i);\r\n    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);\r\n\
+    \    const int lt = l, rt = r;\r\n    while(l < r){\r\n      if(l & 1) apply(l++,\
+    \ x);\r\n      if(r & 1) apply(--r, x);\r\n      l >>= 1; r >>= 1;\r\n    }\r\n\
+    \    l = lt; r = rt;\r\n    for(int i = l_ctz + 1; i <= log; i++) update(l >>\
+    \ i);\r\n    for(int i = r_ctz + 1; i <= log; i++) update((r - 1) >> i);\r\n \
+    \ }\r\n  T query(int l, int r){\r\n    assert(0 <= l && l <= r && r <= n);\r\n\
+    \    l += len; r += len;\r\n    const int l_ctz = __builtin_ctz(l);\r\n    const\
+    \ int r_ctz = __builtin_ctz(r);\r\n    for(int i = log; i > l_ctz; i--) push(l\
+    \ >> i);\r\n    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);\r\n    T\
+    \ left = e(), right = e();\r\n    while(l < r){\r\n      if(l & 1) left = op(left,\
+    \ d[l++]);\r\n      if(r & 1) right = op(d[--r], right);\r\n      l >>= 1; r >>=\
+    \ 1;\r\n    }\r\n    return op(left, right);\r\n  }\r\n  private:\r\n  vector<T>\
+    \ d;\r\n  vector<F> lazy;\r\n  int n = 1, log = 0, len = 0;\r\n  inline void update(const\
+    \ int k){ d[k] = op(d[2*k], d[2*k+1]); }\r\n  inline void apply(const int k, const\
+    \ F &x){\r\n    d[k] = mapping(x, d[k]);\r\n    if(k < len) lazy[k] = composition(lazy[k],\
+    \ x);\r\n  }\r\n  inline void push(const int k){\r\n    apply(2*k, lazy[k]);\r\
+    \n    apply(2*k+1, lazy[k]);\r\n    lazy[k] = id();\r\n  }\r\n};\r\n\r\n/*\r\n\
+    struct Data {\r\n  ll a, len;\r\n};\r\nstruct Lazy {\r\n  ll a, b;\r\n};\r\nData\
+    \ op(const Data &a, const Data &b){\r\n  return { a.a+b.a, a.len+b.len };\r\n\
+    }\r\nData e(){\r\n  return { 0, 0 };\r\n}\r\nData mapping(const Lazy &a, const\
+    \ Data &b){\r\n  return { a.a*b.a + a.b*b.len, b.len };\r\n}\r\nLazy composition(const\
+    \ Lazy &a, const Lazy &b){\r\n  return { a.a*b.a, a.b*b.a + b.b };\r\n}\r\nLazy\
+    \ id(){\r\n  return { 1, 0 };\r\n}\r\n*/\n"
+  code: "template <class T, T(*op)(const T&,const T&), T(*e)(), class F,\r\n     \
+    \     T(*mapping)(const F&,const T&), F(*composition)(const F&,const F&), F(*id)()>\r\
+    \nstruct LazySegmentTree {\r\n  LazySegmentTree(const int _n) : n(_n){\r\n   \
+    \ while((1 << log) < n) log++;\r\n    len = 1 << log;\r\n    d.assign(len * 2,\
+    \ e());\r\n    lazy.assign(len, id());\r\n  }\r\n  void set(const int i, const\
+    \ T &x){\r\n    assert(0 <= i && i < n);\r\n    d[i + len] = x;\r\n  }\r\n  T\
+    \ get(int p){\r\n    assert(0 <= p && p < n);\r\n    p += len;\r\n    for(int\
+    \ i = log; i >= 1; i--) push(p >> i);\r\n    return d[p];\r\n  }\r\n  void build(){\r\
+    \n    for(int i = len - 1; i >= 1; i--) update(i);\r\n  }\r\n  void update(int\
+    \ l, int r, const F &x){\r\n    assert(0 <= l && l <= r && r <= n);\r\n    l +=\
+    \ len; r += len;\r\n    const int l_ctz = __builtin_ctz(l);\r\n    const int r_ctz\
+    \ = __builtin_ctz(r);\r\n    for(int i = log; i > l_ctz; i--) push(l >> i);\r\n\
+    \    for(int i = log; i > r_ctz; i--) push((r - 1) >> i);\r\n    const int lt\
+    \ = l, rt = r;\r\n    while(l < r){\r\n      if(l & 1) apply(l++, x);\r\n    \
+    \  if(r & 1) apply(--r, x);\r\n      l >>= 1; r >>= 1;\r\n    }\r\n    l = lt;\
+    \ r = rt;\r\n    for(int i = l_ctz + 1; i <= log; i++) update(l >> i);\r\n   \
+    \ for(int i = r_ctz + 1; i <= log; i++) update((r - 1) >> i);\r\n  }\r\n  T query(int\
+    \ l, int r){\r\n    assert(0 <= l && l <= r && r <= n);\r\n    l += len; r +=\
+    \ len;\r\n    const int l_ctz = __builtin_ctz(l);\r\n    const int r_ctz = __builtin_ctz(r);\r\
+    \n    for(int i = log; i > l_ctz; i--) push(l >> i);\r\n    for(int i = log; i\
+    \ > r_ctz; i--) push((r - 1) >> i);\r\n    T left = e(), right = e();\r\n    while(l\
+    \ < r){\r\n      if(l & 1) left = op(left, d[l++]);\r\n      if(r & 1) right =\
+    \ op(d[--r], right);\r\n      l >>= 1; r >>= 1;\r\n    }\r\n    return op(left,\
+    \ right);\r\n  }\r\n  private:\r\n  vector<T> d;\r\n  vector<F> lazy;\r\n  int\
+    \ n = 1, log = 0, len = 0;\r\n  inline void update(const int k){ d[k] = op(d[2*k],\
+    \ d[2*k+1]); }\r\n  inline void apply(const int k, const F &x){\r\n    d[k] =\
+    \ mapping(x, d[k]);\r\n    if(k < len) lazy[k] = composition(lazy[k], x);\r\n\
+    \  }\r\n  inline void push(const int k){\r\n    apply(2*k, lazy[k]);\r\n    apply(2*k+1,\
+    \ lazy[k]);\r\n    lazy[k] = id();\r\n  }\r\n};\r\n\r\n/*\r\nstruct Data {\r\n\
+    \  ll a, len;\r\n};\r\nstruct Lazy {\r\n  ll a, b;\r\n};\r\nData op(const Data\
+    \ &a, const Data &b){\r\n  return { a.a+b.a, a.len+b.len };\r\n}\r\nData e(){\r\
+    \n  return { 0, 0 };\r\n}\r\nData mapping(const Lazy &a, const Data &b){\r\n \
+    \ return { a.a*b.a + a.b*b.len, b.len };\r\n}\r\nLazy composition(const Lazy &a,\
+    \ const Lazy &b){\r\n  return { a.a*b.a, a.b*b.a + b.b };\r\n}\r\nLazy id(){\r\
+    \n  return { 1, 0 };\r\n}\r\n*/"
   dependsOn: []
   isVerificationFile: false
   path: SegmentTree/lazysegtree.hpp
   requiredBy: []
-  timestamp: '2022-12-24 01:13:45+09:00'
+  timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: SegmentTree/lazysegtree.hpp
