@@ -5,10 +5,13 @@ data:
     path: graph/UnionFind.hpp
     title: graph/UnionFind.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL/GRL_2_A.test.cpp
+    title: test/aoj/GRL/GRL_2_A.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/UnionFind.hpp\"\nstruct UnionFind {\r\n  private:\r\
@@ -35,8 +38,9 @@ data:
   path: graph/kruskal.hpp
   requiredBy: []
   timestamp: '2023-03-13 15:00:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/kruskal.hpp
 layout: document
 redirect_from:

@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/slide-min.test.cpp
-    title: test/aoj/slide-min.test.cpp
+    path: test/aoj/DSL/DSL_3_D.test.cpp
+    title: test/aoj/DSL/DSL_3_D.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -31,7 +31,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/slide-min.test.cpp
+  - test/aoj/DSL/DSL_3_D.test.cpp
 documentation_of: data-structure/slide-min.hpp
 layout: document
 redirect_from:

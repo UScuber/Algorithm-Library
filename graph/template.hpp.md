@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/HLD.hpp
     title: data-structure/HLD.hpp
   - icon: ':heavy_check_mark:'
@@ -28,17 +28,26 @@ data:
     title: graph/lca.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/bellman-ford.test.cpp
-    title: test/aoj/bellman-ford.test.cpp
+    path: test/aoj/GRL/GRL_1_B.test.cpp
+    title: test/aoj/GRL/GRL_1_B.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/lca.test.cpp
-    title: test/aoj/lca.test.cpp
+    path: test/aoj/GRL/GRL_2_A.test.cpp
+    title: test/aoj/GRL/GRL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL/GRL_5_C.test.cpp
+    title: test/aoj/GRL/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Cycle-Detection(Directed).test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree-Diameter.test.cpp
     title: test/yosupo/Tree-Diameter.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
+    title: test/yosupo/Vertex-Add-Path-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
+    title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -78,10 +87,13 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Cycle-Detection(Directed).test.cpp
   - test/yosupo/Tree-Diameter.test.cpp
-  - test/aoj/bellman-ford.test.cpp
-  - test/aoj/lca.test.cpp
+  - test/yosupo/Vertex-Add-Path-Sum.test.cpp
+  - test/aoj/GRL/GRL_2_A.test.cpp
+  - test/aoj/GRL/GRL_5_C.test.cpp
+  - test/aoj/GRL/GRL_1_B.test.cpp
 documentation_of: graph/template.hpp
 layout: document
 redirect_from:

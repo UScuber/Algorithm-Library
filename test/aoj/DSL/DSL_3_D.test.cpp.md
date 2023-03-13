@@ -17,7 +17,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DSL_3_D
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/DSL_3_D
-  bundledCode: "#line 1 \"test/aoj/slide-min.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_3_D\"\
+  bundledCode: "#line 1 \"test/aoj/DSL/DSL_3_D.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_3_D\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
     \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
     \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
@@ -32,18 +32,18 @@ data:
     \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
     \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
     \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/aoj/slide-min.test.cpp\"\n\n#line 1 \"data-structure/slide-min.hpp\"\
+    \ 4 \"test/aoj/DSL/DSL_3_D.test.cpp\"\n\n#line 1 \"data-structure/slide-min.hpp\"\
     \ntemplate <class T>\r\nvector<T> slide_min(const vector<T> &a, int k){\r\n  int\
     \ n = (int)a.size();\r\n  deque<T> que;\r\n  vector<T> res(n);\r\n  for(int i\
     \ = 0; i < n + k - 1; i++){\r\n    while(!que.empty() && i < n && a[que.back()]\
     \ >= a[i]){\r\n      que.pop_back();\r\n    }\r\n    que.push_back(i);\r\n   \
     \ if(i - k + 1 >= 0){\r\n      res[i - k + 1] = a[que.front()];\r\n      if(que.front()\
     \ == i - k + 1) que.pop_front();\r\n    }\r\n  }\r\n  return res;\r\n}\n#line\
-    \ 6 \"test/aoj/slide-min.test.cpp\"\n\nint main(){\n  int n,k;\n  cin >> n >>\
+    \ 6 \"test/aoj/DSL/DSL_3_D.test.cpp\"\n\nint main(){\n  int n,k;\n  cin >> n >>\
     \ k;\n  vi a(n);\n  rep(i, n) cin >> a[i];\n  const auto res = slide_min(a, k);\n\
     \  rep(i, n-k+1) cout << res[i] << \" \\n\"[i == n - k];\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_3_D\"\n\n\
-    #include \"../../template/template.hpp\"\n\n#include \"../../data-structure/slide-min.hpp\"\
+    #include \"../../../template/template.hpp\"\n\n#include \"../../../data-structure/slide-min.hpp\"\
     \n\nint main(){\n  int n,k;\n  cin >> n >> k;\n  vi a(n);\n  rep(i, n) cin >>\
     \ a[i];\n  const auto res = slide_min(a, k);\n  rep(i, n-k+1) cout << res[i] <<\
     \ \" \\n\"[i == n - k];\n}"
@@ -51,15 +51,15 @@ data:
   - template/template.hpp
   - data-structure/slide-min.hpp
   isVerificationFile: true
-  path: test/aoj/slide-min.test.cpp
+  path: test/aoj/DSL/DSL_3_D.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 14:46:22+09:00'
+  timestamp: '2023-03-13 22:03:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/slide-min.test.cpp
+documentation_of: test/aoj/DSL/DSL_3_D.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/slide-min.test.cpp
-- /verify/test/aoj/slide-min.test.cpp.html
-title: test/aoj/slide-min.test.cpp
+- /verify/test/aoj/DSL/DSL_3_D.test.cpp
+- /verify/test/aoj/DSL/DSL_3_D.test.cpp.html
+title: test/aoj/DSL/DSL_3_D.test.cpp
 ---

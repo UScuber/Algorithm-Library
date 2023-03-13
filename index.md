@@ -33,7 +33,7 @@ data:
     - icon: ':warning:'
       path: SegmentTree/seg-rmin.hpp
       title: SegmentTree/seg-rmin.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/segtree.hpp
       title: SegmentTree/segtree.hpp
   - name: SegmentTree/old
@@ -61,7 +61,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/CumulativeSum2D.hpp
       title: data-structure/CumulativeSum2D.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/HLD.hpp
       title: data-structure/HLD.hpp
     - icon: ':heavy_check_mark:'
@@ -80,6 +80,9 @@ data:
       path: data-structure/Vector.hpp
       title: data-structure/Vector.hpp
     - icon: ':warning:'
+      path: data-structure/binarytrie-sum.hpp
+      title: data-structure/binarytrie-sum.hpp
+    - icon: ':heavy_check_mark:'
       path: data-structure/binarytrie.hpp
       title: data-structure/binarytrie.hpp
     - icon: ':heavy_check_mark:'
@@ -134,7 +137,7 @@ data:
     - icon: ':warning:'
       path: graph/fordfulkerson.hpp
       title: graph/fordfulkerson.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/kruskal.hpp
       title: graph/kruskal.hpp
     - icon: ':heavy_check_mark:'
@@ -157,10 +160,13 @@ data:
     - icon: ':warning:'
       path: math/dynamic-mint.hpp
       title: math/dynamic-mint.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/eratosthenes.hpp
       title: math/eratosthenes.hpp
     - icon: ':warning:'
+      path: math/factorizaiton.hpp
+      title: math/factorizaiton.hpp
+    - icon: ':heavy_check_mark:'
       path: math/floor-sum.hpp
       title: math/floor-sum.hpp
     - icon: ':warning:'
@@ -172,7 +178,7 @@ data:
     - icon: ':warning:'
       path: math/math.hpp
       title: math/math.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
     - icon: ':heavy_check_mark:'
@@ -231,13 +237,13 @@ data:
       title: others/timer.hpp
   - name: string
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: string/manacher.hpp
       title: string/manacher.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: string/rolling-hash.hpp
       title: string/rolling-hash.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: string/z-algorithm.hpp
       title: string/z-algorithm.hpp
   - name: template
@@ -246,28 +252,38 @@ data:
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
-  - name: .
+  - name: test/aoj/ALDS1
     pages:
     - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
-  - name: test/aoj
+      path: test/aoj/ALDS1/ALDS1_14_B.test.cpp
+      title: test/aoj/ALDS1/ALDS1_14_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS1/ALDS1_1_C.test.cpp
+      title: test/aoj/ALDS1/ALDS1_1_C.test.cpp
+  - name: test/aoj/DSL
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj/CumulativeSum2D.test.cpp
-      title: test/aoj/CumulativeSum2D.test.cpp
+      path: test/aoj/DSL/DSL_1_B.test.cpp
+      title: test/aoj/DSL/DSL_1_B.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/Weighted-UnionFind.test.cpp
-      title: test/aoj/Weighted-UnionFind.test.cpp
+      path: test/aoj/DSL/DSL_3_D.test.cpp
+      title: test/aoj/DSL/DSL_3_D.test.cpp
+  - name: test/aoj/GRL
+    pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj/bellman-ford.test.cpp
-      title: test/aoj/bellman-ford.test.cpp
+      path: test/aoj/GRL/GRL_1_B.test.cpp
+      title: test/aoj/GRL/GRL_1_B.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/lca.test.cpp
-      title: test/aoj/lca.test.cpp
+      path: test/aoj/GRL/GRL_2_A.test.cpp
+      title: test/aoj/GRL/GRL_2_A.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/slide-min.test.cpp
-      title: test/aoj/slide-min.test.cpp
+      path: test/aoj/GRL/GRL_5_C.test.cpp
+      title: test/aoj/GRL/GRL_5_C.test.cpp
+  - name: test/aoj/JOI
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/JOI/Planetary-Exploration.test.cpp
+      title: test/aoj/JOI/Planetary-Exploration.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'
@@ -277,11 +293,23 @@ data:
       path: test/yosupo/Cycle-Detection(Directed).test.cpp
       title: test/yosupo/Cycle-Detection(Directed).test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Determinant-of-Matrix.test.cpp
+      title: test/yosupo/Determinant-of-Matrix.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Enumrate-Palindromes.test.cpp
+      title: test/yosupo/Enumrate-Palindromes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Matrix-Product.test.cpp
+      title: test/yosupo/Matrix-Product.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Queue-Operate-All-Composite.test.cpp
       title: test/yosupo/Queue-Operate-All-Composite.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Range-Kth-Smallest.test.cpp
       title: test/yosupo/Range-Kth-Smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Set-Xor-Min.test.cpp
+      title: test/yosupo/Set-Xor-Min.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Static-RMQ.test.cpp
       title: test/yosupo/Static-RMQ.test.cpp
@@ -292,10 +320,22 @@ data:
       path: test/yosupo/Strongly-Connected-Components.test.cpp
       title: test/yosupo/Strongly-Connected-Components.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+      title: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree-Diameter.test.cpp
       title: test/yosupo/Tree-Diameter.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Unionfind.test.cpp
       title: test/yosupo/Unionfind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
+      title: test/yosupo/Vertex-Add-Path-Sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
+      title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Z-Algorithm.test.cpp
+      title: test/yosupo/Z-Algorithm.test.cpp
 layout: toppage
 ---

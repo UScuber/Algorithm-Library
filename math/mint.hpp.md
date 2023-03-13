@@ -3,9 +3,6 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: data-structure/HLD.hpp
-    title: data-structure/HLD.hpp
-  - icon: ':warning:'
     path: math/comb-modP.hpp
     title: math/comb-modP.hpp
   - icon: ':warning:'
@@ -28,8 +25,17 @@ data:
     title: math/fps/kitamasa.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Determinant-of-Matrix.test.cpp
+    title: test/yosupo/Determinant-of-Matrix.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Matrix-Product.test.cpp
+    title: test/yosupo/Matrix-Product.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Queue-Operate-All-Composite.test.cpp
     title: test/yosupo/Queue-Operate-All-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
+    title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -93,7 +99,6 @@ data:
   isVerificationFile: false
   path: math/mint.hpp
   requiredBy:
-  - data-structure/HLD.hpp
   - math/combination.hpp
   - math/comb-modP.hpp
   - math/fps/kitamasa.hpp
@@ -104,6 +109,9 @@ data:
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Matrix-Product.test.cpp
   - test/yosupo/Queue-Operate-All-Composite.test.cpp
 documentation_of: math/mint.hpp
 layout: document

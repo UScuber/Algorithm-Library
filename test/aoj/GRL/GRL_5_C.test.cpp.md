@@ -20,7 +20,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
-  bundledCode: "#line 1 \"test/aoj/lca.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\
+  bundledCode: "#line 1 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
     \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
     \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
@@ -35,10 +35,10 @@ data:
     \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
     \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
     \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/aoj/lca.test.cpp\"\n\n#line 2 \"graph/template.hpp\"\n\r\n/**\r\n *\
-    \ @brief Graph Template\r\n*/\r\ntemplate <class T>\r\nstruct Edge {\r\n  int\
-    \ from,to;\r\n  T cost;\r\n  int idx;\r\n  Edge(){};\r\n  Edge(int f, int t, T\
-    \ c=1, int i=-1) : from(f), to(t), cost(c), idx(i){}\r\n  Edge(int t) : to(t),\
+    \ 4 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n\n#line 2 \"graph/template.hpp\"\n\r\n\
+    /**\r\n * @brief Graph Template\r\n*/\r\ntemplate <class T>\r\nstruct Edge {\r\
+    \n  int from,to;\r\n  T cost;\r\n  int idx;\r\n  Edge(){};\r\n  Edge(int f, int\
+    \ t, T c=1, int i=-1) : from(f), to(t), cost(c), idx(i){}\r\n  Edge(int t) : to(t),\
     \ from(-1), cost(1), idx(-1){}\r\n  operator int() const{ return to; }\r\n  bool\
     \ operator<(const Edge &e){ return cost < e.cost; }\r\n};\r\ntemplate <class T>\r\
     \nstruct Graph : vector<vector<Edge<T>>> {\r\n  Graph(){}\r\n  Graph(const int\
@@ -70,14 +70,14 @@ data:
     \ <= d && d <= l + r);\r\n    if(l < d){\r\n      d = l + r - d;\r\n      swap(u,\
     \ v);\r\n    }\r\n    for(int k = 0; k < log; k++){\r\n      if(!(d >> k)) break;\r\
     \n      if(d >> k & 1) u = parent[k][u];\r\n    }\r\n    return u;\r\n  }\r\n\
-    };\n#line 6 \"test/aoj/lca.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
-    \  int n;\n  cin >> n;\n  vvi root(n);\n  rep(i, n){\n    int k, c;\n    cin >>\
-    \ k;\n    rep(j, k){\n      cin >> c;\n      root[i].push_back(c);\n    }\n  }\n\
-    \  lca<vvi> g(root);\n  int q;\n  cin >> q;\n  rep(i, q){\n    int u,v;\n    cin\
-    \ >> u >> v;\n    cout << g.query(u, v) << \"\\n\";\n  }\n}\n"
+    };\n#line 6 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
+    \  ios::sync_with_stdio(false);\n  int n;\n  cin >> n;\n  vvi root(n);\n  rep(i,\
+    \ n){\n    int k, c;\n    cin >> k;\n    rep(j, k){\n      cin >> c;\n      root[i].push_back(c);\n\
+    \    }\n  }\n  lca<vvi> g(root);\n  int q;\n  cin >> q;\n  rep(i, q){\n    int\
+    \ u,v;\n    cin >> u >> v;\n    cout << g.query(u, v) << \"\\n\";\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\n\n\
-    #include \"../../template/template.hpp\"\n\n#include \"../../graph/lca.hpp\"\n\
-    \nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  int n;\n\
+    #include \"../../../template/template.hpp\"\n\n#include \"../../../graph/lca.hpp\"\
+    \n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  int n;\n\
     \  cin >> n;\n  vvi root(n);\n  rep(i, n){\n    int k, c;\n    cin >> k;\n   \
     \ rep(j, k){\n      cin >> c;\n      root[i].push_back(c);\n    }\n  }\n  lca<vvi>\
     \ g(root);\n  int q;\n  cin >> q;\n  rep(i, q){\n    int u,v;\n    cin >> u >>\
@@ -87,15 +87,15 @@ data:
   - graph/lca.hpp
   - graph/template.hpp
   isVerificationFile: true
-  path: test/aoj/lca.test.cpp
+  path: test/aoj/GRL/GRL_5_C.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 14:46:22+09:00'
+  timestamp: '2023-03-13 22:02:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/lca.test.cpp
+documentation_of: test/aoj/GRL/GRL_5_C.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/lca.test.cpp
-- /verify/test/aoj/lca.test.cpp.html
-title: test/aoj/lca.test.cpp
+- /verify/test/aoj/GRL/GRL_5_C.test.cpp
+- /verify/test/aoj/GRL/GRL_5_C.test.cpp.html
+title: test/aoj/GRL/GRL_5_C.test.cpp
 ---

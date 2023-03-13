@@ -5,10 +5,13 @@ data:
   - icon: ':warning:'
     path: graph/check-bipartite.hpp
     title: graph/check-bipartite.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
     title: graph/kruskal.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL/GRL_2_A.test.cpp
+    title: test/aoj/GRL/GRL_2_A.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Unionfind.test.cpp
     title: test/yosupo/Unionfind.test.cpp
@@ -44,6 +47,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Unionfind.test.cpp
+  - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/UnionFind.hpp
 layout: document
 redirect_from:

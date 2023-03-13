@@ -7,8 +7,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/bellman-ford.test.cpp
-    title: test/aoj/bellman-ford.test.cpp
+    path: test/aoj/GRL/GRL_1_B.test.cpp
+    title: test/aoj/GRL/GRL_1_B.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -64,7 +64,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/bellman-ford.test.cpp
+  - test/aoj/GRL/GRL_1_B.test.cpp
 documentation_of: graph/bellman-ford.hpp
 layout: document
 redirect_from:

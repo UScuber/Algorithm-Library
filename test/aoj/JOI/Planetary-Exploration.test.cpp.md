@@ -17,8 +17,8 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/0560
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/0560
-  bundledCode: "#line 1 \"test/aoj/CumulativeSum2D.test.cpp\"\n#define PROBLEM \"\
-    https://onlinejudge.u-aizu.ac.jp/problems/0560\"\n\n#line 1 \"template/template.hpp\"\
+  bundledCode: "#line 1 \"test/aoj/JOI/Planetary-Exploration.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/problems/0560\"\n\n#line 1 \"template/template.hpp\"\
     \n#include <iostream>\r\n#include <cmath>\r\n#include <string>\r\n#include <vector>\r\
     \n#include <algorithm>\r\n#include <utility>\r\n#include <tuple>\r\n#include <cstdint>\r\
     \n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\n#include <set>\r\n\
@@ -32,8 +32,8 @@ data:
     \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
     \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
     \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
-    \ = b, 1) : 0; }\n#line 4 \"test/aoj/CumulativeSum2D.test.cpp\"\n\n#line 1 \"\
-    data-structure/CumulativeSum2D.hpp\"\ntemplate <class T>\r\nstruct CumulativeSum2D\
+    \ = b, 1) : 0; }\n#line 4 \"test/aoj/JOI/Planetary-Exploration.test.cpp\"\n\n\
+    #line 1 \"data-structure/CumulativeSum2D.hpp\"\ntemplate <class T>\r\nstruct CumulativeSum2D\
     \ {\r\n  CumulativeSum2D(const int h, const int w) : h(h), w(w), a(h+1, vector<T>(w+1)){}\r\
     \n  CumulativeSum2D(const vector<vector<T>> &v) : h(v.size()), w(v[0].size()),\
     \ a(h+1, vector<T>(w+1)){\r\n    for(int i = 0; i < h; i++)\r\n      for(int j\
@@ -45,7 +45,7 @@ data:
     \ const int lx, const int ry, const int rx) const{\r\n    assert(0 <= ly && ly\
     \ <= ry && ry <= h);\r\n    assert(0 <= lx && lx <= rx && rx <= w);\r\n    return\
     \ a[ry][rx] - a[ry][lx] - a[ly][rx] + a[ly][lx];\r\n  }\r\n  private:\r\n  int\
-    \ h, w;\r\n  vector<vector<T>> a;\r\n};\r\n#line 6 \"test/aoj/CumulativeSum2D.test.cpp\"\
+    \ h, w;\r\n  vector<vector<T>> a;\r\n};\r\n#line 6 \"test/aoj/JOI/Planetary-Exploration.test.cpp\"\
     \n\nconst string t = \"JOI\";\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
     \  int n,m,K;\n  cin >> n >> m >> K;\n  vector<CumulativeSum2D<int>> cnt(3, CumulativeSum2D<int>(n,\
     \ m));\n  rep(i, n){\n    string s; cin >> s;\n    rep(j, m){\n      rep(k, 3)\
@@ -54,7 +54,7 @@ data:
     \ >> a >> b >> c >> d;\n    a--; b--;\n    rep(i, 3) cout << cnt[i].query(a, b,\
     \ c, d) << \" \\n\"[i == 2];\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/0560\"\n\n#include\
-    \ \"../../template/template.hpp\"\n\n#include \"../../data-structure/CumulativeSum2D.hpp\"\
+    \ \"../../../template/template.hpp\"\n\n#include \"../../../data-structure/CumulativeSum2D.hpp\"\
     \n\nconst string t = \"JOI\";\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
     \  int n,m,K;\n  cin >> n >> m >> K;\n  vector<CumulativeSum2D<int>> cnt(3, CumulativeSum2D<int>(n,\
     \ m));\n  rep(i, n){\n    string s; cin >> s;\n    rep(j, m){\n      rep(k, 3)\
@@ -66,15 +66,15 @@ data:
   - template/template.hpp
   - data-structure/CumulativeSum2D.hpp
   isVerificationFile: true
-  path: test/aoj/CumulativeSum2D.test.cpp
+  path: test/aoj/JOI/Planetary-Exploration.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 14:46:22+09:00'
+  timestamp: '2023-03-13 22:03:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/CumulativeSum2D.test.cpp
+documentation_of: test/aoj/JOI/Planetary-Exploration.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/CumulativeSum2D.test.cpp
-- /verify/test/aoj/CumulativeSum2D.test.cpp.html
-title: test/aoj/CumulativeSum2D.test.cpp
+- /verify/test/aoj/JOI/Planetary-Exploration.test.cpp
+- /verify/test/aoj/JOI/Planetary-Exploration.test.cpp.html
+title: test/aoj/JOI/Planetary-Exploration.test.cpp
 ---

@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/CumulativeSum2D.test.cpp
-    title: test/aoj/CumulativeSum2D.test.cpp
+    path: test/aoj/JOI/Planetary-Exploration.test.cpp
+    title: test/aoj/JOI/Planetary-Exploration.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,7 +44,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/CumulativeSum2D.test.cpp
+  - test/aoj/JOI/Planetary-Exploration.test.cpp
 documentation_of: data-structure/CumulativeSum2D.hpp
 layout: document
 redirect_from:

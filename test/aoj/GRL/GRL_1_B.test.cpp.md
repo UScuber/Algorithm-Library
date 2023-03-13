@@ -17,10 +17,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B
-  bundledCode: "#line 1 \"test/aoj/bellman-ford.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B\"\
+    - https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B
+  bundledCode: "#line 1 \"test/aoj/GRL/GRL_1_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
     \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
     \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
@@ -35,7 +35,7 @@ data:
     \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
     \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
     \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/aoj/bellman-ford.test.cpp\"\n\n#line 2 \"graph/template.hpp\"\n\r\n\
+    \ 4 \"test/aoj/GRL/GRL_1_B.test.cpp\"\n\n#line 2 \"graph/template.hpp\"\n\r\n\
     /**\r\n * @brief Graph Template\r\n*/\r\ntemplate <class T>\r\nstruct Edge {\r\
     \n  int from,to;\r\n  T cost;\r\n  int idx;\r\n  Edge(){};\r\n  Edge(int f, int\
     \ t, T c=1, int i=-1) : from(f), to(t), cost(c), idx(i){}\r\n  Edge(int t) : to(t),\
@@ -60,16 +60,16 @@ data:
     \ res[i];\r\n  }\r\n  bool is_cycle(const int i) const{\r\n    assert(0 <= i &&\
     \ i < n);\r\n    return res[i] == -inf;\r\n  }\r\n  private:\r\n  const Graph<T>\
     \ &root;\r\n  vector<T> res;\r\n  int n;\r\n  T inf = numeric_limits<T>::max()-1;\r\
-    \n};\n#line 7 \"test/aoj/bellman-ford.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
+    \n};\n#line 7 \"test/aoj/GRL/GRL_1_B.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
     \  ios::sync_with_stdio(false);\n  int n,m,r;\n  cin >> n >> m >> r;\n  graph\
     \ root(n);\n  rep(i, m){\n    int a,b,c;\n    cin >> a >> b >> c;\n    root[a].push_back({\
     \ a, b, c });\n  }\n  BellmanFord<int,min> bf(root);\n  bf.solve(r);\n  rep(i,\
     \ n) if(bf.is_cycle(i)){\n    cout << \"NEGATIVE CYCLE\\n\";\n    return 0;\n\
     \  }\n  rep(i, n){\n    if(bf[i] > (int)1e9) cout << \"INF\\n\";\n    else cout\
     \ << bf[i] << \"\\n\";\n  }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B\"\
-    \n\n#include \"../../template/template.hpp\"\n\n#include \"../../graph/template.hpp\"\
-    \n#include \"../../graph/bellman-ford.hpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B\"\n\n\
+    #include \"../../../template/template.hpp\"\n\n#include \"../../../graph/template.hpp\"\
+    \n#include \"../../../graph/bellman-ford.hpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
     \  ios::sync_with_stdio(false);\n  int n,m,r;\n  cin >> n >> m >> r;\n  graph\
     \ root(n);\n  rep(i, m){\n    int a,b,c;\n    cin >> a >> b >> c;\n    root[a].push_back({\
     \ a, b, c });\n  }\n  BellmanFord<int,min> bf(root);\n  bf.solve(r);\n  rep(i,\
@@ -81,15 +81,15 @@ data:
   - graph/template.hpp
   - graph/bellman-ford.hpp
   isVerificationFile: true
-  path: test/aoj/bellman-ford.test.cpp
+  path: test/aoj/GRL/GRL_1_B.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 14:46:22+09:00'
+  timestamp: '2023-03-13 22:02:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/bellman-ford.test.cpp
+documentation_of: test/aoj/GRL/GRL_1_B.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/bellman-ford.test.cpp
-- /verify/test/aoj/bellman-ford.test.cpp.html
-title: test/aoj/bellman-ford.test.cpp
+- /verify/test/aoj/GRL/GRL_1_B.test.cpp
+- /verify/test/aoj/GRL/GRL_1_B.test.cpp.html
+title: test/aoj/GRL/GRL_1_B.test.cpp
 ---
