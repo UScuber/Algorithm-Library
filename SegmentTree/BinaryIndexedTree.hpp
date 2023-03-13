@@ -1,7 +1,7 @@
 template <class T>
-struct Bit {
-  Bit(const int _n = 0) : n(_n), d(n){}
-  Bit(const vector<T> &v) : d(v), n(v.size()){
+struct BIT {
+  BIT(const int _n = 0) : n(_n), d(n){}
+  BIT(const vector<T> &v) : d(v), n(v.size()){
     for(int i = 1; i <= n; i++){
       const int j = i + (i & -i);
       if(j <= n) d[j - 1] += d[i - 1];
