@@ -59,4 +59,4 @@ struct Mint {
   friend istream &operator>>(istream &is, Mint &a){ return is >> a.x; }
   friend ostream &operator<<(ostream &os, const Mint &a){ return os << a.x; }
 };
-using mint = Mint<1000000007>;
+//using mint = Mint<1000000007>;
