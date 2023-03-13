@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/UnionFind.hpp
+    title: graph/UnionFind.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -8,28 +11,30 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
-    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n \
-    \ File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: UnionFind.hpp:\
-    \ line -1: no such header\n"
+  bundledCode: "#line 1 \"graph/UnionFind.hpp\"\nstruct UnionFind {\r\n  private:\r\
+    \n  int n;\r\n  public:\r\n  vector<int> d;\r\n  UnionFind(int n): n(n), d(n,\
+    \ -1){}\r\n  int root(int x){\r\n    assert(0 <= x && x < n);\r\n    if(d[x] <\
+    \ 0) return x;\r\n    return d[x] = root(d[x]);\r\n  }\r\n  bool unite(int x,\
+    \ int y){\r\n    x = root(x);\r\n    y = root(y);\r\n    if(x == y) return false;\r\
+    \n    if(d[x] > d[y]) swap(x, y);\r\n    d[x] += d[y];\r\n    d[y] = x;\r\n  \
+    \  return true;\r\n  }\r\n  bool same(int x, int y){\r\n    return root(x) ==\
+    \ root(y);\r\n  }\r\n  int size(int x){\r\n    return -d[root(x)];\r\n  }\r\n\
+    };\r\n#line 2 \"graph/kruskal.hpp\"\n\r\ntemplate <class T>\r\nll kruskal(vector<Edge<T>>\
+    \ &es, const int n){\r\n  ll res = 0;\r\n  sort(es.begin(), es.end());\r\n  UnionFind\
+    \ tree(n);\r\n  for(const auto &e : es){\r\n    if(!tree.same(e.from, e.to)){\r\
+    \n      tree.unite(e.from, e.to);\r\n      res += e.cost;\r\n    }\r\n  }\r\n\
+    \  return res;\r\n}\n"
   code: "#include \"UnionFind.hpp\"\r\n\r\ntemplate <class T>\r\nll kruskal(vector<Edge<T>>\
     \ &es, const int n){\r\n  ll res = 0;\r\n  sort(es.begin(), es.end());\r\n  UnionFind\
     \ tree(n);\r\n  for(const auto &e : es){\r\n    if(!tree.same(e.from, e.to)){\r\
     \n      tree.unite(e.from, e.to);\r\n      res += e.cost;\r\n    }\r\n  }\r\n\
     \  return res;\r\n}"
-  dependsOn: []
+  dependsOn:
+  - graph/UnionFind.hpp
   isVerificationFile: false
   path: graph/kruskal.hpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-03-13 15:00:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/kruskal.hpp

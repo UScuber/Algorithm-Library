@@ -11,6 +11,9 @@ data:
   - icon: ':warning:'
     path: graph/center.hpp
     title: graph/center.hpp
+  - icon: ':warning:'
+    path: graph/check-bipartite.hpp
+    title: graph/check-bipartite.hpp
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: graph/cycle-detect.hpp
@@ -66,6 +69,7 @@ data:
   requiredBy:
   - data-structure/HLD.hpp
   - graph/center.hpp
+  - graph/check-bipartite.hpp
   - graph/diameter.hpp
   - graph/cycle-detect.hpp
   - graph/dinic.hpp

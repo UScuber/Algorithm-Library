@@ -48,6 +48,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree-Diameter.test.cpp
     title: test/yosupo/Tree-Diameter.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Unionfind.test.cpp
+    title: test/yosupo/Unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -97,6 +100,7 @@ data:
   - test/yosupo/Associative-Array.test.cpp
   - test/yosupo/Tree-Diameter.test.cpp
   - test/yosupo/Strongly-Connected-Components.test.cpp
+  - test/yosupo/Unionfind.test.cpp
   - test/yosupo/Static-RMQ.test.cpp
   - test/yosupo/Static-Range-Frequency.test.cpp
   - test/aoj/slide-min.test.cpp

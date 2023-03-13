@@ -108,6 +108,9 @@ data:
       path: graph/Undo-UnionFind.hpp
       title: graph/Undo-UnionFind.hpp
     - icon: ':heavy_check_mark:'
+      path: graph/UnionFind.hpp
+      title: graph/UnionFind.hpp
+    - icon: ':heavy_check_mark:'
       path: graph/Weighted-UnionFind.hpp
       title: graph/Weighted-UnionFind.hpp
     - icon: ':heavy_check_mark:'
@@ -143,9 +146,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/template.hpp
       title: Graph Template
-    - icon: ':warning:'
-      path: graph/unionfind.hpp
-      title: graph/unionfind.hpp
   - name: math
     pages:
     - icon: ':warning:'
@@ -294,7 +294,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree-Diameter.test.cpp
       title: test/yosupo/Tree-Diameter.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Unionfind.test.cpp
       title: test/yosupo/Unionfind.test.cpp
 layout: toppage
