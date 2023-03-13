@@ -26,10 +26,13 @@ data:
   - icon: ':warning:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Queue-Operate-All-Composite.test.cpp
+    title: test/yosupo/Queue-Operate-All-Composite.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"math/mint.hpp\"\n\r\ntemplate <int mod>\r\nstruct Mint {\r\
@@ -58,7 +61,7 @@ data:
     \ &a) const{ return x < a.x; }\r\n  constexpr bool operator>(const Mint &a) const{\
     \ return x > a.x; }\r\n  friend istream &operator>>(istream &is, Mint &a){ return\
     \ is >> a.x; }\r\n  friend ostream &operator<<(ostream &os, const Mint &a){ return\
-    \ os << a.x; }\r\n};\r\nusing mint = Mint<1000000007>;\n"
+    \ os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;\n"
   code: "#pragma once\r\n\r\ntemplate <int mod>\r\nstruct Mint {\r\n  ll x;\r\n  constexpr\
     \ Mint(ll x = 0) : x((x + mod) % mod){}\r\n  static constexpr int get_mod(){ return\
     \ mod; }\r\n  constexpr Mint operator-() const{ return Mint(-x); }\r\n  constexpr\
@@ -85,7 +88,7 @@ data:
     \ &a) const{ return x < a.x; }\r\n  constexpr bool operator>(const Mint &a) const{\
     \ return x > a.x; }\r\n  friend istream &operator>>(istream &is, Mint &a){ return\
     \ is >> a.x; }\r\n  friend ostream &operator<<(ostream &os, const Mint &a){ return\
-    \ os << a.x; }\r\n};\r\nusing mint = Mint<1000000007>;"
+    \ os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;"
   dependsOn: []
   isVerificationFile: false
   path: math/mint.hpp
@@ -98,9 +101,10 @@ data:
   - math/fps/fps-template.hpp
   - math/fps/fps-arbitrary-mod.hpp
   - math/convolution/convolution-arbitrary-mod.hpp
-  timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-03-13 14:46:41+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Queue-Operate-All-Composite.test.cpp
 documentation_of: math/mint.hpp
 layout: document
 redirect_from:

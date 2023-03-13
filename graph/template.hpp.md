@@ -5,28 +5,40 @@ data:
   - icon: ':warning:'
     path: data-structure/HLD.hpp
     title: data-structure/HLD.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/bellman-ford.hpp
     title: graph/bellman-ford.hpp
   - icon: ':warning:'
     path: graph/center.hpp
     title: graph/center.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: graph/cycle-detect.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
     title: graph/diameter.hpp
   - icon: ':warning:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/lca.hpp
     title: graph/lca.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/bellman-ford.test.cpp
+    title: test/aoj/bellman-ford.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/lca.test.cpp
+    title: test/aoj/lca.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Cycle-Detection(Directed).test.cpp
+    title: test/yosupo/Cycle-Detection(Directed).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Tree-Diameter.test.cpp
+    title: test/yosupo/Tree-Diameter.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Graph Template
     links: []
@@ -60,8 +72,12 @@ data:
   - graph/lca.hpp
   - graph/bellman-ford.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Cycle-Detection(Directed).test.cpp
+  - test/yosupo/Tree-Diameter.test.cpp
+  - test/aoj/bellman-ford.test.cpp
+  - test/aoj/lca.test.cpp
 documentation_of: graph/template.hpp
 layout: document
 redirect_from:

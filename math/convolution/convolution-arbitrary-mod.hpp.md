@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy: []
@@ -124,7 +124,7 @@ data:
     \ bool operator<(const Mint &a) const{ return x < a.x; }\r\n  constexpr bool operator>(const\
     \ Mint &a) const{ return x > a.x; }\r\n  friend istream &operator>>(istream &is,\
     \ Mint &a){ return is >> a.x; }\r\n  friend ostream &operator<<(ostream &os, const\
-    \ Mint &a){ return os << a.x; }\r\n};\r\nusing mint = Mint<1000000007>;\n#line\
+    \ Mint &a){ return os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;\n#line\
     \ 3 \"math/convolution/convolution-arbitrary-mod.hpp\"\n\r\nnamespace ArbitraryNTT\
     \ {\r\nusing u128 = __uint128_t;\r\nconstexpr int m0 = 167772161;\r\nconstexpr\
     \ int m1 = 469762049;\r\nconstexpr int m2 = 754974721;\r\nusing mint0 = Mint<m0>;\r\
@@ -211,7 +211,7 @@ data:
   isVerificationFile: false
   path: math/convolution/convolution-arbitrary-mod.hpp
   requiredBy: []
-  timestamp: '2023-03-13 02:01:43+09:00'
+  timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/convolution/convolution-arbitrary-mod.hpp

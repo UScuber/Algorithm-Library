@@ -58,22 +58,22 @@ data:
       title: SegmentTree/old/update-rmin.cpp
   - name: data-structure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/CumulativeSum2D.hpp
       title: data-structure/CumulativeSum2D.hpp
     - icon: ':warning:'
       path: data-structure/HLD.hpp
       title: data-structure/HLD.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/HashMap.hpp
       title: data-structure/HashMap.hpp
     - icon: ':warning:'
       path: data-structure/HashSet.hpp
       title: data-structure/HashSet.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/SWAG.hpp
       title: data-structure/SWAG.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/SparseTable.hpp
       title: data-structure/SparseTable.hpp
     - icon: ':warning:'
@@ -82,16 +82,16 @@ data:
     - icon: ':warning:'
       path: data-structure/binarytrie.hpp
       title: data-structure/binarytrie.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/bitvector.hpp
       title: data-structure/bitvector.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/slide-min.hpp
       title: data-structure/slide-min.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/wavelet-matrix-comp.hpp
       title: data-structure/wavelet-matrix-comp.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data-structure/wavelet-matrix.hpp
       title: data-structure/wavelet-matrix.hpp
   - name: geometry
@@ -107,10 +107,10 @@ data:
     - icon: ':warning:'
       path: graph/Undo-UnionFind.hpp
       title: graph/Undo-UnionFind.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/Weighted-UnionFind.hpp
       title: graph/Weighted-UnionFind.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/bellman-ford.hpp
       title: graph/bellman-ford.hpp
     - icon: ':warning:'
@@ -119,10 +119,10 @@ data:
     - icon: ':warning:'
       path: graph/check-bipartite.hpp
       title: graph/check-bipartite.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/cycle-detect.hpp
       title: graph/cycle-detect.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/diameter.hpp
       title: graph/diameter.hpp
     - icon: ':warning:'
@@ -134,13 +134,13 @@ data:
     - icon: ':warning:'
       path: graph/kruskal.hpp
       title: graph/kruskal.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/lca.hpp
       title: graph/lca.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: graph/scc.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/template.hpp
       title: Graph Template
     - icon: ':warning:'
@@ -175,7 +175,7 @@ data:
     - icon: ':warning:'
       path: math/matrix.hpp
       title: math/matrix.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/mint.hpp
       title: math/mint.hpp
   - name: math/convolution
@@ -242,7 +242,7 @@ data:
       title: string/z-algorithm.hpp
   - name: template
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
@@ -251,5 +251,51 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
+  - name: test/aoj
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CumulativeSum2D.test.cpp
+      title: test/aoj/CumulativeSum2D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/Weighted-UnionFind.test.cpp
+      title: test/aoj/Weighted-UnionFind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/bellman-ford.test.cpp
+      title: test/aoj/bellman-ford.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/lca.test.cpp
+      title: test/aoj/lca.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/slide-min.test.cpp
+      title: test/aoj/slide-min.test.cpp
+  - name: test/yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Associative-Array.test.cpp
+      title: test/yosupo/Associative-Array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Cycle-Detection(Directed).test.cpp
+      title: test/yosupo/Cycle-Detection(Directed).test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Queue-Operate-All-Composite.test.cpp
+      title: test/yosupo/Queue-Operate-All-Composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Range-Kth-Smallest.test.cpp
+      title: test/yosupo/Range-Kth-Smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Static-RMQ.test.cpp
+      title: test/yosupo/Static-RMQ.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Static-Range-Frequency.test.cpp
+      title: test/yosupo/Static-Range-Frequency.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Strongly-Connected-Components.test.cpp
+      title: test/yosupo/Strongly-Connected-Components.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Tree-Diameter.test.cpp
+      title: test/yosupo/Tree-Diameter.test.cpp
+    - icon: ':x:'
+      path: test/yosupo/Unionfind.test.cpp
+      title: test/yosupo/Unionfind.test.cpp
 layout: toppage
 ---

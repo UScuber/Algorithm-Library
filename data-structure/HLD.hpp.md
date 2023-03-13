@@ -4,10 +4,10 @@ data:
   - icon: ':warning:'
     path: SegmentTree/segtree.hpp
     title: SegmentTree/segtree.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/template.hpp
     title: Graph Template
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy: []
@@ -52,7 +52,7 @@ data:
     \ &a) const{ return x < a.x; }\r\n  constexpr bool operator>(const Mint &a) const{\
     \ return x > a.x; }\r\n  friend istream &operator>>(istream &is, Mint &a){ return\
     \ is >> a.x; }\r\n  friend ostream &operator<<(ostream &os, const Mint &a){ return\
-    \ os << a.x; }\r\n};\r\nusing mint = Mint<1000000007>;\n#line 1 \"SegmentTree/segtree.hpp\"\
+    \ os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;\n#line 1 \"SegmentTree/segtree.hpp\"\
     \ntemplate <class T, T(*op)(const T&,const T&), T(*e)()>\r\nstruct SegmentTree\
     \ {\r\n  SegmentTree(const int _n) : n(_n){\r\n    while((1 << log) < n) log++;\r\
     \n    len = 1 << log;\r\n    d.resize(len * 2, e());\r\n  }\r\n  void update(int\
@@ -139,7 +139,7 @@ data:
   isVerificationFile: false
   path: data-structure/HLD.hpp
   requiredBy: []
-  timestamp: '2023-03-13 02:01:43+09:00'
+  timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data-structure/HLD.hpp
