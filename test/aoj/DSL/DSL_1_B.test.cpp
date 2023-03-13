@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/DSL_1_B"
 
-#include "../../template/template.hpp"
+#include "../../../template/template.hpp"
 
-#include "../../graph/Weighted-UnionFind.hpp"
+#include "../../../graph/Weighted-UnionFind.hpp"
 
 int main(){
   int n,q;

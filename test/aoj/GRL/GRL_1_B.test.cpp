@@ -1,9 +1,9 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B"
 
-#include "../../template/template.hpp"
+#include "../../../template/template.hpp"
 
-#include "../../graph/template.hpp"
-#include "../../graph/bellman-ford.hpp"
+#include "../../../graph/template.hpp"
+#include "../../../graph/bellman-ford.hpp"
 
 int main(){
   cin.tie(nullptr);

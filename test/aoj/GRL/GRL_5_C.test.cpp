@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C"
 
-#include "../../template/template.hpp"
+#include "../../../template/template.hpp"
 
-#include "../../graph/lca.hpp"
+#include "../../../graph/lca.hpp"
 
 int main(){
   cin.tie(nullptr);
