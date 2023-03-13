@@ -1,5 +1,4 @@
 #include "../graph/template.hpp"
-#include "../math/mint.hpp"
 #include "../SegmentTree/segtree.hpp"
 
 template <class T, T(*op)(const T&,const T&), T(*rev_op)(const T&,const T&), T(*e)()>
@@ -79,17 +78,5 @@ struct HLD {
     }
     return res;
   }
+  T get(const int i){ return seg.get(p[i]); }
 };
-
-struct Data {
-  mint a,b;
-};
-Data e(){
-  return { 1, 0 };
-}
-Data op(const Data &l, const Data &m){
-  return { l.a*m.a, l.b*m.a + m.b };
-}
-Data rev_op(const Data &l, const Data &m){
-  return { m.a*l.a, m.b*l.a + l.b };
-}
