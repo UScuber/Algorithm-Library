@@ -1,5 +1,3 @@
-#include "template.hpp"
-
 template <class graph>
 struct lca {
   const graph &G;
@@ -56,11 +54,11 @@ struct lca {
   int dist(const int u, const int v) const{
     return dep[u] + dep[v] - dep[query(u, v)] * 2;
   }
-  int jump(int u, int v, const int d) const{
+  int jump(int u, int v, int d) const{
     const int lc = query(u, v);
     const int l = dep[u] - dep[lc];
     const int r = dep[v] - dep[lc];
-    assert(0 <= d && d <= l + r);
+    if(d < 0 || d > l + r) return -1;
     if(l < d){
       d = l + r - d;
       swap(u, v);
