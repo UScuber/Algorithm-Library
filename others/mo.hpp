@@ -1,7 +1,7 @@
-int value = 0;
+ll value = 0;
 struct Mo {
   struct Query { int l,r,b,idx; };
-  vector<int> res;
+  vector<ll> res;
   vector<Query> d;
   int width, n, q;
   Mo(int n, int q) : n(n), q(q), width(max(1.0, n/max(1.0, sqrt(q*2.0/3)))), res(q), d(q){}
@@ -30,15 +30,3 @@ struct Mo {
   void del_left(int p);
   void del_right(int p);
 };
-void Mo::add_left(int p){
-  
-}
-void Mo::add_right(int p){
-
-}
-void Mo::del_left(int p){
-
-}
-void Mo::del_right(int p){
-
-}
