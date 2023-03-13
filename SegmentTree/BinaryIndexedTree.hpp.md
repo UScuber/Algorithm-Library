@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Point-Add-Range-Sum.test.cpp
+    title: test/yosupo/Point-Add-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Static-Range-Inversions-Query.test.cpp
+    title: test/yosupo/Static-Range-Inversions-Query.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/BinaryIndexedTree.hpp\"\ntemplate <class T>\r\
@@ -34,8 +40,10 @@ data:
   path: SegmentTree/BinaryIndexedTree.hpp
   requiredBy: []
   timestamp: '2023-03-13 21:50:08+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Static-Range-Inversions-Query.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document
 redirect_from:

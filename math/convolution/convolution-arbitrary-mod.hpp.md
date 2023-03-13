@@ -1,17 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
   - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution(Mod1e9+7).test.cpp
+    title: test/yosupo/Convolution(Mod1e9+7).test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -212,8 +215,9 @@ data:
   path: math/convolution/convolution-arbitrary-mod.hpp
   requiredBy: []
   timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Convolution(Mod1e9+7).test.cpp
 documentation_of: math/convolution/convolution-arbitrary-mod.hpp
 layout: document
 redirect_from:

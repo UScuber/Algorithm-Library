@@ -7,6 +7,9 @@ data:
     path: test/yosupo/Determinant-of-Matrix.test.cpp
     title: test/yosupo/Determinant-of-Matrix.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Inverse-Matrix.test.cpp
+    title: test/yosupo/Inverse-Matrix.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix-Product.test.cpp
     title: test/yosupo/Matrix-Product.test.cpp
   _isVerificationFailed: false
@@ -104,6 +107,7 @@ data:
   verifiedWith:
   - test/yosupo/Determinant-of-Matrix.test.cpp
   - test/yosupo/Matrix-Product.test.cpp
+  - test/yosupo/Inverse-Matrix.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

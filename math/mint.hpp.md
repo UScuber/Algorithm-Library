@@ -8,16 +8,16 @@ data:
   - icon: ':warning:'
     path: math/combination.hpp
     title: math/combination.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/convolution-arbitrary-mod.hpp
     title: math/convolution/convolution-arbitrary-mod.hpp
   - icon: ':warning:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':warning:'
@@ -25,14 +25,50 @@ data:
     title: math/fps/kitamasa.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Bitwise-And-Convolution.test.cpp
+    title: test/yosupo/Bitwise-And-Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Bitwise-Xor-Convolution.test.cpp
+    title: test/yosupo/Bitwise-Xor-Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution(Mod1e9+7).test.cpp
+    title: test/yosupo/Convolution(Mod1e9+7).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution.test.cpp
+    title: test/yosupo/Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Determinant-of-Matrix.test.cpp
     title: test/yosupo/Determinant-of-Matrix.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Inverse-Matrix.test.cpp
+    title: test/yosupo/Inverse-Matrix.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix-Product.test.cpp
     title: test/yosupo/Matrix-Product.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Point-Set-Range-Composite.test.cpp
+    title: test/yosupo/Point-Set-Range-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Queue-Operate-All-Composite.test.cpp
     title: test/yosupo/Queue-Operate-All-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Range-Affine-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Subset-Sum.test.cpp
+    title: test/yosupo/Subset-Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
     title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
@@ -109,10 +145,22 @@ data:
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Convolution.test.cpp
   - test/yosupo/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Matrix-Product.test.cpp
+  - test/yosupo/Point-Set-Range-Composite.test.cpp
   - test/yosupo/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Bitwise-Xor-Convolution.test.cpp
+  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Bitwise-And-Convolution.test.cpp
+  - test/yosupo/Inverse-Matrix.test.cpp
+  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Subset-Sum.test.cpp
+  - test/yosupo/Range-Affine-Range-Sum.test.cpp
 documentation_of: math/mint.hpp
 layout: document
 redirect_from:

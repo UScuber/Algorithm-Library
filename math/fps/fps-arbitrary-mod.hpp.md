@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
   - icon: ':heavy_check_mark:'

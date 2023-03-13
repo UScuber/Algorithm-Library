@@ -7,6 +7,9 @@ data:
     title: data-structure/HLD.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Point-Set-Range-Composite.test.cpp
+    title: test/yosupo/Point-Set-Range-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
     title: test/yosupo/Vertex-Add-Path-Sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -31,9 +34,7 @@ data:
     \ = e(), right = e();\r\n    while(l < r){\r\n      if(l & 1) left = op(left,\
     \ d[l++]);\r\n      if(r & 1) right = op(d[--r], right);\r\n      l >>= 1; r >>=\
     \ 1;\r\n    }\r\n    return op(left, right);\r\n  }\r\n  private:\r\n  int n =\
-    \ 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};\r\n\r\n/*\r\nstruct Data {\r\n\
-    \  int a;\r\n};\r\nData op(const Data &a, const Data &b){\r\n  return { min(a.a,\
-    \ b.a) };\r\n}\r\nData e(){\r\n  return { 0 };\r\n}\r\n*/\n"
+    \ 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};\n"
   code: "template <class T, T(*op)(const T&,const T&), T(*e)()>\r\nstruct SegmentTree\
     \ {\r\n  SegmentTree(const int _n) : n(_n){\r\n    while((1 << log) < n) log++;\r\
     \n    len = 1 << log;\r\n    d.resize(len * 2, e());\r\n  }\r\n  void update(int\
@@ -47,19 +48,17 @@ data:
     \n    l += len; r += len;\r\n    T left = e(), right = e();\r\n    while(l < r){\r\
     \n      if(l & 1) left = op(left, d[l++]);\r\n      if(r & 1) right = op(d[--r],\
     \ right);\r\n      l >>= 1; r >>= 1;\r\n    }\r\n    return op(left, right);\r\
-    \n  }\r\n  private:\r\n  int n = 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};\r\
-    \n\r\n/*\r\nstruct Data {\r\n  int a;\r\n};\r\nData op(const Data &a, const Data\
-    \ &b){\r\n  return { min(a.a, b.a) };\r\n}\r\nData e(){\r\n  return { 0 };\r\n\
-    }\r\n*/"
+    \n  }\r\n  private:\r\n  int n = 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};"
   dependsOn: []
   isVerificationFile: false
   path: SegmentTree/segtree.hpp
   requiredBy:
   - data-structure/HLD.hpp
-  timestamp: '2023-03-13 02:01:43+09:00'
+  timestamp: '2023-03-14 01:16:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Point-Set-Range-Composite.test.cpp
   - test/yosupo/Vertex-Add-Path-Sum.test.cpp
 documentation_of: SegmentTree/segtree.hpp
 layout: document

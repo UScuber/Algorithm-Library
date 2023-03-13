@@ -6,13 +6,13 @@ data:
     - icon: ':warning:'
       path: SegmentTree/2d-segtree.hpp
       title: SegmentTree/2d-segtree.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/BinaryIndexedTree.hpp
       title: SegmentTree/BinaryIndexedTree.hpp
     - icon: ':warning:'
       path: SegmentTree/RangeMex.hpp
       title: SegmentTree/RangeMex.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/lazysegtree.hpp
       title: SegmentTree/lazysegtree.hpp
     - icon: ':warning:'
@@ -158,11 +158,20 @@ data:
       path: math/combination.hpp
       title: math/combination.hpp
     - icon: ':warning:'
+      path: math/crt.hpp
+      title: math/crt.hpp
+    - icon: ':warning:'
       path: math/dynamic-mint.hpp
       title: math/dynamic-mint.hpp
     - icon: ':heavy_check_mark:'
       path: math/eratosthenes.hpp
       title: math/eratosthenes.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/euler.hpp
+      title: math/euler.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/extgcd.hpp
+      title: math/extgcd.hpp
     - icon: ':warning:'
       path: math/factorizaiton.hpp
       title: math/factorizaiton.hpp
@@ -172,36 +181,39 @@ data:
     - icon: ':warning:'
       path: math/frac.hpp
       title: math/frac.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
+      path: math/gcdlcm.hpp
+      title: math/gcdlcm.hpp
+    - icon: ':heavy_check_mark:'
       path: math/isprime.hpp
       title: math/isprime.hpp
-    - icon: ':warning:'
-      path: math/math.hpp
-      title: math/math.hpp
     - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
     - icon: ':heavy_check_mark:'
       path: math/mint.hpp
       title: math/mint.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/modpow.hpp
+      title: math/modpow.hpp
   - name: math/convolution
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/and-convolution.hpp
       title: math/convolution/and-convolution.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/convolution-arbitrary-mod.hpp
       title: math/convolution/convolution-arbitrary-mod.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/convolution.hpp
       title: math/convolution/convolution.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/ntt.hpp
       title: math/convolution/ntt.hpp
     - icon: ':warning:'
       path: math/convolution/or-convolution.hpp
       title: math/convolution/or-convolution.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/xor-convolution.hpp
       title: math/convolution/xor-convolution.hpp
   - name: math/fps
@@ -209,10 +221,10 @@ data:
     - icon: ':warning:'
       path: math/fps/fps-arbitrary-mod.hpp
       title: math/fps/fps-arbitrary-mod.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/fps-template.hpp
       title: math/fps/fps-template.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/fps.hpp
       title: math/fps/fps.hpp
     - icon: ':warning:'
@@ -226,7 +238,7 @@ data:
     - icon: ':warning:'
       path: others/int128.hpp
       title: others/int128.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: others/mo.hpp
       title: others/mo.hpp
     - icon: ':warning:'
@@ -260,6 +272,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/ALDS1/ALDS1_1_C.test.cpp
       title: test/aoj/ALDS1/ALDS1_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
+      title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   - name: test/aoj/DSL
     pages:
     - icon: ':heavy_check_mark:'
@@ -284,11 +299,37 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/JOI/Planetary-Exploration.test.cpp
       title: test/aoj/JOI/Planetary-Exploration.test.cpp
+  - name: test/aoj/NTL
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL/NTL_1_B.test.cpp
+      title: test/aoj/NTL/NTL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL/NTL_1_C.test.cpp
+      title: test/aoj/NTL/NTL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL/NTL_1_D.test.cpp
+      title: test/aoj/NTL/NTL_1_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL/NTL_1_E.test.cpp
+      title: test/aoj/NTL/NTL_1_E.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Associative-Array.test.cpp
       title: test/yosupo/Associative-Array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Bitwise-And-Convolution.test.cpp
+      title: test/yosupo/Bitwise-And-Convolution.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Bitwise-Xor-Convolution.test.cpp
+      title: test/yosupo/Bitwise-Xor-Convolution.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Convolution(Mod1e9+7).test.cpp
+      title: test/yosupo/Convolution(Mod1e9+7).test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Convolution.test.cpp
+      title: test/yosupo/Convolution.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Cycle-Detection(Directed).test.cpp
       title: test/yosupo/Cycle-Detection(Directed).test.cpp
@@ -299,11 +340,38 @@ data:
       path: test/yosupo/Enumrate-Palindromes.test.cpp
       title: test/yosupo/Enumrate-Palindromes.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+      title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+      title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Inverse-Matrix.test.cpp
+      title: test/yosupo/Inverse-Matrix.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Jump-on-Tree.test.cpp
+      title: test/yosupo/Jump-on-Tree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+      title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Matrix-Product.test.cpp
       title: test/yosupo/Matrix-Product.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Point-Add-Range-Sum.test.cpp
+      title: test/yosupo/Point-Add-Range-Sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Point-Set-Range-Composite.test.cpp
+      title: test/yosupo/Point-Set-Range-Composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+      title: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Queue-Operate-All-Composite.test.cpp
       title: test/yosupo/Queue-Operate-All-Composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Range-Affine-Range-Sum.test.cpp
+      title: test/yosupo/Range-Affine-Range-Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Range-Kth-Smallest.test.cpp
       title: test/yosupo/Range-Kth-Smallest.test.cpp
@@ -317,8 +385,14 @@ data:
       path: test/yosupo/Static-Range-Frequency.test.cpp
       title: test/yosupo/Static-Range-Frequency.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Static-Range-Inversions-Query.test.cpp
+      title: test/yosupo/Static-Range-Inversions-Query.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Strongly-Connected-Components.test.cpp
       title: test/yosupo/Strongly-Connected-Components.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Subset-Sum.test.cpp
+      title: test/yosupo/Subset-Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
       title: test/yosupo/Sum-of-Floor-of-Linear.test.cpp

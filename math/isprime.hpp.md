@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
+    title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/isprime.hpp\"\nusing ull = unsigned long long;\r\n\r\
@@ -36,8 +39,9 @@ data:
   path: math/isprime.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
 documentation_of: math/isprime.hpp
 layout: document
 redirect_from:

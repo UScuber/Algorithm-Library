@@ -2,28 +2,49 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/convolution-arbitrary-mod.hpp
     title: math/convolution/convolution-arbitrary-mod.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/convolution.hpp
     title: math/convolution/convolution.hpp
   - icon: ':warning:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':warning:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution(Mod1e9+7).test.cpp
+    title: test/yosupo/Convolution(Mod1e9+7).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution.test.cpp
+    title: test/yosupo/Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Subset-Sum.test.cpp
+    title: test/yosupo/Subset-Sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -206,8 +227,15 @@ data:
   - math/convolution/convolution-arbitrary-mod.hpp
   - math/convolution/convolution.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Convolution.test.cpp
+  - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7).test.cpp
+  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Subset-Sum.test.cpp
 documentation_of: math/convolution/ntt.hpp
 layout: document
 redirect_from:

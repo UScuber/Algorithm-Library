@@ -23,9 +23,6 @@ data:
   - icon: ':warning:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
-  - icon: ':heavy_check_mark:'
-    path: graph/lca.hpp
-    title: graph/lca.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_1_B.test.cpp
@@ -33,9 +30,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_2_A.test.cpp
     title: test/aoj/GRL/GRL_2_A.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/GRL/GRL_5_C.test.cpp
-    title: test/aoj/GRL/GRL_5_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Cycle-Detection(Directed).test.cpp
@@ -82,7 +76,6 @@ data:
   - graph/diameter.hpp
   - graph/cycle-detect.hpp
   - graph/dinic.hpp
-  - graph/lca.hpp
   - graph/bellman-ford.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
@@ -92,7 +85,6 @@ data:
   - test/yosupo/Tree-Diameter.test.cpp
   - test/yosupo/Vertex-Add-Path-Sum.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
-  - test/aoj/GRL/GRL_5_C.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
 documentation_of: graph/template.hpp
 layout: document

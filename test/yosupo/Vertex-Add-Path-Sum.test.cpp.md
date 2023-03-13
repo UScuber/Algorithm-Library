@@ -61,12 +61,10 @@ data:
     \n    l += len; r += len;\r\n    T left = e(), right = e();\r\n    while(l < r){\r\
     \n      if(l & 1) left = op(left, d[l++]);\r\n      if(r & 1) right = op(d[--r],\
     \ right);\r\n      l >>= 1; r >>= 1;\r\n    }\r\n    return op(left, right);\r\
-    \n  }\r\n  private:\r\n  int n = 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};\r\
-    \n\r\n/*\r\nstruct Data {\r\n  int a;\r\n};\r\nData op(const Data &a, const Data\
-    \ &b){\r\n  return { min(a.a, b.a) };\r\n}\r\nData e(){\r\n  return { 0 };\r\n\
-    }\r\n*/\n#line 3 \"data-structure/HLD.hpp\"\n\r\ntemplate <class T, T(*op)(const\
-    \ T&,const T&), T(*rev_op)(const T&,const T&), T(*e)()>\r\nstruct HLD {\r\n  graph\
-    \ root;\r\n  int n, in_cnt = 0;\r\n  vector<int> pre, sh, sz, p;\r\n  SegmentTree<T,op,e>\
+    \n  }\r\n  private:\r\n  int n = 1, log = 0, len = 0;\r\n  vector<T> d;\r\n};\n\
+    #line 3 \"data-structure/HLD.hpp\"\n\r\ntemplate <class T, T(*op)(const T&,const\
+    \ T&), T(*rev_op)(const T&,const T&), T(*e)()>\r\nstruct HLD {\r\n  graph root;\r\
+    \n  int n, in_cnt = 0;\r\n  vector<int> pre, sh, sz, p;\r\n  SegmentTree<T,op,e>\
     \ seg;\r\n  SegmentTree<T,rev_op,e> rseg;\r\n  HLD(const graph &g) : root(g),\
     \ n(g.size()), pre(n), sh(n), sz(n), p(n), seg(n), rseg(n){\r\n    size(0, -1);\r\
     \n    calc(0, -1, 0);\r\n  }\r\n  void size(int pos, int par){\r\n    sz[pos]\
@@ -124,7 +122,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 21:54:49+09:00'
+  timestamp: '2023-03-14 01:16:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Vertex-Add-Path-Sum.test.cpp

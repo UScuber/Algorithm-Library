@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
   - icon: ':heavy_check_mark:'
@@ -11,16 +11,31 @@ data:
   - icon: ':warning:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':warning:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Subset-Sum.test.cpp
+    title: test/yosupo/Subset-Sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -274,8 +289,13 @@ data:
   - math/fps/fps.hpp
   - math/fps/fps-arbitrary-mod.hpp
   timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Subset-Sum.test.cpp
 documentation_of: math/fps/fps-template.hpp
 layout: document
 redirect_from:
