@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/0560"
 
-#include "../../template/template.hpp"
+#include "../../../template/template.hpp"
 
-#include "../../data-structure/CumulativeSum2D.hpp"
+#include "../../../data-structure/CumulativeSum2D.hpp"
 
 const string t = "JOI";
 int main(){
