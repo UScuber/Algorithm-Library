@@ -2,6 +2,7 @@ template <class T, size_t MAX_DIGIT>
 struct BinaryTrie {
   struct Node {
     int cnt = 0;
+    T sum = 0;
     int ch[2] = { -1, -1 };
   };
   T lazy = 0;
@@ -14,6 +15,7 @@ struct BinaryTrie {
     const T nval = val ^ lazy ^ xor_val;
     int idx = 0;
     root[idx].cnt += num;
+    root[idx].sum += val * num;
     for(int i = MAX_DIGIT-1; i >= 0; i--){
       const int f = nval >> i & 1;
       if(root[idx].ch[f] == -1){
@@ -22,35 +24,32 @@ struct BinaryTrie {
       }
       idx = root[idx].ch[f];
       root[idx].cnt += num;
+      root[idx].sum += val * num;
     }
   }
   void clear(){
     root = { 0 };
     lazy = 0;
   }
-  T min(T xor_val = 0) const{ return kth_elem(0, xor_val); }
-  T max(T xor_val = 0) const{ return kth_elem(num_size()-1, xor_val); }
-  T kth_elem(int k, T xor_val = 0) const{
+  pair<T, T> kth_elem(int k, T xor_val = 0) const{
     xor_val ^= lazy;
     int idx = 0;
-    T res = 0;
+    T res = 0, tot = 0;
     for(int i = MAX_DIGIT-1; i >= 0; i--){
       const int f = xor_val >> i & 1;
       const int l = root[idx].ch[f];
       const int r = root[idx].ch[!f];
       if(l == -1 || root[l].cnt <= k){
-        if(l != -1) k -= root[l].cnt;
+        if(l != -1){
+          k -= root[l].cnt;
+          tot += root[l].sum;
+        }
         idx = r;
         res |= T(1) << i;
       }else idx = l;
     }
-    return res;
-  }
-  T lower_bound(T val, T xor_val = 0) const{
-    return kth_elem(order(val, xor_val));
-  }
-  T upper_bound(T val, T xor_val = 0) const{
-    return kth_elem(order(val+1, xor_val));
+    tot += res * (k + 1);
+    return { res, tot };
   }
   int order(T val, T xor_val = 0) const{
     xor_val ^= lazy;
