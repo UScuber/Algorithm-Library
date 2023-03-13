@@ -12,5 +12,6 @@
 "test/yosupo/Static-RMQ.test.cpp": "2023-03-13 14:46:22 +0900",
 "test/yosupo/Static-Range-Frequency.test.cpp": "2023-03-13 14:46:22 +0900",
 "test/yosupo/Strongly-Connected-Components.test.cpp": "2023-03-13 14:46:22 +0900",
-"test/yosupo/Tree-Diameter.test.cpp": "2023-03-13 14:46:22 +0900"
+"test/yosupo/Tree-Diameter.test.cpp": "2023-03-13 14:46:22 +0900",
+"test/yosupo/Unionfind.test.cpp": "2023-03-13 15:00:41 +0900"
 }
