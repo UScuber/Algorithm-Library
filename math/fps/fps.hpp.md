@@ -11,7 +11,7 @@ data:
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
   _extendedVerifiedWith:
@@ -21,6 +21,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    title: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
@@ -321,6 +324,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
   - test/yosupo/Log-of-Formal-Power-Series.test.cpp
   - test/yosupo/Pow-of-Formal-Power-Series.test.cpp

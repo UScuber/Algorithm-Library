@@ -2,17 +2,20 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/JOI/Planetary-Exploration2.test.cpp
+    title: test/aoj/JOI/Planetary-Exploration2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/2d-segtree.hpp\"\ntemplate <class T, T(*op)(const\
-    \ T&, const T&), const T(*e)()>\r\nstruct SegmentTree2D {\r\n  int h,w, logh,logw;\r\
-    \n  vector<vector<T>> d;\r\n  SegmentTree2D() : SegmentTree2D(0, 0){}\r\n  SegmentTree2D(const\
+    \ T&,const T&), T(*e)()>\r\nstruct SegmentTree2D {\r\n  int h,w, logh,logw;\r\n\
+    \  vector<vector<T>> d;\r\n  SegmentTree2D() : SegmentTree2D(0, 0){}\r\n  SegmentTree2D(const\
     \ int _h, const int _w){\r\n    h = w = 1;\r\n    logh = logw = 1;\r\n    while((h\
-    \ <<= 1) < _h) logh++;\r\n    while((w <<= 1) < _w) logw++;\r\n    d.resize(h\
+    \ <<= 1) < _h) logh++;\r\n    while((w <<= 1) < _w) logw++;\r\n    d.assign(h\
     \ * 2, vector<T>(w * 2, e()));\r\n  }\r\n  void set(const int i, const int j,\
     \ const T x){\r\n    d[i + h][j + w] += x;\r\n  }\r\n  void build(){\r\n    for(int\
     \ i = 2*h-1; i >= h ; i--){\r\n      for(int j = w - 1; j >= 1; j--)\r\n     \
@@ -37,13 +40,12 @@ data:
     \  return op(sml, smr);\r\n  }\r\n  inline void updateX(const int i, const int\
     \ j){\r\n    d[i][j] = op(d[i][2*j], d[i][2*j+1]);\r\n  }\r\n  inline void updateY(const\
     \ int i, const int j){\r\n    d[i][j] = op(d[2*i][j], d[2*i+1][j]);\r\n  }\r\n\
-    };\r\n\r\ntemplate <class T>\r\nT op(const T &a, const T &b){\r\n  return a +\
-    \ b;\r\n}\r\ntemplate <class T>\r\nconst T e(){\r\n  return 0;\r\n}\n"
-  code: "template <class T, T(*op)(const T&, const T&), const T(*e)()>\r\nstruct SegmentTree2D\
+    };\n"
+  code: "template <class T, T(*op)(const T&,const T&), T(*e)()>\r\nstruct SegmentTree2D\
     \ {\r\n  int h,w, logh,logw;\r\n  vector<vector<T>> d;\r\n  SegmentTree2D() :\
     \ SegmentTree2D(0, 0){}\r\n  SegmentTree2D(const int _h, const int _w){\r\n  \
     \  h = w = 1;\r\n    logh = logw = 1;\r\n    while((h <<= 1) < _h) logh++;\r\n\
-    \    while((w <<= 1) < _w) logw++;\r\n    d.resize(h * 2, vector<T>(w * 2, e()));\r\
+    \    while((w <<= 1) < _w) logw++;\r\n    d.assign(h * 2, vector<T>(w * 2, e()));\r\
     \n  }\r\n  void set(const int i, const int j, const T x){\r\n    d[i + h][j +\
     \ w] += x;\r\n  }\r\n  void build(){\r\n    for(int i = 2*h-1; i >= h ; i--){\r\
     \n      for(int j = w - 1; j >= 1; j--)\r\n        updateX(i, j);\r\n    }\r\n\
@@ -67,16 +69,15 @@ data:
     \  lx >>= 1;\r\n      rx >>= 1;\r\n    }\r\n    return op(sml, smr);\r\n  }\r\n\
     \  inline void updateX(const int i, const int j){\r\n    d[i][j] = op(d[i][2*j],\
     \ d[i][2*j+1]);\r\n  }\r\n  inline void updateY(const int i, const int j){\r\n\
-    \    d[i][j] = op(d[2*i][j], d[2*i+1][j]);\r\n  }\r\n};\r\n\r\ntemplate <class\
-    \ T>\r\nT op(const T &a, const T &b){\r\n  return a + b;\r\n}\r\ntemplate <class\
-    \ T>\r\nconst T e(){\r\n  return 0;\r\n}"
+    \    d[i][j] = op(d[2*i][j], d[2*i+1][j]);\r\n  }\r\n};"
   dependsOn: []
   isVerificationFile: false
   path: SegmentTree/2d-segtree.hpp
   requiredBy: []
-  timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-03-14 17:58:45+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/JOI/Planetary-Exploration2.test.cpp
 documentation_of: SegmentTree/2d-segtree.hpp
 layout: document
 redirect_from:

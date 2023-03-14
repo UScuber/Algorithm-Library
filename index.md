@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: SegmentTree
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/2d-segtree.hpp
       title: SegmentTree/2d-segtree.hpp
     - icon: ':heavy_check_mark:'
@@ -18,19 +18,19 @@ data:
     - icon: ':warning:'
       path: SegmentTree/linear-lazysegtree.hpp
       title: SegmentTree/linear-lazysegtree.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/radd-rmin.hpp
       title: SegmentTree/radd-rmin.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/radd-rsum.hpp
       title: SegmentTree/radd-rsum.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/rupdate-rmin.hpp
       title: SegmentTree/rupdate-rmin.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/rupdate-rsum.hpp
       title: SegmentTree/rupdate-rsum.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: SegmentTree/seg-rmin.hpp
       title: SegmentTree/seg-rmin.hpp
     - icon: ':heavy_check_mark:'
@@ -131,10 +131,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/diameter.hpp
       title: graph/diameter.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/dinic.hpp
       title: graph/dinic.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/fordfulkerson.hpp
       title: graph/fordfulkerson.hpp
     - icon: ':heavy_check_mark:'
@@ -218,7 +218,7 @@ data:
       title: math/convolution/xor-convolution.hpp
   - name: math/fps
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/fps-arbitrary-mod.hpp
       title: math/fps/fps-arbitrary-mod.hpp
     - icon: ':heavy_check_mark:'
@@ -227,12 +227,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/fps/fps.hpp
       title: math/fps/fps.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/kitamasa.hpp
       title: math/fps/kitamasa.hpp
   - name: others
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: others/fastIO.hpp
       title: others/fastIO.hpp
     - icon: ':warning:'
@@ -281,6 +281,30 @@ data:
       path: test/aoj/DSL/DSL_1_B.test.cpp
       title: test/aoj/DSL/DSL_1_B.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_A.test.cpp
+      title: test/aoj/DSL/DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_B.test.cpp
+      title: test/aoj/DSL/DSL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_D.test.cpp
+      title: test/aoj/DSL/DSL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_E.test.cpp
+      title: test/aoj/DSL/DSL_2_E.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_F.test.cpp
+      title: test/aoj/DSL/DSL_2_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_G.test.cpp
+      title: test/aoj/DSL/DSL_2_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_H.test.cpp
+      title: test/aoj/DSL/DSL_2_H.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL/DSL_2_I.test.cpp
+      title: test/aoj/DSL/DSL_2_I.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/DSL/DSL_3_D.test.cpp
       title: test/aoj/DSL/DSL_3_D.test.cpp
   - name: test/aoj/GRL
@@ -294,11 +318,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/GRL/GRL_5_C.test.cpp
       title: test/aoj/GRL/GRL_5_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL/GRL_6_A.test.cpp
+      title: test/aoj/GRL/GRL_6_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL/GRL_6_A2.test.cpp
+      title: test/aoj/GRL/GRL_6_A2.test.cpp
   - name: test/aoj/JOI
     pages:
     - icon: ':heavy_check_mark:'
       path: test/aoj/JOI/Planetary-Exploration.test.cpp
       title: test/aoj/JOI/Planetary-Exploration.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/JOI/Planetary-Exploration2.test.cpp
+      title: test/aoj/JOI/Planetary-Exploration2.test.cpp
   - name: test/aoj/NTL
     pages:
     - icon: ':heavy_check_mark:'
@@ -328,6 +361,9 @@ data:
       path: test/yosupo/Convolution(Mod1e9+7).test.cpp
       title: test/yosupo/Convolution(Mod1e9+7).test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+      title: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Convolution.test.cpp
       title: test/yosupo/Convolution.test.cpp
     - icon: ':heavy_check_mark:'
@@ -352,8 +388,14 @@ data:
       path: test/yosupo/Jump-on-Tree.test.cpp
       title: test/yosupo/Jump-on-Tree.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+      title: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
       title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Many-A+B.test.cpp
+      title: test/yosupo/Many-A+B.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Matrix-Product.test.cpp
       title: test/yosupo/Matrix-Product.test.cpp

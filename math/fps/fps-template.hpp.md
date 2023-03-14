@@ -8,22 +8,28 @@ data:
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
   - icon: ':heavy_check_mark:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+    title: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    title: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
@@ -291,7 +297,9 @@ data:
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
   - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
   - test/yosupo/Log-of-Formal-Power-Series.test.cpp
   - test/yosupo/Pow-of-Formal-Power-Series.test.cpp

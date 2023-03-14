@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_B.test.cpp
+    title: test/aoj/DSL/DSL_2_B.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Point-Add-Range-Sum.test.cpp
     title: test/yosupo/Point-Add-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -44,6 +47,7 @@ data:
   verifiedWith:
   - test/yosupo/Point-Add-Range-Sum.test.cpp
   - test/yosupo/Static-Range-Inversions-Query.test.cpp
+  - test/aoj/DSL/DSL_2_B.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document
 redirect_from:

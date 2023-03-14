@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_E.test.cpp
+    title: test/aoj/DSL/DSL_2_E.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_H.test.cpp
+    title: test/aoj/DSL/DSL_2_H.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/radd-rmin.hpp\"\ntemplate <class T>\r\nstruct\
@@ -69,8 +75,10 @@ data:
   path: SegmentTree/radd-rmin.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/DSL/DSL_2_H.test.cpp
+  - test/aoj/DSL/DSL_2_E.test.cpp
 documentation_of: SegmentTree/radd-rmin.hpp
 layout: document
 redirect_from:

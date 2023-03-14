@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_A.test.cpp
+    title: test/aoj/DSL/DSL_2_A.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/seg-rmin.hpp\"\ntemplate<class T, const T&(*op)(const\
@@ -87,8 +90,9 @@ data:
   path: SegmentTree/seg-rmin.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/DSL/DSL_2_A.test.cpp
 documentation_of: SegmentTree/seg-rmin.hpp
 layout: document
 redirect_from:

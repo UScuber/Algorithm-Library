@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_D.test.cpp
+    title: test/aoj/DSL/DSL_2_D.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL/DSL_2_F.test.cpp
+    title: test/aoj/DSL/DSL_2_F.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/rupdate-rmin.hpp\"\ntemplate <class T>\r\nstruct\
@@ -69,8 +75,10 @@ data:
   path: SegmentTree/rupdate-rmin.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/DSL/DSL_2_D.test.cpp
+  - test/aoj/DSL/DSL_2_F.test.cpp
 documentation_of: SegmentTree/rupdate-rmin.hpp
 layout: document
 redirect_from:

@@ -20,7 +20,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
     title: graph/diameter.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
   _extendedVerifiedWith:
@@ -30,6 +30,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_2_A.test.cpp
     title: test/aoj/GRL/GRL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL/GRL_6_A2.test.cpp
+    title: test/aoj/GRL/GRL_6_A2.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Cycle-Detection(Directed).test.cpp
@@ -85,6 +88,7 @@ data:
   - test/yosupo/Tree-Diameter.test.cpp
   - test/yosupo/Vertex-Add-Path-Sum.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
+  - test/aoj/GRL/GRL_6_A2.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
 documentation_of: graph/template.hpp
 layout: document

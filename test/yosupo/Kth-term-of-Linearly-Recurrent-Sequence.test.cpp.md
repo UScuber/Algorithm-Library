@@ -8,36 +8,62 @@ data:
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
   - icon: ':heavy_check_mark:'
+    path: math/fps/fps.hpp
+    title: math/fps/fps.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/fps/kitamasa.hpp
+    title: math/fps/kitamasa.hpp
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
-  _extendedRequiredBy: []
-  _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
-    title: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+    path: template/template.hpp
+    title: template/template.hpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
+  _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    links: []
-  bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
-    \ NTT {\r\n  static constexpr uint32_t get_pr(){\r\n    const uint32_t _mod =\
-    \ mint::get_mod();\r\n    using u64 = uint64_t;\r\n    u64 ds[32] = {};\r\n  \
-    \  int idx = 0;\r\n    u64 m = _mod - 1;\r\n    for(u64 i = 2; i * i <= m; i++){\r\
-    \n      if(m % i == 0){\r\n        ds[idx++] = i;\r\n        while(m % i == 0)\
-    \ m /= i;\r\n      }\r\n    }\r\n    if(m != 1) ds[idx++] = m;\r\n    uint32_t\
-    \ _pr = 2;\r\n    while(true){\r\n      int flg = 1;\r\n      for(int i = 0; i\
-    \ < idx; i++){\r\n        u64 a = _pr, b = (_mod - 1) / ds[i], r = 1;\r\n    \
-    \    while(b){\r\n          if(b & 1) r = r * a % _mod;\r\n          a = a * a\
-    \ % _mod;\r\n          b >>= 1;\r\n        }\r\n        if(r == 1){\r\n      \
-    \    flg = 0;\r\n          break;\r\n        }\r\n      }\r\n      if(flg == 1)\
-    \ break;\r\n      _pr++;\r\n    }\r\n    return _pr;\r\n  };\r\n  static constexpr\
-    \ uint32_t mod = mint::get_mod();\r\n  static constexpr uint32_t pr = get_pr();\r\
-    \n  static constexpr int level = __builtin_ctzll(mod - 1);\r\n  mint dw[level],\
-    \ dy[level];\r\n  void setwy(const int k){\r\n    mint w[level], y[level];\r\n\
-    \    w[k - 1] = mint(pr).pow((mod - 1) / (1 << k));\r\n    y[k - 1] = w[k - 1].inv();\r\
-    \n    for(int i = k - 2; i > 0; i--)\r\n      w[i] = w[i + 1] * w[i + 1], y[i]\
-    \ = y[i + 1] * y[i + 1];\r\n    dw[1] = w[1], dy[1] = y[1], dw[2] = w[2], dy[2]\
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence
+    links:
+    - https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence
+  bundledCode: "#line 1 \"test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence\"\
+    \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
+    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
+    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
+    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
+    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
+    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
+    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
+    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
+    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
+    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
+    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
+    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
+    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
+    \ 4 \"test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp\"\n\n#line\
+    \ 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct NTT {\r\n  static\
+    \ constexpr uint32_t get_pr(){\r\n    const uint32_t _mod = mint::get_mod();\r\
+    \n    using u64 = uint64_t;\r\n    u64 ds[32] = {};\r\n    int idx = 0;\r\n  \
+    \  u64 m = _mod - 1;\r\n    for(u64 i = 2; i * i <= m; i++){\r\n      if(m % i\
+    \ == 0){\r\n        ds[idx++] = i;\r\n        while(m % i == 0) m /= i;\r\n  \
+    \    }\r\n    }\r\n    if(m != 1) ds[idx++] = m;\r\n    uint32_t _pr = 2;\r\n\
+    \    while(true){\r\n      int flg = 1;\r\n      for(int i = 0; i < idx; i++){\r\
+    \n        u64 a = _pr, b = (_mod - 1) / ds[i], r = 1;\r\n        while(b){\r\n\
+    \          if(b & 1) r = r * a % _mod;\r\n          a = a * a % _mod;\r\n    \
+    \      b >>= 1;\r\n        }\r\n        if(r == 1){\r\n          flg = 0;\r\n\
+    \          break;\r\n        }\r\n      }\r\n      if(flg == 1) break;\r\n   \
+    \   _pr++;\r\n    }\r\n    return _pr;\r\n  };\r\n  static constexpr uint32_t\
+    \ mod = mint::get_mod();\r\n  static constexpr uint32_t pr = get_pr();\r\n  static\
+    \ constexpr int level = __builtin_ctzll(mod - 1);\r\n  mint dw[level], dy[level];\r\
+    \n  void setwy(const int k){\r\n    mint w[level], y[level];\r\n    w[k - 1] =\
+    \ mint(pr).pow((mod - 1) / (1 << k));\r\n    y[k - 1] = w[k - 1].inv();\r\n  \
+    \  for(int i = k - 2; i > 0; i--)\r\n      w[i] = w[i + 1] * w[i + 1], y[i] =\
+    \ y[i + 1] * y[i + 1];\r\n    dw[1] = w[1], dy[1] = y[1], dw[2] = w[2], dy[2]\
     \ = y[2];\r\n    for(int i = 3; i < k; i++){\r\n      dw[i] = dw[i - 1] * y[i\
     \ - 2] * w[i];\r\n      dy[i] = dy[i - 1] * w[i - 2] * y[i];\r\n    }\r\n  }\r\
     \n  NTT(){ setwy(level); }\r\n  void fft4(vector<mint> &a, const int k){\r\n \
@@ -196,133 +222,116 @@ data:
     \ FPS &r);\r\n  void ntt();\r\n  void intt();\r\n  void ntt_doubling();\r\n  static\
     \ int ntt_pr();\r\n  FPS inv(int deg = -1) const;\r\n  FPS exp(int deg = -1) const;\r\
     \n};\r\ntemplate <class mint>\r\nvoid *FPS<mint>::ntt_ptr = nullptr;\n#line 2\
-    \ \"math/fps/fps-arbitrary-mod.hpp\"\n\r\nnamespace ArbitraryNTT {\r\nusing u128\
-    \ = __uint128_t;\r\nconstexpr int m0 = 167772161;\r\nconstexpr int m1 = 469762049;\r\
-    \nconstexpr int m2 = 754974721;\r\nusing mint0 = Mint<m0>;\r\nusing mint1 = Mint<m1>;\r\
-    \nusing mint2 = Mint<m2>;\r\nconstexpr int r01 = mint1(m0).inv().x;\r\nconstexpr\
-    \ int r02 = mint2(m0).inv().x;\r\nconstexpr int r12 = mint2(m1).inv().x;\r\nconstexpr\
-    \ int r02r12 = ll(r02) * r12 % m2;\r\nconstexpr ll w1 = m0;\r\nconstexpr ll w2\
-    \ = ll(m0) * m1;\r\n\r\ntemplate <class T, class submint>\r\nvector<submint> mul(const\
-    \ vector<T> &a, const vector<T> &b){\r\n  static NTT<submint> ntt;\r\n  vector<submint>\
-    \ s(a.size()), t(b.size());\r\n  for(int i = 0; i < (int)a.size(); i++) s[i] =\
-    \ ll(a[i] % submint::get_mod());\r\n  for(int i = 0; i < (int)b.size(); i++) t[i]\
-    \ = ll(b[i] % submint::get_mod());\r\n  return ntt.multiply(s, t);\r\n}\r\ntemplate\
-    \ <class T>\r\nvector<int> multiply(const vector<T> &s, const vector<T> &t, const\
-    \ int mod){\r\n  const auto d0 = mul<T, mint0>(s, t);\r\n  const auto d1 = mul<T,\
-    \ mint1>(s, t);\r\n  const auto d2 = mul<T, mint2>(s, t);\r\n  const int n = d0.size();\r\
-    \n  vector<int> ret(n);\r\n  const int W1 = w1 % mod;\r\n  const int W2 = w2 %\
-    \ mod;\r\n  for(int i = 0; i < n; i++){\r\n    const int n1 = d1[i].x, n2 = d2[i].x,\
-    \ a = d0[i].x;\r\n    const int b = ll(n1 + m1 - a) * r01 % m1;\r\n    const int\
-    \ c = (ll(n2 + m2 - a) * r02r12 + ll(m2 - b) * r12) % m2;\r\n    ret[i] = (ll(a)\
-    \ + ll(b) * W1 + ll(c) * W2) % mod;\r\n  }\r\n  return ret;\r\n}\r\n\r\ntemplate\
-    \ <class mint>\r\nvector<mint> multiply(const vector<mint> &a, const vector<mint>\
-    \ &b){\r\n  if(a.size() == 0 && b.size() == 0) return {};\r\n  if(min<int>(a.size(),\
-    \ b.size()) < 128){\r\n    vector<mint> ret(a.size() + b.size() - 1);\r\n    for(int\
-    \ i = 0; i < (int)a.size(); i++)\r\n      for(int j = 0; j < (int)b.size(); j++)\
-    \ ret[i + j] += a[i] * b[j];\r\n    return ret;\r\n  }\r\n  vector<int> s(a.size()),\
-    \ t(b.size());\r\n  for(int i = 0; i < (int)a.size(); i++) s[i] = a[i].x;\r\n\
-    \  for(int i = 0; i < (int)b.size(); i++) t[i] = b[i].x;\r\n  vector<int> u =\
-    \ multiply<int>(s, t, mint::get_mod());\r\n  vector<mint> ret(u.size());\r\n \
-    \ for(int i = 0; i < (int)u.size(); i++) ret[i] = mint(u[i]);\r\n  return ret;\r\
-    \n}\r\n\r\ntemplate <class T>\r\nvector<u128> multiply_u128(const vector<T> &s,\
-    \ const vector<T> &t){\r\n  if(s.size() == 0 && t.size() == 0) return {};\r\n\
-    \  if(min<int>(s.size(), t.size()) < 128){\r\n    vector<u128> ret(s.size() +\
-    \ t.size() - 1);\r\n    for(int i = 0; i < (int)s.size(); i++)\r\n      for(int\
-    \ j = 0; j < (int)t.size(); j++) ret[i + j] += ll(s[i]) * t[j];\r\n    return\
-    \ ret;\r\n  }\r\n  const auto d0 = mul<T, mint0>(s, t);\r\n  const auto d1 = mul<T,\
-    \ mint1>(s, t);\r\n  const auto d2 = mul<T, mint2>(s, t);\r\n  const int n = d0.size();\r\
-    \n  vector<u128> ret(n);\r\n  for(int i = 0; i < n; i++){\r\n    ll n1 = d1[i].x,\
-    \ n2 = d2[i].x;\r\n    ll a = d0[i].x;\r\n    u128 b = (n1 + m1 - a) * r01 % m1;\r\
-    \n    u128 c = ((n2 + m2 - a) * r02r12 + (m2 - b) * r12) % m2;\r\n    ret[i] =\
-    \ a + b * w1 + c * w2;\r\n  }\r\n  return ret;\r\n}\r\n} // namespace ArbitraryNTT\r\
-    \ntemplate <class mint> void FPS<mint>::set_fft(){ ntt_ptr = nullptr; }\r\ntemplate\
-    \ <class mint> void FPS<mint>::ntt(){ exit(1); }\r\ntemplate <class mint> void\
-    \ FPS<mint>::intt(){ exit(1); }\r\ntemplate <class mint> void FPS<mint>::ntt_doubling(){\
-    \ exit(1); }\r\ntemplate <class mint> int FPS<mint>::ntt_pr(){ exit(1); }\r\n\
-    template <class mint>\r\nFPS<mint> &FPS<mint>::operator*=(const FPS<mint> &r){\r\
-    \n  if(this->empty() || r.empty()){\r\n    this->clear();\r\n    return *this;\r\
-    \n  }\r\n  const auto ret = ArbitraryNTT::multiply(*this, r);\r\n  return *this\
-    \ = FPS<mint>(ret.begin(), ret.end());\r\n}\r\ntemplate <class mint>\r\nFPS<mint>\
-    \ FPS<mint>::inv(int deg) const{\r\n  assert((*this)[0] != mint(0));\r\n  if(deg\
-    \ == -1) deg = (*this).size();\r\n  FPS<mint> ret({mint(1) / (*this)[0]});\r\n\
-    \  for(int i = 1; i < deg; i <<= 1)\r\n    ret = (ret + ret - ret * ret * (*this).pre(i\
-    \ << 1)).pre(i << 1);\r\n  return ret.pre(deg);\r\n}\r\ntemplate <class mint>\r\
-    \nFPS<mint> FPS<mint>::exp(int deg) const{\r\n  assert((*this).size() == 0 ||\
-    \ (*this)[0] == mint(0));\r\n  if(deg == -1) deg = (int)this->size();\r\n  FPS<mint>\
-    \ ret({mint(1)});\r\n  for(int i = 1; i < deg; i <<= 1){\r\n    ret = (ret * (pre(i\
-    \ << 1) + mint(1) - ret.log(i << 1))).pre(i << 1);\r\n  }\r\n  return ret.pre(deg);\r\
-    \n}\n"
-  code: "#include \"fps-template.hpp\"\r\n\r\nnamespace ArbitraryNTT {\r\nusing u128\
-    \ = __uint128_t;\r\nconstexpr int m0 = 167772161;\r\nconstexpr int m1 = 469762049;\r\
-    \nconstexpr int m2 = 754974721;\r\nusing mint0 = Mint<m0>;\r\nusing mint1 = Mint<m1>;\r\
-    \nusing mint2 = Mint<m2>;\r\nconstexpr int r01 = mint1(m0).inv().x;\r\nconstexpr\
-    \ int r02 = mint2(m0).inv().x;\r\nconstexpr int r12 = mint2(m1).inv().x;\r\nconstexpr\
-    \ int r02r12 = ll(r02) * r12 % m2;\r\nconstexpr ll w1 = m0;\r\nconstexpr ll w2\
-    \ = ll(m0) * m1;\r\n\r\ntemplate <class T, class submint>\r\nvector<submint> mul(const\
-    \ vector<T> &a, const vector<T> &b){\r\n  static NTT<submint> ntt;\r\n  vector<submint>\
-    \ s(a.size()), t(b.size());\r\n  for(int i = 0; i < (int)a.size(); i++) s[i] =\
-    \ ll(a[i] % submint::get_mod());\r\n  for(int i = 0; i < (int)b.size(); i++) t[i]\
-    \ = ll(b[i] % submint::get_mod());\r\n  return ntt.multiply(s, t);\r\n}\r\ntemplate\
-    \ <class T>\r\nvector<int> multiply(const vector<T> &s, const vector<T> &t, const\
-    \ int mod){\r\n  const auto d0 = mul<T, mint0>(s, t);\r\n  const auto d1 = mul<T,\
-    \ mint1>(s, t);\r\n  const auto d2 = mul<T, mint2>(s, t);\r\n  const int n = d0.size();\r\
-    \n  vector<int> ret(n);\r\n  const int W1 = w1 % mod;\r\n  const int W2 = w2 %\
-    \ mod;\r\n  for(int i = 0; i < n; i++){\r\n    const int n1 = d1[i].x, n2 = d2[i].x,\
-    \ a = d0[i].x;\r\n    const int b = ll(n1 + m1 - a) * r01 % m1;\r\n    const int\
-    \ c = (ll(n2 + m2 - a) * r02r12 + ll(m2 - b) * r12) % m2;\r\n    ret[i] = (ll(a)\
-    \ + ll(b) * W1 + ll(c) * W2) % mod;\r\n  }\r\n  return ret;\r\n}\r\n\r\ntemplate\
-    \ <class mint>\r\nvector<mint> multiply(const vector<mint> &a, const vector<mint>\
-    \ &b){\r\n  if(a.size() == 0 && b.size() == 0) return {};\r\n  if(min<int>(a.size(),\
-    \ b.size()) < 128){\r\n    vector<mint> ret(a.size() + b.size() - 1);\r\n    for(int\
-    \ i = 0; i < (int)a.size(); i++)\r\n      for(int j = 0; j < (int)b.size(); j++)\
-    \ ret[i + j] += a[i] * b[j];\r\n    return ret;\r\n  }\r\n  vector<int> s(a.size()),\
-    \ t(b.size());\r\n  for(int i = 0; i < (int)a.size(); i++) s[i] = a[i].x;\r\n\
-    \  for(int i = 0; i < (int)b.size(); i++) t[i] = b[i].x;\r\n  vector<int> u =\
-    \ multiply<int>(s, t, mint::get_mod());\r\n  vector<mint> ret(u.size());\r\n \
-    \ for(int i = 0; i < (int)u.size(); i++) ret[i] = mint(u[i]);\r\n  return ret;\r\
-    \n}\r\n\r\ntemplate <class T>\r\nvector<u128> multiply_u128(const vector<T> &s,\
-    \ const vector<T> &t){\r\n  if(s.size() == 0 && t.size() == 0) return {};\r\n\
-    \  if(min<int>(s.size(), t.size()) < 128){\r\n    vector<u128> ret(s.size() +\
-    \ t.size() - 1);\r\n    for(int i = 0; i < (int)s.size(); i++)\r\n      for(int\
-    \ j = 0; j < (int)t.size(); j++) ret[i + j] += ll(s[i]) * t[j];\r\n    return\
-    \ ret;\r\n  }\r\n  const auto d0 = mul<T, mint0>(s, t);\r\n  const auto d1 = mul<T,\
-    \ mint1>(s, t);\r\n  const auto d2 = mul<T, mint2>(s, t);\r\n  const int n = d0.size();\r\
-    \n  vector<u128> ret(n);\r\n  for(int i = 0; i < n; i++){\r\n    ll n1 = d1[i].x,\
-    \ n2 = d2[i].x;\r\n    ll a = d0[i].x;\r\n    u128 b = (n1 + m1 - a) * r01 % m1;\r\
-    \n    u128 c = ((n2 + m2 - a) * r02r12 + (m2 - b) * r12) % m2;\r\n    ret[i] =\
-    \ a + b * w1 + c * w2;\r\n  }\r\n  return ret;\r\n}\r\n} // namespace ArbitraryNTT\r\
-    \ntemplate <class mint> void FPS<mint>::set_fft(){ ntt_ptr = nullptr; }\r\ntemplate\
-    \ <class mint> void FPS<mint>::ntt(){ exit(1); }\r\ntemplate <class mint> void\
-    \ FPS<mint>::intt(){ exit(1); }\r\ntemplate <class mint> void FPS<mint>::ntt_doubling(){\
-    \ exit(1); }\r\ntemplate <class mint> int FPS<mint>::ntt_pr(){ exit(1); }\r\n\
-    template <class mint>\r\nFPS<mint> &FPS<mint>::operator*=(const FPS<mint> &r){\r\
-    \n  if(this->empty() || r.empty()){\r\n    this->clear();\r\n    return *this;\r\
-    \n  }\r\n  const auto ret = ArbitraryNTT::multiply(*this, r);\r\n  return *this\
-    \ = FPS<mint>(ret.begin(), ret.end());\r\n}\r\ntemplate <class mint>\r\nFPS<mint>\
-    \ FPS<mint>::inv(int deg) const{\r\n  assert((*this)[0] != mint(0));\r\n  if(deg\
-    \ == -1) deg = (*this).size();\r\n  FPS<mint> ret({mint(1) / (*this)[0]});\r\n\
-    \  for(int i = 1; i < deg; i <<= 1)\r\n    ret = (ret + ret - ret * ret * (*this).pre(i\
-    \ << 1)).pre(i << 1);\r\n  return ret.pre(deg);\r\n}\r\ntemplate <class mint>\r\
-    \nFPS<mint> FPS<mint>::exp(int deg) const{\r\n  assert((*this).size() == 0 ||\
-    \ (*this)[0] == mint(0));\r\n  if(deg == -1) deg = (int)this->size();\r\n  FPS<mint>\
-    \ ret({mint(1)});\r\n  for(int i = 1; i < deg; i <<= 1){\r\n    ret = (ret * (pre(i\
-    \ << 1) + mint(1) - ret.log(i << 1))).pre(i << 1);\r\n  }\r\n  return ret.pre(deg);\r\
-    \n}"
+    \ \"math/fps/fps.hpp\"\n\r\ntemplate <class mint>\r\nvoid FPS<mint>::set_fft(){\
+    \ if(!ntt_ptr) ntt_ptr = new NTT<mint>; }\r\ntemplate <class mint>\r\nFPS<mint>\
+    \ &FPS<mint>::operator*=(const FPS<mint> &r){\r\n  if(this->empty() || r.empty()){\r\
+    \n    this->clear();\r\n    return *this;\r\n  }\r\n  set_fft();\r\n  const auto\
+    \ ret = static_cast<NTT<mint>*>(ntt_ptr)->multiply(*this, r);\r\n  return *this\
+    \ = FPS<mint>(ret.begin(), ret.end());\r\n}\r\ntemplate <class mint>\r\nvoid FPS<mint>::ntt(){\r\
+    \n  set_fft();\r\n  static_cast<NTT<mint>*>(ntt_ptr)->ntt(*this);\r\n}\r\ntemplate\
+    \ <class mint>\r\nvoid FPS<mint>::intt(){\r\n  set_fft();\r\n  static_cast<NTT<mint>*>(ntt_ptr)->intt(*this);\r\
+    \n}\r\ntemplate <class mint>\r\nvoid FPS<mint>::ntt_doubling(){\r\n  set_fft();\r\
+    \n  static_cast<NTT<mint>*>(ntt_ptr)->ntt_doubling(*this);\r\n}\r\ntemplate <class\
+    \ mint>\r\nint FPS<mint>::ntt_pr(){\r\n  set_fft();\r\n  return static_cast<NTT<mint>*>(ntt_ptr)->pr;\r\
+    \n}\r\ntemplate <class mint>\r\nFPS<mint> FPS<mint>::inv(int deg) const{\r\n \
+    \ assert((*this)[0] != mint(0));\r\n  if(deg == -1) deg = (int)this->size();\r\
+    \n  FPS<mint> res(deg);\r\n  res[0] = { mint(1) / (*this)[0] };\r\n  for(int d\
+    \ = 1; d < deg; d <<= 1){\r\n    FPS<mint> f(2 * d), g(2 * d);\r\n    for(int\
+    \ j = 0; j < min((int)this->size(), 2 * d); j++) f[j] = (*this)[j];\r\n    for(int\
+    \ j = 0; j < d; j++) g[j] = res[j];\r\n    f.ntt();\r\n    g.ntt();\r\n    for(int\
+    \ j = 0; j < 2 * d; j++) f[j] *= g[j];\r\n    f.intt();\r\n    for(int j = 0;\
+    \ j < d; j++) f[j] = 0;\r\n    f.ntt();\r\n    for(int j = 0; j < 2 * d; j++)\
+    \ f[j] *= g[j];\r\n    f.intt();\r\n    for(int j = d; j < min(2 * d, deg); j++)\
+    \ res[j] = -f[j];\r\n  }\r\n  return res.pre(deg);\r\n}\r\ntemplate <class mint>\r\
+    \nFPS<mint> FPS<mint>::exp(int deg) const{\r\n  using fps = FPS<mint>;\r\n  assert((*this).size()\
+    \ == 0 || (*this)[0] == mint(0));\r\n  if(deg == -1) deg = this->size();\r\n \
+    \ fps inv;\r\n  inv.reserve(deg + 1);\r\n  inv.push_back(mint(0));\r\n  inv.push_back(mint(1));\r\
+    \n  auto inplace_integral = [&](fps &F) -> void {\r\n    const int n = (int)F.size();\r\
+    \n    const auto mod = mint::get_mod();\r\n    while((int)inv.size() <= n){\r\n\
+    \      const int i = inv.size();\r\n      inv.push_back((-inv[mod % i]) * (mod\
+    \ / i));\r\n    }\r\n    F.insert(begin(F), mint(0));\r\n    for(int i = 1; i\
+    \ <= n; i++) F[i] *= inv[i];\r\n  };\r\n  auto inplace_diff = [](fps& F) -> void\
+    \ {\r\n    if(F.empty()) return;\r\n    F.erase(begin(F));\r\n    mint coeff =\
+    \ 1;\r\n    const mint one = 1;\r\n    for(int i = 0; i < (int)F.size(); i++){\r\
+    \n      F[i] *= coeff;\r\n      coeff += one;\r\n    }\r\n  };\r\n  fps b{ 1,\
+    \ 1 < (int)this->size() ? (*this)[1] : 0 }, c{ 1 }, z1, z2{ 1, 1 };\r\n  for(int\
+    \ m = 2; m < deg; m *= 2){\r\n    auto y = b;\r\n    y.resize(2 * m);\r\n    y.ntt();\r\
+    \n    z1 = z2;\r\n    fps z(m);\r\n    for(int i = 0; i < m; i++) z[i] = y[i]\
+    \ * z1[i];\r\n    z.intt();\r\n    fill(begin(z), begin(z) + m / 2, mint(0));\r\
+    \n    z.ntt();\r\n    for(int i = 0; i < m; i++) z[i] *= -z1[i];\r\n    z.intt();\r\
+    \n    c.insert(end(c), begin(z) + m / 2, end(z));\r\n    z2 = c;\r\n    z2.resize(2\
+    \ * m);\r\n    z2.ntt();\r\n    fps x(begin(*this), begin(*this) + min<int>(this->size(),\
+    \ m));\r\n    x.resize(m);\r\n    inplace_diff(x);\r\n    x.push_back(mint(0));\r\
+    \n    x.ntt();\r\n    for(int i = 0; i < m; i++) x[i] *= y[i];\r\n    x.intt();\r\
+    \n    x -= b.diff();\r\n    x.resize(2 * m);\r\n    for(int i = 0; i < m - 1;\
+    \ i++) x[m + i] = x[i], x[i] = mint(0);\r\n    x.ntt();\r\n    for(int i = 0;\
+    \ i < 2 * m; i++) x[i] *= z2[i];\r\n    x.intt();\r\n    x.pop_back();\r\n   \
+    \ inplace_integral(x);\r\n    for(int i = m; i < min<int>(this->size(), 2 * m);\
+    \ i++) x[i] += (*this)[i];\r\n    fill(begin(x), begin(x) + m, mint(0));\r\n \
+    \   x.ntt();\r\n    for(int i = 0; i < 2 * m; i++) x[i] *= y[i];\r\n    x.intt();\r\
+    \n    b.insert(end(b), begin(x) + m, end(x));\r\n  }\r\n  return fps{ begin(b),\
+    \ begin(b) + deg };\r\n}\n#line 2 \"math/fps/kitamasa.hpp\"\n// #include \"fps-arbitrary-mod.hpp\"\
+    \r\n\r\ntemplate <class mint>\r\nmint LinearRecurrence(ll k, FPS<mint> Q, FPS<mint>\
+    \ P){\r\n  Q.shrink();\r\n  mint ret = 0;\r\n  if(P.size() >= Q.size()){\r\n \
+    \   const auto R = P / Q;\r\n    P -= R * Q;\r\n    P.shrink();\r\n    if(k <\
+    \ (int)R.size()) ret += R[k];\r\n  }\r\n  if((int)P.size() == 0) return ret;\r\
+    \n  FPS<mint>::set_fft();\r\n  if(FPS<mint>::ntt_ptr == nullptr){\r\n    P.resize((int)Q.size()\
+    \ - 1);\r\n    while(k){\r\n      auto Q2 = Q;\r\n      for(int i = 1; i < (int)Q2.size();\
+    \ i += 2) Q2[i] = -Q2[i];\r\n      const auto S = P * Q2;\r\n      const auto\
+    \ T = Q * Q2;\r\n      if(k & 1){\r\n        for(int i = 1; i < (int)S.size();\
+    \ i += 2) P[i >> 1] = S[i];\r\n        for(int i = 0; i < (int)T.size(); i +=\
+    \ 2) Q[i >> 1] = T[i];\r\n      }else{\r\n        for(int i = 0; i < (int)S.size();\
+    \ i += 2) P[i >> 1] = S[i];\r\n        for(int i = 0; i < (int)T.size(); i +=\
+    \ 2) Q[i >> 1] = T[i];\r\n      }\r\n      k >>= 1;\r\n    }\r\n    return ret\
+    \ + P[0];\r\n  }else{\r\n    int N = 1;\r\n    while(N < (int)Q.size()) N <<=\
+    \ 1;\r\n    P.resize(2 * N);\r\n    Q.resize(2 * N);\r\n    P.ntt();\r\n    Q.ntt();\r\
+    \n    vector<mint> S(2 * N), T(2 * N);\r\n    vector<int> btr(N);\r\n    for(int\
+    \ i = 0, logn = __builtin_ctz(N); i < (1 << logn); i++){\r\n      btr[i] = (btr[i\
+    \ >> 1] >> 1) + ((i & 1) << (logn - 1));\r\n    }\r\n    const mint dw = mint(FPS<mint>::ntt_pr()).inv().pow((mint::get_mod()\
+    \ - 1) / (2 * N));\r\n    while(k){\r\n      mint inv2 = mint(2).inv();\r\n  \
+    \    // even degree of Q(x)Q(-x)\r\n      T.resize(N);\r\n      for(int i = 0;\
+    \ i < N; i++) T[i] = Q[(i << 1) | 0] * Q[(i << 1) | 1];\r\n      S.resize(N);\r\
+    \n      if(k & 1){\r\n        // odd degree of P(x)Q(-x)\r\n        for(auto &i\
+    \ : btr) {\r\n          S[i] = (P[(i << 1) | 0] * Q[(i << 1) | 1] -\r\n      \
+    \            P[(i << 1) | 1] * Q[(i << 1) | 0]) * inv2;\r\n          inv2 *= dw;\r\
+    \n        }\r\n      }else{\r\n        // even degree of P(x)Q(-x)\r\n       \
+    \ for(int i = 0; i < N; i++){\r\n          S[i] = (P[(i << 1) | 0] * Q[(i << 1)\
+    \ | 1] +\r\n                  P[(i << 1) | 1] * Q[(i << 1) | 0]) * inv2;\r\n \
+    \       }\r\n      }\r\n      swap(P, S);\r\n      swap(Q, T);\r\n      k >>=\
+    \ 1;\r\n      if(k < N) break;\r\n      P.ntt_doubling();\r\n      Q.ntt_doubling();\r\
+    \n    }\r\n    P.intt();\r\n    Q.intt();\r\n    return ret + (P * (Q.inv()))[k];\r\
+    \n  }\r\n}\r\ntemplate <class mint>\r\nmint kitamasa(ll N, FPS<mint> Q, FPS<mint>\
+    \ a){\r\n  assert(!Q.empty() && Q[0] != 0);\r\n  if(N < (int)a.size()) return\
+    \ a[N];\r\n  assert((int)a.size() >= int(Q.size()) - 1);\r\n  auto P = a.pre((int)Q.size()\
+    \ - 1) * Q;\r\n  P.resize(Q.size() - 1);\r\n  return LinearRecurrence<mint>(N,\
+    \ Q, P);\r\n}\n#line 6 \"test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp\"\
+    \n\nusing mint = Mint<998244353>;\nusing fps = FPS<mint>;\n\nint main(){\n  cin.tie(nullptr);\n\
+    \  ios::sync_with_stdio(false);\n  int d; ll K;\n  cin >> d >> K;\n  fps a(d),\
+    \ c(d+1);\n  rep(i, d) cin >> a[i];\n  rep(i, d) cin >> c[i+1];\n  c = fps{1}\
+    \ - c;\n  cout << kitamasa(K, c, a) << \"\\n\";\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence\"\
+    \n\n#include \"../../template/template.hpp\"\n\n#include \"../../math/fps/kitamasa.hpp\"\
+    \n\nusing mint = Mint<998244353>;\nusing fps = FPS<mint>;\n\nint main(){\n  cin.tie(nullptr);\n\
+    \  ios::sync_with_stdio(false);\n  int d; ll K;\n  cin >> d >> K;\n  fps a(d),\
+    \ c(d+1);\n  rep(i, d) cin >> a[i];\n  rep(i, d) cin >> c[i+1];\n  c = fps{1}\
+    \ - c;\n  cout << kitamasa(K, c, a) << \"\\n\";\n}"
   dependsOn:
+  - template/template.hpp
+  - math/fps/kitamasa.hpp
+  - math/fps/fps.hpp
   - math/fps/fps-template.hpp
   - math/convolution/ntt.hpp
   - math/mint.hpp
-  isVerificationFile: false
-  path: math/fps/fps-arbitrary-mod.hpp
+  isVerificationFile: true
+  path: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   requiredBy: []
-  timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
-documentation_of: math/fps/fps-arbitrary-mod.hpp
+  timestamp: '2023-03-14 18:00:32+09:00'
+  verificationStatus: TEST_ACCEPTED
+  verifiedWith: []
+documentation_of: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
 layout: document
 redirect_from:
-- /library/math/fps/fps-arbitrary-mod.hpp
-- /library/math/fps/fps-arbitrary-mod.hpp.html
-title: math/fps/fps-arbitrary-mod.hpp
+- /verify/test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+- /verify/test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp.html
+title: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
 ---
