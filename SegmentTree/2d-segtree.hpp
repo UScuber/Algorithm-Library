@@ -1,4 +1,4 @@
-template <class T, T(*op)(const T&, const T&), const T(*e)()>
+template <class T, T(*op)(const T&,const T&), T(*e)()>
 struct SegmentTree2D {
   int h,w, logh,logw;
   vector<vector<T>> d;
@@ -8,7 +8,7 @@ struct SegmentTree2D {
     logh = logw = 1;
     while((h <<= 1) < _h) logh++;
     while((w <<= 1) < _w) logw++;
-    d.resize(h * 2, vector<T>(w * 2, e()));
+    d.assign(h * 2, vector<T>(w * 2, e()));
   }
   void set(const int i, const int j, const T x){
     d[i + h][j + w] += x;
@@ -76,12 +76,3 @@ struct SegmentTree2D {
     d[i][j] = op(d[2*i][j], d[2*i+1][j]);
   }
 };
-
-template <class T>
-T op(const T &a, const T &b){
-  return a + b;
-}
-template <class T>
-const T e(){
-  return 0;
-}
