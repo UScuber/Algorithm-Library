@@ -3,9 +3,7 @@ struct SegmentTree {
   SegmentTree(const int _n) : n(_n){
     while((1 << log) < n) log++;
     len = 1 << log;
-    //inf = -op(inf-1, -inf+1);
-    inf = -op(inf, -inf);
-    d.resize(len * 2, inf);
+    d.assign(len * 2, inf);
   }
   void update(int k, const T &x){
     assert(0 <= k && k < n);
@@ -38,51 +36,56 @@ struct SegmentTree {
     }
     return op(left, right);
   }
-  //min i  (0 <= i < r), (op(a[i], v) == a[i])
-  int min_left(int r, const T v) const{
-    assert(0 <= r && r <= n);
-    if(d[1] > v || !r) return r;
-    r += len;
-    int k = 1;
-    for(int i = log - 1; i >= 0; i--){
-      k <<= 1;
-      if(op(d[k]+op(1,-1),v)==v){
-        k++;
-        if(k > (r >> i) || op(d[k]+op(1,-1),v)==v) return r - len;
+  template <class F>
+  int max_right(int l, F f) const{
+    assert(0 <= l && l <= n);
+    assert(f(inf));
+    if(l == n) return n;
+    l += len;
+    T sm = inf;
+    do {
+      l /= l & -l;
+      if(!f(op(sm, d[l]))){
+        while(l < len){
+          l <<= 1;
+          if(f(op(sm, d[l]))){
+            sm = op(sm, d[l]);
+            l++;
+          }
+        }
+        return l - len;
       }
-    }
-    return k - len;
+      sm = op(sm, d[l]);
+      l++;
+    }while(l & (l - 1));
+    return n;
   }
-  //max i  (0 <= i < r), (op(a[i], v) == a[i])
-  int min_right(const int l, const int r, const T &x) const{
-    assert(0 <= l && l <= r && r <= n);
-    return min_right_sub(l, r, x, 1, 0, len);
-  }
-  //min i  (l <= i < r), (op(a[i], v) == a[i])
-  int min_left(const int l, const int r, const T &x) const{
-    assert(0 <= l && l <= r && r <= n);
-    return min_left_sub(l, r, x, 1, 0, len);
+  template <class F>
+  int min_left(int r, F f) const{
+    assert(0 <= r && r <= n);
+    assert(f(inf));
+    if(r == 0) return 0;
+    r += len;
+    T sm = inf;
+    do {
+      r /= r & -r;
+      if(r > 1) r--;
+      if(!f(op(d[r], sm))){
+        while(r < len){
+          r = r * 2 + 1;
+          if(f(op(d[r], sm))){
+            sm = op(d[r], sm);
+            r--;
+          }
+        }
+        return r + 1 - len;
+      }
+      sm = op(d[r], sm);
+    }while(r & (r - 1));
+    return 0;
   }
   private:
-  T inf = numeric_limits<T>::max();
+  const T inf = -op(numeric_limits<T>::max(), -numeric_limits<T>::max());
   int n = 1, log = 0, len = 0;
   vector<T> d;
-  //範囲外であればreturn a-1
-  int min_right_sub(int a, int b, const T &x, int k, int l, int r) const{
-    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return a - 1;
-    if(k >= len) return k - len;
-
-    int vrig = min_right_sub(a, b, x, 2*k+1, (l+r)/2, r);
-    if(vrig != a - 1) return vrig;
-    return min_right_sub(a, b, x, 2*k, l, (l+r)/2);
-  }
-  //範囲外であればreturn b
-  int min_left_sub(int a, int b, const T &x, int k, int l, int r) const{
-    if(op(d[k]+op(1,-1),x)==x || r <= a || b <= l) return b;
-    if(k >= len) return k - len;
-
-    int vlef = min_left_sub(a, b, x, 2*k, l, (l+r)/2);
-    if(vlef != b) return vlef;
-    return min_left_sub(a, b, x, 2*k+1, (l+r)/2, r);
-  }
 };

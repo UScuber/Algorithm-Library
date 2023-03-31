@@ -9,7 +9,7 @@ int main(){
   ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
-  LazySegmentTree<ll> seg(n);
+  LazySegmentTree<ll,min> seg(n);
   rep(i, q){
     int t; cin >> t;
     if(!t){
