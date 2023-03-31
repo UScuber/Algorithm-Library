@@ -10,14 +10,14 @@ data:
     path: test/aoj/DSL/DSL_2_B.test.cpp
     title: test/aoj/DSL/DSL_2_B.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Point-Add-Range-Sum.test.cpp
-    title: test/yosupo/Point-Add-Range-Sum.test.cpp
+    path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Rectangle-Sum.test.cpp
-    title: test/yosupo/Rectangle-Sum.test.cpp
+    path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Static-Range-Inversions-Query.test.cpp
-    title: test/yosupo/Static-Range-Inversions-Query.test.cpp
+    path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -52,9 +52,9 @@ data:
   timestamp: '2023-03-13 21:50:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Static-Range-Inversions-Query.test.cpp
-  - test/yosupo/Point-Add-Range-Sum.test.cpp
-  - test/yosupo/Rectangle-Sum.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   - test/aoj/DSL/DSL_2_B.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document

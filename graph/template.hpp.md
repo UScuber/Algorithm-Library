@@ -17,7 +17,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: graph/cycle-detect.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/diameter.hpp
     title: graph/diameter.hpp
   - icon: ':heavy_check_mark:'
@@ -34,20 +34,20 @@ data:
     path: test/aoj/GRL/GRL_6_A2.test.cpp
     title: test/aoj/GRL/GRL_6_A2.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Cycle-Detection(Directed).test.cpp
-    title: test/yosupo/Cycle-Detection(Directed).test.cpp
+    path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Tree-Diameter.test.cpp
-    title: test/yosupo/Tree-Diameter.test.cpp
+    path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
-    title: test/yosupo/Vertex-Add-Path-Sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
-    title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
-  _isVerificationFailed: false
+    path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+    title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Tree/Tree-Diameter.test.cpp
+    title: test/yosupo/Tree/Tree-Diameter.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: Graph Template
     links: []
@@ -81,12 +81,12 @@ data:
   - graph/center.hpp
   - graph/check-bipartite.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/yosupo/Cycle-Detection(Directed).test.cpp
-  - test/yosupo/Tree-Diameter.test.cpp
-  - test/yosupo/Vertex-Add-Path-Sum.test.cpp
-  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - test/yosupo/Tree/Tree-Diameter.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
   - test/aoj/GRL/GRL_6_A2.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp

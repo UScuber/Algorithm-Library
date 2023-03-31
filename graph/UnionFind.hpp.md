@@ -13,8 +13,8 @@ data:
     path: test/aoj/GRL/GRL_2_A.test.cpp
     title: test/aoj/GRL/GRL_2_A.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Unionfind.test.cpp
-    title: test/yosupo/Unionfind.test.cpp
+    path: test/yosupo/Data-Structure/Unionfind.test.cpp
+    title: test/yosupo/Data-Structure/Unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -46,7 +46,7 @@ data:
   timestamp: '2023-03-13 15:00:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Unionfind.test.cpp
+  - test/yosupo/Data-Structure/Unionfind.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/UnionFind.hpp
 layout: document

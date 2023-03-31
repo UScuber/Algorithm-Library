@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/UnionFind.hpp
     title: graph/UnionFind.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/template.hpp
     title: Graph Template
   _extendedRequiredBy: []

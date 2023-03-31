@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: SegmentTree/BinaryIndexedTree.hpp
     title: SegmentTree/BinaryIndexedTree.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

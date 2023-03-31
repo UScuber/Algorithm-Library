@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/template.hpp
     title: Graph Template
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

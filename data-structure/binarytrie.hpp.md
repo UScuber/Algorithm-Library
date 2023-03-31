@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Set-Xor-Min.test.cpp
-    title: test/yosupo/Set-Xor-Min.test.cpp
+    path: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+    title: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -87,7 +87,7 @@ data:
   timestamp: '2023-03-13 21:53:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Set-Xor-Min.test.cpp
+  - test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
 documentation_of: data-structure/binarytrie.hpp
 layout: document
 redirect_from:

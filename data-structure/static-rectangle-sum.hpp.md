@@ -7,8 +7,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Rectangle-Sum.test.cpp
-    title: test/yosupo/Rectangle-Sum.test.cpp
+    path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -71,7 +71,7 @@ data:
   timestamp: '2023-03-31 18:03:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Rectangle-Sum.test.cpp
+  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
 documentation_of: data-structure/static-rectangle-sum.hpp
 layout: document
 redirect_from:

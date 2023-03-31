@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Many-A+B.test.cpp
-    title: test/yosupo/Many-A+B.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/yosupo/Sample/Many-A+B.test.cpp
+    title: test/yosupo/Sample/Many-A+B.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"others/fastIO.hpp\"\nstruct FastIO {\r\n  char tmp_s[20];\r\
@@ -80,9 +80,9 @@ data:
   path: others/fastIO.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/yosupo/Many-A+B.test.cpp
+  - test/yosupo/Sample/Many-A+B.test.cpp
 documentation_of: others/fastIO.hpp
 layout: document
 redirect_from:

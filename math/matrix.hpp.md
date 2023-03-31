@@ -4,17 +4,17 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Determinant-of-Matrix.test.cpp
-    title: test/yosupo/Determinant-of-Matrix.test.cpp
+    path: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+    title: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Inverse-Matrix.test.cpp
-    title: test/yosupo/Inverse-Matrix.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Matrix-Product.test.cpp
-    title: test/yosupo/Matrix-Product.test.cpp
-  _isVerificationFailed: false
+    path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
+    title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Matrix/Matrix-Product.test.cpp
+    title: test/yosupo/Matrix/Matrix-Product.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/matrix.hpp\"\ntemplate <class T>\r\nstruct matrix {\r\
@@ -103,11 +103,11 @@ data:
   path: math/matrix.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/yosupo/Matrix-Product.test.cpp
-  - test/yosupo/Determinant-of-Matrix.test.cpp
-  - test/yosupo/Inverse-Matrix.test.cpp
+  - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Matrix/Inverse-Matrix.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

@@ -82,116 +82,116 @@ data:
     path: test/aoj/NTL/NTL_1_E.test.cpp
     title: test/aoj/NTL/NTL_1_E.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Associative-Array.test.cpp
-    title: test/yosupo/Associative-Array.test.cpp
+    path: test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
+    title: test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Bitwise-And-Convolution.test.cpp
-    title: test/yosupo/Bitwise-And-Convolution.test.cpp
+    path: test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
+    title: test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Bitwise-Xor-Convolution.test.cpp
-    title: test/yosupo/Bitwise-Xor-Convolution.test.cpp
+    path: test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
+    title: test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Convolution(Mod1e9+7).test.cpp
-    title: test/yosupo/Convolution(Mod1e9+7).test.cpp
+    path: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
+    title: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
-    title: test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+    path: test/yosupo/Convolution/Convolution.test.cpp
+    title: test/yosupo/Convolution/Convolution.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Convolution.test.cpp
-    title: test/yosupo/Convolution.test.cpp
+    path: test/yosupo/Data-Structure/Associative-Array.test.cpp
+    title: test/yosupo/Data-Structure/Associative-Array.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Cycle-Detection(Directed).test.cpp
-    title: test/yosupo/Cycle-Detection(Directed).test.cpp
+    path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Determinant-of-Matrix.test.cpp
-    title: test/yosupo/Determinant-of-Matrix.test.cpp
+    path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Enumrate-Palindromes.test.cpp
-    title: test/yosupo/Enumrate-Palindromes.test.cpp
+    path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
-    title: test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+    path: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
-    title: test/yosupo/Inv-of-Formal-Power-Series.test.cpp
+    path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+    title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Inverse-Matrix.test.cpp
-    title: test/yosupo/Inverse-Matrix.test.cpp
+    path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Jump-on-Tree.test.cpp
-    title: test/yosupo/Jump-on-Tree.test.cpp
+    path: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+    title: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-    title: test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    path: test/yosupo/Data-Structure/Static-RMQ.test.cpp
+    title: test/yosupo/Data-Structure/Static-RMQ.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Log-of-Formal-Power-Series.test.cpp
-    title: test/yosupo/Log-of-Formal-Power-Series.test.cpp
+    path: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Many-A+B.test.cpp
-    title: test/yosupo/Many-A+B.test.cpp
+    path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Matrix-Product.test.cpp
-    title: test/yosupo/Matrix-Product.test.cpp
+    path: test/yosupo/Data-Structure/Unionfind.test.cpp
+    title: test/yosupo/Data-Structure/Unionfind.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Point-Add-Range-Sum.test.cpp
-    title: test/yosupo/Point-Add-Range-Sum.test.cpp
+    path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Point-Set-Range-Composite.test.cpp
-    title: test/yosupo/Point-Set-Range-Composite.test.cpp
+    path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
-    title: test/yosupo/Pow-of-Formal-Power-Series.test.cpp
+    path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+    title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Queue-Operate-All-Composite.test.cpp
-    title: test/yosupo/Queue-Operate-All-Composite.test.cpp
+    path: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
+    title: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Range-Affine-Range-Sum.test.cpp
-    title: test/yosupo/Range-Affine-Range-Sum.test.cpp
+    path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Range-Kth-Smallest.test.cpp
-    title: test/yosupo/Range-Kth-Smallest.test.cpp
+    path: test/yosupo/Math/Subset-Sum.test.cpp
+    title: test/yosupo/Math/Subset-Sum.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Rectangle-Sum.test.cpp
-    title: test/yosupo/Rectangle-Sum.test.cpp
+    path: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
+    title: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Set-Xor-Min.test.cpp
-    title: test/yosupo/Set-Xor-Min.test.cpp
+    path: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+    title: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Static-RMQ.test.cpp
-    title: test/yosupo/Static-RMQ.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Static-Range-Frequency.test.cpp
-    title: test/yosupo/Static-Range-Frequency.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Static-Range-Inversions-Query.test.cpp
-    title: test/yosupo/Static-Range-Inversions-Query.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Strongly-Connected-Components.test.cpp
-    title: test/yosupo/Strongly-Connected-Components.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Subset-Sum.test.cpp
-    title: test/yosupo/Subset-Sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
-    title: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Tree-Diameter.test.cpp
-    title: test/yosupo/Tree-Diameter.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Unionfind.test.cpp
-    title: test/yosupo/Unionfind.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Vertex-Add-Path-Sum.test.cpp
-    title: test/yosupo/Vertex-Add-Path-Sum.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Vertex-Set-Path-Composite.test.cpp
-    title: test/yosupo/Vertex-Set-Path-Composite.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Z-Algorithm.test.cpp
-    title: test/yosupo/Z-Algorithm.test.cpp
-  _isVerificationFailed: false
+    path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
+    title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Matrix/Matrix-Product.test.cpp
+    title: test/yosupo/Matrix/Matrix-Product.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
+    title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Sample/Many-A+B.test.cpp
+    title: test/yosupo/Sample/Many-A+B.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/String/Enumrate-Palindromes.test.cpp
+    title: test/yosupo/String/Enumrate-Palindromes.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/String/Z-Algorithm.test.cpp
+    title: test/yosupo/String/Z-Algorithm.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Tree/Jump-on-Tree.test.cpp
+    title: test/yosupo/Tree/Jump-on-Tree.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Tree/Tree-Diameter.test.cpp
+    title: test/yosupo/Tree/Tree-Diameter.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include\
@@ -230,44 +230,44 @@ data:
   - geometry/template.hpp
   - geometry/totsuhou.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/yosupo/Unionfind.test.cpp
-  - test/yosupo/Cycle-Detection(Directed).test.cpp
-  - test/yosupo/Tree-Diameter.test.cpp
-  - test/yosupo/Matrix-Product.test.cpp
-  - test/yosupo/Static-RMQ.test.cpp
-  - test/yosupo/Subset-Sum.test.cpp
-  - test/yosupo/Convolution(Mod1e9+7).test.cpp
-  - test/yosupo/Convolution.test.cpp
-  - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
-  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Static-Range-Inversions-Query.test.cpp
-  - test/yosupo/Queue-Operate-All-Composite.test.cpp
-  - test/yosupo/Point-Add-Range-Sum.test.cpp
-  - test/yosupo/Vertex-Add-Path-Sum.test.cpp
-  - test/yosupo/Bitwise-And-Convolution.test.cpp
-  - test/yosupo/Set-Xor-Min.test.cpp
-  - test/yosupo/Strongly-Connected-Components.test.cpp
-  - test/yosupo/Z-Algorithm.test.cpp
-  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
-  - test/yosupo/Determinant-of-Matrix.test.cpp
-  - test/yosupo/Bitwise-Xor-Convolution.test.cpp
-  - test/yosupo/Static-Range-Frequency.test.cpp
-  - test/yosupo/Enumrate-Palindromes.test.cpp
-  - test/yosupo/Many-A+B.test.cpp
-  - test/yosupo/Range-Kth-Smallest.test.cpp
-  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Sum-of-Floor-of-Linear.test.cpp
-  - test/yosupo/Jump-on-Tree.test.cpp
-  - test/yosupo/Associative-Array.test.cpp
-  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Inverse-Matrix.test.cpp
-  - test/yosupo/Rectangle-Sum.test.cpp
-  - test/yosupo/Point-Set-Range-Composite.test.cpp
-  - test/yosupo/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
+  - test/yosupo/Convolution/Convolution.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
+  - test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
+  - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Matrix/Inverse-Matrix.test.cpp
+  - test/yosupo/Sample/Many-A+B.test.cpp
+  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
+  - test/yosupo/Tree/Tree-Diameter.test.cpp
+  - test/yosupo/Tree/Jump-on-Tree.test.cpp
+  - test/yosupo/Math/Subset-Sum.test.cpp
+  - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+  - test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
+  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Data-Structure/Unionfind.test.cpp
+  - test/yosupo/Data-Structure/Static-RMQ.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
+  - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - test/yosupo/Data-Structure/Associative-Array.test.cpp
+  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/String/Z-Algorithm.test.cpp
+  - test/yosupo/String/Enumrate-Palindromes.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   - test/aoj/ALDS1/ALDS1_14_B.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test.cpp

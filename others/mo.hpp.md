@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Static-Range-Inversions-Query.test.cpp
-    title: test/yosupo/Static-Range-Inversions-Query.test.cpp
+    path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,7 +44,7 @@ data:
   timestamp: '2023-03-14 01:17:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
 documentation_of: others/mo.hpp
 layout: document
 redirect_from:

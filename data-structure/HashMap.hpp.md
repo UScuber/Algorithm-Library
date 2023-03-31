@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Associative-Array.test.cpp
-    title: test/yosupo/Associative-Array.test.cpp
+    path: test/yosupo/Data-Structure/Associative-Array.test.cpp
+    title: test/yosupo/Data-Structure/Associative-Array.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -50,7 +50,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Associative-Array.test.cpp
+  - test/yosupo/Data-Structure/Associative-Array.test.cpp
 documentation_of: data-structure/HashMap.hpp
 layout: document
 redirect_from:

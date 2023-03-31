@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
-    title: test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+    path: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
+    title: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,7 +43,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+  - test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
 documentation_of: math/floor-sum.hpp
 layout: document
 redirect_from:

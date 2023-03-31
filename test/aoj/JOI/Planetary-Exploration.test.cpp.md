@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/CumulativeSum2D.hpp
     title: data-structure/CumulativeSum2D.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

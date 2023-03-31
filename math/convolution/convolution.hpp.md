@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Convolution.test.cpp
-    title: test/yosupo/Convolution.test.cpp
+    path: test/yosupo/Convolution/Convolution.test.cpp
+    title: test/yosupo/Convolution/Convolution.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -113,7 +113,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Convolution.test.cpp
+  - test/yosupo/Convolution/Convolution.test.cpp
 documentation_of: math/convolution/convolution.hpp
 layout: document
 redirect_from:
