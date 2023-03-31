@@ -50,13 +50,13 @@ data:
   isVerificationFile: false
   path: data-structure/bitvector.hpp
   requiredBy:
-  - data-structure/wavelet-matrix.hpp
   - data-structure/wavelet-matrix-comp.hpp
+  - data-structure/wavelet-matrix.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Range-Kth-Smallest.test.cpp
   - test/yosupo/Static-Range-Frequency.test.cpp
+  - test/yosupo/Range-Kth-Smallest.test.cpp
 documentation_of: data-structure/bitvector.hpp
 layout: document
 redirect_from:

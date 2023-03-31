@@ -141,33 +141,33 @@ data:
   isVerificationFile: false
   path: math/mint.hpp
   requiredBy:
-  - math/combination.hpp
   - math/comb-modP.hpp
+  - math/fps/fps-arbitrary-mod.hpp
   - math/fps/kitamasa.hpp
   - math/fps/fps.hpp
   - math/fps/fps-template.hpp
-  - math/fps/fps-arbitrary-mod.hpp
   - math/convolution/convolution-arbitrary-mod.hpp
+  - math/combination.hpp
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Matrix-Product.test.cpp
+  - test/yosupo/Subset-Sum.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Convolution.test.cpp
-  - test/yosupo/Determinant-of-Matrix.test.cpp
   - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
   - test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Convolution(Mod1e9+7).test.cpp
-  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
-  - test/yosupo/Matrix-Product.test.cpp
-  - test/yosupo/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
   - test/yosupo/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Bitwise-And-Convolution.test.cpp
+  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Determinant-of-Matrix.test.cpp
   - test/yosupo/Bitwise-Xor-Convolution.test.cpp
   - test/yosupo/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Bitwise-And-Convolution.test.cpp
+  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
   - test/yosupo/Inverse-Matrix.test.cpp
-  - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Subset-Sum.test.cpp
+  - test/yosupo/Point-Set-Range-Composite.test.cpp
   - test/yosupo/Range-Affine-Range-Sum.test.cpp
 documentation_of: math/mint.hpp
 layout: document

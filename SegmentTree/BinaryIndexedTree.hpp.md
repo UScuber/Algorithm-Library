@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: data-structure/static-rectangle-sum.hpp
+    title: data-structure/static-rectangle-sum.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL/DSL_2_B.test.cpp
@@ -9,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Point-Add-Range-Sum.test.cpp
     title: test/yosupo/Point-Add-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Rectangle-Sum.test.cpp
+    title: test/yosupo/Rectangle-Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Static-Range-Inversions-Query.test.cpp
     title: test/yosupo/Static-Range-Inversions-Query.test.cpp
@@ -41,12 +47,14 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: SegmentTree/BinaryIndexedTree.hpp
-  requiredBy: []
+  requiredBy:
+  - data-structure/static-rectangle-sum.hpp
   timestamp: '2023-03-13 21:50:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Point-Add-Range-Sum.test.cpp
   - test/yosupo/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Rectangle-Sum.test.cpp
   - test/aoj/DSL/DSL_2_B.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document

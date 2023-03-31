@@ -105,8 +105,8 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Determinant-of-Matrix.test.cpp
   - test/yosupo/Matrix-Product.test.cpp
+  - test/yosupo/Determinant-of-Matrix.test.cpp
   - test/yosupo/Inverse-Matrix.test.cpp
 documentation_of: math/matrix.hpp
 layout: document

@@ -74,19 +74,19 @@ data:
   path: graph/template.hpp
   requiredBy:
   - data-structure/HLD.hpp
-  - graph/center.hpp
-  - graph/check-bipartite.hpp
-  - graph/diameter.hpp
-  - graph/cycle-detect.hpp
   - graph/dinic.hpp
   - graph/bellman-ford.hpp
+  - graph/diameter.hpp
+  - graph/cycle-detect.hpp
+  - graph/center.hpp
+  - graph/check-bipartite.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Cycle-Detection(Directed).test.cpp
   - test/yosupo/Tree-Diameter.test.cpp
   - test/yosupo/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
   - test/aoj/GRL/GRL_6_A2.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp

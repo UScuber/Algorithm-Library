@@ -151,6 +151,9 @@ data:
     path: test/yosupo/Range-Kth-Smallest.test.cpp
     title: test/yosupo/Range-Kth-Smallest.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Rectangle-Sum.test.cpp
+    title: test/yosupo/Rectangle-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Set-Xor-Min.test.cpp
     title: test/yosupo/Set-Xor-Min.test.cpp
   - icon: ':heavy_check_mark:'
@@ -229,65 +232,66 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Unionfind.test.cpp
+  - test/yosupo/Cycle-Detection(Directed).test.cpp
+  - test/yosupo/Tree-Diameter.test.cpp
+  - test/yosupo/Matrix-Product.test.cpp
+  - test/yosupo/Static-RMQ.test.cpp
+  - test/yosupo/Subset-Sum.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Convolution.test.cpp
-  - test/yosupo/Determinant-of-Matrix.test.cpp
-  - test/yosupo/Point-Add-Range-Sum.test.cpp
   - test/yosupo/Inv-of-Formal-Power-Series.test.cpp
   - test/yosupo/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Convolution(Mod1e9+7).test.cpp
-  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
-  - test/yosupo/Many-A+B.test.cpp
-  - test/yosupo/Matrix-Product.test.cpp
-  - test/yosupo/Point-Set-Range-Composite.test.cpp
-  - test/yosupo/Queue-Operate-All-Composite.test.cpp
-  - test/yosupo/Enumrate-Palindromes.test.cpp
-  - test/yosupo/Bitwise-Xor-Convolution.test.cpp
-  - test/yosupo/Cycle-Detection(Directed).test.cpp
-  - test/yosupo/Jump-on-Tree.test.cpp
-  - test/yosupo/Set-Xor-Min.test.cpp
-  - test/yosupo/Z-Algorithm.test.cpp
-  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Range-Kth-Smallest.test.cpp
-  - test/yosupo/Bitwise-And-Convolution.test.cpp
-  - test/yosupo/Inverse-Matrix.test.cpp
-  - test/yosupo/Static-Range-Inversions-Query.test.cpp
-  - test/yosupo/Associative-Array.test.cpp
-  - test/yosupo/Tree-Diameter.test.cpp
+  - test/yosupo/Convolution(Mod1e9+7)2.test.cpp
   - test/yosupo/Pow-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+  - test/yosupo/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Point-Add-Range-Sum.test.cpp
   - test/yosupo/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Bitwise-And-Convolution.test.cpp
+  - test/yosupo/Set-Xor-Min.test.cpp
   - test/yosupo/Strongly-Connected-Components.test.cpp
-  - test/yosupo/Unionfind.test.cpp
-  - test/yosupo/Subset-Sum.test.cpp
-  - test/yosupo/Static-RMQ.test.cpp
-  - test/yosupo/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Z-Algorithm.test.cpp
+  - test/yosupo/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Bitwise-Xor-Convolution.test.cpp
   - test/yosupo/Static-Range-Frequency.test.cpp
-  - test/aoj/JOI/Planetary-Exploration2.test.cpp
-  - test/aoj/JOI/Planetary-Exploration.test.cpp
+  - test/yosupo/Enumrate-Palindromes.test.cpp
+  - test/yosupo/Many-A+B.test.cpp
+  - test/yosupo/Range-Kth-Smallest.test.cpp
+  - test/yosupo/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Sum-of-Floor-of-Linear.test.cpp
+  - test/yosupo/Jump-on-Tree.test.cpp
+  - test/yosupo/Associative-Array.test.cpp
+  - test/yosupo/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Inverse-Matrix.test.cpp
+  - test/yosupo/Rectangle-Sum.test.cpp
+  - test/yosupo/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Range-Affine-Range-Sum.test.cpp
+  - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   - test/aoj/ALDS1/ALDS1_14_B.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test.cpp
-  - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
-  - test/aoj/DSL/DSL_2_D.test.cpp
-  - test/aoj/DSL/DSL_2_A.test.cpp
-  - test/aoj/DSL/DSL_2_H.test.cpp
-  - test/aoj/DSL/DSL_2_I.test.cpp
-  - test/aoj/DSL/DSL_2_E.test.cpp
-  - test/aoj/DSL/DSL_2_G.test.cpp
-  - test/aoj/DSL/DSL_2_B.test.cpp
-  - test/aoj/DSL/DSL_2_F.test.cpp
-  - test/aoj/DSL/DSL_3_D.test.cpp
-  - test/aoj/DSL/DSL_1_B.test.cpp
-  - test/aoj/NTL/NTL_1_E.test.cpp
-  - test/aoj/NTL/NTL_1_D.test.cpp
-  - test/aoj/NTL/NTL_1_B.test.cpp
-  - test/aoj/NTL/NTL_1_C.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
   - test/aoj/GRL/GRL_6_A2.test.cpp
+  - test/aoj/GRL/GRL_6_A.test.cpp
   - test/aoj/GRL/GRL_5_C.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
-  - test/aoj/GRL/GRL_6_A.test.cpp
+  - test/aoj/NTL/NTL_1_B.test.cpp
+  - test/aoj/NTL/NTL_1_C.test.cpp
+  - test/aoj/NTL/NTL_1_D.test.cpp
+  - test/aoj/NTL/NTL_1_E.test.cpp
+  - test/aoj/JOI/Planetary-Exploration.test.cpp
+  - test/aoj/JOI/Planetary-Exploration2.test.cpp
+  - test/aoj/DSL/DSL_2_A.test.cpp
+  - test/aoj/DSL/DSL_2_B.test.cpp
+  - test/aoj/DSL/DSL_2_E.test.cpp
+  - test/aoj/DSL/DSL_2_F.test.cpp
+  - test/aoj/DSL/DSL_3_D.test.cpp
+  - test/aoj/DSL/DSL_2_I.test.cpp
+  - test/aoj/DSL/DSL_2_D.test.cpp
+  - test/aoj/DSL/DSL_1_B.test.cpp
+  - test/aoj/DSL/DSL_2_H.test.cpp
+  - test/aoj/DSL/DSL_2_G.test.cpp
 documentation_of: template/template.hpp
 layout: document
 redirect_from:

@@ -92,6 +92,9 @@ data:
       path: data-structure/slide-min.hpp
       title: data-structure/slide-min.hpp
     - icon: ':heavy_check_mark:'
+      path: data-structure/static-rectangle-sum.hpp
+      title: data-structure/static-rectangle-sum.hpp
+    - icon: ':heavy_check_mark:'
       path: data-structure/wavelet-matrix-comp.hpp
       title: data-structure/wavelet-matrix-comp.hpp
     - icon: ':heavy_check_mark:'
@@ -417,6 +420,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Range-Kth-Smallest.test.cpp
       title: test/yosupo/Range-Kth-Smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Rectangle-Sum.test.cpp
+      title: test/yosupo/Rectangle-Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Set-Xor-Min.test.cpp
       title: test/yosupo/Set-Xor-Min.test.cpp
