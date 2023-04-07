@@ -159,39 +159,39 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
     title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Matrix-Product.test.cpp
     title: test/yosupo/Matrix/Matrix-Product.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B.test.cpp
     title: test/yosupo/Sample/Many-A+B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/String/Enumrate-Palindromes.test.cpp
     title: test/yosupo/String/Enumrate-Palindromes.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/String/Z-Algorithm.test.cpp
     title: test/yosupo/String/Z-Algorithm.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Jump-on-Tree.test.cpp
     title: test/yosupo/Tree/Jump-on-Tree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include\
@@ -227,71 +227,71 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
-  - geometry/template.hpp
   - geometry/totsuhou.hpp
+  - geometry/template.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
+  - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
+  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
   - test/yosupo/Convolution/Convolution.test.cpp
   - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
-  - test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
-  - test/yosupo/Matrix/Matrix-Product.test.cpp
-  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
-  - test/yosupo/Matrix/Inverse-Matrix.test.cpp
-  - test/yosupo/Sample/Many-A+B.test.cpp
-  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
   - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/yosupo/Tree/Jump-on-Tree.test.cpp
-  - test/yosupo/Math/Subset-Sum.test.cpp
-  - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
-  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Data-Structure/Unionfind.test.cpp
-  - test/yosupo/Data-Structure/Static-RMQ.test.cpp
-  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
-  - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
-  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
-  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Associative-Array.test.cpp
+  - test/yosupo/Data-Structure/Static-RMQ.test.cpp
+  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Data-Structure/Unionfind.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
-  - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
-  - test/yosupo/Data-Structure/Associative-Array.test.cpp
   - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
-  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
-  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
-  - test/yosupo/String/Z-Algorithm.test.cpp
+  - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+  - test/yosupo/Math/Subset-Sum.test.cpp
+  - test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
+  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Matrix/Inverse-Matrix.test.cpp
+  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Sample/Many-A+B.test.cpp
   - test/yosupo/String/Enumrate-Palindromes.test.cpp
-  - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
+  - test/yosupo/String/Z-Algorithm.test.cpp
+  - test/aoj/JOI/Planetary-Exploration2.test.cpp
+  - test/aoj/JOI/Planetary-Exploration.test.cpp
   - test/aoj/ALDS1/ALDS1_14_B.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test.cpp
-  - test/aoj/GRL/GRL_2_A.test.cpp
-  - test/aoj/GRL/GRL_6_A2.test.cpp
-  - test/aoj/GRL/GRL_6_A.test.cpp
-  - test/aoj/GRL/GRL_5_C.test.cpp
+  - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
-  - test/aoj/NTL/NTL_1_B.test.cpp
-  - test/aoj/NTL/NTL_1_C.test.cpp
+  - test/aoj/GRL/GRL_6_A2.test.cpp
+  - test/aoj/GRL/GRL_5_C.test.cpp
+  - test/aoj/GRL/GRL_6_A.test.cpp
+  - test/aoj/GRL/GRL_2_A.test.cpp
+  - test/aoj/DSL/DSL_1_B.test.cpp
+  - test/aoj/DSL/DSL_2_I.test.cpp
+  - test/aoj/DSL/DSL_2_E.test.cpp
+  - test/aoj/DSL/DSL_2_B.test.cpp
+  - test/aoj/DSL/DSL_2_A.test.cpp
+  - test/aoj/DSL/DSL_3_D.test.cpp
+  - test/aoj/DSL/DSL_2_G.test.cpp
+  - test/aoj/DSL/DSL_2_H.test.cpp
+  - test/aoj/DSL/DSL_2_D.test.cpp
+  - test/aoj/DSL/DSL_2_F.test.cpp
   - test/aoj/NTL/NTL_1_D.test.cpp
   - test/aoj/NTL/NTL_1_E.test.cpp
-  - test/aoj/JOI/Planetary-Exploration.test.cpp
-  - test/aoj/JOI/Planetary-Exploration2.test.cpp
-  - test/aoj/DSL/DSL_2_A.test.cpp
-  - test/aoj/DSL/DSL_2_B.test.cpp
-  - test/aoj/DSL/DSL_2_E.test.cpp
-  - test/aoj/DSL/DSL_2_F.test.cpp
-  - test/aoj/DSL/DSL_3_D.test.cpp
-  - test/aoj/DSL/DSL_2_I.test.cpp
-  - test/aoj/DSL/DSL_2_D.test.cpp
-  - test/aoj/DSL/DSL_1_B.test.cpp
-  - test/aoj/DSL/DSL_2_H.test.cpp
-  - test/aoj/DSL/DSL_2_G.test.cpp
+  - test/aoj/NTL/NTL_1_B.test.cpp
+  - test/aoj/NTL/NTL_1_C.test.cpp
 documentation_of: template/template.hpp
 layout: document
 redirect_from:

@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: SegmentTree/lazysegtree.hpp
     title: SegmentTree/lazysegtree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

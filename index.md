@@ -131,7 +131,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/cycle-detect.hpp
       title: graph/cycle-detect.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/diameter.hpp
       title: graph/diameter.hpp
     - icon: ':heavy_check_mark:'
@@ -143,13 +143,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/kruskal.hpp
       title: graph/kruskal.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/lca.hpp
       title: graph/lca.hpp
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
       title: graph/scc.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/template.hpp
       title: Graph Template
   - name: math
@@ -190,10 +190,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/isprime.hpp
       title: math/isprime.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: math/matrix.hpp
       title: math/matrix.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: math/mint.hpp
       title: math/mint.hpp
     - icon: ':heavy_check_mark:'
@@ -210,7 +210,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/convolution/convolution.hpp
       title: math/convolution/convolution.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: math/convolution/ntt.hpp
       title: math/convolution/ntt.hpp
     - icon: ':warning:'
@@ -224,10 +224,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/fps/fps-arbitrary-mod.hpp
       title: math/fps/fps-arbitrary-mod.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/fps-template.hpp
       title: math/fps/fps-template.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: math/fps/fps.hpp
       title: math/fps/fps.hpp
     - icon: ':heavy_check_mark:'
@@ -235,7 +235,7 @@ data:
       title: math/fps/kitamasa.hpp
   - name: others
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: others/fastIO.hpp
       title: others/fastIO.hpp
     - icon: ':warning:'
@@ -252,18 +252,18 @@ data:
       title: others/timer.hpp
   - name: string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string/manacher.hpp
       title: string/manacher.hpp
     - icon: ':heavy_check_mark:'
       path: string/rolling-hash.hpp
       title: string/rolling-hash.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string/z-algorithm.hpp
       title: string/z-algorithm.hpp
   - name: template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
@@ -437,42 +437,42 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
       title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Matrix/Matrix-Product.test.cpp
       title: test/yosupo/Matrix/Matrix-Product.test.cpp
   - name: test/yosupo/Polynomial
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
       title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
       title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
       title: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
       title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   - name: test/yosupo/Sample
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Sample/Many-A+B.test.cpp
       title: test/yosupo/Sample/Many-A+B.test.cpp
   - name: test/yosupo/String
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/String/Enumrate-Palindromes.test.cpp
       title: test/yosupo/String/Enumrate-Palindromes.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/String/Z-Algorithm.test.cpp
       title: test/yosupo/String/Z-Algorithm.test.cpp
   - name: test/yosupo/Tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/Jump-on-Tree.test.cpp
       title: test/yosupo/Tree/Jump-on-Tree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/Tree-Diameter.test.cpp
       title: test/yosupo/Tree/Tree-Diameter.test.cpp
 layout: toppage

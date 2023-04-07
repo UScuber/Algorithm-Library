@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_5_C.test.cpp
     title: test/aoj/GRL/GRL_5_C.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Jump-on-Tree.test.cpp
     title: test/yosupo/Tree/Jump-on-Tree.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/lca.hpp\"\ntemplate <class graph>\r\nstruct lca {\r\
@@ -72,7 +72,7 @@ data:
   path: graph/lca.hpp
   requiredBy: []
   timestamp: '2023-03-14 01:15:07+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Tree/Jump-on-Tree.test.cpp
   - test/aoj/GRL/GRL_5_C.test.cpp

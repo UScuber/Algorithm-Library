@@ -17,7 +17,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: graph/cycle-detect.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
     title: graph/diameter.hpp
   - icon: ':heavy_check_mark:'
@@ -42,12 +42,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Graph Template
     links: []
@@ -73,23 +73,23 @@ data:
   isVerificationFile: false
   path: graph/template.hpp
   requiredBy:
-  - data-structure/HLD.hpp
-  - graph/dinic.hpp
-  - graph/bellman-ford.hpp
-  - graph/diameter.hpp
-  - graph/cycle-detect.hpp
-  - graph/center.hpp
   - graph/check-bipartite.hpp
+  - graph/center.hpp
+  - graph/cycle-detect.hpp
+  - graph/dinic.hpp
+  - graph/diameter.hpp
+  - graph/bellman-ford.hpp
+  - data-structure/HLD.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  - test/aoj/GRL/GRL_2_A.test.cpp
-  - test/aoj/GRL/GRL_6_A2.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
+  - test/aoj/GRL/GRL_6_A2.test.cpp
+  - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/template.hpp
 layout: document
 redirect_from:

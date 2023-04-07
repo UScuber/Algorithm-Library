@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/convolution/and-convolution.hpp
     title: math/convolution/and-convolution.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

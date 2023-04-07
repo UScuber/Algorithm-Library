@@ -11,10 +11,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':heavy_check_mark:'
@@ -36,21 +36,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Subset-Sum.test.cpp
     title: test/yosupo/Math/Subset-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -226,23 +226,23 @@ data:
   isVerificationFile: false
   path: math/convolution/ntt.hpp
   requiredBy:
-  - math/fps/fps-arbitrary-mod.hpp
-  - math/fps/kitamasa.hpp
   - math/fps/fps.hpp
+  - math/fps/kitamasa.hpp
   - math/fps/fps-template.hpp
+  - math/fps/fps-arbitrary-mod.hpp
   - math/convolution/convolution.hpp
   - math/convolution/convolution-arbitrary-mod.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Convolution/Convolution.test.cpp
   - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
-  - test/yosupo/Math/Subset-Sum.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Math/Subset-Sum.test.cpp
   - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
   - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
 documentation_of: math/convolution/ntt.hpp
 layout: document

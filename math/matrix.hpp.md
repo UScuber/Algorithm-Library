@@ -9,12 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
     title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Matrix-Product.test.cpp
     title: test/yosupo/Matrix/Matrix-Product.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/matrix.hpp\"\ntemplate <class T>\r\nstruct matrix {\r\
@@ -103,11 +103,11 @@ data:
   path: math/matrix.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Matrix/Matrix-Product.test.cpp
-  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
   - test/yosupo/Matrix/Inverse-Matrix.test.cpp
+  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
+  - test/yosupo/Matrix/Matrix-Product.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:
