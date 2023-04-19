@@ -1,5 +1,3 @@
-#include "../template/template.hpp"
-
 using Real = double;
 
 constexpr Real EPS = 1e-10;
