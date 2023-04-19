@@ -4,15 +4,36 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometry/template.hpp
     title: geometry/template.hpp
+  - icon: ':heavy_check_mark:'
+    path: template/template.hpp
+    title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _pathExtension: cpp
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    links: []
-  bundledCode: "#line 1 \"geometry/template.hpp\"\nusing Real = double;\r\n\r\nconstexpr\
-    \ Real EPS = 1e-10;\r\nconstexpr Real PI = 3.141592653589793238462643383279L;\r\
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_B
+    links:
+    - https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_B
+  bundledCode: "#line 1 \"test/aoj/CGL/CGL_2_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_B\"\
+    \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
+    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
+    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
+    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
+    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
+    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
+    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
+    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
+    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
+    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
+    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
+    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
+    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
+    \ 4 \"test/aoj/CGL/CGL_2_B.test.cpp\"\n\n#line 1 \"geometry/template.hpp\"\nusing\
+    \ Real = double;\r\n\r\nconstexpr Real EPS = 1e-10;\r\nconstexpr Real PI = 3.141592653589793238462643383279L;\r\
     \nconstexpr Real INF = 1e18;\r\n\r\ninline constexpr bool eq(const Real &a, const\
     \ Real &b){\r\n  return fabs(b - a) < EPS;\r\n}\r\n\r\nstruct Point {\r\n  constexpr\
     \ Point(const Real &_x=0, const Real &_y=0) : x(_x), y(_y){}\r\n  constexpr Real\
@@ -254,32 +275,28 @@ data:
     \n      sort(p.begin(), p.end());\r\n      return p;\r\n    };\r\n    vector<Point>\
     \ res_a = move(a, a[0], b[j]-b[i]);\r\n    vector<Point> res_b = move(b, b[i],\
     \ a[1]-a[0]);\r\n    if(res_a == res_b) return true;\r\n  }\r\n  return false;\r\
-    \n}\n#line 2 \"geometry/totsuhou.hpp\"\n\r\nvector<Point> totsuhou(const vector<Point>\
-    \ &pos){\r\n  int n = pos.size();\r\n  vector<Point> g(2 * n);\r\n  int k = 0;\r\
-    \n  for(int i = 0; i < n; i++){\r\n    while(k > 1 && cross(g[k-1] - g[k-2], pos[i]\
-    \ - g[k-1]) <= 0) k--;\r\n    g[k++] = pos[i];\r\n  }\r\n  for(int i = n - 2,\
-    \ t = k; i >= 0; i--){\r\n    while(k > t && cross(g[k-1] - g[k-2], pos[i] - g[k-1])\
-    \ <= 0) k--;\r\n    g[k++] = pos[i];\r\n  }\r\n  g.resize(--k);\r\n  return g;\r\
-    \n}\n"
-  code: "#include \"template.hpp\"\r\n\r\nvector<Point> totsuhou(const vector<Point>\
-    \ &pos){\r\n  int n = pos.size();\r\n  vector<Point> g(2 * n);\r\n  int k = 0;\r\
-    \n  for(int i = 0; i < n; i++){\r\n    while(k > 1 && cross(g[k-1] - g[k-2], pos[i]\
-    \ - g[k-1]) <= 0) k--;\r\n    g[k++] = pos[i];\r\n  }\r\n  for(int i = n - 2,\
-    \ t = k; i >= 0; i--){\r\n    while(k > t && cross(g[k-1] - g[k-2], pos[i] - g[k-1])\
-    \ <= 0) k--;\r\n    g[k++] = pos[i];\r\n  }\r\n  g.resize(--k);\r\n  return g;\r\
-    \n}"
+    \n}\n#line 6 \"test/aoj/CGL/CGL_2_B.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
+    \  ios::sync_with_stdio(false);\n  int q;\n  cin >> q;\n  rep(_, q){\n    Segment\
+    \ a,b;\n    cin >> a >> b;\n    if(intersect(a, b)) cout << \"1\\n\";\n    else\
+    \ cout << \"0\\n\";\n  }\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_B\"\n\n\
+    #include \"../../../template/template.hpp\"\n\n#include \"../../../geometry/template.hpp\"\
+    \n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  int q;\n\
+    \  cin >> q;\n  rep(_, q){\n    Segment a,b;\n    cin >> a >> b;\n    if(intersect(a,\
+    \ b)) cout << \"1\\n\";\n    else cout << \"0\\n\";\n  }\n}"
   dependsOn:
+  - template/template.hpp
   - geometry/template.hpp
-  isVerificationFile: false
-  path: geometry/totsuhou.hpp
+  isVerificationFile: true
+  path: test/aoj/CGL/CGL_2_B.test.cpp
   requiredBy: []
   timestamp: '2023-04-19 16:35:06+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: geometry/totsuhou.hpp
+documentation_of: test/aoj/CGL/CGL_2_B.test.cpp
 layout: document
 redirect_from:
-- /library/geometry/totsuhou.hpp
-- /library/geometry/totsuhou.hpp.html
-title: geometry/totsuhou.hpp
+- /verify/test/aoj/CGL/CGL_2_B.test.cpp
+- /verify/test/aoj/CGL/CGL_2_B.test.cpp.html
+title: test/aoj/CGL/CGL_2_B.test.cpp
 ---

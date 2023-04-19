@@ -1,13 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: geometry/template.hpp
-    title: geometry/template.hpp
-  - icon: ':warning:'
-    path: geometry/totsuhou.hpp
-    title: geometry/totsuhou.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS1/ALDS1_14_B.test.cpp
@@ -18,6 +12,60 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
     title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/CGL_1_A.test.cpp
+    title: test/aoj/CGL/CGL_1_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/CGL_1_C.test.cpp
+    title: test/aoj/CGL/CGL_1_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/CGL_2_A.test.cpp
+    title: test/aoj/CGL/CGL_2_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/CGL_2_B.test.cpp
+    title: test/aoj/CGL/CGL_2_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/CGL_2_C.test.cpp
+    title: test/aoj/CGL/CGL_2_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_1_B.test.cpp
+    title: test/aoj/CGL/GCL_1_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_2_D.test.cpp
+    title: test/aoj/CGL/GCL_2_D.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_3_A.test.cpp
+    title: test/aoj/CGL/GCL_3_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_3_B.test.cpp
+    title: test/aoj/CGL/GCL_3_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_4_B.test.cpp
+    title: test/aoj/CGL/GCL_4_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_4_C.test.cpp
+    title: test/aoj/CGL/GCL_4_C.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_5_A.test.cpp
+    title: test/aoj/CGL/GCL_5_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_A.test.cpp
+    title: test/aoj/CGL/GCL_7_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_E.test.cpp
+    title: test/aoj/CGL/GCL_7_E.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_F.test.cpp
+    title: test/aoj/CGL/GCL_7_F.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_G.test.cpp
+    title: test/aoj/CGL/GCL_7_G.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_H.test.cpp
+    title: test/aoj/CGL/GCL_7_H.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL/GCL_7_I.test.cpp
+    title: test/aoj/CGL/GCL_7_I.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL/DSL_1_B.test.cpp
     title: test/aoj/DSL/DSL_1_B.test.cpp
@@ -175,6 +223,9 @@ data:
     path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
+    title: test/yosupo/Sample/Many-A+B(128bit).test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B.test.cpp
     title: test/yosupo/Sample/Many-A+B.test.cpp
   - icon: ':heavy_check_mark:'
@@ -226,9 +277,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy:
-  - geometry/totsuhou.hpp
-  - geometry/template.hpp
+  requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
@@ -265,6 +314,7 @@ data:
   - test/yosupo/Matrix/Inverse-Matrix.test.cpp
   - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
   - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Sample/Many-A+B(128bit).test.cpp
   - test/yosupo/Sample/Many-A+B.test.cpp
   - test/yosupo/String/Enumrate-Palindromes.test.cpp
   - test/yosupo/String/Z-Algorithm.test.cpp
@@ -288,6 +338,24 @@ data:
   - test/aoj/DSL/DSL_2_H.test.cpp
   - test/aoj/DSL/DSL_2_D.test.cpp
   - test/aoj/DSL/DSL_2_F.test.cpp
+  - test/aoj/CGL/GCL_4_C.test.cpp
+  - test/aoj/CGL/CGL_1_A.test.cpp
+  - test/aoj/CGL/GCL_1_B.test.cpp
+  - test/aoj/CGL/GCL_7_G.test.cpp
+  - test/aoj/CGL/CGL_1_C.test.cpp
+  - test/aoj/CGL/GCL_7_H.test.cpp
+  - test/aoj/CGL/GCL_7_I.test.cpp
+  - test/aoj/CGL/GCL_7_F.test.cpp
+  - test/aoj/CGL/CGL_2_C.test.cpp
+  - test/aoj/CGL/CGL_2_B.test.cpp
+  - test/aoj/CGL/GCL_3_A.test.cpp
+  - test/aoj/CGL/GCL_7_E.test.cpp
+  - test/aoj/CGL/GCL_3_B.test.cpp
+  - test/aoj/CGL/GCL_2_D.test.cpp
+  - test/aoj/CGL/CGL_2_A.test.cpp
+  - test/aoj/CGL/GCL_4_B.test.cpp
+  - test/aoj/CGL/GCL_5_A.test.cpp
+  - test/aoj/CGL/GCL_7_A.test.cpp
   - test/aoj/NTL/NTL_1_D.test.cpp
   - test/aoj/NTL/NTL_1_E.test.cpp
   - test/aoj/NTL/NTL_1_B.test.cpp

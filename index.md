@@ -102,7 +102,7 @@ data:
       title: data-structure/wavelet-matrix.hpp
   - name: geometry
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: geometry/template.hpp
       title: geometry/template.hpp
     - icon: ':warning:'
@@ -238,7 +238,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: others/fastIO.hpp
       title: others/fastIO.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: others/int128.hpp
       title: others/int128.hpp
     - icon: ':heavy_check_mark:'
@@ -278,6 +278,62 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
       title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
+  - name: test/aoj/CGL
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/CGL_1_A.test.cpp
+      title: test/aoj/CGL/CGL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/CGL_1_C.test.cpp
+      title: test/aoj/CGL/CGL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/CGL_2_A.test.cpp
+      title: test/aoj/CGL/CGL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/CGL_2_B.test.cpp
+      title: test/aoj/CGL/CGL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/CGL_2_C.test.cpp
+      title: test/aoj/CGL/CGL_2_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_1_B.test.cpp
+      title: test/aoj/CGL/GCL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_2_D.test.cpp
+      title: test/aoj/CGL/GCL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_3_A.test.cpp
+      title: test/aoj/CGL/GCL_3_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_3_B.test.cpp
+      title: test/aoj/CGL/GCL_3_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_4_B.test.cpp
+      title: test/aoj/CGL/GCL_4_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_4_C.test.cpp
+      title: test/aoj/CGL/GCL_4_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_5_A.test.cpp
+      title: test/aoj/CGL/GCL_5_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_A.test.cpp
+      title: test/aoj/CGL/GCL_7_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_E.test.cpp
+      title: test/aoj/CGL/GCL_7_E.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_F.test.cpp
+      title: test/aoj/CGL/GCL_7_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_G.test.cpp
+      title: test/aoj/CGL/GCL_7_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_H.test.cpp
+      title: test/aoj/CGL/GCL_7_H.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL/GCL_7_I.test.cpp
+      title: test/aoj/CGL/GCL_7_I.test.cpp
   - name: test/aoj/DSL
     pages:
     - icon: ':heavy_check_mark:'
@@ -456,6 +512,9 @@ data:
       title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   - name: test/yosupo/Sample
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
+      title: test/yosupo/Sample/Many-A+B(128bit).test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Sample/Many-A+B.test.cpp
       title: test/yosupo/Sample/Many-A+B.test.cpp
