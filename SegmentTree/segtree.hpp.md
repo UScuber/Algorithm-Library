@@ -57,8 +57,8 @@ data:
   timestamp: '2023-03-14 01:16:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
 documentation_of: SegmentTree/segtree.hpp
 layout: document

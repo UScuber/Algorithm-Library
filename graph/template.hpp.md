@@ -73,22 +73,22 @@ data:
   isVerificationFile: false
   path: graph/template.hpp
   requiredBy:
+  - data-structure/HLD.hpp
+  - graph/diameter.hpp
   - graph/check-bipartite.hpp
+  - graph/dinic.hpp
   - graph/center.hpp
   - graph/cycle-detect.hpp
-  - graph/dinic.hpp
-  - graph/diameter.hpp
   - graph/bellman-ford.hpp
-  - data-structure/HLD.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  - test/aoj/GRL/GRL_1_B.test.cpp
+  - test/yosupo/Tree/Tree-Diameter.test.cpp
+  - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   - test/aoj/GRL/GRL_6_A2.test.cpp
+  - test/aoj/GRL/GRL_1_B.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/template.hpp
 layout: document

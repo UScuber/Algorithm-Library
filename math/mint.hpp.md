@@ -46,6 +46,9 @@ data:
     path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
     title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+    title: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -141,34 +144,35 @@ data:
   isVerificationFile: false
   path: math/mint.hpp
   requiredBy:
-  - math/fps/fps.hpp
-  - math/fps/kitamasa.hpp
+  - math/convolution/convolution-arbitrary-mod.hpp
   - math/fps/fps-template.hpp
+  - math/fps/kitamasa.hpp
   - math/fps/fps-arbitrary-mod.hpp
+  - math/fps/fps.hpp
   - math/combination.hpp
   - math/comb-modP.hpp
-  - math/convolution/convolution-arbitrary-mod.hpp
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
   - test/yosupo/Convolution/Bitwise-Xor-Convolution.test.cpp
   - test/yosupo/Convolution/Convolution.test.cpp
-  - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
   - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
-  - test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
-  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
-  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
-  - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
   - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
-  - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - test/yosupo/Math/Subset-Sum.test.cpp
-  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Matrix/Matrix-Product.test.cpp
   - test/yosupo/Matrix/Inverse-Matrix.test.cpp
   - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
-  - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Math/Subset-Sum.test.cpp
+  - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+  - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
 documentation_of: math/mint.hpp
 layout: document
 redirect_from:

@@ -437,6 +437,9 @@ data:
       path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
       title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+      title: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
       title: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -479,6 +482,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
       title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/Primary-Test.test.cpp
+      title: test/yosupo/Math/Primary-Test.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/Subset-Sum.test.cpp
       title: test/yosupo/Math/Subset-Sum.test.cpp
