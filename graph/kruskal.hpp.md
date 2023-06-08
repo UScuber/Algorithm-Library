@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/UnionFind.hpp
-    title: graph/UnionFind.hpp
+    title: UnionFind
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -43,8 +43,15 @@ data:
   - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/kruskal.hpp
 layout: document
-redirect_from:
-- /library/graph/kruskal.hpp
-- /library/graph/kruskal.hpp.html
-title: graph/kruskal.hpp
+title: "Kruskal\u6CD5(\u6700\u5C0F\u5168\u57DF\u6728)"
 ---
+
+## 説明
+
+- 最小全域木を求める
+
+- 戻り値は全域木の最小コスト
+
+```cpp
+ll kruskal(vector<Edge<T>> &es, int V)
+```

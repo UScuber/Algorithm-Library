@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/Weighted-UnionFind.hpp
-    title: graph/Weighted-UnionFind.hpp
+    title: "Weighted-UnionFind(\u91CD\u307F\u4ED8\u304DUnionFind)"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp

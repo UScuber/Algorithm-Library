@@ -112,28 +112,28 @@ data:
     pages:
     - icon: ':warning:'
       path: graph/Undo-UnionFind.hpp
-      title: graph/Undo-UnionFind.hpp
+      title: "Undo-UnionFind(Undo\u4ED8\u304DUnionFind)"
     - icon: ':heavy_check_mark:'
       path: graph/UnionFind.hpp
-      title: graph/UnionFind.hpp
+      title: UnionFind
     - icon: ':heavy_check_mark:'
       path: graph/Weighted-UnionFind.hpp
-      title: graph/Weighted-UnionFind.hpp
+      title: "Weighted-UnionFind(\u91CD\u307F\u4ED8\u304DUnionFind)"
     - icon: ':heavy_check_mark:'
       path: graph/bellman-ford.hpp
-      title: graph/bellman-ford.hpp
+      title: "Bellman Ford\u6CD5"
     - icon: ':warning:'
       path: graph/center.hpp
-      title: graph/center.hpp
+      title: "\u6728\u306E\u4E2D\u5FC3"
     - icon: ':warning:'
       path: graph/check-bipartite.hpp
       title: graph/check-bipartite.hpp
     - icon: ':heavy_check_mark:'
       path: graph/cycle-detect.hpp
-      title: graph/cycle-detect.hpp
+      title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
     - icon: ':heavy_check_mark:'
       path: graph/diameter.hpp
-      title: graph/diameter.hpp
+      title: "Diameter(\u6728\u306E\u76F4\u5F84)"
     - icon: ':heavy_check_mark:'
       path: graph/dinic.hpp
       title: graph/dinic.hpp
@@ -142,13 +142,14 @@ data:
       title: graph/fordfulkerson.hpp
     - icon: ':heavy_check_mark:'
       path: graph/kruskal.hpp
-      title: graph/kruskal.hpp
+      title: "Kruskal\u6CD5(\u6700\u5C0F\u5168\u57DF\u6728)"
     - icon: ':heavy_check_mark:'
       path: graph/lca.hpp
-      title: graph/lca.hpp
+      title: "Longest Common Ancestor(\u6700\u5C0F\u5171\u901A\u7956\u5148)"
     - icon: ':heavy_check_mark:'
       path: graph/scc.hpp
-      title: graph/scc.hpp
+      title: "SCC(Stronly Connected Components)(\u5F37\u9023\u7D50\u6210\u5206\u5206\
+        \u89E3)"
     - icon: ':heavy_check_mark:'
       path: graph/template.hpp
       title: Graph Template

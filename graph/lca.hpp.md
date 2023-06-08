@@ -78,8 +78,27 @@ data:
   - test/aoj/GRL/GRL_5_C.test.cpp
 documentation_of: graph/lca.hpp
 layout: document
-redirect_from:
-- /library/graph/lca.hpp
-- /library/graph/lca.hpp.html
-title: graph/lca.hpp
+title: "Longest Common Ancestor(\u6700\u5C0F\u5171\u901A\u7956\u5148)"
 ---
+
+## 説明
+
+- Constructor
+```cpp
+lca(const graph &G, int root = 0)
+```
+
+- uとvの最小共通祖先を求める
+```cpp
+int lca::query(int u, int v)
+```
+
+- u,v間の距離を求める
+```cpp
+int lca::dist(int u, int v)
+```
+
+- u-vのパスでuからの距離がdの頂点を求める
+```cpp
+int lca::jump(int u, int v, int d)
+```

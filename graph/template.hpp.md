@@ -7,19 +7,19 @@ data:
     title: data-structure/HLD.hpp
   - icon: ':heavy_check_mark:'
     path: graph/bellman-ford.hpp
-    title: graph/bellman-ford.hpp
+    title: "Bellman Ford\u6CD5"
   - icon: ':warning:'
     path: graph/center.hpp
-    title: graph/center.hpp
+    title: "\u6728\u306E\u4E2D\u5FC3"
   - icon: ':warning:'
     path: graph/check-bipartite.hpp
     title: graph/check-bipartite.hpp
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
-    title: graph/cycle-detect.hpp
+    title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
   - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
-    title: graph/diameter.hpp
+    title: "Diameter(\u6728\u306E\u76F4\u5F84)"
   - icon: ':heavy_check_mark:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
@@ -74,21 +74,21 @@ data:
   path: graph/template.hpp
   requiredBy:
   - data-structure/HLD.hpp
-  - graph/diameter.hpp
-  - graph/check-bipartite.hpp
-  - graph/dinic.hpp
-  - graph/center.hpp
   - graph/cycle-detect.hpp
+  - graph/check-bipartite.hpp
+  - graph/diameter.hpp
+  - graph/center.hpp
+  - graph/dinic.hpp
   - graph/bellman-ford.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - test/aoj/GRL/GRL_6_A2.test.cpp
+  - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/aoj/GRL/GRL_1_B.test.cpp
+  - test/aoj/GRL/GRL_6_A2.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/template.hpp
 layout: document

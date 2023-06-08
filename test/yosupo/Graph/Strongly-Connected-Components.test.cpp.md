@@ -3,7 +3,8 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
-    title: graph/scc.hpp
+    title: "SCC(Stronly Connected Components)(\u5F37\u9023\u7D50\u6210\u5206\u5206\
+      \u89E3)"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp

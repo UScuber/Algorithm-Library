@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/UnionFind.hpp
-    title: graph/UnionFind.hpp
+    title: UnionFind
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
-    title: graph/kruskal.hpp
+    title: "Kruskal\u6CD5(\u6700\u5C0F\u5168\u57DF\u6728)"
   - icon: ':heavy_check_mark:'
     path: graph/template.hpp
     title: Graph Template

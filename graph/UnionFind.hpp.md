@@ -7,7 +7,7 @@ data:
     title: graph/check-bipartite.hpp
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
-    title: graph/kruskal.hpp
+    title: "Kruskal\u6CD5(\u6700\u5C0F\u5168\u57DF\u6728)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_2_A.test.cpp
@@ -41,8 +41,8 @@ data:
   isVerificationFile: false
   path: graph/UnionFind.hpp
   requiredBy:
-  - graph/kruskal.hpp
   - graph/check-bipartite.hpp
+  - graph/kruskal.hpp
   timestamp: '2023-03-13 15:00:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
@@ -50,8 +50,27 @@ data:
   - test/aoj/GRL/GRL_2_A.test.cpp
 documentation_of: graph/UnionFind.hpp
 layout: document
-redirect_from:
-- /library/graph/UnionFind.hpp
-- /library/graph/UnionFind.hpp.html
-title: graph/UnionFind.hpp
+title: UnionFind
 ---
+
+## 説明
+
+- Constructor
+```cpp
+UnionFind(int n)
+```
+
+- 頂点x,yを接続
+```cpp
+bool unite(int x, int y)
+```
+
+- 同じ集合か判定
+```cpp
+bool same(int x, int y)
+```
+
+- その頂点を含む集合の大きさを求める
+```cpp
+int size(int x)
+```

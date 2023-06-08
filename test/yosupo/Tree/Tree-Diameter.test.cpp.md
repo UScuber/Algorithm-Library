@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
-    title: graph/diameter.hpp
+    title: "Diameter(\u6728\u306E\u76F4\u5F84)"
   - icon: ':heavy_check_mark:'
     path: graph/template.hpp
     title: Graph Template

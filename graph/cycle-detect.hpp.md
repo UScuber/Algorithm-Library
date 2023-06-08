@@ -58,8 +58,20 @@ data:
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
 documentation_of: graph/cycle-detect.hpp
 layout: document
-redirect_from:
-- /library/graph/cycle-detect.hpp
-- /library/graph/cycle-detect.hpp.html
-title: graph/cycle-detect.hpp
+title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
 ---
+
+## 説明
+
+- 閉路を検出し、そのうち１つの閉路の頂点集合を返す
+- 閉路が存在しなければ、空の配列を返す
+
+- Constructor
+```cpp
+Cycle (const graph &_g)
+```
+
+- 閉路検出
+```cpp
+vector<Edge<int>> Cycle::detect()
+```

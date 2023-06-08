@@ -53,8 +53,13 @@ data:
   verifiedWith: []
 documentation_of: graph/center.hpp
 layout: document
-redirect_from:
-- /library/graph/center.hpp
-- /library/graph/center.hpp.html
-title: graph/center.hpp
+title: "\u6728\u306E\u4E2D\u5FC3"
 ---
+
+## 説明
+
+- 木の中心を求める
+
+```cpp
+vector<int> find_centor(const graph &g)
+```

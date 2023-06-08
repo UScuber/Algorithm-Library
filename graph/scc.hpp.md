@@ -58,8 +58,17 @@ data:
   - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
 documentation_of: graph/scc.hpp
 layout: document
-redirect_from:
-- /library/graph/scc.hpp
-- /library/graph/scc.hpp.html
-title: graph/scc.hpp
+title: "SCC(Stronly Connected Components)(\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\
+  )"
 ---
+
+## 説明
+
+- dag[i]: 分解後の頂点と辺からなるグラフ(DAG)
+- group[i]: 分解後のグループiに入る頂点集合
+- comp[i]: iが入っている成分のグループの番号
+
+- Constructor
+```cpp
+scc(const graph &g);
+```

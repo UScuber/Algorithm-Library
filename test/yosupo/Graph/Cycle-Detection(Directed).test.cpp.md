@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
-    title: graph/cycle-detect.hpp
+    title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
   - icon: ':heavy_check_mark:'
     path: graph/template.hpp
     title: Graph Template

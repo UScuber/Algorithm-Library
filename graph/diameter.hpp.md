@@ -54,8 +54,13 @@ data:
   - test/yosupo/Tree/Tree-Diameter.test.cpp
 documentation_of: graph/diameter.hpp
 layout: document
-redirect_from:
-- /library/graph/diameter.hpp
-- /library/graph/diameter.hpp.html
-title: graph/diameter.hpp
+title: "Diameter(\u6728\u306E\u76F4\u5F84)"
 ---
+
+## 説明
+
+- グラフの直径を求める
+
+```cpp
+vector<int> diameter(const Graph<T> &g)
+```

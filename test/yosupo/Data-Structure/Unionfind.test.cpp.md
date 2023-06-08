@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/UnionFind.hpp
-    title: graph/UnionFind.hpp
+    title: UnionFind
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
