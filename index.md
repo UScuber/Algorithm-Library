@@ -60,19 +60,19 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data-structure/CumulativeSum2D.hpp
-      title: data-structure/CumulativeSum2D.hpp
+      title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
       path: data-structure/HLD.hpp
       title: data-structure/HLD.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/HashMap.hpp
-      title: data-structure/HashMap.hpp
+      title: HashMap
     - icon: ':warning:'
       path: data-structure/HashSet.hpp
       title: data-structure/HashSet.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/SWAG.hpp
-      title: data-structure/SWAG.hpp
+      title: SWAG(Sliding Window Aggregation)
     - icon: ':heavy_check_mark:'
       path: data-structure/SparseTable.hpp
       title: data-structure/SparseTable.hpp
@@ -84,7 +84,7 @@ data:
       title: data-structure/binarytrie-sum.hpp
     - icon: ':heavy_check_mark:'
       path: data-structure/binarytrie.hpp
-      title: data-structure/binarytrie.hpp
+      title: BinaryTrie
     - icon: ':heavy_check_mark:'
       path: data-structure/bitvector.hpp
       title: data-structure/bitvector.hpp

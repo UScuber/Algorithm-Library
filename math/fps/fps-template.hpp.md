@@ -291,19 +291,19 @@ data:
   isVerificationFile: false
   path: math/fps/fps-template.hpp
   requiredBy:
-  - math/fps/fps-arbitrary-mod.hpp
   - math/fps/fps.hpp
   - math/fps/kitamasa.hpp
+  - math/fps/fps-arbitrary-mod.hpp
   timestamp: '2023-03-13 14:46:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   - test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
   - test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
+  - test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
+  - test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
   - test/yosupo/Math/Subset-Sum.test.cpp
   - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
+  - test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
 documentation_of: math/fps/fps-template.hpp
 layout: document
 redirect_from:

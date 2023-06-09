@@ -91,8 +91,8 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
   - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
 documentation_of: SegmentTree/lazysegtree.hpp
 layout: document
 redirect_from:

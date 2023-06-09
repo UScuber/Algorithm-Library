@@ -46,8 +46,8 @@ data:
   timestamp: '2023-03-13 15:00:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Unionfind.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp
+  - test/yosupo/Data-Structure/Unionfind.test.cpp
 documentation_of: graph/UnionFind.hpp
 layout: document
 title: UnionFind

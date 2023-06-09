@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/binarytrie.hpp
-    title: data-structure/binarytrie.hpp
+    title: BinaryTrie
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp

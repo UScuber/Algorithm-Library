@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data-structure/SWAG.hpp
-    title: data-structure/SWAG.hpp
+    title: SWAG(Sliding Window Aggregation)
   - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp

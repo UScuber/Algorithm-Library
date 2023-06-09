@@ -52,10 +52,10 @@ data:
   timestamp: '2023-03-13 21:50:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
-  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
-  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   - test/aoj/DSL/DSL_2_B.test.cpp
+  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document
 redirect_from:

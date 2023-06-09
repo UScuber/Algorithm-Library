@@ -47,8 +47,16 @@ data:
   - test/aoj/JOI/Planetary-Exploration.test.cpp
 documentation_of: data-structure/CumulativeSum2D.hpp
 layout: document
-redirect_from:
-- /library/data-structure/CumulativeSum2D.hpp
-- /library/data-structure/CumulativeSum2D.hpp.html
-title: data-structure/CumulativeSum2D.hpp
+title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
 ---
+
+## 説明
+
+- `CumulativeSum2D<T>(h, w)`: Constructor。$O(HW)$
+- `CumulativeSum2D<T>(const vector<vector<T>> &v)`: Constructor。$O(HW)$
+
+- `set(i, j, x)`: 値の加算。$O(1)$
+
+- `build()`: 累積和の構築。$O(HW)$
+
+- `query(ly, lx, ry, rx)`: 長方形内($[ly,ry),[lx,rx)$)の和を取得。$O(1)$
