@@ -52,6 +52,58 @@ struct LazySegmentTree {
     }
     return op(left, right);
   }
+  template <class G>
+  int max_right(int l, G g){
+    assert(0 <= l && l <= n);
+    assert(g(e()));
+    if(l == n) return n;
+    l += len;
+    for(int i = log; i >= 1; i--) push(l >> i);
+    T sm = e();
+    do {
+      l /= l & -l;
+      if(!g(op(sm, d[l]))){
+        while(l < len){
+          push(l);
+          l <<= 1;
+          if(g(op(sm, d[l]))){
+            sm = op(sm, d[l]);
+            l++;
+          }
+        }
+        return l - len;
+      }
+      sm = op(sm, d[l]);
+      l++;
+    }while(l & (l - 1));
+    return n;
+  }
+  template <class G>
+  int min_left(int r, G g){
+    assert(0 <= r && r <= n);
+    assert(g(e()));
+    if(r == 0) return 0;
+    r += len;
+    for(int i = log; i >= 1; i--) push((r - 1) >> i);
+    T sm = e();
+    do {
+      r /= r & -r;
+      if(r > 1) r--;
+      if(!g(op(d[r], sm))){
+        while(r < len){
+          push(r);
+          r = r * 2 + 1;
+          if(g(op(d[r], sm))){
+            sm = op(d[r], sm);
+            r--;
+          }
+        }
+        return r + 1 - len;
+      }
+      sm = op(d[r], sm);
+    }while(r & (r - 1));
+    return 0;
+  }
   private:
   vector<T> d;
   vector<F> lazy;
@@ -67,27 +119,3 @@ struct LazySegmentTree {
     lazy[k] = id();
   }
 };
-
-/*
-struct Data {
-  ll a, len;
-};
-struct Lazy {
-  ll a, b;
-};
-Data op(const Data &a, const Data &b){
-  return { a.a+b.a, a.len+b.len };
-}
-Data e(){
-  return { 0, 0 };
-}
-Data mapping(const Lazy &a, const Data &b){
-  return { a.a*b.a + a.b*b.len, b.len };
-}
-Lazy composition(const Lazy &a, const Lazy &b){
-  return { a.a*b.a, a.b*b.a + b.b };
-}
-Lazy id(){
-  return { 1, 0 };
-}
-*/

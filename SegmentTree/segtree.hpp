@@ -37,6 +37,54 @@ struct SegmentTree {
     }
     return op(left, right);
   }
+  template <class F>
+  int max_right(int l, F f) const{
+    assert(0 <= l && l <= n);
+    assert(f(e()));
+    if(l == n) return n;
+    l += len;
+    T sm = e();
+    do {
+      l /= l & -l;
+      if(!f(op(sm, d[l]))){
+        while(l < len){
+          l <<= 1;
+          if(f(op(sm, d[l]))){
+            sm = op(sm, d[l]);
+            l++;
+          }
+        }
+        return l - len;
+      }
+      sm = op(sm, d[l]);
+      l++;
+    }while(l & (l - 1));
+    return n;
+  }
+  template <class F>
+  int min_left(int r, F f) const{
+    assert(0 <= r && r <= n);
+    assert(f(e()));
+    if(r == 0) return 0;
+    r += len;
+    T sm = e();
+    do {
+      r /= r & -r;
+      if(r > 1) r--;
+      if(!f(op(d[r], sm))){
+        while(r < len){
+          r = r * 2 + 1;
+          if(f(op(d[r], sm))){
+            sm = op(d[r], sm);
+            r--;
+          }
+        }
+        return r + 1 - len;
+      }
+      sm = op(d[r], sm);
+    }while(r & (r - 1));
+    return 0;
+  }
   private:
   int n = 1, log = 0, len = 0;
   vector<T> d;
