@@ -41,8 +41,8 @@ data:
   isVerificationFile: false
   path: graph/UnionFind.hpp
   requiredBy:
-  - graph/check-bipartite.hpp
   - graph/kruskal.hpp
+  - graph/check-bipartite.hpp
   timestamp: '2023-03-13 15:00:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

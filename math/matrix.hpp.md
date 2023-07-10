@@ -106,8 +106,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Matrix/Inverse-Matrix.test.cpp
-  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
   - test/yosupo/Matrix/Matrix-Product.test.cpp
+  - test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

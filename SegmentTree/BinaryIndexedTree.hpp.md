@@ -54,8 +54,8 @@ data:
   verifiedWith:
   - test/aoj/DSL/DSL_2_B.test.cpp
   - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
-  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
 documentation_of: SegmentTree/BinaryIndexedTree.hpp
 layout: document
 redirect_from:
