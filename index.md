@@ -484,8 +484,8 @@ data:
       path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
       title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/yosupo/Math/Primary-Test.test.cpp
-      title: test/yosupo/Math/Primary-Test.test.cpp
+      path: test/yosupo/Math/Primality-Test.test.cpp
+      title: test/yosupo/Math/Primality-Test.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/Subset-Sum.test.cpp
       title: test/yosupo/Math/Subset-Sum.test.cpp

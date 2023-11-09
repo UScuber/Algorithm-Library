@@ -110,8 +110,8 @@ data:
   timestamp: '2023-03-31 18:03:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL/DSL_2_F.test.cpp
   - test/aoj/DSL/DSL_2_D.test.cpp
+  - test/aoj/DSL/DSL_2_F.test.cpp
 documentation_of: SegmentTree/rupdate-rmin.hpp
 layout: document
 redirect_from:

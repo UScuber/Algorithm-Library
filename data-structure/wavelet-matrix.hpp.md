@@ -160,8 +160,8 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
   - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
 documentation_of: data-structure/wavelet-matrix.hpp
 layout: document
 redirect_from:

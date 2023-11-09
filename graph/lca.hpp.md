@@ -74,8 +74,8 @@ data:
   timestamp: '2023-03-14 01:15:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/GRL/GRL_5_C.test.cpp
   - test/yosupo/Tree/Jump-on-Tree.test.cpp
+  - test/aoj/GRL/GRL_5_C.test.cpp
 documentation_of: graph/lca.hpp
 layout: document
 title: "Longest Common Ancestor(\u6700\u5C0F\u5171\u901A\u7956\u5148)"

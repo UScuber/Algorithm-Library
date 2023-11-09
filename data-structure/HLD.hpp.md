@@ -123,8 +123,8 @@ data:
   timestamp: '2023-07-10 18:11:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
 documentation_of: data-structure/HLD.hpp
 layout: document
 redirect_from:

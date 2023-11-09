@@ -14,11 +14,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/primarity_test
+    PROBLEM: https://judge.yosupo.jp/problem/primality_test
     links:
-    - https://judge.yosupo.jp/problem/primarity_test
-  bundledCode: "#line 1 \"test/yosupo/Math/Primary-Test.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/primarity_test\"\n\n#line 1 \"template/template.hpp\"\
+    - https://judge.yosupo.jp/problem/primality_test
+  bundledCode: "#line 1 \"test/yosupo/Math/Primality-Test.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/primality_test\"\n\n#line 1 \"template/template.hpp\"\
     \n#include <iostream>\r\n#include <cmath>\r\n#include <string>\r\n#include <vector>\r\
     \n#include <algorithm>\r\n#include <utility>\r\n#include <tuple>\r\n#include <cstdint>\r\
     \n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\n#include <set>\r\n\
@@ -32,7 +32,7 @@ data:
     \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
     \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
     \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
-    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Math/Primary-Test.test.cpp\"\n\n#line\
+    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Math/Primality-Test.test.cpp\"\n\n#line\
     \ 1 \"math/isprime.hpp\"\nusing ull = unsigned long long;\r\n\r\ninline ull modmul(ull\
     \ a, ull b, ull m) noexcept{\r\n\tll ret = a * b - m * ull(1.L / m * a * b);\r\
     \n\treturn ret + m * (ret < 0) - m * (ret >= (ll)m);\r\n}\r\ninline ull modpow(ull\
@@ -44,11 +44,11 @@ data:
     \ a : A){   // ^ count trailing zeroes\r\n\t\tull p = modpow(a % n, d, n), i =\
     \ s;\r\n\t\twhile(p != 1 && p != n - 1 && a % n && i--)\r\n\t\t\tp = modmul(p,\
     \ p, n);\r\n\t\tif(p != n - 1 && i != s) return false;\r\n\t}\r\n\treturn true;\r\
-    \n}\n#line 6 \"test/yosupo/Math/Primary-Test.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
+    \n}\n#line 6 \"test/yosupo/Math/Primality-Test.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
     \  ios_base::sync_with_stdio(false);\n  int q;\n  cin >> q;\n  rep(_, q){\n  \
     \  ll n; cin >> n;\n    if(is_prime(n)) cout << \"Yes\\n\";\n    else cout <<\
     \ \"No\\n\";\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primarity_test\"\n\n#include\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primality_test\"\n\n#include\
     \ \"../../../template/template.hpp\"\n\n#include \"../../../math/isprime.hpp\"\
     \n\nint main(){\n  cin.tie(nullptr);\n  ios_base::sync_with_stdio(false);\n  int\
     \ q;\n  cin >> q;\n  rep(_, q){\n    ll n; cin >> n;\n    if(is_prime(n)) cout\
@@ -57,15 +57,15 @@ data:
   - template/template.hpp
   - math/isprime.hpp
   isVerificationFile: true
-  path: test/yosupo/Math/Primary-Test.test.cpp
+  path: test/yosupo/Math/Primality-Test.test.cpp
   requiredBy: []
-  timestamp: '2023-05-19 13:12:15+09:00'
+  timestamp: '2023-11-09 14:18:09+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/Math/Primary-Test.test.cpp
+documentation_of: test/yosupo/Math/Primality-Test.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/Math/Primary-Test.test.cpp
-- /verify/test/yosupo/Math/Primary-Test.test.cpp.html
-title: test/yosupo/Math/Primary-Test.test.cpp
+- /verify/test/yosupo/Math/Primality-Test.test.cpp
+- /verify/test/yosupo/Math/Primality-Test.test.cpp.html
+title: test/yosupo/Math/Primality-Test.test.cpp
 ---

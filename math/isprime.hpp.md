@@ -7,8 +7,8 @@ data:
     path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
     title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Math/Primary-Test.test.cpp
-    title: test/yosupo/Math/Primary-Test.test.cpp
+    path: test/yosupo/Math/Primality-Test.test.cpp
+    title: test/yosupo/Math/Primality-Test.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,8 +44,8 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Math/Primality-Test.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
-  - test/yosupo/Math/Primary-Test.test.cpp
 documentation_of: math/isprime.hpp
 layout: document
 redirect_from:
