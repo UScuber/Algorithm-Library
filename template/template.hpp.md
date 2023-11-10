@@ -148,6 +148,9 @@ data:
     path: test/yosupo/Data-Structure/Associative-Array.test.cpp
     title: test/yosupo/Data-Structure/Associative-Array.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -165,6 +168,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
     title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
     title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
@@ -192,6 +198,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Graph/Shortest-Path.test.cpp
+    title: test/yosupo/Graph/Shortest-Path.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
     title: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
@@ -287,6 +296,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Graph/Shortest-Path.test.cpp
   - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   - test/yosupo/Tree/Jump-on-Tree.test.cpp
@@ -311,9 +321,11 @@ data:
   - test/yosupo/Data-Structure/Associative-Array.test.cpp
   - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
   - test/yosupo/Data-Structure/Static-RMQ.test.cpp
+  - test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
   - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   - test/yosupo/Data-Structure/Unionfind.test.cpp
   - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
   - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp

@@ -76,6 +76,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data-structure/SparseTable.hpp
       title: data-structure/SparseTable.hpp
+    - icon: ':heavy_check_mark:'
+      path: data-structure/Treap.hpp
+      title: data-structure/Treap.hpp
     - icon: ':warning:'
       path: data-structure/Vector.hpp
       title: data-structure/Vector.hpp
@@ -134,6 +137,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/diameter.hpp
       title: "Diameter(\u6728\u306E\u76F4\u5F84)"
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.hpp
+      title: graph/dijkstra.hpp
     - icon: ':heavy_check_mark:'
       path: graph/dinic.hpp
       title: graph/dinic.hpp
@@ -429,6 +435,9 @@ data:
       path: test/yosupo/Data-Structure/Associative-Array.test.cpp
       title: test/yosupo/Data-Structure/Associative-Array.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+      title: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
       title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -446,6 +455,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
       title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
+      title: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
       title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
@@ -475,6 +487,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
       title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Graph/Shortest-Path.test.cpp
+      title: test/yosupo/Graph/Shortest-Path.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
       title: test/yosupo/Graph/Strongly-Connected-Components.test.cpp

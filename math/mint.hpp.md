@@ -40,6 +40,9 @@ data:
     path: test/yosupo/Convolution/Convolution.test.cpp
     title: test/yosupo/Convolution/Convolution.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
     title: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
   - icon: ':heavy_check_mark:'
@@ -166,6 +169,7 @@ data:
   - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
   - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
   - test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+  - test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
   - test/yosupo/Convolution/Convolution.test.cpp

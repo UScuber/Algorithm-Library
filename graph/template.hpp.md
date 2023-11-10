@@ -21,6 +21,9 @@ data:
     path: graph/diameter.hpp
     title: "Diameter(\u6728\u306E\u76F4\u5F84)"
   - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.hpp
+    title: graph/dijkstra.hpp
+  - icon: ':heavy_check_mark:'
     path: graph/dinic.hpp
     title: graph/dinic.hpp
   _extendedVerifiedWith:
@@ -42,6 +45,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Graph/Shortest-Path.test.cpp
+    title: test/yosupo/Graph/Shortest-Path.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
@@ -74,6 +80,7 @@ data:
   path: graph/template.hpp
   requiredBy:
   - graph/diameter.hpp
+  - graph/dijkstra.hpp
   - graph/bellman-ford.hpp
   - graph/dinic.hpp
   - graph/check-bipartite.hpp
@@ -83,6 +90,7 @@ data:
   timestamp: '2023-03-13 02:01:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Graph/Shortest-Path.test.cpp
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   - test/yosupo/Tree/Tree-Diameter.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
