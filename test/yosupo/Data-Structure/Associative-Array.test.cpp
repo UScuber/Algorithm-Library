@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/HashMap.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int q;
   cin >> q;
   HashMap<ll,ll> cnt;
@@ -18,7 +17,7 @@ int main(){
       cnt[k] = v;
     }else{
       cin >> k;
-      cout << cnt[k] << "\n";
+      cout << cnt[k] << '\n';
     }
   }
 }

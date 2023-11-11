@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/Treap.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   SumAddQuery<ll,ll> tr;

@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/binarytrie.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int q;
   cin >> q;
   BinaryTrie<int, 30> bt;
@@ -19,7 +18,7 @@ int main(){
     }else if(t == 1){
       if(bt.count(x)) bt.erase(x);
     }else{
-      cout << bt.min(x) << "\n";
+      cout << bt.min(x) << '\n';
     }
   }
 }

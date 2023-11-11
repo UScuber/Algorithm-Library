@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../SegmentTree/BinaryIndexedTree.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   BIT<ll> seg(n);
@@ -18,6 +17,6 @@ int main(){
     int t,a,b;
     cin >> t >> a >> b;
     if(t == 0) seg.add(a, b);
-    else cout << seg.sum(a, b) << "\n";
+    else cout << seg.sum(a, b) << '\n';
   }
 }

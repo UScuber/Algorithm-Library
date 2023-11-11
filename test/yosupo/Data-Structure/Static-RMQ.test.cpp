@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/SparseTable.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   SparseTable<int, min> st(n);
@@ -15,6 +14,6 @@ int main(){
   rep(i, q){
     int l,r;
     cin >> l >> r;
-    cout << st.query(l, r) << "\n";
+    cout << st.query(l, r) << '\n';
   }
 }

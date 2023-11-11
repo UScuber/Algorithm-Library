@@ -4,6 +4,7 @@
 
 #include "../../../SegmentTree/segtree.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 using mint = Mint<998244353>;
 
@@ -18,8 +19,6 @@ Data e(){
 }
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   SegmentTree<Data,op,e> seg(n);
@@ -36,7 +35,7 @@ int main(){
       seg.update(l, { r,x });
     }else{
       const Data res = seg.query(l, r);
-      cout << res.a*x + res.b << "\n";
+      cout << (res.a*x + res.b).x << '\n';
     }
   }
 }

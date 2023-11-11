@@ -4,6 +4,7 @@
 
 #include "../../../data-structure/SWAG.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 using mint = Mint<998244353>;
 
@@ -19,8 +20,6 @@ const Data e(){
   return { 1, 0 };
 }
 int main(){
-  cin.tie(nullptr);
-  ios_base::sync_with_stdio(false);
   int q;
   cin >> q;
   SWAG<Data, op, e> sw;
@@ -34,8 +33,8 @@ int main(){
       sw.pop();
     }else{
       int x; cin >> x;
-      Data l = sw.fold(0, sw.size());
-      cout << l.a*x + l.b << "\n";
+      const Data l = sw.fold(0, sw.size());
+      cout << (l.a*x + l.b).x << '\n';
     }
   }
 }

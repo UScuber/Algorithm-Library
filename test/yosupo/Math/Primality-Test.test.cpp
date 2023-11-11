@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../math/isprime.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios_base::sync_with_stdio(false);
   int q;
   cin >> q;
   rep(_, q){

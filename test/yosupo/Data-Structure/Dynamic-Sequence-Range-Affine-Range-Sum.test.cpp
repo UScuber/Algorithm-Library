@@ -4,6 +4,7 @@
 
 #include "../../../data-structure/Treap.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 using mint = Mint<998244353>;
 
@@ -33,7 +34,7 @@ int main(){
       tree.update(l, r, { b, c });
     }else{
       cin >> l >> r;
-      cout << tree.query(l, r).x << "\n";
+      cout << tree.query(l, r).x << '\n';
     }
   }
 }

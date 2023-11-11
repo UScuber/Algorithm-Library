@@ -4,6 +4,7 @@
 
 #include "../../../others/mo.hpp"
 #include "../../../SegmentTree/BinaryIndexedTree.hpp"
+#include "../../../others/fastIO.hpp"
 
 BIT<int> seg;
 vi a;
@@ -26,8 +27,6 @@ void Mo::del_right(int p){
 }
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   a.resize(n);
@@ -44,5 +43,5 @@ int main(){
     mo.insert(l, r);
   }
   mo.build();
-  rep(i, q) cout << mo.res[i] << "\n";
+  rep(i, q) cout << mo.res[i] << '\n';
 }

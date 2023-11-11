@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/static-rectangle-sum.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   RectangleSum<int,ll> rs;
@@ -20,5 +19,5 @@ int main(){
     cin >> l >> d >> r >> u;
     rs.add_rect(l, d, r, u);
   }
-  for(const auto &x : rs.run()) cout << x << "\n";
+  for(const auto &x : rs.run()) cout << x << '\n';
 }

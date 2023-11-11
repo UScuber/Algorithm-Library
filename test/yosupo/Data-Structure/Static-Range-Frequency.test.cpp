@@ -3,6 +3,7 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/wavelet-matrix-comp.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
   int n,q;
@@ -13,6 +14,6 @@ int main(){
   int l,r,x;
   while(q--){
     cin >> l >> r >> x;
-    cout << mat.rank(x, r) - mat.rank(x, l) << "\n";
+    cout << mat.rank(x, r) - mat.rank(x, l) << '\n';
   }
 }

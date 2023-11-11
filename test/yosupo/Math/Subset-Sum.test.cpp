@@ -4,14 +4,13 @@
 
 #include "../../../math/fps/fps.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 constexpr int Mod = 998244353;
 using mint = Mint<Mod>;
 using fps = FPS<mint>;
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,t;
   cin >> n >> t;
   vi cnt(t + 1);
@@ -32,5 +31,5 @@ int main(){
     }
   }
   f = f.exp();
-  for(int i = 1; i <= t; i++) cout << f[i] << " \n"[i == t];
+  for(int i = 1; i <= t; i++) cout << f[i].x << " \n"[i == t];
 }

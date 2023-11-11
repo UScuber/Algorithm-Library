@@ -4,6 +4,7 @@
 
 #include "../../../data-structure/HLD.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 using mint = Mint<998244353>;
 
@@ -21,8 +22,6 @@ Data rev_op(const Data &l, const Data &m){
 }
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   vi a(n), b(n);
@@ -47,7 +46,7 @@ int main(){
       cin >> u >> v >> x;
       const Data res = hld.query(u, v);
       const mint ans = res.a * x + res.b;
-      cout << ans << "\n";
+      cout << ans.x << '\n';
     }
   }
 }

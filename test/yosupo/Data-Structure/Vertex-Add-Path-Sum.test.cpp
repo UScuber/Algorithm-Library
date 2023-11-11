@@ -3,6 +3,7 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/HLD.hpp"
+#include "../../../others/fastIO.hpp"
 
 using Data = ll;
 
@@ -15,8 +16,6 @@ Data rev_op(const Data &a, const Data &b){
 }
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   vi a(n);
@@ -39,7 +38,7 @@ int main(){
       hld.update(p, hld.get(p) + x);
     }else{
       cin >> u >> v;
-      cout << hld.query(u, v) << "\n";
+      cout << hld.query(u, v) << '\n';
     }
   }
 }

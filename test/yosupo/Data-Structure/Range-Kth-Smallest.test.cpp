@@ -3,6 +3,7 @@
 #include "../../../template/template.hpp"
 
 #include "../../../data-structure/wavelet-matrix-comp.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
   int n,q;
@@ -13,6 +14,6 @@ int main(){
   int l,r,k;
   while(q--){
     cin >> l >> r >> k;
-    cout << mat.kth_smallest(l, r, k) << "\n";
+    cout << mat.kth_smallest(l, r, k) << '\n';
   }
 }

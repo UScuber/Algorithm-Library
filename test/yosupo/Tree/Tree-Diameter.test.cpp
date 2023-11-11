@@ -3,10 +3,9 @@
 #include "../../../template/template.hpp"
 
 #include "../../../graph/diameter.hpp"
+#include "../../../others/fastIO.hpp"
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n;
   cin >> n;
   Graph<ll> root(n);
@@ -17,7 +16,7 @@ int main(){
     root[b].push_back({ b, a, c });
   }
   const auto res = diameter(root);
-  int m = res.second.size();
-  cout << res.first << " " << m << "\n";
+  const int m = res.second.size();
+  cout << res.first << ' ' << m << '\n';
   rep(i, m) cout << res.second[i] << " \n"[i == m - 1];
 }

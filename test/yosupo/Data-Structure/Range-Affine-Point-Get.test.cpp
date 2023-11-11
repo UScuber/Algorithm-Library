@@ -4,6 +4,7 @@
 
 #include "../../../SegmentTree/lazysegtree.hpp"
 #include "../../../math/mint.hpp"
+#include "../../../others/fastIO.hpp"
 
 using mint = Mint<998244353>;
 
@@ -26,8 +27,6 @@ Lazy composition(const Lazy &a, const Lazy &b){
 Lazy id(){ return { 1, 0 }; }
 
 int main(){
-  cin.tie(nullptr);
-  ios::sync_with_stdio(false);
   int n,q;
   cin >> n >> q;
   LazySegmentTree<Data,op,e,Lazy,mapping,composition,id> seg(n);
@@ -44,7 +43,7 @@ int main(){
       seg.update(l, r, { b, c });
     }else{
       int i; cin >> i;
-      cout << seg.get(i).a << "\n";
+      cout << seg.get(i).a.x << '\n';
     }
   }
 }
