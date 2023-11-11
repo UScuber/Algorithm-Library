@@ -74,5 +74,14 @@
 "test/yosupo/Matrix/Inverse-Matrix.test.cpp": "2023-11-11 17:58:53 +0900",
 "test/yosupo/Matrix/Matrix-Product.test.cpp": "2023-11-11 17:58:53 +0900",
 "test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp": "2023-11-11 17:58:53 +0900",
-"test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp": "2023-11-11 17:58:53 +0900"
+"test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp": "2023-11-11 17:58:53 +0900",
+"test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp": "2023-11-11 17:58:53 +0900",
+"test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp": "2023-11-11 17:58:53 +0900",
+"test/yosupo/Sample/A+B.test.cpp": "2023-11-12 01:29:38 +0900",
+"test/yosupo/Sample/Many-A+B(128bit).test.cpp": "2023-11-12 00:39:10 +0900",
+"test/yosupo/Sample/Many-A+B.test.cpp": "2023-11-12 00:39:10 +0900",
+"test/yosupo/String/Enumrate-Palindromes.test.cpp": "2023-11-11 17:58:53 +0900",
+"test/yosupo/String/Z-Algorithm.test.cpp": "2023-11-11 17:58:53 +0900",
+"test/yosupo/Tree/Jump-on-Tree.test.cpp": "2023-11-12 01:15:26 +0900",
+"test/yosupo/Tree/Tree-Diameter.test.cpp": "2023-11-12 01:15:26 +0900"
 }
