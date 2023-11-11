@@ -17,7 +17,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/diameter.hpp
     title: "Diameter(\u6728\u306E\u76F4\u5F84)"
   - icon: ':heavy_check_mark:'
@@ -48,12 +48,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Shortest-Path.test.cpp
     title: test/yosupo/Graph/Shortest-Path.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Graph Template
     links: []
@@ -88,7 +88,7 @@ data:
   - graph/center.hpp
   - data-structure/HLD.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Graph/Shortest-Path.test.cpp
   - test/yosupo/Graph/Cycle-Detection(Directed).test.cpp

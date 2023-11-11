@@ -60,21 +60,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Subset-Sum.test.cpp
     title: test/yosupo/Math/Subset-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
     title: test/yosupo/Sample/Many-A+B(128bit).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B.test.cpp
     title: test/yosupo/Sample/Many-A+B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Jump-on-Tree.test.cpp
     title: test/yosupo/Tree/Jump-on-Tree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"others/fastIO.hpp\"\nnamespace FastIO {\r\nstruct PreCalc\
@@ -173,7 +173,7 @@ data:
   path: others/fastIO.hpp
   requiredBy: []
   timestamp: '2023-11-12 00:39:10+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Tree/Jump-on-Tree.test.cpp
   - test/yosupo/Tree/Tree-Diameter.test.cpp

@@ -4,13 +4,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: data-structure/SWAG.hpp
     title: SWAG(Sliding Window Aggregation)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: others/fastIO.hpp
     title: others/fastIO.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: SegmentTree/radd-rmin.hpp
     title: SegmentTree/radd-rmin.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

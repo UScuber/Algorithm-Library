@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: SegmentTree/BinaryIndexedTree.hpp
     title: SegmentTree/BinaryIndexedTree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: others/fastIO.hpp
     title: others/fastIO.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

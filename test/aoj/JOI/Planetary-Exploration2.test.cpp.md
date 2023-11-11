@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: SegmentTree/2d-segtree.hpp
     title: SegmentTree/2d-segtree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

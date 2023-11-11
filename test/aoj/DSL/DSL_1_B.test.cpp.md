@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/Weighted-UnionFind.hpp
     title: "Weighted-UnionFind(\u91CD\u307F\u4ED8\u304DUnionFind)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

@@ -231,33 +231,36 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Log-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Sample/A+B.test.cpp
+    title: test/yosupo/Sample/A+B.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
     title: test/yosupo/Sample/Many-A+B(128bit).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Sample/Many-A+B.test.cpp
     title: test/yosupo/Sample/Many-A+B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/String/Enumrate-Palindromes.test.cpp
     title: test/yosupo/String/Enumrate-Palindromes.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/String/Z-Algorithm.test.cpp
     title: test/yosupo/String/Z-Algorithm.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Jump-on-Tree.test.cpp
     title: test/yosupo/Tree/Jump-on-Tree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/Tree-Diameter.test.cpp
     title: test/yosupo/Tree/Tree-Diameter.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include\
@@ -292,7 +295,7 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Graph/Shortest-Path.test.cpp
   - test/yosupo/Graph/Strongly-Connected-Components.test.cpp
@@ -335,6 +338,7 @@ data:
   - test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
   - test/yosupo/Convolution/Bitwise-And-Convolution.test.cpp
   - test/yosupo/Sample/Many-A+B(128bit).test.cpp
+  - test/yosupo/Sample/A+B.test.cpp
   - test/yosupo/Sample/Many-A+B.test.cpp
   - test/aoj/ALDS1/ALDS1_14_B.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test.cpp

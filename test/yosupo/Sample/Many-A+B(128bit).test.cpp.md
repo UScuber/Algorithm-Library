@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: others/fastIO.hpp
     title: others/fastIO.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: others/int128.hpp
     title: others/int128.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/many_aplusb_128bit
@@ -105,7 +105,7 @@ data:
   path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
   requiredBy: []
   timestamp: '2023-11-12 00:39:10+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Sample/Many-A+B(128bit).test.cpp
 layout: document

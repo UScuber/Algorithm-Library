@@ -7,10 +7,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/kruskal.hpp
     title: "Kruskal\u6CD5(\u6700\u5C0F\u5168\u57DF\u6728)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/template.hpp
     title: Graph Template
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: math/euler.hpp
-    title: math/euler.hpp
-  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
@@ -14,10 +11,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_D
+    PROBLEM: https://judge.yosupo.jp/problem/aplusb
     links:
-    - https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_D
-  bundledCode: "#line 1 \"test/aoj/NTL/NTL_1_D.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_D\"\
+    - https://judge.yosupo.jp/problem/aplusb
+  bundledCode: "#line 1 \"test/yosupo/Sample/A+B.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
     \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
     \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
@@ -31,28 +28,23 @@ data:
     \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
     \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
     \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
-    \ = b, 1) : 0; }\n#line 4 \"test/aoj/NTL/NTL_1_D.test.cpp\"\n\n#line 1 \"math/euler.hpp\"\
-    \nll euler(ll n){\n  ll res = n, k = n;\n  for(ll i = 2; i*i <= k; i++){\n   \
-    \ if(n % i) continue;\n    res = res / i * (i - 1);\n    while(n % i == 0) n /=\
-    \ i;\n  }\n  if(n != 1) res = res / n * (n - 1);\n  return res;\n}\n#line 6 \"\
-    test/aoj/NTL/NTL_1_D.test.cpp\"\n\nint main(){\n  int n;\n  cin >> n;\n  cout\
-    \ << euler(n) << \"\\n\";\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_D\"\n\n\
-    #include \"../../../template/template.hpp\"\n\n#include \"../../../math/euler.hpp\"\
-    \n\nint main(){\n  int n;\n  cin >> n;\n  cout << euler(n) << \"\\n\";\n}"
+    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Sample/A+B.test.cpp\"\n\nint main(){\n\
+    \  int a,b;\n  cin >> a >> b;\n  cout << a + b << \"\\n\";\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n\n#include \"\
+    ../../../template/template.hpp\"\n\nint main(){\n  int a,b;\n  cin >> a >> b;\n\
+    \  cout << a + b << \"\\n\";\n}"
   dependsOn:
   - template/template.hpp
-  - math/euler.hpp
   isVerificationFile: true
-  path: test/aoj/NTL/NTL_1_D.test.cpp
+  path: test/yosupo/Sample/A+B.test.cpp
   requiredBy: []
-  timestamp: '2023-11-11 17:58:53+09:00'
+  timestamp: '2023-11-12 01:29:38+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/NTL/NTL_1_D.test.cpp
+documentation_of: test/yosupo/Sample/A+B.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/NTL/NTL_1_D.test.cpp
-- /verify/test/aoj/NTL/NTL_1_D.test.cpp.html
-title: test/aoj/NTL/NTL_1_D.test.cpp
+- /verify/test/yosupo/Sample/A+B.test.cpp
+- /verify/test/yosupo/Sample/A+B.test.cpp.html
+title: test/yosupo/Sample/A+B.test.cpp
 ---

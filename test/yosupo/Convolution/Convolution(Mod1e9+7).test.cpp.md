@@ -4,13 +4,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/convolution/convolution-arbitrary-mod.hpp
     title: math/convolution/convolution-arbitrary-mod.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/mint.hpp
     title: math/mint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
