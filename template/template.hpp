@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <utility>
 #include <tuple>
 #include <cstdint>
 #include <cstdio>
@@ -12,14 +11,13 @@
 #include <set>
 #include <stack>
 #include <deque>
-#include <unordered_map>
-#include <unordered_set>
 #include <bitset>
 #include <cctype>
 #include <climits>
 #include <functional>
 #include <cassert>
 #include <numeric>
+#include <cstring>
 #define rep(i, n) for(int i = 0; i < (n); i++)
 #define per(i, n) for(int i = (n) - 1; i >= 0; i--)
 using ll = long long;
