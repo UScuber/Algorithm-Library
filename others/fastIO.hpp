@@ -14,7 +14,7 @@ struct PreCalc {
 static constexpr PreCalc pr;
 struct FastIO {
   template <class T>
-  using enable_if_integer = enable_if_t<is_integral<T>::value || is_same<T, __int128_t> || is_same<T, __uint128_t>::value>;
+  using enable_if_integer = enable_if_t<is_integral<T>::value || is_same<T, __int128_t>::value || is_same<T, __uint128_t>::value>;
   static constexpr int buf_size = 1 << 20;
   static constexpr int rem = 1 << 6;
   char in_buf[buf_size], *in_cur = in_buf;
