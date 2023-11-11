@@ -2,6 +2,7 @@
 
 #include "../../../template/template.hpp"
 
+#include "../../../others/fastIO.hpp"
 #include "../../../others/int128.hpp"
 
 int main(){
