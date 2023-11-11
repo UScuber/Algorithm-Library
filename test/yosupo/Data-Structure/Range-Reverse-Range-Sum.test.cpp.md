@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data-structure/Treap.hpp
     title: data-structure/Treap.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/range_reverse_range_sum
@@ -20,34 +20,33 @@ data:
   bundledCode: "#line 1 \"test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_reverse_range_sum\"\n\
     \n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
-    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
-    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
-    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
-    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
-    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
-    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
-    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
-    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
-    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
-    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
-    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
-    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp\"\n\n#line 1\
-    \ \"data-structure/Treap.hpp\"\n#include <random>\n#include <chrono>\n// T0: \u5143\
-    \u306E\u914D\u5217\u306E\u30E2\u30CE\u30A4\u30C9\n// T1: T0\u306B\u5BFE\u3059\u308B\
-    \u4F5C\u7528\u7D20\u30E2\u30CE\u30A4\u30C9\ntemplate <class T0, class T1>\nstruct\
-    \ BaseImplicitTreap {\nprivate:\n  virtual T0 f0(const T0 &, const T0 &) = 0;\n\
-    \  const T0 u0;\n  virtual T1 f1(const T1 &, const T1 &) = 0;\n  const T1 u1;\n\
-    \  virtual T0 g(const T0 &, const T1 &) = 0;\n  virtual T1 p(const T1 &, const\
-    \ int) = 0;\n\n  struct xorshift {\n    uint64_t x;\n    xorshift(){\n      mt19937\
-    \ rnd(chrono::steady_clock::now().time_since_epoch().count());\n      x = rnd();\n\
-    \      for(int i = 0; i < 100; i++){\n        random();\n      }\n    }\n    uint64_t\
-    \ random(){\n      x = x ^ (x << 7);\n      return x = x ^ (x >> 9);\n    }\n\
-    \  } rnd;\n\n  struct Node {\n    T0 value, acc;\n    T1 lazy;\n    int priority,\
-    \ cnt;\n    bool rev;\n    Node *l, *r;\n    Node(const T0 &value_, const int\
-    \ priority_, const T0 &u0_, const T1 &u1_)\n        : value(value_), acc(u0_),\
-    \ lazy(u1_), priority(priority_), cnt(1), rev(false), l(nullptr), r(nullptr){}\n\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
+    \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
+    \n#include <set>\r\n#include <stack>\r\n#include <deque>\r\n#include <bitset>\r\
+    \n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include\
+    \ <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i, n) for(int\
+    \ i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\
+    \nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n\
+    #define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\
+    \n#define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
+    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
+    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
+    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
+    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp\"\
+    \n\n#line 1 \"data-structure/Treap.hpp\"\n#include <random>\n#include <chrono>\n\
+    // T0: \u5143\u306E\u914D\u5217\u306E\u30E2\u30CE\u30A4\u30C9\n// T1: T0\u306B\
+    \u5BFE\u3059\u308B\u4F5C\u7528\u7D20\u30E2\u30CE\u30A4\u30C9\ntemplate <class\
+    \ T0, class T1>\nstruct BaseImplicitTreap {\nprivate:\n  virtual T0 f0(const T0\
+    \ &, const T0 &) = 0;\n  const T0 u0;\n  virtual T1 f1(const T1 &, const T1 &)\
+    \ = 0;\n  const T1 u1;\n  virtual T0 g(const T0 &, const T1 &) = 0;\n  virtual\
+    \ T1 p(const T1 &, const int) = 0;\n\n  struct xorshift {\n    uint64_t x;\n \
+    \   xorshift(){\n      mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \      x = rnd();\n      for(int i = 0; i < 100; i++){\n        random();\n  \
+    \    }\n    }\n    uint64_t random(){\n      x = x ^ (x << 7);\n      return x\
+    \ = x ^ (x >> 9);\n    }\n  } rnd;\n\n  struct Node {\n    T0 value, acc;\n  \
+    \  T1 lazy;\n    int priority, cnt;\n    bool rev;\n    Node *l, *r;\n    Node(const\
+    \ T0 &value_, const int priority_, const T0 &u0_, const T1 &u1_)\n        : value(value_),\
+    \ acc(u0_), lazy(u1_), priority(priority_), cnt(1), rev(false), l(nullptr), r(nullptr){}\n\
     \  } *root = nullptr;\n\n  using Tree = Node *;\n\n  inline int cnt(Tree t) const\
     \ noexcept{ return t ? t->cnt : 0; }\n  inline T0 acc(Tree t) const noexcept{\
     \ return t ? t->acc : u0; }\n  void update_cnt(Tree t){\n    if(t) t->cnt = 1\
@@ -174,8 +173,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
   requiredBy: []
-  timestamp: '2023-11-10 15:25:01+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-11-11 17:58:53+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
 layout: document

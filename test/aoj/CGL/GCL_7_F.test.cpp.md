@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometry/template.hpp
     title: geometry/template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
@@ -21,80 +21,80 @@ data:
   bundledCode: "#line 1 \"test/aoj/CGL/GCL_7_F.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_7_F\"\
     \n#define ERROR 1e-9\n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\
     \n#include <cmath>\r\n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\
-    \n#include <utility>\r\n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\
-    \n#include <map>\r\n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n\
-    #include <deque>\r\n#include <unordered_map>\r\n#include <unordered_set>\r\n#include\
-    \ <bitset>\r\n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\
-    \n#include <cassert>\r\n#include <numeric>\r\n#define rep(i, n) for(int i = 0;\
-    \ i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing\
-    \ ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n#define\
-    \ vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n\
-    #define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
-    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
-    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
-    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
-    \ = b, 1) : 0; }\n#line 5 \"test/aoj/CGL/GCL_7_F.test.cpp\"\n\n#line 1 \"geometry/template.hpp\"\
-    \nusing Real = double;\r\n\r\nconstexpr Real EPS = 1e-10;\r\nconstexpr Real PI\
-    \ = 3.141592653589793238462643383279L;\r\nconstexpr Real INF = 1e18;\r\n\r\ninline\
-    \ constexpr bool eq(const Real &a, const Real &b){\r\n  return fabs(b - a) < EPS;\r\
-    \n}\r\n\r\nstruct Point {\r\n  constexpr Point(const Real &_x=0, const Real &_y=0)\
-    \ : x(_x), y(_y){}\r\n  constexpr Real &real(){ return x; }\r\n  constexpr Real\
-    \ &imag(){ return y; }\r\n  constexpr Real real() const{ return x; }\r\n  constexpr\
-    \ Real imag() const{ return y; }\r\n  constexpr Point operator-() const{ return\
-    \ Point(-x, -y); }\r\n  constexpr Point &operator+=(const Point &p){ x += p.real();\
-    \ y += p.imag(); return *this; }\r\n  constexpr Point &operator-=(const Point\
-    \ &p){ x -= p.real(); y -= p.imag(); return *this; }\r\n  constexpr Point &operator*=(const\
-    \ Real &a){ x *= a; y *= a; return *this; }\r\n  constexpr Point &operator*=(const\
-    \ Point &p){ return *this = *this * p; }\r\n  constexpr Point &operator/=(const\
-    \ Real &a){ assert(!eq(a, 0.0)); x /= a; y /= a; return *this; }\r\n  constexpr\
-    \ Point operator+(const Point &p) const{ return Point(*this) += p; }\r\n  constexpr\
-    \ Point operator-(const Point &p) const{ return Point(*this) -= p; }\r\n  constexpr\
-    \ Point operator*(const Real &p) const{ return Point(*this) *= p; }\r\n  constexpr\
-    \ Point operator*(const Point &p) const{ return Point(x*p.x - y*p.y, y*p.x + x*p.y);\
-    \ }\r\n  constexpr Point operator/(const Real &p) const{ return Point(*this) /=\
-    \ p; }\r\n  constexpr bool operator==(const Point &p) const{ return eq(x, p.real())\
-    \ && eq(y, p.imag()); }\r\n  constexpr bool operator!=(const Point &p) const{\
-    \ return !(*this == p); }\r\n  constexpr bool operator<(const Point &p) const{\r\
-    \n    if(x != p.real()) return x < p.real();\r\n    return y < p.imag();\r\n \
-    \ }\r\n  constexpr bool operator>(const Point &p) const{\r\n    if(x != p.real())\
-    \ return x > p.real();\r\n    return y > p.imag();\r\n  }\r\n  constexpr Real\
-    \ norm() const{ return x*x + y*y; }\r\n  constexpr Real abs() const{ return sqrt(norm());\
-    \ }\r\n  constexpr Point conj() const{ return Point(x, -y); }\r\n  constexpr Real\
-    \ arg() const{ return atan2(y, x); }\r\n  friend istream &operator>>(istream &is,\
-    \ Point &p){ return is >> p.real() >> p.imag(); }\r\n  friend ostream &operator<<(ostream\
-    \ &os, const Point &p){ return os << p.real() << \" \" << p.imag(); }\r\nprivate:\r\
-    \n  Real x,y;\r\n};\r\n\r\nPoint polar(const Real &r, const Real &theta){\r\n\
-    \  return Point(r*cos(theta), r*sin(theta));\r\n}\r\nconstexpr Real real(const\
-    \ Point &p){ return p.real(); }\r\nconstexpr Real imag(const Point &p){ return\
-    \ p.imag(); }\r\nconstexpr Real norm(const Point &p){ return p.norm(); }\r\nconstexpr\
-    \ Real abs(const Point &p){ return p.abs(); }\r\nconstexpr Point conj(const Point\
-    \ &p){ return p.conj(); }\r\nconstexpr Real arg(const Point &p){ return p.arg();\
-    \ }\r\ninline constexpr Real cross(const Point &a, const Point &b){\r\n  return\
-    \ a.real() * b.imag() - a.imag() * b.real();\r\n}\r\ninline constexpr Real dot(const\
-    \ Point &a, const Point &b){\r\n  return a.real() * b.real() + a.imag() * b.imag();\r\
-    \n}\r\nconstexpr Point rotate(const Point &p, const Real &theta){\r\n  return\
-    \ Point(cos(theta)*p.real() - sin(theta)*p.imag(), sin(theta)*p.real() + cos(theta)*p.imag());\r\
-    \n}\r\nconstexpr Real rad2deg(const Real &theta){ return theta*180.0/PI; }\r\n\
-    constexpr Real deg2rad(const Real &theta){ return theta*PI/180.0; }\r\n\r\n//\
-    \ calc <ABC\r\nconstexpr Real get_angle(const Point &a, const Point &b, const\
-    \ Point &c){\r\n  Real alpha = arg(b - a), beta = arg(c - b);\r\n  if(alpha >\
-    \ beta) swap(alpha, beta);\r\n  const Real theta = beta - alpha;\r\n  return min(theta,\
-    \ PI*2 - theta);\r\n}\r\nconstexpr int type(const Point &a){\r\n  if(eq(a.real(),\
-    \ 0) && eq(a.imag(), 0)) return 0;\r\n  if(a.imag() > -EPS || (eq(a.imag(), 0)\
-    \ && a.real() < EPS)) return 1;\r\n  return -1;\r\n}\r\n\r\nstruct Line {\r\n\
-    \  Point a,b;\r\n  constexpr Line(){}\r\n  constexpr Line(const Point &_a, const\
-    \ Point &_b) : a(_a), b(_b){}\r\n  constexpr Line(const Real &A, const Real &B,\
-    \ const Real &C){\r\n    if(eq(A, 0)) a = Point(0, C/B), b = Point(1, C/B);\r\n\
-    \    else if(eq(B, 0)) a = Point(C/A, 0), b = Point(C/A, 1);\r\n    else a = Point(0,\
-    \ C/B), b = Point(C/A, 0);\r\n  }\r\n  friend istream &operator>>(istream &is,\
-    \ Line &l){ return is >> l.a >> l.b; }\r\n  friend ostream &operator<<(ostream\
-    \ &os, const Line &l){ return os << l.a << \" to \" << l.b; }\r\n};\r\n\r\nstruct\
-    \ Segment {\r\n  Point a,b;\r\n  constexpr Segment(){}\r\n  constexpr Segment(const\
-    \ Point &_a, const Point &_b) : a(_a), b(_b){}\r\n  friend istream &operator>>(istream\
-    \ &is, Segment &l){ return is >> l.a >> l.b; }\r\n  friend ostream &operator<<(ostream\
-    \ &os, const Segment &l){ return os << l.a << \" to \" << l.b; }\r\n};\r\n\r\n\
-    struct Circle {\r\n  Point p;\r\n  Real r;\r\n  Circle(){}\r\n  constexpr Circle(const\
-    \ Point &_p, const Real &_r) : p(_p), r(_r){}\r\n};\r\n\r\nusing Points = vector<Point>;\r\
+    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
+    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
+    \n#include <bitset>\r\n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\
+    \n#include <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i,\
+    \ n) for(int i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i\
+    \ >= 0; i--)\r\nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi\
+    \ vector<vi>\r\n#define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define\
+    \ pll pair<ll, ll>\r\n#define all(a) (a).begin(), (a).end()\r\n#define rall(a)\
+    \ (a).rbegin(), (a).rend()\r\nconstexpr int mod = 1000000007;\r\nusing namespace\
+    \ std;\r\ntemplate<class T, class U>\r\nbool chmax(T &a, const U &b){ return a\
+    \ < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class U>\r\nbool chmin(T &a, const\
+    \ U &b){ return a > b ? (a = b, 1) : 0; }\n#line 5 \"test/aoj/CGL/GCL_7_F.test.cpp\"\
+    \n\n#line 1 \"geometry/template.hpp\"\nusing Real = double;\r\n\r\nconstexpr Real\
+    \ EPS = 1e-10;\r\nconstexpr Real PI = 3.141592653589793238462643383279L;\r\nconstexpr\
+    \ Real INF = 1e18;\r\n\r\ninline constexpr bool eq(const Real &a, const Real &b){\r\
+    \n  return fabs(b - a) < EPS;\r\n}\r\n\r\nstruct Point {\r\n  constexpr Point(const\
+    \ Real &_x=0, const Real &_y=0) : x(_x), y(_y){}\r\n  constexpr Real &real(){\
+    \ return x; }\r\n  constexpr Real &imag(){ return y; }\r\n  constexpr Real real()\
+    \ const{ return x; }\r\n  constexpr Real imag() const{ return y; }\r\n  constexpr\
+    \ Point operator-() const{ return Point(-x, -y); }\r\n  constexpr Point &operator+=(const\
+    \ Point &p){ x += p.real(); y += p.imag(); return *this; }\r\n  constexpr Point\
+    \ &operator-=(const Point &p){ x -= p.real(); y -= p.imag(); return *this; }\r\
+    \n  constexpr Point &operator*=(const Real &a){ x *= a; y *= a; return *this;\
+    \ }\r\n  constexpr Point &operator*=(const Point &p){ return *this = *this * p;\
+    \ }\r\n  constexpr Point &operator/=(const Real &a){ assert(!eq(a, 0.0)); x /=\
+    \ a; y /= a; return *this; }\r\n  constexpr Point operator+(const Point &p) const{\
+    \ return Point(*this) += p; }\r\n  constexpr Point operator-(const Point &p) const{\
+    \ return Point(*this) -= p; }\r\n  constexpr Point operator*(const Real &p) const{\
+    \ return Point(*this) *= p; }\r\n  constexpr Point operator*(const Point &p) const{\
+    \ return Point(x*p.x - y*p.y, y*p.x + x*p.y); }\r\n  constexpr Point operator/(const\
+    \ Real &p) const{ return Point(*this) /= p; }\r\n  constexpr bool operator==(const\
+    \ Point &p) const{ return eq(x, p.real()) && eq(y, p.imag()); }\r\n  constexpr\
+    \ bool operator!=(const Point &p) const{ return !(*this == p); }\r\n  constexpr\
+    \ bool operator<(const Point &p) const{\r\n    if(x != p.real()) return x < p.real();\r\
+    \n    return y < p.imag();\r\n  }\r\n  constexpr bool operator>(const Point &p)\
+    \ const{\r\n    if(x != p.real()) return x > p.real();\r\n    return y > p.imag();\r\
+    \n  }\r\n  constexpr Real norm() const{ return x*x + y*y; }\r\n  constexpr Real\
+    \ abs() const{ return sqrt(norm()); }\r\n  constexpr Point conj() const{ return\
+    \ Point(x, -y); }\r\n  constexpr Real arg() const{ return atan2(y, x); }\r\n \
+    \ friend istream &operator>>(istream &is, Point &p){ return is >> p.real() >>\
+    \ p.imag(); }\r\n  friend ostream &operator<<(ostream &os, const Point &p){ return\
+    \ os << p.real() << \" \" << p.imag(); }\r\nprivate:\r\n  Real x,y;\r\n};\r\n\r\
+    \nPoint polar(const Real &r, const Real &theta){\r\n  return Point(r*cos(theta),\
+    \ r*sin(theta));\r\n}\r\nconstexpr Real real(const Point &p){ return p.real();\
+    \ }\r\nconstexpr Real imag(const Point &p){ return p.imag(); }\r\nconstexpr Real\
+    \ norm(const Point &p){ return p.norm(); }\r\nconstexpr Real abs(const Point &p){\
+    \ return p.abs(); }\r\nconstexpr Point conj(const Point &p){ return p.conj();\
+    \ }\r\nconstexpr Real arg(const Point &p){ return p.arg(); }\r\ninline constexpr\
+    \ Real cross(const Point &a, const Point &b){\r\n  return a.real() * b.imag()\
+    \ - a.imag() * b.real();\r\n}\r\ninline constexpr Real dot(const Point &a, const\
+    \ Point &b){\r\n  return a.real() * b.real() + a.imag() * b.imag();\r\n}\r\nconstexpr\
+    \ Point rotate(const Point &p, const Real &theta){\r\n  return Point(cos(theta)*p.real()\
+    \ - sin(theta)*p.imag(), sin(theta)*p.real() + cos(theta)*p.imag());\r\n}\r\n\
+    constexpr Real rad2deg(const Real &theta){ return theta*180.0/PI; }\r\nconstexpr\
+    \ Real deg2rad(const Real &theta){ return theta*PI/180.0; }\r\n\r\n// calc <ABC\r\
+    \nconstexpr Real get_angle(const Point &a, const Point &b, const Point &c){\r\n\
+    \  Real alpha = arg(b - a), beta = arg(c - b);\r\n  if(alpha > beta) swap(alpha,\
+    \ beta);\r\n  const Real theta = beta - alpha;\r\n  return min(theta, PI*2 - theta);\r\
+    \n}\r\nconstexpr int type(const Point &a){\r\n  if(eq(a.real(), 0) && eq(a.imag(),\
+    \ 0)) return 0;\r\n  if(a.imag() > -EPS || (eq(a.imag(), 0) && a.real() < EPS))\
+    \ return 1;\r\n  return -1;\r\n}\r\n\r\nstruct Line {\r\n  Point a,b;\r\n  constexpr\
+    \ Line(){}\r\n  constexpr Line(const Point &_a, const Point &_b) : a(_a), b(_b){}\r\
+    \n  constexpr Line(const Real &A, const Real &B, const Real &C){\r\n    if(eq(A,\
+    \ 0)) a = Point(0, C/B), b = Point(1, C/B);\r\n    else if(eq(B, 0)) a = Point(C/A,\
+    \ 0), b = Point(C/A, 1);\r\n    else a = Point(0, C/B), b = Point(C/A, 0);\r\n\
+    \  }\r\n  friend istream &operator>>(istream &is, Line &l){ return is >> l.a >>\
+    \ l.b; }\r\n  friend ostream &operator<<(ostream &os, const Line &l){ return os\
+    \ << l.a << \" to \" << l.b; }\r\n};\r\n\r\nstruct Segment {\r\n  Point a,b;\r\
+    \n  constexpr Segment(){}\r\n  constexpr Segment(const Point &_a, const Point\
+    \ &_b) : a(_a), b(_b){}\r\n  friend istream &operator>>(istream &is, Segment &l){\
+    \ return is >> l.a >> l.b; }\r\n  friend ostream &operator<<(ostream &os, const\
+    \ Segment &l){ return os << l.a << \" to \" << l.b; }\r\n};\r\n\r\nstruct Circle\
+    \ {\r\n  Point p;\r\n  Real r;\r\n  Circle(){}\r\n  constexpr Circle(const Point\
+    \ &_p, const Real &_r) : p(_p), r(_r){}\r\n};\r\n\r\nusing Points = vector<Point>;\r\
     \nusing Lines = vector<Line>;\r\nusing Segments = vector<Segment>;\r\nusing Polygon\
     \ = vector<Point>;\r\n\r\n// \u70B9\u306E\u56DE\u8EE2\u65B9\u5411\r\nconstexpr\
     \ int ccw(const Point &a, Point b, Point c){\r\n  b -= a, c -= a;\r\n  if(cross(b,\
@@ -293,7 +293,7 @@ data:
   isVerificationFile: true
   path: test/aoj/CGL/GCL_7_F.test.cpp
   requiredBy: []
-  timestamp: '2023-04-19 16:35:06+09:00'
+  timestamp: '2023-11-11 17:58:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/CGL/GCL_7_F.test.cpp

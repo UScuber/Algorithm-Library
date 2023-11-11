@@ -2,22 +2,22 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data-structure/wavelet-matrix-comp.hpp
     title: data-structure/wavelet-matrix-comp.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data-structure/wavelet-matrix.hpp
     title: data-structure/wavelet-matrix.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
     title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
     title: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/bitvector.hpp\"\nstruct BitVector {\r\n \
@@ -53,7 +53,7 @@ data:
   - data-structure/wavelet-matrix.hpp
   - data-structure/wavelet-matrix-comp.hpp
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
   - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp

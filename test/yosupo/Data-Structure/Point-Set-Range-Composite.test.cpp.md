@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: SegmentTree/segtree.hpp
     title: SegmentTree/segtree.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/mint.hpp
     title: math/mint.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
@@ -23,26 +23,25 @@ data:
   bundledCode: "#line 1 \"test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
-    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
-    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
-    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
-    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
-    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
-    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
-    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
-    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
-    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
-    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
-    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
-    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp\"\n\n#line\
-    \ 1 \"SegmentTree/segtree.hpp\"\ntemplate <class T, T(*op)(const T&,const T&),\
-    \ T(*e)()>\r\nstruct SegmentTree {\r\n  SegmentTree(const int _n) : n(_n){\r\n\
-    \    while((1 << log) < n) log++;\r\n    len = 1 << log;\r\n    d.resize(len *\
-    \ 2, e());\r\n  }\r\n  void update(int k, const T &x){\r\n    assert(0 <= k &&\
-    \ k < n);\r\n    k += len;\r\n    d[k] = x;\r\n    while(k > 1){\r\n      k >>=\
-    \ 1;\r\n      d[k] = op(d[k*2], d[k*2+1]);\r\n    }\r\n  }\r\n  void set(const\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
+    \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
+    \n#include <set>\r\n#include <stack>\r\n#include <deque>\r\n#include <bitset>\r\
+    \n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include\
+    \ <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i, n) for(int\
+    \ i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\
+    \nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n\
+    #define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\
+    \n#define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
+    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
+    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
+    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
+    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp\"\
+    \n\n#line 1 \"SegmentTree/segtree.hpp\"\ntemplate <class T, T(*op)(const T&,const\
+    \ T&), T(*e)()>\r\nstruct SegmentTree {\r\n  SegmentTree(const int _n) : n(_n){\r\
+    \n    while((1 << log) < n) log++;\r\n    len = 1 << log;\r\n    d.resize(len\
+    \ * 2, e());\r\n  }\r\n  void update(int k, const T &x){\r\n    assert(0 <= k\
+    \ && k < n);\r\n    k += len;\r\n    d[k] = x;\r\n    while(k > 1){\r\n      k\
+    \ >>= 1;\r\n      d[k] = op(d[k*2], d[k*2+1]);\r\n    }\r\n  }\r\n  void set(const\
     \ int i, const T &x){\r\n    assert(0 <= i && i < n);\r\n    d[i + len] = x;\r\
     \n  }\r\n  T get(const int i) const{\r\n    assert(0 <= i && i < n);\r\n    return\
     \ d[i + len];\r\n  }\r\n  void build(){\r\n    for(int k = len - 1; k >= 1; k--)\r\
@@ -119,8 +118,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
   requiredBy: []
-  timestamp: '2023-07-10 18:11:11+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-11-11 17:58:53+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
 layout: document

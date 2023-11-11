@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
     title: test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/yosupo/Math/Primality-Test.test.cpp
     title: test/yosupo/Math/Primality-Test.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/isprime.hpp\"\nusing ull = unsigned long long;\r\n\r\
@@ -42,7 +42,7 @@ data:
   path: math/isprime.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/yosupo/Math/Primality-Test.test.cpp
   - test/aoj/ALDS1/ALDS1_1_C.test2.test.cpp

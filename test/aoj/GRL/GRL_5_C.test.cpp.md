@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/lca.hpp
     title: "Longest Common Ancestor(\u6700\u5C0F\u5171\u901A\u7956\u5148)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
@@ -19,27 +19,26 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
   bundledCode: "#line 1 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
-    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
-    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
-    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
-    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
-    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
-    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
-    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
-    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
-    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
-    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
-    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
-    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n\n#line 1 \"graph/lca.hpp\"\ntemplate <class\
-    \ graph>\r\nstruct lca {\r\n  const graph &G;\r\n  vector<vector<int>> parent;\r\
-    \n  vector<int> dep;\r\n  int log = 1;\r\n  lca(const graph &G, int root = 0)\
-    \ : G(G){\r\n    init(root);\r\n  }\r\n  void init(int root = 0){\r\n    const\
-    \ int n = G.size();\r\n    dep.assign(n, -1);\r\n    parent.assign(1, vector<int>(n,\
-    \ -1));\r\n    queue<int> que({ root });\r\n    dep[root] = 0;\r\n    int max_dep\
-    \ = 0;\r\n    while(!que.empty()){\r\n      const int pos = que.front();\r\n \
-    \     que.pop();\r\n      max_dep = max(max_dep, dep[pos]);\r\n      for(const\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
+    \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
+    \n#include <set>\r\n#include <stack>\r\n#include <deque>\r\n#include <bitset>\r\
+    \n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include\
+    \ <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i, n) for(int\
+    \ i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\
+    \nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n\
+    #define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\
+    \n#define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
+    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
+    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
+    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
+    \ = b, 1) : 0; }\n#line 4 \"test/aoj/GRL/GRL_5_C.test.cpp\"\n\n#line 1 \"graph/lca.hpp\"\
+    \ntemplate <class graph>\r\nstruct lca {\r\n  const graph &G;\r\n  vector<vector<int>>\
+    \ parent;\r\n  vector<int> dep;\r\n  int log = 1;\r\n  lca(const graph &G, int\
+    \ root = 0) : G(G){\r\n    init(root);\r\n  }\r\n  void init(int root = 0){\r\n\
+    \    const int n = G.size();\r\n    dep.assign(n, -1);\r\n    parent.assign(1,\
+    \ vector<int>(n, -1));\r\n    queue<int> que({ root });\r\n    dep[root] = 0;\r\
+    \n    int max_dep = 0;\r\n    while(!que.empty()){\r\n      const int pos = que.front();\r\
+    \n      que.pop();\r\n      max_dep = max(max_dep, dep[pos]);\r\n      for(const\
     \ auto &x : G[pos]){\r\n        if(dep[x] == -1){\r\n          dep[x] = dep[pos]\
     \ + 1;\r\n          parent[0][x] = pos;\r\n          que.push(x);\r\n        }\r\
     \n      }\r\n    }\r\n    while((1 << log) <= max_dep) log++;\r\n    parent.resize(log,\
@@ -77,7 +76,7 @@ data:
   isVerificationFile: true
   path: test/aoj/GRL/GRL_5_C.test.cpp
   requiredBy: []
-  timestamp: '2023-03-14 01:15:07+09:00'
+  timestamp: '2023-11-11 17:58:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/GRL/GRL_5_C.test.cpp

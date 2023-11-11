@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
     title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -326,7 +326,7 @@ data:
   path: math/fps/kitamasa.hpp
   requiredBy: []
   timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
 documentation_of: math/fps/kitamasa.hpp

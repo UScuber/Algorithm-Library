@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometry/template.hpp
     title: geometry/template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
@@ -19,48 +19,47 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/problems/CGL_7_H
   bundledCode: "#line 1 \"test/aoj/CGL/GCL_7_H.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_7_H\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
-    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
-    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
-    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
-    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
-    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
-    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
-    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
-    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
-    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
-    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
-    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
-    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/aoj/CGL/GCL_7_H.test.cpp\"\n\n#line 1 \"geometry/template.hpp\"\nusing\
-    \ Real = double;\r\n\r\nconstexpr Real EPS = 1e-10;\r\nconstexpr Real PI = 3.141592653589793238462643383279L;\r\
-    \nconstexpr Real INF = 1e18;\r\n\r\ninline constexpr bool eq(const Real &a, const\
-    \ Real &b){\r\n  return fabs(b - a) < EPS;\r\n}\r\n\r\nstruct Point {\r\n  constexpr\
-    \ Point(const Real &_x=0, const Real &_y=0) : x(_x), y(_y){}\r\n  constexpr Real\
-    \ &real(){ return x; }\r\n  constexpr Real &imag(){ return y; }\r\n  constexpr\
-    \ Real real() const{ return x; }\r\n  constexpr Real imag() const{ return y; }\r\
-    \n  constexpr Point operator-() const{ return Point(-x, -y); }\r\n  constexpr\
-    \ Point &operator+=(const Point &p){ x += p.real(); y += p.imag(); return *this;\
-    \ }\r\n  constexpr Point &operator-=(const Point &p){ x -= p.real(); y -= p.imag();\
-    \ return *this; }\r\n  constexpr Point &operator*=(const Real &a){ x *= a; y *=\
-    \ a; return *this; }\r\n  constexpr Point &operator*=(const Point &p){ return\
-    \ *this = *this * p; }\r\n  constexpr Point &operator/=(const Real &a){ assert(!eq(a,\
-    \ 0.0)); x /= a; y /= a; return *this; }\r\n  constexpr Point operator+(const\
-    \ Point &p) const{ return Point(*this) += p; }\r\n  constexpr Point operator-(const\
-    \ Point &p) const{ return Point(*this) -= p; }\r\n  constexpr Point operator*(const\
-    \ Real &p) const{ return Point(*this) *= p; }\r\n  constexpr Point operator*(const\
-    \ Point &p) const{ return Point(x*p.x - y*p.y, y*p.x + x*p.y); }\r\n  constexpr\
-    \ Point operator/(const Real &p) const{ return Point(*this) /= p; }\r\n  constexpr\
-    \ bool operator==(const Point &p) const{ return eq(x, p.real()) && eq(y, p.imag());\
-    \ }\r\n  constexpr bool operator!=(const Point &p) const{ return !(*this == p);\
-    \ }\r\n  constexpr bool operator<(const Point &p) const{\r\n    if(x != p.real())\
-    \ return x < p.real();\r\n    return y < p.imag();\r\n  }\r\n  constexpr bool\
-    \ operator>(const Point &p) const{\r\n    if(x != p.real()) return x > p.real();\r\
-    \n    return y > p.imag();\r\n  }\r\n  constexpr Real norm() const{ return x*x\
-    \ + y*y; }\r\n  constexpr Real abs() const{ return sqrt(norm()); }\r\n  constexpr\
-    \ Point conj() const{ return Point(x, -y); }\r\n  constexpr Real arg() const{\
-    \ return atan2(y, x); }\r\n  friend istream &operator>>(istream &is, Point &p){\
-    \ return is >> p.real() >> p.imag(); }\r\n  friend ostream &operator<<(ostream\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
+    \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
+    \n#include <set>\r\n#include <stack>\r\n#include <deque>\r\n#include <bitset>\r\
+    \n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include\
+    \ <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i, n) for(int\
+    \ i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\
+    \nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n\
+    #define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\
+    \n#define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
+    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
+    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
+    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
+    \ = b, 1) : 0; }\n#line 4 \"test/aoj/CGL/GCL_7_H.test.cpp\"\n\n#line 1 \"geometry/template.hpp\"\
+    \nusing Real = double;\r\n\r\nconstexpr Real EPS = 1e-10;\r\nconstexpr Real PI\
+    \ = 3.141592653589793238462643383279L;\r\nconstexpr Real INF = 1e18;\r\n\r\ninline\
+    \ constexpr bool eq(const Real &a, const Real &b){\r\n  return fabs(b - a) < EPS;\r\
+    \n}\r\n\r\nstruct Point {\r\n  constexpr Point(const Real &_x=0, const Real &_y=0)\
+    \ : x(_x), y(_y){}\r\n  constexpr Real &real(){ return x; }\r\n  constexpr Real\
+    \ &imag(){ return y; }\r\n  constexpr Real real() const{ return x; }\r\n  constexpr\
+    \ Real imag() const{ return y; }\r\n  constexpr Point operator-() const{ return\
+    \ Point(-x, -y); }\r\n  constexpr Point &operator+=(const Point &p){ x += p.real();\
+    \ y += p.imag(); return *this; }\r\n  constexpr Point &operator-=(const Point\
+    \ &p){ x -= p.real(); y -= p.imag(); return *this; }\r\n  constexpr Point &operator*=(const\
+    \ Real &a){ x *= a; y *= a; return *this; }\r\n  constexpr Point &operator*=(const\
+    \ Point &p){ return *this = *this * p; }\r\n  constexpr Point &operator/=(const\
+    \ Real &a){ assert(!eq(a, 0.0)); x /= a; y /= a; return *this; }\r\n  constexpr\
+    \ Point operator+(const Point &p) const{ return Point(*this) += p; }\r\n  constexpr\
+    \ Point operator-(const Point &p) const{ return Point(*this) -= p; }\r\n  constexpr\
+    \ Point operator*(const Real &p) const{ return Point(*this) *= p; }\r\n  constexpr\
+    \ Point operator*(const Point &p) const{ return Point(x*p.x - y*p.y, y*p.x + x*p.y);\
+    \ }\r\n  constexpr Point operator/(const Real &p) const{ return Point(*this) /=\
+    \ p; }\r\n  constexpr bool operator==(const Point &p) const{ return eq(x, p.real())\
+    \ && eq(y, p.imag()); }\r\n  constexpr bool operator!=(const Point &p) const{\
+    \ return !(*this == p); }\r\n  constexpr bool operator<(const Point &p) const{\r\
+    \n    if(x != p.real()) return x < p.real();\r\n    return y < p.imag();\r\n \
+    \ }\r\n  constexpr bool operator>(const Point &p) const{\r\n    if(x != p.real())\
+    \ return x > p.real();\r\n    return y > p.imag();\r\n  }\r\n  constexpr Real\
+    \ norm() const{ return x*x + y*y; }\r\n  constexpr Real abs() const{ return sqrt(norm());\
+    \ }\r\n  constexpr Point conj() const{ return Point(x, -y); }\r\n  constexpr Real\
+    \ arg() const{ return atan2(y, x); }\r\n  friend istream &operator>>(istream &is,\
+    \ Point &p){ return is >> p.real() >> p.imag(); }\r\n  friend ostream &operator<<(ostream\
     \ &os, const Point &p){ return os << p.real() << \" \" << p.imag(); }\r\nprivate:\r\
     \n  Real x,y;\r\n};\r\n\r\nPoint polar(const Real &r, const Real &theta){\r\n\
     \  return Point(r*cos(theta), r*sin(theta));\r\n}\r\nconstexpr Real real(const\
@@ -288,7 +287,7 @@ data:
   isVerificationFile: true
   path: test/aoj/CGL/GCL_7_H.test.cpp
   requiredBy: []
-  timestamp: '2023-04-19 16:35:06+09:00'
+  timestamp: '2023-11-11 17:58:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/CGL/GCL_7_H.test.cpp

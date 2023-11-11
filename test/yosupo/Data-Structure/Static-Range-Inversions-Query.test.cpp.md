@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: SegmentTree/BinaryIndexedTree.hpp
     title: SegmentTree/BinaryIndexedTree.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: others/mo.hpp
     title: others/mo.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_inversions_query
@@ -23,23 +23,22 @@ data:
   bundledCode: "#line 1 \"test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_inversions_query\"\
     \n\n#line 1 \"template/template.hpp\"\n#include <iostream>\r\n#include <cmath>\r\
-    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <utility>\r\
-    \n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\
-    \n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n#include <deque>\r\
-    \n#include <unordered_map>\r\n#include <unordered_set>\r\n#include <bitset>\r\n\
-    #include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include <cassert>\r\
-    \n#include <numeric>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define\
-    \ per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define\
-    \ vi vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define\
-    \ pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(),\
-    \ (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod =\
-    \ 1000000007;\r\nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T\
-    \ &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class\
-    \ U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line\
-    \ 4 \"test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp\"\n\n\
-    #line 1 \"others/mo.hpp\"\nll value = 0;\r\nstruct Mo {\r\n  struct Query { int\
-    \ l,r,b,idx; };\r\n  vector<ll> res;\r\n  vector<Query> d;\r\n  int width, n,\
-    \ q;\r\n  Mo(int n, int q) : n(n), q(q), width(max(1.0, n/max(1.0, sqrt(q*2.0/3)))),\
+    \n#include <string>\r\n#include <vector>\r\n#include <algorithm>\r\n#include <tuple>\r\
+    \n#include <cstdint>\r\n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\
+    \n#include <set>\r\n#include <stack>\r\n#include <deque>\r\n#include <bitset>\r\
+    \n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\n#include\
+    \ <cassert>\r\n#include <numeric>\r\n#include <cstring>\r\n#define rep(i, n) for(int\
+    \ i = 0; i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\
+    \nusing ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n\
+    #define vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\
+    \n#define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
+    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
+    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
+    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
+    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp\"\
+    \n\n#line 1 \"others/mo.hpp\"\nll value = 0;\r\nstruct Mo {\r\n  struct Query\
+    \ { int l,r,b,idx; };\r\n  vector<ll> res;\r\n  vector<Query> d;\r\n  int width,\
+    \ n, q;\r\n  Mo(int n, int q) : n(n), q(q), width(max(1.0, n/max(1.0, sqrt(q*2.0/3)))),\
     \ res(q), d(q){}\r\n  void insert(const int &l, const int &r){\r\n    assert(0\
     \ <= l && l <= r && r <= n);\r\n    static int idx = 0;\r\n    d[idx] = { l, r,\
     \ l / width, idx };\r\n    idx++;\r\n  }\r\n  void build(){\r\n    sort(d.begin(),\
@@ -91,8 +90,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
   requiredBy: []
-  timestamp: '2023-03-31 19:15:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-11-11 17:58:53+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
 layout: document

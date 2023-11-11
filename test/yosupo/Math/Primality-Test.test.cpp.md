@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/isprime.hpp
     title: math/isprime.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/primality_test
@@ -20,34 +20,33 @@ data:
   bundledCode: "#line 1 \"test/yosupo/Math/Primality-Test.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/primality_test\"\n\n#line 1 \"template/template.hpp\"\
     \n#include <iostream>\r\n#include <cmath>\r\n#include <string>\r\n#include <vector>\r\
-    \n#include <algorithm>\r\n#include <utility>\r\n#include <tuple>\r\n#include <cstdint>\r\
-    \n#include <cstdio>\r\n#include <map>\r\n#include <queue>\r\n#include <set>\r\n\
-    #include <stack>\r\n#include <deque>\r\n#include <unordered_map>\r\n#include <unordered_set>\r\
-    \n#include <bitset>\r\n#include <cctype>\r\n#include <climits>\r\n#include <functional>\r\
-    \n#include <cassert>\r\n#include <numeric>\r\n#define rep(i, n) for(int i = 0;\
-    \ i < (n); i++)\r\n#define per(i, n) for(int i = (n) - 1; i >= 0; i--)\r\nusing\
-    \ ll = long long;\r\n#define vi vector<int>\r\n#define vvi vector<vi>\r\n#define\
-    \ vl vector<ll>\r\n#define pii pair<int, int>\r\n#define pll pair<ll, ll>\r\n\
-    #define all(a) (a).begin(), (a).end()\r\n#define rall(a) (a).rbegin(), (a).rend()\r\
-    \nconstexpr int mod = 1000000007;\r\nusing namespace std;\r\ntemplate<class T,\
-    \ class U>\r\nbool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }\r\
-    \ntemplate<class T, class U>\r\nbool chmin(T &a, const U &b){ return a > b ? (a\
-    \ = b, 1) : 0; }\n#line 4 \"test/yosupo/Math/Primality-Test.test.cpp\"\n\n#line\
-    \ 1 \"math/isprime.hpp\"\nusing ull = unsigned long long;\r\n\r\ninline ull modmul(ull\
-    \ a, ull b, ull m) noexcept{\r\n\tll ret = a * b - m * ull(1.L / m * a * b);\r\
-    \n\treturn ret + m * (ret < 0) - m * (ret >= (ll)m);\r\n}\r\ninline ull modpow(ull\
-    \ b, ull e, ull m) noexcept{\r\n\tull ans = 1;\r\n\tfor(; e; b = modmul(b, b,\
-    \ m), e >>= 1)\r\n\t\tif(e & 1) ans = modmul(ans, b, m);\r\n\treturn ans;\r\n\
-    }\r\nbool is_prime(const ull n){\r\n\tif(n < 2 || n % 6 % 4 != 1) return (n |\
-    \ 1) == 3;\r\n\tstatic constexpr ull A[] = { 2, 325, 9375, 28178, 450775, 9780504,\
-    \ 1795265022 };\r\n\tconst ull s = __builtin_ctzll(n - 1), d = n >> s;\r\n\tfor(ull\
-    \ a : A){   // ^ count trailing zeroes\r\n\t\tull p = modpow(a % n, d, n), i =\
-    \ s;\r\n\t\twhile(p != 1 && p != n - 1 && a % n && i--)\r\n\t\t\tp = modmul(p,\
-    \ p, n);\r\n\t\tif(p != n - 1 && i != s) return false;\r\n\t}\r\n\treturn true;\r\
-    \n}\n#line 6 \"test/yosupo/Math/Primality-Test.test.cpp\"\n\nint main(){\n  cin.tie(nullptr);\n\
-    \  ios_base::sync_with_stdio(false);\n  int q;\n  cin >> q;\n  rep(_, q){\n  \
-    \  ll n; cin >> n;\n    if(is_prime(n)) cout << \"Yes\\n\";\n    else cout <<\
-    \ \"No\\n\";\n  }\n}\n"
+    \n#include <algorithm>\r\n#include <tuple>\r\n#include <cstdint>\r\n#include <cstdio>\r\
+    \n#include <map>\r\n#include <queue>\r\n#include <set>\r\n#include <stack>\r\n\
+    #include <deque>\r\n#include <bitset>\r\n#include <cctype>\r\n#include <climits>\r\
+    \n#include <functional>\r\n#include <cassert>\r\n#include <numeric>\r\n#include\
+    \ <cstring>\r\n#define rep(i, n) for(int i = 0; i < (n); i++)\r\n#define per(i,\
+    \ n) for(int i = (n) - 1; i >= 0; i--)\r\nusing ll = long long;\r\n#define vi\
+    \ vector<int>\r\n#define vvi vector<vi>\r\n#define vl vector<ll>\r\n#define pii\
+    \ pair<int, int>\r\n#define pll pair<ll, ll>\r\n#define all(a) (a).begin(), (a).end()\r\
+    \n#define rall(a) (a).rbegin(), (a).rend()\r\nconstexpr int mod = 1000000007;\r\
+    \nusing namespace std;\r\ntemplate<class T, class U>\r\nbool chmax(T &a, const\
+    \ U &b){ return a < b ? (a = b, 1) : 0; }\r\ntemplate<class T, class U>\r\nbool\
+    \ chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }\n#line 4 \"test/yosupo/Math/Primality-Test.test.cpp\"\
+    \n\n#line 1 \"math/isprime.hpp\"\nusing ull = unsigned long long;\r\n\r\ninline\
+    \ ull modmul(ull a, ull b, ull m) noexcept{\r\n\tll ret = a * b - m * ull(1.L\
+    \ / m * a * b);\r\n\treturn ret + m * (ret < 0) - m * (ret >= (ll)m);\r\n}\r\n\
+    inline ull modpow(ull b, ull e, ull m) noexcept{\r\n\tull ans = 1;\r\n\tfor(;\
+    \ e; b = modmul(b, b, m), e >>= 1)\r\n\t\tif(e & 1) ans = modmul(ans, b, m);\r\
+    \n\treturn ans;\r\n}\r\nbool is_prime(const ull n){\r\n\tif(n < 2 || n % 6 % 4\
+    \ != 1) return (n | 1) == 3;\r\n\tstatic constexpr ull A[] = { 2, 325, 9375, 28178,\
+    \ 450775, 9780504, 1795265022 };\r\n\tconst ull s = __builtin_ctzll(n - 1), d\
+    \ = n >> s;\r\n\tfor(ull a : A){   // ^ count trailing zeroes\r\n\t\tull p = modpow(a\
+    \ % n, d, n), i = s;\r\n\t\twhile(p != 1 && p != n - 1 && a % n && i--)\r\n\t\t\
+    \tp = modmul(p, p, n);\r\n\t\tif(p != n - 1 && i != s) return false;\r\n\t}\r\n\
+    \treturn true;\r\n}\n#line 6 \"test/yosupo/Math/Primality-Test.test.cpp\"\n\n\
+    int main(){\n  cin.tie(nullptr);\n  ios_base::sync_with_stdio(false);\n  int q;\n\
+    \  cin >> q;\n  rep(_, q){\n    ll n; cin >> n;\n    if(is_prime(n)) cout << \"\
+    Yes\\n\";\n    else cout << \"No\\n\";\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primality_test\"\n\n#include\
     \ \"../../../template/template.hpp\"\n\n#include \"../../../math/isprime.hpp\"\
     \n\nint main(){\n  cin.tie(nullptr);\n  ios_base::sync_with_stdio(false);\n  int\
@@ -59,8 +58,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/Primality-Test.test.cpp
   requiredBy: []
-  timestamp: '2023-11-09 14:18:09+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-11-11 17:58:53+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Math/Primality-Test.test.cpp
 layout: document
