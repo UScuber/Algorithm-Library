@@ -8,8 +8,8 @@ int main(){
   int t;
   cin >> t;
   rep(i, t){
-    ll a,b;
+    unsigned long long a,b;
     cin >> a >> b;
-    cout << a + b << "\n";
+    cout << a + b << '\n';
   }
 }
