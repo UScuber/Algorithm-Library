@@ -8,29 +8,29 @@ data:
     path: math/mint.hpp
     title: math/mint.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/fps-arbitrary-mod.hpp
     title: math/fps/fps-arbitrary-mod.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
     title: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
     title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Subset-Sum.test.cpp
     title: test/yosupo/Math/Subset-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
   - icon: ':x:'
@@ -41,7 +41,7 @@ data:
     title: test/yosupo/Polynomial/Pow-of-Formal-Power-Series.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -295,7 +295,7 @@ data:
   - math/fps/kitamasa.hpp
   - math/fps/fps.hpp
   timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   - test/yosupo/Math/Subset-Sum.test.cpp

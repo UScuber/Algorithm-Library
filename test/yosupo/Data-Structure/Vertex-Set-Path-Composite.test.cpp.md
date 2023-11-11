@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: SegmentTree/segtree.hpp
     title: SegmentTree/segtree.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/HLD.hpp
     title: data-structure/HLD.hpp
   - icon: ':question:'
@@ -14,13 +14,16 @@ data:
     path: math/mint.hpp
     title: math/mint.hpp
   - icon: ':question:'
+    path: others/fastIO.hpp
+    title: others/fastIO.hpp
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
@@ -133,47 +136,93 @@ data:
     \ &a) const{ return x < a.x; }\r\n  constexpr bool operator>(const Mint &a) const{\
     \ return x > a.x; }\r\n  friend istream &operator>>(istream &is, Mint &a){ return\
     \ is >> a.x; }\r\n  friend ostream &operator<<(ostream &os, const Mint &a){ return\
-    \ os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;\n#line 7 \"test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp\"\
+    \ os << a.x; }\r\n};\r\n//using mint = Mint<1000000007>;\n#line 1 \"others/fastIO.hpp\"\
+    \nnamespace FastIO {\r\nstruct PreCalc {\r\n  char num[10000 * 4];\r\n  constexpr\
+    \ PreCalc() : num(){\r\n    for(int i = 0; i < 10000; i++){\r\n      int t = i;\r\
+    \n      for(int j = 3; j >= 0; j--){\r\n        num[i*4 + j] = (t % 10) + '0';\r\
+    \n        t /= 10;\r\n      }\r\n    }\r\n  }\r\n};\r\nstatic constexpr PreCalc\
+    \ pr;\r\nstruct FastIO {\r\n  template <class T>\r\n  using enable_if_integer\
+    \ = enable_if_t<is_integral<T>::value || is_same<T, __int128_t>::value || is_same<T,\
+    \ __uint128_t>::value>;\r\n  static constexpr int buf_size = 1 << 20;\r\n  static\
+    \ constexpr int rem = 1 << 6;\r\n  char in_buf[buf_size], *in_cur = in_buf + buf_size;\r\
+    \n  char out_buf[buf_size], *out_cur = out_buf;\r\n  FastIO(){ load(); }\r\n \
+    \ ~FastIO(){ flush(); }\r\n  void load(){\r\n    const int len = in_buf + buf_size\
+    \ - in_cur;\r\n    memmove(in_buf, in_cur, len);\r\n    in_cur = in_buf;\r\n \
+    \   fread(in_buf + len, 1, buf_size - len, stdin);\r\n  }\r\n  void flush(){\r\
+    \n    fwrite(out_buf, 1, out_cur - out_buf, stdout);\r\n    out_cur = out_buf;\r\
+    \n  }\r\n  void through(){\r\n    if(in_cur - in_buf >= buf_size - rem) load();\r\
+    \n    while(*in_cur <= ' ') in_cur++;\r\n    assert(in_buf <= in_cur && in_cur\
+    \ < in_buf + buf_size);\r\n  }\r\n  #define gc() (*in_cur++)\r\n  template <class\
+    \ T, enable_if_integer<T>* = nullptr>\r\n  inline void read(T &x){\r\n    through();\r\
+    \n    bool neg = false;\r\n    int c = gc();\r\n    if(c == '-') neg = true, c\
+    \ = gc();\r\n    x = c^'0'; c = gc();\r\n    while(c >= '0' && c <= '9') x = x*10\
+    \ + (c^'0'), c = gc();\r\n    if(neg) x = -x;\r\n  }\r\n  inline void read(string\
+    \ &x){\r\n    through();\r\n    x.clear();\r\n    while(true){\r\n      char *p\
+    \ = in_cur;\r\n      while(*p > ' ' && p - in_buf < buf_size - rem) p++;\r\n \
+    \     copy(in_cur, p, back_inserter(x));\r\n      in_cur = p;\r\n      if(*p <=\
+    \ ' ') break;\r\n      load();\r\n    }\r\n  }\r\n  inline void read(char &x){\r\
+    \n    through();\r\n    x = gc();\r\n  }\r\n  #undef gc\r\n  #define pc(c) *out_cur++\
+    \ = (c)\r\n  template <class T, enable_if_integer<T>* = nullptr>\r\n  inline void\
+    \ out(T x){\r\n    static constexpr int tmp_size = sizeof(T)*5/2;\r\n    static\
+    \ char tmp[tmp_size];\r\n    if(out_cur - out_buf >= buf_size - rem) flush();\r\
+    \n    if(!x){ pc('0'); return; }\r\n    if(x < 0){ pc('-'); x = -x; }\r\n    int\
+    \ idx = tmp_size;\r\n    while(x >= 10000){\r\n      idx -= 4;\r\n      memcpy(tmp\
+    \ + idx, pr.num + (x % 10000)*4, 4);\r\n      x /= 10000;\r\n    }\r\n    if(x\
+    \ < 100){\r\n      if(x < 10){\r\n        pc(x + '0');\r\n      }else{\r\n   \
+    \     pc(x/10 + '0');\r\n        pc(x%10 + '0');\r\n      }\r\n    }else{\r\n\
+    \      if(x < 1000){\r\n        memcpy(out_cur, pr.num + x*4 + 1, 3);\r\n    \
+    \    out_cur += 3;\r\n      }else{\r\n        memcpy(out_cur, pr.num + x*4, 4);\r\
+    \n        out_cur += 4;\r\n      }\r\n    }\r\n    memcpy(out_cur, tmp + idx,\
+    \ tmp_size - idx);\r\n    out_cur += tmp_size - idx;\r\n  }\r\n  inline void out(const\
+    \ string &s){\r\n    flush();\r\n    fwrite(s.c_str(), 1, s.size(), stdout);\r\
+    \n  }\r\n  inline void out(const char c){\r\n    if(out_cur - out_buf >= buf_size\
+    \ - rem) flush();\r\n    pc(c);\r\n  }\r\n  #undef pc\r\n  template <class T>\r\
+    \n  friend FastIO &operator>>(FastIO &io, T &x){\r\n    io.read(x);\r\n    return\
+    \ io;\r\n  }\r\n  template <class T>\r\n  friend FastIO &operator<<(FastIO &io,\
+    \ const T &x){\r\n    io.out(x);\r\n    return io;\r\n  }\r\n};\r\nFastIO io;\r\
+    \n} // namespace FastIO\r\nusing FastIO::io;\r\n#define cin io\r\n#define cout\
+    \ io\n#line 8 \"test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp\"\
     \n\r\nusing mint = Mint<998244353>;\r\n\r\nstruct Data {\r\n  mint a,b;\r\n};\r\
     \nData e(){\r\n  return { 1, 0 };\r\n}\r\nData op(const Data &l, const Data &m){\r\
     \n  return { l.a*m.a, l.b*m.a + m.b };\r\n}\r\nData rev_op(const Data &l, const\
     \ Data &m){\r\n  return { m.a*l.a, m.b*l.a + l.b };\r\n}\r\n\r\nint main(){\r\n\
-    \  cin.tie(nullptr);\r\n  ios::sync_with_stdio(false);\r\n  int n,q;\r\n  cin\
-    \ >> n >> q;\r\n  vi a(n), b(n);\r\n  rep(i, n) cin >> a[i] >> b[i];\r\n  graph\
-    \ root(n);\r\n  rep(i, n - 1){\r\n    int a,b;\r\n    cin >> a >> b;\r\n    root[a].push_back(b);\r\
-    \n    root[b].push_back(a);\r\n  }\r\n  HLD<Data,op,rev_op,e> hld(root);\r\n \
-    \ rep(i, n) hld.set(i, { a[i], b[i] });\r\n  hld.build();\r\n  int t,p,c,d,u,v,x;\r\
-    \n  rep(_, q){\r\n    cin >> t;\r\n    if(t == 0){\r\n      cin >> p >> c >> d;\r\
-    \n      hld.update(p, { c, d });\r\n    }else{\r\n      cin >> u >> v >> x;\r\n\
-    \      const Data res = hld.query(u, v);\r\n      const mint ans = res.a * x +\
-    \ res.b;\r\n      cout << ans << \"\\n\";\r\n    }\r\n  }\r\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_set_path_composite\"\
-    \r\n\r\n#include \"../../../template/template.hpp\"\r\n\r\n#include \"../../../data-structure/HLD.hpp\"\
-    \r\n#include \"../../../math/mint.hpp\"\r\n\r\nusing mint = Mint<998244353>;\r\
-    \n\r\nstruct Data {\r\n  mint a,b;\r\n};\r\nData e(){\r\n  return { 1, 0 };\r\n\
-    }\r\nData op(const Data &l, const Data &m){\r\n  return { l.a*m.a, l.b*m.a + m.b\
-    \ };\r\n}\r\nData rev_op(const Data &l, const Data &m){\r\n  return { m.a*l.a,\
-    \ m.b*l.a + l.b };\r\n}\r\n\r\nint main(){\r\n  cin.tie(nullptr);\r\n  ios::sync_with_stdio(false);\r\
-    \n  int n,q;\r\n  cin >> n >> q;\r\n  vi a(n), b(n);\r\n  rep(i, n) cin >> a[i]\
+    \  int n,q;\r\n  cin >> n >> q;\r\n  vi a(n), b(n);\r\n  rep(i, n) cin >> a[i]\
     \ >> b[i];\r\n  graph root(n);\r\n  rep(i, n - 1){\r\n    int a,b;\r\n    cin\
     \ >> a >> b;\r\n    root[a].push_back(b);\r\n    root[b].push_back(a);\r\n  }\r\
     \n  HLD<Data,op,rev_op,e> hld(root);\r\n  rep(i, n) hld.set(i, { a[i], b[i] });\r\
     \n  hld.build();\r\n  int t,p,c,d,u,v,x;\r\n  rep(_, q){\r\n    cin >> t;\r\n\
     \    if(t == 0){\r\n      cin >> p >> c >> d;\r\n      hld.update(p, { c, d });\r\
     \n    }else{\r\n      cin >> u >> v >> x;\r\n      const Data res = hld.query(u,\
-    \ v);\r\n      const mint ans = res.a * x + res.b;\r\n      cout << ans << \"\\\
-    n\";\r\n    }\r\n  }\r\n}"
+    \ v);\r\n      const mint ans = res.a * x + res.b;\r\n      cout << ans.x << '\\\
+    n';\r\n    }\r\n  }\r\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_set_path_composite\"\
+    \r\n\r\n#include \"../../../template/template.hpp\"\r\n\r\n#include \"../../../data-structure/HLD.hpp\"\
+    \r\n#include \"../../../math/mint.hpp\"\r\n#include \"../../../others/fastIO.hpp\"\
+    \r\n\r\nusing mint = Mint<998244353>;\r\n\r\nstruct Data {\r\n  mint a,b;\r\n\
+    };\r\nData e(){\r\n  return { 1, 0 };\r\n}\r\nData op(const Data &l, const Data\
+    \ &m){\r\n  return { l.a*m.a, l.b*m.a + m.b };\r\n}\r\nData rev_op(const Data\
+    \ &l, const Data &m){\r\n  return { m.a*l.a, m.b*l.a + l.b };\r\n}\r\n\r\nint\
+    \ main(){\r\n  int n,q;\r\n  cin >> n >> q;\r\n  vi a(n), b(n);\r\n  rep(i, n)\
+    \ cin >> a[i] >> b[i];\r\n  graph root(n);\r\n  rep(i, n - 1){\r\n    int a,b;\r\
+    \n    cin >> a >> b;\r\n    root[a].push_back(b);\r\n    root[b].push_back(a);\r\
+    \n  }\r\n  HLD<Data,op,rev_op,e> hld(root);\r\n  rep(i, n) hld.set(i, { a[i],\
+    \ b[i] });\r\n  hld.build();\r\n  int t,p,c,d,u,v,x;\r\n  rep(_, q){\r\n    cin\
+    \ >> t;\r\n    if(t == 0){\r\n      cin >> p >> c >> d;\r\n      hld.update(p,\
+    \ { c, d });\r\n    }else{\r\n      cin >> u >> v >> x;\r\n      const Data res\
+    \ = hld.query(u, v);\r\n      const mint ans = res.a * x + res.b;\r\n      cout\
+    \ << ans.x << '\\n';\r\n    }\r\n  }\r\n}"
   dependsOn:
   - template/template.hpp
   - data-structure/HLD.hpp
   - graph/template.hpp
   - SegmentTree/segtree.hpp
   - math/mint.hpp
+  - others/fastIO.hpp
   isVerificationFile: true
   path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
   requiredBy: []
-  timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-11-12 01:15:26+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
 layout: document

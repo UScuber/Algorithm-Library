@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
     title: "SCC(Stronly Connected Components)(\u5F37\u9023\u7D50\u6210\u5206\u5206\
       \u89E3)"
@@ -10,9 +10,9 @@ data:
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/scc
@@ -72,7 +72,7 @@ data:
   path: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
   requiredBy: []
   timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
 layout: document

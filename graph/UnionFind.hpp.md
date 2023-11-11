@@ -12,12 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_2_A.test.cpp
     title: test/aoj/GRL/GRL_2_A.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Unionfind.test.cpp
     title: test/yosupo/Data-Structure/Unionfind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"graph/UnionFind.hpp\"\nstruct UnionFind {\r\n  private:\r\
@@ -44,7 +44,7 @@ data:
   - graph/check-bipartite.hpp
   - graph/kruskal.hpp
   timestamp: '2023-03-13 15:00:41+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Unionfind.test.cpp
   - test/aoj/GRL/GRL_2_A.test.cpp

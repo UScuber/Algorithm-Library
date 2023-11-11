@@ -4,10 +4,10 @@ data:
   - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':question:'
@@ -15,12 +15,12 @@ data:
     title: math/mint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
     title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"math/convolution/ntt.hpp\"\ntemplate <class mint>\r\nstruct\
@@ -326,7 +326,7 @@ data:
   path: math/fps/kitamasa.hpp
   requiredBy: []
   timestamp: '2023-03-13 14:46:41+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
 documentation_of: math/fps/kitamasa.hpp

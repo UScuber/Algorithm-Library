@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
     title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/SWAG.hpp\"\ntemplate <class T, T(*op)(const\
@@ -40,7 +40,7 @@ data:
   path: data-structure/SWAG.hpp
   requiredBy: []
   timestamp: '2023-03-13 02:01:43+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
 documentation_of: data-structure/SWAG.hpp

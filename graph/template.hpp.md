@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/HLD.hpp
     title: data-structure/HLD.hpp
   - icon: ':heavy_check_mark:'
@@ -14,13 +14,13 @@ data:
   - icon: ':warning:'
     path: graph/check-bipartite.hpp
     title: graph/check-bipartite.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
   - icon: ':x:'
     path: graph/diameter.hpp
     title: "Diameter(\u6728\u306E\u76F4\u5F84)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/dijkstra.hpp
     title: graph/dijkstra.hpp
   - icon: ':heavy_check_mark:'
@@ -36,16 +36,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/GRL/GRL_6_A2.test.cpp
     title: test/aoj/GRL/GRL_6_A2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Shortest-Path.test.cpp
     title: test/yosupo/Graph/Shortest-Path.test.cpp
   - icon: ':x:'

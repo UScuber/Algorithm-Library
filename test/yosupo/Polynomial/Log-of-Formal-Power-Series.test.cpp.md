@@ -4,10 +4,10 @@ data:
   - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':question:'

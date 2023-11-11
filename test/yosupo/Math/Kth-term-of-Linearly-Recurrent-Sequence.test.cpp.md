@@ -4,13 +4,13 @@ data:
   - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/fps/kitamasa.hpp
     title: math/fps/kitamasa.hpp
   - icon: ':question:'
@@ -21,9 +21,9 @@ data:
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence
@@ -325,7 +325,7 @@ data:
   path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
   requiredBy: []
   timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: others/fastIO.hpp
     title: others/fastIO.hpp
   - icon: ':x:'

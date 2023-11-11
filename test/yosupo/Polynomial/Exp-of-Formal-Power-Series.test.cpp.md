@@ -4,10 +4,10 @@ data:
   - icon: ':question:'
     path: math/convolution/ntt.hpp
     title: math/convolution/ntt.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps-template.hpp
     title: math/fps/fps-template.hpp
-  - icon: ':x:'
+  - icon: ':question:'
     path: math/fps/fps.hpp
     title: math/fps/fps.hpp
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/exp_of_formal_power_series
@@ -287,7 +287,7 @@ data:
   path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
   requiredBy: []
   timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
 layout: document

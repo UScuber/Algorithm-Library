@@ -138,97 +138,97 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
     title: test/yosupo/Convolution/Convolution(Mod1e9+7).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
     title: test/yosupo/Convolution/Convolution(Mod1e9+7)2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Convolution/Convolution.test.cpp
     title: test/yosupo/Convolution/Convolution.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Associative-Array.test.cpp
     title: test/yosupo/Data-Structure/Associative-Array.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
     title: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
     title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
     title: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
     title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
     title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
     title: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Static-RMQ.test.cpp
     title: test/yosupo/Data-Structure/Static-RMQ.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
     title: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
     title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Unionfind.test.cpp
     title: test/yosupo/Data-Structure/Unionfind.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
     title: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Shortest-Path.test.cpp
     title: test/yosupo/Graph/Shortest-Path.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
     title: test/yosupo/Graph/Strongly-Connected-Components.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
     title: test/yosupo/Math/Kth-term-of-Linearly-Recurrent-Sequence.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Primality-Test.test.cpp
     title: test/yosupo/Math/Primality-Test.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Subset-Sum.test.cpp
     title: test/yosupo/Math/Subset-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
     title: test/yosupo/Math/Sum-of-Floor-of-Linear.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
     title: test/yosupo/Matrix/Determinant-of-Matrix.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Inverse-Matrix.test.cpp
     title: test/yosupo/Matrix/Inverse-Matrix.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Matrix/Matrix-Product.test.cpp
     title: test/yosupo/Matrix/Matrix-Product.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Exp-of-Formal-Power-Series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
     title: test/yosupo/Polynomial/Inv-of-Formal-Power-Series.test.cpp
   - icon: ':x:'

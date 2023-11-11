@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: SegmentTree/BinaryIndexedTree.hpp
     title: SegmentTree/BinaryIndexedTree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
     title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/BinaryIndexedTree.hpp\"\ntemplate <class T>\r\
@@ -69,7 +69,7 @@ data:
   path: data-structure/static-rectangle-sum.hpp
   requiredBy: []
   timestamp: '2023-03-31 18:03:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
 documentation_of: data-structure/static-rectangle-sum.hpp

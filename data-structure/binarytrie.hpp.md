@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
     title: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data-structure/binarytrie.hpp\"\ntemplate <class T, size_t\
@@ -85,7 +85,7 @@ data:
   path: data-structure/binarytrie.hpp
   requiredBy: []
   timestamp: '2023-03-13 21:53:46+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
 documentation_of: data-structure/binarytrie.hpp

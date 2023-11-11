@@ -6,12 +6,12 @@ data:
     title: Graph Template
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Shortest-Path.test.cpp
     title: test/yosupo/Graph/Shortest-Path.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/template.hpp\"\n\r\n/**\r\n * @brief Graph Template\r\
@@ -46,7 +46,7 @@ data:
   path: graph/dijkstra.hpp
   requiredBy: []
   timestamp: '2023-11-10 15:24:24+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Graph/Shortest-Path.test.cpp
 documentation_of: graph/dijkstra.hpp

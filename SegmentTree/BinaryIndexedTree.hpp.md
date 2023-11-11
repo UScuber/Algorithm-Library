@@ -2,25 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/static-rectangle-sum.hpp
     title: data-structure/static-rectangle-sum.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL/DSL_2_B.test.cpp
     title: test/aoj/DSL/DSL_2_B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
     title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
     title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
     title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/BinaryIndexedTree.hpp\"\ntemplate <class T>\r\
@@ -50,7 +50,7 @@ data:
   requiredBy:
   - data-structure/static-rectangle-sum.hpp
   timestamp: '2023-03-13 21:50:08+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
   - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp

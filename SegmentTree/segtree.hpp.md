@@ -2,22 +2,22 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data-structure/HLD.hpp
     title: data-structure/HLD.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
     title: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
     title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"SegmentTree/segtree.hpp\"\ntemplate <class T, T(*op)(const\
@@ -84,7 +84,7 @@ data:
   requiredBy:
   - data-structure/HLD.hpp
   timestamp: '2023-07-10 18:11:11+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
   - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp

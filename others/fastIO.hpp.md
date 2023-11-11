@@ -3,15 +3,78 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Associative-Array.test.cpp
+    title: test/yosupo/Data-Structure/Associative-Array.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+    title: test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+    title: test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+    title: test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Static-RMQ.test.cpp
+    title: test/yosupo/Data-Structure/Static-RMQ.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+    title: test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Unionfind.test.cpp
+    title: test/yosupo/Data-Structure/Unionfind.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+    title: test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/Primality-Test.test.cpp
+    title: test/yosupo/Math/Primality-Test.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/Subset-Sum.test.cpp
+    title: test/yosupo/Math/Subset-Sum.test.cpp
   - icon: ':x:'
     path: test/yosupo/Sample/Many-A+B(128bit).test.cpp
     title: test/yosupo/Sample/Many-A+B(128bit).test.cpp
   - icon: ':x:'
     path: test/yosupo/Sample/Many-A+B.test.cpp
     title: test/yosupo/Sample/Many-A+B.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Tree/Jump-on-Tree.test.cpp
+    title: test/yosupo/Tree/Jump-on-Tree.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Tree/Tree-Diameter.test.cpp
+    title: test/yosupo/Tree/Tree-Diameter.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"others/fastIO.hpp\"\nnamespace FastIO {\r\nstruct PreCalc\
@@ -110,8 +173,29 @@ data:
   path: others/fastIO.hpp
   requiredBy: []
   timestamp: '2023-11-12 00:39:10+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/yosupo/Tree/Jump-on-Tree.test.cpp
+  - test/yosupo/Tree/Tree-Diameter.test.cpp
+  - test/yosupo/Math/Primality-Test.test.cpp
+  - test/yosupo/Math/Subset-Sum.test.cpp
+  - test/yosupo/Data-Structure/Point-Set-Range-Composite.test.cpp
+  - test/yosupo/Data-Structure/Set-Xor-Min.test.cpp
+  - test/yosupo/Data-Structure/Queue-Operate-All-Composite.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Point-Get.test.cpp
+  - test/yosupo/Data-Structure/Associative-Array.test.cpp
+  - test/yosupo/Data-Structure/Range-Kth-Smallest.test.cpp
+  - test/yosupo/Data-Structure/Static-RMQ.test.cpp
+  - test/yosupo/Data-Structure/Range-Reverse-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Rectangle-Sum.test.cpp
+  - test/yosupo/Data-Structure/Unionfind.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Inversions-Query.test.cpp
+  - test/yosupo/Data-Structure/Dynamic-Sequence-Range-Affine-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Point-Add-Range-Sum.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Set-Path-Composite.test.cpp
+  - test/yosupo/Data-Structure/Static-Range-Frequency.test.cpp
+  - test/yosupo/Data-Structure/Vertex-Add-Path-Sum.test.cpp
+  - test/yosupo/Data-Structure/Range-Affine-Range-Sum.test.cpp
   - test/yosupo/Sample/Many-A+B(128bit).test.cpp
   - test/yosupo/Sample/Many-A+B.test.cpp
 documentation_of: others/fastIO.hpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/cycle-detect.hpp
     title: "Cycle Detect(\u30B5\u30A4\u30AF\u30EB\u691C\u51FA)"
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/cycle_detection
@@ -79,7 +79,7 @@ data:
   path: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
   requiredBy: []
   timestamp: '2023-11-11 17:58:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Graph/Cycle-Detection(Directed).test.cpp
 layout: document
